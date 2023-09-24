@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: "A Lecture on Topological Defect"
+  author:
+    - name: Kantaro Ohmori
+      emal: kant.ohmori@gmail.com
+      affiliations:
+        - name: The University of Tokyo
+          department: Faculty of Sciences
+          address: Hongo 7-3-1
+          city: Tokyo
+          country: Japan
+          postal-code: 113-8654
+  date: last-modified
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+
+
+
