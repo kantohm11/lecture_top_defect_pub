@@ -1,15 +1,36 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Lecture on Topological Defect",
+    "section": "",
+    "text": "1 What is this\nThis is a lecture note prepared for two sets of “intensive lectures”:1\nIn this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences."
+  },
+  {
+    "objectID": "index.html#other-lecturesreviews",
+    "href": "index.html#other-lecturesreviews",
+    "title": "A Lecture on Topological Defect",
+    "section": "1.1 Other Lectures/Reviews",
+    "text": "1.1 Other Lectures/Reviews\nRecently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are\nBecause this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.\nAlso, about conventional symmetries and their anomalies, there are nice old lectures. The ones I would recommend:"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "A Lecture on Topological Defect",
+    "section": "",
+    "text": "In Japan, an “intensive lecture” is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.↩︎"
+  },
+  {
     "objectID": "intro.html#section",
     "href": "intro.html#section",
-    "title": "1  Introduction",
-    "section": "1.1 section",
-    "text": "1.1 section\n\n1.1.1 subsubsection\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "title": "2  Introduction",
+    "section": "2.1 section",
+    "text": "2.1 section\n\n2.1.1 subsubsection\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   },
@@ -19,26 +40,5 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A Lecture on Topological Defect",
-    "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
-  },
-  {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
-    "title": "A Lecture on Topological Defect",
-    "section": "section",
-    "text": "section"
-  },
-  {
-    "objectID": "index.html#subsubsection",
-    "href": "index.html#subsubsection",
-    "title": "A Lecture on Topological Defect",
-    "section": "subsubsection",
-    "text": "subsubsection"
   }
 ]
