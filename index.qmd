@@ -15,6 +15,13 @@ Due to lack of time and (more significantly) my understanding, the lecture will 
 Recently there has been a surge of lecture notes/ review articles on generalized symmetries. 
 The ones I have noticed are
 
+* [@Schafer-Nameki:2023jdn]
+* [@Gomes:2023ahz]
+* [@Bhardwaj:2023kri]
+* [@Luo:2023ive]
+* [@Shao:2023gho]
+
+There are probably more.
 Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.
 
-Also, about conventional symmetries and their anomalies, there are nice old lectures. The ones I would recommend:
+Also, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is [@TachikawaTasi].

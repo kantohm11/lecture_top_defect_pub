@@ -11,7 +11,7 @@
     "href": "index.html#other-lecturesreviews",
     "title": "A Lecture on Topological Defect",
     "section": "1.1 Other Lectures/Reviews",
-    "text": "1.1 Other Lectures/Reviews\nRecently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are\nBecause this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.\nAlso, about conventional symmetries and their anomalies, there are nice old lectures. The ones I would recommend:"
+    "text": "1.1 Other Lectures/Reviews\nRecently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are\n\n(Schafer-Nameki 2023)\n(Gomes 2023)\n(Bhardwaj et al. 2023)\n(Luo, Wang, and Wang 2023)\n(Shao 2023)\n\nThere are probably more. Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.\nAlso, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is (Yuji 2019).\n\n\n\n\nBhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam Gladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023. “Lectures on Generalized Symmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to higher-form symmetries.” SciPost Phys. Lect. Notes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and Applications.” In. https://arxiv.org/abs/2307.09215.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures on (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be Undone: TASI Lectures on Non-Invertible Symmetry,” August. https://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies and topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
   },
   {
     "objectID": "index.html#footnotes",
@@ -21,11 +21,11 @@
     "text": "In Japan, an “intensive lecture” is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.↩︎"
   },
   {
-    "objectID": "intro.html#section",
-    "href": "intro.html#section",
+    "objectID": "intro.html#symmetry",
+    "href": "intro.html#symmetry",
     "title": "2  Introduction",
-    "section": "2.1 section",
-    "text": "2.1 section\n\n2.1.1 subsubsection\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "section": "2.1 Symmetry",
+    "text": "2.1 Symmetry\nSymmetry plays a fundamental role in theoretical physics. In this lecture we consider them in quantum theory. The importance of symmetry in the quantum world is established by\n\n\n\n\n\n\ntest\n\n\n\ntest\n\n\n\n\n\n\n\n\ntest\n\n\n\ntest"
   },
   {
     "objectID": "summary.html",
@@ -39,6 +39,6 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Bhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam\nGladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023.\n“Lectures on Generalized\nSymmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to\nhigher-form symmetries.” SciPost Phys. Lect.\nNotes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and\nApplications.” In. https://arxiv.org/abs/2307.09215.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures\non (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be\nUndone: TASI Lectures on Non-Invertible Symmetry,” August.\nhttps://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies\nand topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
   }
 ]

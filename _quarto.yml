@@ -27,6 +27,16 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreport
+    cite-method: biblatex
+    biblatexoptions: 
+      - "style=phys"
+      - "eprint=true"
+      - "url=true"
+      - "backref=true"
+      - "biblabel=brackets"
+      - "citestyle = numeric-comp"
+      - "sorting = none"
 
+callout-icon: false
 
 
