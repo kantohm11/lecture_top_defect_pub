@@ -1,31 +1,24 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A Lecture on Topological Defect",
-    "section": "",
-    "text": "1 What is this\nThis is a lecture note prepared for two sets of “intensive lectures”:1\nIn this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences."
-  },
-  {
-    "objectID": "index.html#other-lecturesreviews",
-    "href": "index.html#other-lecturesreviews",
-    "title": "A Lecture on Topological Defect",
-    "section": "1.1 Other Lectures/Reviews",
-    "text": "1.1 Other Lectures/Reviews\nRecently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are\n\n(Schafer-Nameki 2023)\n(Gomes 2023)\n(Bhardwaj et al. 2023)\n(Luo, Wang, and Wang 2023)\n(Shao 2023)\n\nThere are probably more. Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.\nAlso, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is (Yuji 2019).\n\n\n\n\nBhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam Gladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023. “Lectures on Generalized Symmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to higher-form symmetries.” SciPost Phys. Lect. Notes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and Applications.” In. https://arxiv.org/abs/2307.09215.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures on (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be Undone: TASI Lectures on Non-Invertible Symmetry,” August. https://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies and topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "A Lecture on Topological Defect",
-    "section": "",
-    "text": "In Japan, an “intensive lecture” is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.↩︎"
-  },
-  {
     "objectID": "intro.html#symmetry",
     "href": "intro.html#symmetry",
     "title": "2  Introduction",
     "section": "2.1 Symmetry",
-    "text": "2.1 Symmetry\nSymmetry plays a fundamental role in theoretical physics. In this lecture we consider them in quantum theory. The importance of symmetry in the quantum world is established by\n\n\n\n\n\n\ntest\n\n\n\ntest\n\n\n\n\n\n\n\n\ntest\n\n\n\ntest"
+    "text": "2.1 Symmetry\nSymmetry plays a fundamental role in theoretical physics. In this lecture we consider them in quantum field theories (QFTs). The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow. More precisely, when an ultraviolet (UV) theory \\(\\mathcal{T}_\\text{UV}\\) flows into an infrared theory \\(\\mathcal{T}_\\text{IR}\\), there is a canonical homomorphism \\(f_\\text{RG}\\) from the UV symmetry group \\(G_\\text{UV}\\) to the IR symmetry group \\(G_\\text{IR}\\):1\n\n\n\n\n\n\n\\[\nf_\\text{RG} : G_\\text{UV} \\to G_\\text{IR}.\n\\tag{2.1}\\]\n\n\n\nGiven this relation, there are two ways of applying symmetry in QFT:\n\nUV to IR: Given a microscopic model (e.g. a model of elementary particles or electrons in a matter), constrain/guess what happens in the macroscopic scale.\nIR to UV: Given some macroscopic phenomena, constrain/guess what could be the microscopic origin of it (e.g. guessing QCD lagrangian from hadron spectrum).\n\n\n\n\n\n\n\nWarning\n\n\n\nIn this lecture, whenever something is called “symmetry”, it means a global symmetry. Here global means that the symmetry operation acts on the entire space."
+  },
+  {
+    "objectID": "intro.html#locality",
+    "href": "intro.html#locality",
+    "title": "2  Introduction",
+    "section": "2.2 Locality",
+    "text": "2.2 Locality\nThe second important keyword in this lecture is locality."
+  },
+  {
+    "objectID": "intro.html#footnotes",
+    "href": "intro.html#footnotes",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "If the RG flow is from a finite energy to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of \\(\\mathcal{T}_\\text{IR}\\), \\(f_\\text{RG}\\) is an isomorphism. However, typically one integrates out massive dofs in the description of \\(\\mathcal{T}_\\text{RG}\\), in which case some symmetry can decouple and thus \\(f_\\text{RG}\\) can be non-surjective (if \\(G_\\text{IR}\\) is taken to be the faithful symmetry). Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an emergent symmetry, in which case \\(f_\\text{RG}\\) can be non-injective.↩︎"
   },
   {
     "objectID": "summary.html",
@@ -33,12 +26,5 @@
     "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Bhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam\nGladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023.\n“Lectures on Generalized\nSymmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to\nhigher-form symmetries.” SciPost Phys. Lect.\nNotes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and\nApplications.” In. https://arxiv.org/abs/2307.09215.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures\non (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be\nUndone: TASI Lectures on Non-Invertible Symmetry,” August.\nhttps://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies\nand topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
   }
 ]

@@ -3,25 +3,23 @@
 This is a lecture note prepared for two sets of "intensive lectures":[^1]
 
 * at Tohoku University, Oct. 11-13, 2023, and
-* at Yukawa Insititute, Nov. 29-1, 2023.
+* at Yukawa Insititute for Theoretical Physics, Kyoto University, Nov. 29-1, 2023.
 
 In this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries.
 Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences.
 
 [^1]: In Japan, an "intensive lecture" is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.
 
+## Prerequisite
+* Basic knowledge about scalar field theory and (abelian) gauge theory in path-integral formalism, and
+* Knowledge about renoarmalization group (RG) flows to understand motivations.
+
+## What is contained and what is not
+
 ## Other Lectures/Reviews
 
 Recently there has been a surge of lecture notes/ review articles on generalized symmetries. 
-The ones I have noticed are
-
-* [@Schafer-Nameki:2023jdn]
-* [@Gomes:2023ahz]
-* [@Bhardwaj:2023kri]
-* [@Luo:2023ive]
-* [@Shao:2023gho]
-
-There are probably more.
+The ones I have noticed are [@McGreevy:2022oyu;@Schafer-Nameki:2023jdn;@Gomes:2023ahz;@Bhardwaj:2023kri;@Luo:2023ive;@Shao:2023gho].
 Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.
 
 Also, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is [@TachikawaTasi].

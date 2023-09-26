@@ -37,6 +37,6 @@ format:
       - "citestyle = numeric-comp"
       - "sorting = none"
 
-callout-icon: false
+callout-icon: true
 
 
