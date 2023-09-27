@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Lecture on Topological Defect",
+    "section": "",
+    "text": "1 What is this\nThis is a lecture note prepared for two sets of “intensive lectures”:1\nIn this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences."
+  },
+  {
+    "objectID": "index.html#prerequisite",
+    "href": "index.html#prerequisite",
+    "title": "A Lecture on Topological Defect",
+    "section": "1.1 Prerequisite",
+    "text": "1.1 Prerequisite\n\nBasic knowledge about scalar field theory and (abelian) gauge theory in path-integral formalism, and\nKnowledge about renoarmalization group (RG) flows to understand motivations."
+  },
+  {
+    "objectID": "index.html#what-is-contained-and-what-is-not",
+    "href": "index.html#what-is-contained-and-what-is-not",
+    "title": "A Lecture on Topological Defect",
+    "section": "1.2 What is contained and what is not",
+    "text": "1.2 What is contained and what is not"
+  },
+  {
+    "objectID": "index.html#other-lecturesreviews",
+    "href": "index.html#other-lecturesreviews",
+    "title": "A Lecture on Topological Defect",
+    "section": "1.3 Other Lectures/Reviews",
+    "text": "1.3 Other Lectures/Reviews\nRecently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are (McGreevy 2022; Schafer-Nameki 2023; Gomes 2023; Bhardwaj et al. 2023; Luo, Wang, and Wang 2023; Shao 2023). Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.\nAlso, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is (Yuji 2019).\n\n\n\n\nBhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam Gladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023. “Lectures on Generalized Symmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to higher-form symmetries.” SciPost Phys. Lect. Notes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and Applications.” In. https://arxiv.org/abs/2307.09215.\n\n\nMcGreevy, John. 2022. “Generalized Symmetries in Condensed Matter,” April. https://doi.org/10.1146/annurev-conmatphys-040721-021029.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures on (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be Undone: TASI Lectures on Non-Invertible Symmetry,” August. https://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies and topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "A Lecture on Topological Defect",
+    "section": "",
+    "text": "In Japan, an “intensive lecture” is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.↩︎"
+  },
+  {
     "objectID": "intro.html#symmetry",
     "href": "intro.html#symmetry",
     "title": "2  Introduction",
@@ -26,5 +61,12 @@
     "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bhardwaj, Lakshya, Lea E. Bottini, Ludovic Fraser-Taliente, Liam\nGladden, Dewi S. W. Gould, Arthur Platschorre, and Hannah Tillim. 2023.\n“Lectures on Generalized\nSymmetries,” July. https://arxiv.org/abs/2307.07547.\n\n\nGomes, Pedro R. S. 2023. “An introduction to\nhigher-form symmetries.” SciPost Phys. Lect.\nNotes 74: 1. https://doi.org/10.21468/SciPostPhysLectNotes.74.\n\n\nLuo, Ran, Qing-Rui Wang, and Yi-Nan Wang. 2023. “Lecture Notes on Generalized Symmetries and\nApplications.” In. https://arxiv.org/abs/2307.09215.\n\n\nMcGreevy, John. 2022. “Generalized Symmetries\nin Condensed Matter,” April. https://doi.org/10.1146/annurev-conmatphys-040721-021029.\n\n\nSchafer-Nameki, Sakura. 2023. “ICTP Lectures\non (Non-)Invertible Generalized Symmetries,” May. https://arxiv.org/abs/2305.18296.\n\n\nShao, Shu-Heng. 2023. “What’s Done Cannot Be\nUndone: TASI Lectures on Non-Invertible Symmetry,” August.\nhttps://arxiv.org/abs/2308.00747.\n\n\nYuji, Tachikawa. 2019. “Lecture on anomalies\nand topological phases.” https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/."
   }
 ]
