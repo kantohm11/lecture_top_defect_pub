@@ -162,16 +162,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="symmetry" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="symmetry"><span class="header-section-number">2.1</span> Symmetry</h2>
 <p><strong>Symmetry</strong> plays a fundamental role in theoretical physics. In this lecture we consider them in <em>quantum field theories</em> (QFTs). The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow. More precisely, when an ultraviolet (UV) theory <span class="math inline">\(\mathcal{T}_\text{UV}\)</span> flows into an infrared theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, there is a canonical homomorphism <span class="math inline">\(f_\text{RG}\)</span> from the UV symmetry group <span class="math inline">\(G_\text{UV}\)</span> to the IR symmetry group <span class="math inline">\(G_\text{IR}\)</span>:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+RG flow homomorphism from UV symmetry to IR symmetry
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span id="eq-RG-group-match"><span class="math display">\[
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 \tag{2.1}\]</span></span></p>
-</div>
 </div>
 </div>
 <p>Given this relation, there are two ways of applying symmetry in QFT:</p>
@@ -195,14 +198,18 @@ Warning
 </section>
 <section id="locality" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="locality"><span class="header-section-number">2.2</span> Locality</h2>
-<p>The second important keyword in this lecture is <strong>locality</strong>.</p>
+<p>The second important keyword in this lecture is <strong>locality</strong>. By the word quantum field theory, in most cases we implicitly mean <em>local</em> quantum field theory. This can roughly be explain that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.</p>
+<p>Locality of QFT has a concequence with respect to symmetry: that is, in most situations we only consider symmetries that <em>preserves locality</em>. In terms of fields, this means that the symmetry transformation is local:</p>
+<p><span class="math display">\[
+\phi(x) \mapsto F(\phi(x'))
+\]</span></p>
 
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>If the RG flow is from a finite energy to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive dofs in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective (if <span class="math inline">\(G_\text{IR}\)</span> is taken to be the <em>faithful</em> symmetry). Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If the UV theory is a fixed point, <span class="math inline">\(G_\text{UV}\)</span> should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, the map <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive dofs in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

@@ -6,7 +6,8 @@ In this lecture we consider them in *quantum field theories* (QFTs).
 The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow.
 More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ flows into an infrared theory $\mathcal{T}_\text{IR}$, there is a canonical homomorphism $f_\text{RG}$ from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
 
-::: {.callout-note appearance="minimal"}
+::: {.callout-note icon="false"}
+## RG flow homomorphism from UV symmetry to IR symmetry
 $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
@@ -18,8 +19,8 @@ Given this relation, there are two ways of applying symmetry in QFT:
 * UV to IR: Given a microscopic model (e.g. a model of elementary particles or electrons in a matter), constrain/guess what happens in the macroscopic scale.
 * IR to UV: Given some macroscopic phenomena, constrain/guess what could be the microscopic origin of it (e.g. guessing QCD lagrangian from hadron spectrum).
 
-[^SymRG]: If the RG flow is from a finite energy to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of $\mathcal{T}_\text{IR}$, $f_\text{RG}$ is an isomorphism.
-However, typically one integrates out massive dofs in the description of $\mathcal{T}_\text{RG}$, in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective (if $G_\text{IR}$ is taken to be the *faithful* symmetry). Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
+[^SymRG]: If the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of $\mathcal{T}_\text{IR}$, the map $f_\text{RG}$ is an isomorphism.
+However, typically one integrates out massive dofs in the description of $\mathcal{T}_\text{RG}$, in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 
 ::: {.callout-warning}
 In this lecture, whenever something is called "symmetry", it means a *global* symmetry.
@@ -28,3 +29,12 @@ Here *global* means that the symmetry operation acts on the entire space.
 
 ## Locality
 The second important keyword in this lecture is **locality**.
+By the word quantum field theory, in most cases we implicitly mean *local* quantum field theory.
+This can roughly be explain that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.
+
+Locality of QFT has a concequence with respect to symmetry: that is, in most situations we only consider symmetries that *preserves locality*. 
+In terms of fields, this means that the symmetry transformation is local:
+
+$$
+\phi(x) \mapsto F(\phi(x'))
+$$
