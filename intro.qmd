@@ -24,7 +24,7 @@ However, typically one integrates out massive dofs in the description of $\mathc
 
 ::: {.callout-warning}
 In this lecture, whenever something is called "symmetry", it means a *global* symmetry.
-Here *global* means that the symmetry operation acts on the entire space.
+Here *global* means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.
 :::
 
 ## Locality
@@ -36,5 +36,24 @@ Locality of QFT has a concequence with respect to symmetry: that is, in most sit
 In terms of fields, this means that the symmetry transformation is local:
 
 $$
-\phi(x) \mapsto F(\phi(x'))
-$$
+\phi(x) \mapsto F(\phi(x)),
+$${#eq-field-transform}
+where $F(\phi(x))$ is a function depends on the *local* value a field (or a collection of fields and its derivatives) at the point $x$.
+If the symmetry involves a spacetime transformation, the point $x$ in the right hand side should be replaced by the image of $x$ under the symmetry.
+This preservation of locality of a symmetry is the reason for the symmetry relation in @eq-RG-group-match.
+This will be made clear in the lecture.
+
+However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform. 
+There are types of symmetry called "topological symmetry", which arises from topologically-nontrivial field configuration.
+Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
+In many occurences a topological symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
+
+From the modern perspective, the universal charactarization of locality-preserving symmetry is its correspondence to **topological operators**.
+
+::: {.callout-warning}
+Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality preserving.
+:::
+
+::: {.callout-warning}
+Here is another unfortunate conflict of terminology. In the literature (outside of generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. In this lecture (and widely in the generalized symmetry literature) "topological defect operator" means an extended operator that is itself topological.
+:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A Lecture on Topological Defect - 2&nbsp; Introduction</title>
+<title>A Lecture on Topological Operators - 2&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">A Lecture on Topological Defect</a> 
+      <a href="./">A Lecture on Topological Operators</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -192,7 +192,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In this lecture, whenever something is called “symmetry”, it means a <em>global</em> symmetry. Here <em>global</em> means that the symmetry operation acts on the entire space.</p>
+<p>In this lecture, whenever something is called “symmetry”, it means a <em>global</em> symmetry. Here <em>global</em> means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.</p>
 </div>
 </div>
 </section>
@@ -200,9 +200,36 @@ Warning
 <h2 data-number="2.2" class="anchored" data-anchor-id="locality"><span class="header-section-number">2.2</span> Locality</h2>
 <p>The second important keyword in this lecture is <strong>locality</strong>. By the word quantum field theory, in most cases we implicitly mean <em>local</em> quantum field theory. This can roughly be explain that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.</p>
 <p>Locality of QFT has a concequence with respect to symmetry: that is, in most situations we only consider symmetries that <em>preserves locality</em>. In terms of fields, this means that the symmetry transformation is local:</p>
-<p><span class="math display">\[
-\phi(x) \mapsto F(\phi(x'))
-\]</span></p>
+<p><span id="eq-field-transform"><span class="math display">\[
+\phi(x) \mapsto F(\phi(x)),
+\tag{2.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>2.1</span></a>. This will be made clear in the lecture.</p>
+<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>2.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>2.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Again, we are <em>not</em> talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality preserving.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here is another unfortunate conflict of terminology. In the literature (outside of generalized symmetry literature), a “topological defect” refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg<strong>ed</strong> under a topological (higher) symmetry. In this lecture (and widely in the generalized symmetry literature) “topological defect operator” means an extended operator that is itself topological.</p>
+</div>
+</div>
 
 
 </section>
