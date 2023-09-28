@@ -6,8 +6,8 @@ In this lecture we consider them in *quantum field theories* (QFTs).
 The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow.
 More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ flows into an infrared theory $\mathcal{T}_\text{IR}$, there is a canonical homomorphism $f_\text{RG}$ from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
 
-::: {.callout-note icon="false"}
-## RG flow homomorphism from UV symmetry to IR symmetry
+::: {.callout-important icon="true"}
+### RG flow homomorphism from UV symmetry to IR symmetry
 $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
@@ -22,8 +22,9 @@ Given this relation, there are two ways of applying symmetry in QFT:
 [^SymRG]: If the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of $\mathcal{T}_\text{IR}$, the map $f_\text{RG}$ is an isomorphism.
 However, typically one integrates out massive dofs in the description of $\mathcal{T}_\text{RG}$, in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 
-::: {.callout-warning}
-In this lecture, whenever something is called "symmetry", it means a *global* symmetry.
+::: {.callout-note}
+### Terminology
+In this lecture, "symmetry" means a *global* symmetry.
 Here *global* means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.
 :::
 
@@ -48,12 +49,38 @@ There are types of symmetry called "topological symmetry", which arises from top
 Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
 In many occurences a topological symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
 
-From the modern perspective, the universal charactarization of locality-preserving symmetry is its correspondence to **topological operators**.
+From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to **topological operators**. 
+A topological operator $\mathcal{D}[M_n]$ in a QFT is an extended operator defined on a $n$-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold $M_n$ (See @fig-TopOpsDeform).
 
-::: {.callout-warning}
+![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
+
+The first aim of the lecture is to understand the correspondence, that is
+
+::: {.callout-important}
+### Symmetry/Topological Operator Correspondence
+$$\begin{split}
+&\text{(Conventional) locality-preserving symmetry} \\ 
+\Longleftrightarrow\;
+&\text{invertible topological operator of codimension 1.}
+\end{split}
+$${#eq-conv-STO-corresp}
+:::
+
+We will explicitly study this correspondence in the case of scalar field theory in @sec-scalar and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
+
+::: {.callout-note}
+### Terminology
 Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality preserving.
 :::
 
-::: {.callout-warning}
-Here is another unfortunate conflict of terminology. In the literature (outside of generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. In this lecture (and widely in the generalized symmetry literature) "topological defect operator" means an extended operator that is itself topological.
+::: {.callout-note}
+### Terminology
+Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* guaranteed to be topological (in the sense explained in this lecture). On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
 :::
+
+## Generalized Symmetry
+
+The correspondence @eq-conv-STO-corresp is the core in the notion of **generalized (global) symmetry**, 
+coined by [@Gaiotto:2014kfa] [^GKSW].
+
+[^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially knwon from [@KalbRamond].

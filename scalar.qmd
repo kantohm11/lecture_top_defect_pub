@@ -1,0 +1,4 @@
+# Topological Operators in Scalar Field Theory {#sec-scalar}
+## Scalar Transformations
+## Widing Symmetry in 1+1d Compact Boson
+## T-duality 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A Lecture on Topological Operators - 2&nbsp; Introduction</title>
+<title>A Lecture on Topological Operators - 1&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./scalar.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -91,6 +110,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">A Lecture on Topological Operators</a> 
+        <div class="sidebar-tools-main">
+    <a href="./A-Lecture-on-Topological-Operators.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -103,19 +125,31 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is this</span></span></a>
+ <span class="menu-text">What is this</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scalar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Vector</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -134,8 +168,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#symmetry" id="toc-symmetry" class="nav-link active" data-scroll-target="#symmetry"><span class="header-section-number">2.1</span> Symmetry</a></li>
-  <li><a href="#locality" id="toc-locality" class="nav-link" data-scroll-target="#locality"><span class="header-section-number">2.2</span> Locality</a></li>
+  <li><a href="#symmetry" id="toc-symmetry" class="nav-link active" data-scroll-target="#symmetry"><span class="header-section-number">1.1</span> Symmetry</a></li>
+  <li><a href="#locality" id="toc-locality" class="nav-link" data-scroll-target="#locality"><span class="header-section-number">1.2</span> Locality</a></li>
+  <li><a href="#generalized-symmetry" id="toc-generalized-symmetry" class="nav-link" data-scroll-target="#generalized-symmetry"><span class="header-section-number">1.3</span> Generalized Symmetry</a></li>
   </ul>
 </nav>
     </div>
@@ -144,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -159,13 +194,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="symmetry" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="symmetry"><span class="header-section-number">2.1</span> Symmetry</h2>
+<section id="symmetry" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="symmetry"><span class="header-section-number">1.1</span> Symmetry</h2>
 <p><strong>Symmetry</strong> plays a fundamental role in theoretical physics. In this lecture we consider them in <em>quantum field theories</em> (QFTs). The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow. More precisely, when an ultraviolet (UV) theory <span class="math inline">\(\mathcal{T}_\text{UV}\)</span> flows into an infrared theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, there is a canonical homomorphism <span class="math inline">\(f_\text{RG}\)</span> from the UV symmetry group <span class="math inline">\(G_\text{UV}\)</span> to the IR symmetry group <span class="math inline">\(G_\text{IR}\)</span>:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 RG flow homomorphism from UV symmetry to IR symmetry
@@ -174,7 +209,7 @@ RG flow homomorphism from UV symmetry to IR symmetry
 <div class="callout-body-container callout-body">
 <p><span id="eq-RG-group-match"><span class="math display">\[
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
-\tag{2.1}\]</span></span></p>
+\tag{1.1}\]</span></span></p>
 </div>
 </div>
 <p>Given this relation, there are two ways of applying symmetry in QFT:</p>
@@ -182,61 +217,107 @@ f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 <li>UV to IR: Given a microscopic model (e.g.&nbsp;a model of elementary particles or electrons in a matter), constrain/guess what happens in the macroscopic scale.</li>
 <li>IR to UV: Given some macroscopic phenomena, constrain/guess what could be the microscopic origin of it (e.g.&nbsp;guessing QCD lagrangian from hadron spectrum).</li>
 </ul>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Terminology
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In this lecture, whenever something is called “symmetry”, it means a <em>global</em> symmetry. Here <em>global</em> means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.</p>
+<p>In this lecture, “symmetry” means a <em>global</em> symmetry. Here <em>global</em> means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.</p>
 </div>
 </div>
 </section>
-<section id="locality" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="locality"><span class="header-section-number">2.2</span> Locality</h2>
+<section id="locality" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="locality"><span class="header-section-number">1.2</span> Locality</h2>
 <p>The second important keyword in this lecture is <strong>locality</strong>. By the word quantum field theory, in most cases we implicitly mean <em>local</em> quantum field theory. This can roughly be explain that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.</p>
 <p>Locality of QFT has a concequence with respect to symmetry: that is, in most situations we only consider symmetries that <em>preserves locality</em>. In terms of fields, this means that the symmetry transformation is local:</p>
 <p><span id="eq-field-transform"><span class="math display">\[
 \phi(x) \mapsto F(\phi(x)),
-\tag{2.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>2.1</span></a>. This will be made clear in the lecture.</p>
-<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>2.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>2.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+\tag{1.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>1.1</span></a>. This will be made clear in the lecture.</p>
+<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
+<p>From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to <strong>topological operators</strong>. A topological operator <span class="math inline">\(\mathcal{D}[M_n]\)</span> in a QFT is an extended operator defined on a <span class="math inline">\(n\)</span>-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold <span class="math inline">\(M_n\)</span> (See <a href="#fig-TopOpsDeform">Figure&nbsp;<span>1.1</span></a>).</p>
+<div id="fig-TopOpsDeform" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/TopOpsDeform.png" class="img-fluid figure-img" width="400"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.1: Topological operator.</figcaption>
+</figure>
+</div>
+<p>The first aim of the lecture is to understand the correspondence, that is</p>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Symmetry/Topological Operator Correspondence
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span id="eq-conv-STO-corresp"><span class="math display">\[\begin{split}
+&amp;\text{(Conventional) locality-preserving symmetry} \\
+\Longleftrightarrow\;
+&amp;\text{invertible topological operator of codimension 1.}
+\end{split}
+\tag{1.3}\]</span></span></p>
+</div>
+</div>
+<p>We will explicitly study this correspondence in the case of scalar field theory in <a href="scalar.html"><span>Chapter&nbsp;2</span></a> and in the case of abelian gauge theory in <a href="vector.html"><span>Chapter&nbsp;3</span></a>. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Terminology
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Again, we are <em>not</em> talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality preserving.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Terminology
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Here is another unfortunate conflict of terminology. In the literature (outside of generalized symmetry literature), a “topological defect” refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg<strong>ed</strong> under a topological (higher) symmetry. In this lecture (and widely in the generalized symmetry literature) “topological defect operator” means an extended operator that is itself topological.</p>
+<p>Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a “topological defect” refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg<strong>ed</strong> under a topological (higher) symmetry. As an operator in the IR theory, it is <em>not</em> guaranteed to be topological (in the sense explained in this lecture). On the other hand, in the generalized symmetry literature, “topological defect (operator)” often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term “topological operator”.</p>
 </div>
 </div>
+</section>
+<section id="generalized-symmetry" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="generalized-symmetry"><span class="header-section-number">1.3</span> Generalized Symmetry</h2>
+<p>The correspondence <a href="#eq-conv-STO-corresp">Equation&nbsp;<span>1.3</span></a> is the core in the notion of <strong>generalized (global) symmetry</strong>, coined by <span class="citation" data-cites="Gaiotto:2014kfa">(<a href="references.html#ref-Gaiotto:2014kfa" role="doc-biblioref">Gaiotto et al. 2015</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Barkeshli:2014cna" class="csl-entry" role="listitem">
+Barkeshli, M., Bonderson, P., Cheng, M., and Wang, Z. (2019), <span>“<span class="nocase">Symmetry Fractionalization, Defects, and Gauging of Topological Phases</span>,”</span> <em>Phys. Rev. B</em>, 100, 115147. <a href="https://doi.org/10.1103/PhysRevB.100.115147">https://doi.org/10.1103/PhysRevB.100.115147</a>.
+</div>
+<div id="ref-Gaiotto:2014kfa" class="csl-entry" role="listitem">
+Gaiotto, D., Kapustin, A., Seiberg, N., and Willett, B. (2015), <span>“<span>Generalized Global Symmetries</span>,”</span> <em>JHEP</em>, 02, 172. <a href="https://doi.org/10.1007/JHEP02(2015)172">https://doi.org/10.1007/JHEP02(2015)172</a>.
+</div>
+<div id="ref-KalbRamond" class="csl-entry" role="listitem">
+Kalb, M., and Ramond, P. (1974), <span>“Classical direct interstring action,”</span> <em>Phys. Rev. D</em>, American Physical Society, 9, 2273–2284. <a href="https://doi.org/10.1103/PhysRevD.9.2273">https://doi.org/10.1103/PhysRevD.9.2273</a>.
+</div>
+<div id="ref-Kapustin:2013uxa" class="csl-entry" role="listitem">
+Kapustin, A., and Thorngren, R. (2013), <span>“<a href="https://arxiv.org/abs/1309.4721"><span class="nocase">Higher symmetry and gapped phases of gauge theories</span></a>.”</span>
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>If the UV theory is a fixed point, <span class="math inline">\(G_\text{UV}\)</span> should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, the map <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive dofs in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The global higher-form symmetry itself had appeared and investigated in the literature, e.g.&nbsp;<span class="citation" data-cites="Kapustin:2013uxa Barkeshli:2014cna">(<a href="references.html#ref-Barkeshli:2014cna" role="doc-biblioref">Barkeshli et al. 2019</a>; <a href="references.html#ref-Kapustin:2013uxa" role="doc-biblioref">Kapustin and Thorngren 2013</a>)</span>, and its gauged version was essentially knwon from <span class="citation" data-cites="KalbRamond">(<a href="references.html#ref-KalbRamond" role="doc-biblioref">Kalb and Ramond 1974</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -477,12 +558,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is this</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is this</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./scalar.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

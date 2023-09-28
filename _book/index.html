@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is this</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">What is this</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,6 +109,9 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">A Lecture on Topological Operators</a> 
+        <div class="sidebar-tools-main">
+    <a href="./A-Lecture-on-Topological-Operators.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -121,19 +124,31 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is this</span></span></a>
+ <span class="menu-text">What is this</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scalar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Vector</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,11 +167,11 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-this" id="toc-what-is-this" class="nav-link active" data-scroll-target="#what-is-this"><span class="header-section-number">1</span> What is this</a>
+  <li><a href="#what-is-this" id="toc-what-is-this" class="nav-link active" data-scroll-target="#what-is-this">What is this</a>
   <ul class="collapse">
-  <li><a href="#prerequisite" id="toc-prerequisite" class="nav-link" data-scroll-target="#prerequisite"><span class="header-section-number">1.1</span> Prerequisite</a></li>
-  <li><a href="#what-is-contained-and-what-is-not" id="toc-what-is-contained-and-what-is-not" class="nav-link" data-scroll-target="#what-is-contained-and-what-is-not"><span class="header-section-number">1.2</span> What is contained and what is not</a></li>
-  <li><a href="#other-lecturesreviews" id="toc-other-lecturesreviews" class="nav-link" data-scroll-target="#other-lecturesreviews"><span class="header-section-number">1.3</span> Other Lectures/Reviews</a></li>
+  <li><a href="#prerequisite" id="toc-prerequisite" class="nav-link" data-scroll-target="#prerequisite">Prerequisite</a></li>
+  <li><a href="#what-is-contained-and-what-is-not" id="toc-what-is-contained-and-what-is-not" class="nav-link" data-scroll-target="#what-is-contained-and-what-is-not">What is contained and what is not</a></li>
+  <li><a href="#other-lecturesreviews" id="toc-other-lecturesreviews" class="nav-link" data-scroll-target="#other-lecturesreviews">Other Lectures/Reviews</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -200,26 +215,26 @@ div.csl-indent {
 
 </header>
 
-<section id="what-is-this" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> What is this</h1>
+<section id="what-is-this" class="level1 unnumbered">
+<h1 class="unnumbered">What is this</h1>
 <p>This is a lecture note prepared for two sets of “intensive lectures”:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <ul>
 <li>at Tohoku University, Oct.&nbsp;11-13, 2023, and</li>
 <li>at Yukawa Insititute for Theoretical Physics, Kyoto University, Nov.&nbsp;29-1, 2023.</li>
 </ul>
 <p>In this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences.</p>
-<section id="prerequisite" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="prerequisite"><span class="header-section-number">1.1</span> Prerequisite</h2>
+<section id="prerequisite" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisite">Prerequisite</h2>
 <ul>
 <li>Basic knowledge about scalar field theory and (abelian) gauge theory in path-integral formalism, and</li>
 <li>Knowledge about renoarmalization group (RG) flows to understand motivations.</li>
 </ul>
 </section>
-<section id="what-is-contained-and-what-is-not" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-contained-and-what-is-not"><span class="header-section-number">1.2</span> What is contained and what is not</h2>
+<section id="what-is-contained-and-what-is-not" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-contained-and-what-is-not">What is contained and what is not</h2>
 </section>
-<section id="other-lecturesreviews" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="other-lecturesreviews"><span class="header-section-number">1.3</span> Other Lectures/Reviews</h2>
+<section id="other-lecturesreviews" class="level2">
+<h2 class="anchored" data-anchor-id="other-lecturesreviews">Other Lectures/Reviews</h2>
 <p>Recently there has been a surge of lecture notes/ review articles on generalized symmetries. The ones I have noticed are <span class="citation" data-cites="McGreevy:2022oyu Schafer-Nameki:2023jdn Gomes:2023ahz Bhardwaj:2023kri Luo:2023ive Shao:2023gho">(<a href="references.html#ref-Bhardwaj:2023kri" role="doc-biblioref">Bhardwaj et al. 2023</a>; <a href="references.html#ref-Gomes:2023ahz" role="doc-biblioref">Gomes 2023</a>; <a href="references.html#ref-Luo:2023ive" role="doc-biblioref">Luo et al. 2023</a>; <a href="references.html#ref-McGreevy:2022oyu" role="doc-biblioref">McGreevy 2022</a>; <a href="references.html#ref-Schafer-Nameki:2023jdn" role="doc-biblioref">Schafer-Nameki 2023</a>; <a href="references.html#ref-Shao:2023gho" role="doc-biblioref">Shao 2023</a>)</span>. Because this lecture will focus on the fundamental aspects of the topic and will not connect very well with the existent literature (so sorry about that), readers/audiences are strongly encouraged to refer to at least one of them, or something similar.</p>
 <p>Also, about conventional symmetries and their anomalies, there are nice old lectures. The one I would particularly recommend is <span class="citation" data-cites="TachikawaTasi">(<a href="references.html#ref-TachikawaTasi" role="doc-biblioref">Tachikawa 2019</a>)</span>.</p>
 
@@ -495,7 +510,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

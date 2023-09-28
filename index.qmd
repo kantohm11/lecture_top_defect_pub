@@ -1,4 +1,4 @@
-# What is this
+# What is this {.unnumbered}
 
 This is a lecture note prepared for two sets of "intensive lectures":[^1]
 
