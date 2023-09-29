@@ -54,17 +54,19 @@ A topological operator $\mathcal{D}[M_n]$ in a QFT is an extended operator defin
 
 ![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
 
-The first aim of the lecture is to understand the correspondence, that is
+The first aim of the lecture is to understand the correspondence, that is[^subsystem]
 
 ::: {.callout-important}
 ### Symmetry/Topological Operator Correspondence
 $$\begin{split}
 &\text{(Conventional) locality-preserving symmetry} \\ 
-\Longleftrightarrow\;
-&\text{invertible topological operator of codimension 1.}
+&\Longleftrightarrow\;
+\text{invertible topological operator of codimension 1.}
 \end{split}
 $${#eq-conv-STO-corresp}
 :::
+
+
 
 We will explicitly study this correspondence in the case of scalar field theory in @sec-scalar and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
 
@@ -75,12 +77,25 @@ Again, we are *not* talking about gauge redundancy, which is sometimes called lo
 
 ::: {.callout-note}
 ### Terminology
-Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* guaranteed to be topological (in the sense explained in this lecture). On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
+Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* a priori guaranteed to be topological in the sense of @fig-TopOpsDeform . On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
 :::
 
 ## Generalized Symmetry
 
-The correspondence @eq-conv-STO-corresp is the core in the notion of **generalized (global) symmetry**, 
+The correspondence in @eq-conv-STO-corresp is the core in the notion of **generalized (global) symmetry**, 
 coined by [@Gaiotto:2014kfa] [^GKSW].
+That is, the notion of symmetry can be generalized by relaxing the adjective in the right hand side of @eq-conv-STO-corresp. 
+Therefore, we *define* generalized symmetry by the following correspondence generalizing @eq-conv-STO-corresp:
+
+::: {.callout-important}
+### Generalized Symmetry/Topological Operator Correspondence
+$$\begin{split}
+&\text{Generalized symmetry (in a ``usual" QFT)} \\ 
+&\stackrel{\text{def}}{\Longleftrightarrow}\;
+\text{General topological operator.}
+\end{split}
+$${#eq-GSTO-corresp}
+:::
+It is customary and convenient 
 
 [^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially knwon from [@KalbRamond].
