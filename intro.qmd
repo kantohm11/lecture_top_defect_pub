@@ -54,7 +54,7 @@ A topological operator $\mathcal{D}[M_n]$ in a QFT is an extended operator defin
 
 ![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
 
-The first aim of the lecture is to understand the correspondence, that is[^subsystem]
+The first aim of the lecture is to understand the correspondence, that is
 
 ::: {.callout-important}
 ### Symmetry/Topological Operator Correspondence
