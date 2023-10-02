@@ -47,7 +47,7 @@ This will be made clear in the lecture.
 However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform. 
 There are types of symmetry called "topological symmetry", which arises from topologically-nontrivial field configuration.
 Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
-In many occurences a topological symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
+In many occurrences a topological symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
 
 From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to **topological operators**. 
 A topological operator $\mathcal{D}[M_n]$ in a QFT is an extended operator defined on a $n$-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold $M_n$ (See @fig-TopOpsDeform).
@@ -96,6 +96,18 @@ $$\begin{split}
 \end{split}
 $${#eq-GSTO-corresp}
 :::
-It is customary and convenient 
+More specifically, a generalized symmetry  corresponding to a operator of codimension $p+1$ is called **$p$-form symmetry**, and a generalized symmetry corresponding to a operator without its inverse is called **non-invertible symmetry** (among other names like category symmetry and topological symmetry).
 
-[^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially knwon from [@KalbRamond].
+In an "unsual" QFT, we can even relax the topological-ness of the operator in the right hand side of @eq-GSTO-corresp, resulting in what is called **subsystem** symmetry. We will briefly make a comment on it.
+
+The sub-classes of generalized symmetry is summarized in the table below:
+
+|              | $p$-form | non-invertible | subsystem  |
+|--------------|----------|----------------|------------|
+| codimension  | $p+1$    |                |            |
+| Invertible?  |          | No             |            |
+| Topological? |          |                | Partically |
+
+The sub-classes are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.
+
+[^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially known from [@KalbRamond].

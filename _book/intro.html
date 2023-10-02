@@ -238,7 +238,7 @@ Terminology
 <p><span id="eq-field-transform"><span class="math display">\[
 \phi(x) \mapsto F(\phi(x)),
 \tag{1.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>1.1</span></a>. This will be made clear in the lecture.</p>
-<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
+<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurrences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
 <p>From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to <strong>topological operators</strong>. A topological operator <span class="math inline">\(\mathcal{D}[M_n]\)</span> in a QFT is an extended operator defined on a <span class="math inline">\(n\)</span>-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold <span class="math inline">\(M_n\)</span> (See <a href="#fig-TopOpsDeform">Figure&nbsp;<span>1.1</span></a>).</p>
 <div id="fig-TopOpsDeform" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -246,7 +246,7 @@ Terminology
 <figcaption class="figure-caption">Figure&nbsp;1.1: Topological operator.</figcaption>
 </figure>
 </div>
-<p>The first aim of the lecture is to understand the correspondence, that is[^subsystem]</p>
+<p>The first aim of the lecture is to understand the correspondence, that is</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -314,7 +314,40 @@ Generalized Symmetry/Topological Operator Correspondence
 \tag{1.4}\]</span></span></p>
 </div>
 </div>
-<p>It is customary and convenient</p>
+<p>More specifically, a generalized symmetry corresponding to a operator of codimension <span class="math inline">\(p+1\)</span> is called <strong><span class="math inline">\(p\)</span>-form symmetry</strong>, and a generalized symmetry corresponding to a operator without its inverse is called <strong>non-invertible symmetry</strong> (among other names like category symmetry and topological symmetry).</p>
+<p>In an “unsual” QFT, we can even relax the topological-ness of the operator in the right hand side of <a href="#eq-GSTO-corresp">Equation&nbsp;<span>1.4</span></a>, resulting in what is called <strong>subsystem</strong> symmetry. We will briefly make a comment on it.</p>
+<p>The sub-classes of generalized symmetry is summarized in the table below:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(p\)</span>-form</th>
+<th>non-invertible</th>
+<th>subsystem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>codimension</td>
+<td><span class="math inline">\(p+1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Invertible?</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Topological?</td>
+<td></td>
+<td></td>
+<td>Partically</td>
+</tr>
+</tbody>
+</table>
+<p>The sub-classes are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -336,7 +369,7 @@ Kapustin, A., and Thorngren, R. (2013), <span>“<a href="https://arxiv.org/abs/
 <hr>
 <ol>
 <li id="fn1"><p>If the UV theory is a fixed point, <span class="math inline">\(G_\text{UV}\)</span> should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, the map <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive dofs in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The global higher-form symmetry itself had appeared and investigated in the literature, e.g.&nbsp;<span class="citation" data-cites="Kapustin:2013uxa Barkeshli:2014cna">(<a href="references.html#ref-Barkeshli:2014cna" role="doc-biblioref">Barkeshli et al. 2019</a>; <a href="references.html#ref-Kapustin:2013uxa" role="doc-biblioref">Kapustin and Thorngren 2013</a>)</span>, and its gauged version was essentially knwon from <span class="citation" data-cites="KalbRamond">(<a href="references.html#ref-KalbRamond" role="doc-biblioref">Kalb and Ramond 1974</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The global higher-form symmetry itself had appeared and investigated in the literature, e.g.&nbsp;<span class="citation" data-cites="Kapustin:2013uxa Barkeshli:2014cna">(<a href="references.html#ref-Barkeshli:2014cna" role="doc-biblioref">Barkeshli et al. 2019</a>; <a href="references.html#ref-Kapustin:2013uxa" role="doc-biblioref">Kapustin and Thorngren 2013</a>)</span>, and its gauged version was essentially known from <span class="citation" data-cites="KalbRamond">(<a href="references.html#ref-KalbRamond" role="doc-biblioref">Kalb and Ramond 1974</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
