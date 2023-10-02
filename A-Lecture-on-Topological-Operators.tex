@@ -78,6 +78,10 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\DeclareMathOperator{\vol}{vol}
+\newcommand{\stdim}{D}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\imunit}{i}
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
@@ -170,11 +174,11 @@
 
 \title{A Lecture on Topological Operators}
 \author{Kantaro Ohmori}
-\date{2023-09-30}
+\date{2023-10-02}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -190,7 +194,7 @@
 
 \markboth{What is this}{What is this}
 
-This is a lecture note prepared for two sets of ``intensive
+\(\vol\) This is a lecture note prepared for two sets of ``intensive
 lectures'':\footnote{In Japan, an ``intensive lecture'' is a format of a
   lecture course where a lecturer (usually from another university)
   gives lectures in consecutive days filling 7-9 slots in usually 3
@@ -223,8 +227,10 @@ readers/audiences.
   Basic knowledge about scalar field theory and (abelian) gauge theory
   in path-integral formalism, and
 \item
-  Knowledge about renoarmalization group (RG) flows to understand
+  Knowledge about renormalization group (RG) flows to understand
   motivations.
+\item
+  Knowledge about differential form and Stokes's theorem in terms of it.
 \end{itemize}
 
 \hypertarget{what-is-contained-and-what-is-not}{%
@@ -280,7 +286,7 @@ symmetry group \(G_\text{IR}\):\footnote{If the UV theory is a fixed
   \emph{emergent} symmetry, in which case \(f_\text{RG}\) can be
   non-injective.}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{RG flow homomorphism from UV symmetry to IR symmetry}}, breakable, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{RG flow homomorphism from UV symmetry to IR symmetry}}, colframe=quarto-callout-important-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 \begin{equation}\protect\hypertarget{eq-RG-group-match}{}{
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
@@ -298,11 +304,11 @@ Given this relation, there are two ways of applying symmetry in QFT:
   the macroscopic scale.
 \item
   IR to UV: Given some macroscopic phenomena, constrain/guess what could
-  be the microscopic origin of it (e.g.~guessing QCD lagrangian from
+  be the microscopic origin of it (e.g.~guessing QCD Lagrangian from
   hadron spectrum).
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, breakable, opacityback=0, colframe=quarto-callout-note-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, colframe=quarto-callout-note-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 In this lecture, ``symmetry'' means a \emph{global} symmetry. Here
 \emph{global} means that the symmetry operation acts on the entire
@@ -316,11 +322,11 @@ spacetime out of consideration for simplicity.
 
 The second important keyword in this lecture is \textbf{locality}. By
 the word quantum field theory, in most cases we implicitly mean
-\emph{local} quantum field theory. This can roughly be explain that the
-action is written as the integration of Lagrangian density, which is a
-local functional of fields over the spacetime.
+\emph{local} quantum field theory. This can roughly be explained by that
+the action is written as the integration of Lagrangian density, which is
+a local functional of fields over the spacetime.
 
-Locality of QFT has a concequence with respect to symmetry: that is, in
+Locality of QFT has a consequence with respect to symmetry: that is, in
 most situations we only consider symmetries that \emph{preserves
 locality}. In terms of fields, this means that the symmetry
 transformation is local:
@@ -330,7 +336,7 @@ transformation is local:
 }\label{eq-field-transform}\end{equation} where \(F(\phi(x))\) is a
 function depends on the \emph{local} value a field (or a collection of
 fields and its derivatives) at the point \(x\). If the symmetry involves
-a spacetime transformation, the point \(x\) in the right hand side
+a spacetime transformation, the point \(x\) in the right-hand side
 should be replaced by the image of \(x\) under the symmetry. This
 preservation of locality of a symmetry is the reason for the symmetry
 relation in Equation~\ref{eq-RG-group-match}. This will be made clear in
@@ -367,7 +373,7 @@ supporting manifold \(M_n\) (See Figure~\ref{fig-TopOpsDeform}).
 The first aim of the lecture is to understand the correspondence, that
 is
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry/Topological Operator Correspondence}}, breakable, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry/Topological Operator Correspondence}}, colframe=quarto-callout-important-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 \begin{equation}\protect\hypertarget{eq-conv-STO-corresp}{}{\begin{split}
 &\text{(Conventional) locality-preserving symmetry} \\ 
@@ -378,13 +384,15 @@ is
 
 \end{tcolorbox}
 
-We will explicitly study this correspondence in the case of scalar field
-theory in Chapter~\ref{sec-scalar} and in the case of abelian gauge
-theory in Chapter~\ref{sec-vector}. The case of fermion is very
-interesting and crucial, but it will be remained to be worked out by
-audiences/readers.
+To be precise, we regard this correspondence as the right-hand side
+\emph{defining} the left-hand side. We will explicitly check this
+correspondence/definition reproduces the known symmetries in the case of
+scalar field theory in Chapter~\ref{sec-scalar} and in the case of
+abelian gauge theory in Chapter~\ref{sec-vector}. The case of fermion is
+very interesting and crucial, but it will be remained to be worked out
+by audiences/readers.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, breakable, opacityback=0, colframe=quarto-callout-note-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, colframe=quarto-callout-note-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 Again, we are \emph{not} talking about gauge redundancy, which is
 sometimes called local symmetry. Global symmetries one encounters in a
@@ -392,7 +400,7 @@ QFT textbook are all locality preserving.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, breakable, opacityback=0, colframe=quarto-callout-note-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology}}, colframe=quarto-callout-note-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 Here is another unfortunate conflict of terminology. In the literature
 (outside generalized symmetry literature), a ``topological defect''
@@ -417,11 +425,11 @@ the notion of \textbf{generalized (global) symmetry}, coined by
   e.g.~\autocite{Kapustin:2013uxa,Barkeshli:2014cna}, and its gauged
   version was essentially known from \autocite{KalbRamond}.}. That is,
 the notion of symmetry can be generalized by relaxing the adjective in
-the right hand side of Equation~\ref{eq-conv-STO-corresp}. Therefore, we
+the right-hand side of Equation~\ref{eq-conv-STO-corresp}. Therefore, we
 \emph{define} generalized symmetry by the following correspondence
 generalizing Equation~\ref{eq-conv-STO-corresp}:
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, rightrule=.15mm, coltitle=black, bottomrule=.15mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Generalized Symmetry/Topological Operator Correspondence}}, breakable, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, coltitle=black, left=2mm, opacityback=0, titlerule=0mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, colback=white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Generalized Symmetry/Topological Operator Correspondence}}, colframe=quarto-callout-important-color-frame, toptitle=1mm, leftrule=.75mm, bottomtitle=1mm]
 
 \begin{equation}\protect\hypertarget{eq-GSTO-corresp}{}{\begin{split}
 &\text{Generalized symmetry (in a ``usual" QFT)} \\ 
@@ -432,16 +440,16 @@ generalizing Equation~\ref{eq-conv-STO-corresp}:
 
 \end{tcolorbox}
 
-More specifically, a generalized symmetry corresponding to a operator of
-codimension \(p+1\) is called \textbf{\(p\)-form symmetry}, and a
-generalized symmetry corresponding to a operator without its inverse is
+More specifically, a generalized symmetry corresponding to an operator
+of codimension \(p+1\) is called \textbf{\(p\)-form symmetry}, and a
+generalized symmetry corresponding to an operator without its inverse is
 called \textbf{non-invertible symmetry} (among other names like category
 symmetry and topological symmetry).
 
-In an ``unsual'' QFT, we can even relax the topological-ness of the
-operator in the right hand side of Equation~\ref{eq-GSTO-corresp},
+In an ``unusual'' QFT, we can even relax the topological-ness of the
+operator in the right-hand side of Equation~\ref{eq-GSTO-corresp},
 resulting in what is called \textbf{subsystem} symmetry. We will briefly
-make a comment on it.
+make a comment on it in \textbf{?@sec-somewhere}.
 
 The sub-classes of generalized symmetry is summarized in the table
 below:
@@ -458,7 +466,7 @@ Invertible? & & No & \\
 Topological? & & & Partically \\
 \end{longtable}
 
-The sub-classes are not mutually exclusive, so, in principle, there can
+The subclasses are not mutually exclusive, so, in principle, there can
 be a 2-form non-invertible subsystem symmetry.
 
 \bookmarksetup{startatroot}
@@ -467,12 +475,46 @@ be a 2-form non-invertible subsystem symmetry.
 \chapter{Topological Operators in Scalar Field
 Theory}\label{sec-scalar}}
 
-\hypertarget{scalar-transformations}{%
-\section{Scalar Transformations}\label{scalar-transformations}}
+In this section we take a scalar field theory as an example to study
+topological operators.
 
-\hypertarget{widing-symmetry-in-11d-compact-boson}{%
-\section{Widing Symmetry in 1+1d Compact
-Boson}\label{widing-symmetry-in-11d-compact-boson}}
+\hypertarget{scalar-transformation}{%
+\section{Scalar Transformation}\label{scalar-transformation}}
+
+\hypertarget{set-up}{%
+\subsection{Set Up}\label{set-up}}
+
+To be concrete, let us consider a complex scalar field theory whose
+Lagrangian (density) on a spacetime of dimension \(\stdim\) is \[
+\begin{aligned}
+\mathcal{L}(\phi,x) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi)\right)\vol\\
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi)\vol,
+\end{aligned}
+\] where \(\vol = \prod_{i=1}^{\stdim} \mathop{dx_i}\) is the volume
+form for the flat space, and \(V(\phi)\) is the potential. The action is
+the integral over the spacetime \(M_{\stdim}\): \[
+S[\phi] = \int_{M_{\stdim}}\mathcal{L}(\phi,x).
+\]
+
+We consider a symmetry transformation of the scalar field \[
+\phi(x) \mapsto \phi^\alpha(x)
+\] parametrized by \(\alpha\) (constant over \(M_{\stdim}\)) that leaves
+the action invariant: \(S[\phi]=S[\phi^\alpha]\). For example, the usual
+\(\U(1)\) rotation corresponds to the transformation \[
+\phi^\alpha(x) = e^{\imunit \alpha}\phi.
+\] Or, when \(V(\phi)=0\), the action also admit the shift symmetry \[
+\phi^\alpha(x) = \phi + \alpha.
+\]
+
+In this section, we would like to construct the topological operator
+corresponding to this kind of symmetry. The construction applies to
+other types of scalar field theory, e.g.~real and/or multiple scalar
+fields, or a non-linear sigma model as long as the kinetic term is
+standard enough (more on this in \textbf{?@sec-somewhere}).
+
+\hypertarget{winding-symmetry-in-11d-compact-boson}{%
+\section{Winding Symmetry in 1+1d Compact
+Boson}\label{winding-symmetry-in-11d-compact-boson}}
 
 \hypertarget{t-duality}{%
 \section{T-duality}\label{t-duality}}

@@ -22,6 +22,8 @@ book:
     - summary.qmd
     - references.qmd
   downloads: pdf
+  body-header: header.qmd
+    
 
 number-sections: true
 shift-heading-level-by: 0
@@ -50,6 +52,7 @@ format:
       - callout-title-modify.lua
     keep-tex: true
     fig-pos: 't'
+    include-in-header: header.tex
 
 callout-icon: true
 

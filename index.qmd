@@ -1,5 +1,6 @@
 # What is this {.unnumbered}
 
+$\vol$
 This is a lecture note prepared for two sets of "intensive lectures":[^1]
 
 * at Tohoku University, Oct. 11-13, 2023, and
@@ -12,7 +13,8 @@ Due to lack of time and (more significantly) my understanding, the lecture will 
 
 ## Prerequisite
 * Basic knowledge about scalar field theory and (abelian) gauge theory in path-integral formalism, and
-* Knowledge about renoarmalization group (RG) flows to understand motivations.
+* Knowledge about renormalization group (RG) flows to understand motivations.
+* Knowledge about differential form and Stokes's theorem in terms of it.
 
 ## What is contained and what is not
 

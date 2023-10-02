@@ -1,0 +1,9 @@
+::: {.hidden}
+$$
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\stdim}{stdim}
+%\newcommand{\stdim}{D}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\imunit}{i}
+$$
+:::

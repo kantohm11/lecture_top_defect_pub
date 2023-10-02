@@ -1,5 +1,6 @@
 /.quarto/
 /_book
+/header_files
 
 /.luarc.json
 .DS_Store
@@ -7,3 +8,8 @@
 #generated tex files
 *.tex
 *.toc
+*.synctex(busy)
+*.synctex
+*.log
+*.bcf
+*.fdb_latexmk

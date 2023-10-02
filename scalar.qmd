@@ -1,4 +1,43 @@
 # Topological Operators in Scalar Field Theory {#sec-scalar}
-## Scalar Transformations
-## Widing Symmetry in 1+1d Compact Boson
+
+In this section we take a scalar field theory as an example to study topological operators.
+
+## Scalar Transformation
+
+### Set Up
+To be concrete, let us consider a complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is
+$$
+\begin{aligned}
+\mathcal{L}(\phi,x) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi)\right)\vol\\
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi)\vol,
+\end{aligned}
+$$
+where $\vol = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential.
+The action is the integral over the spacetime $M_{\stdim}$:
+$$
+S[\phi] = \int_{M_{\stdim}}\mathcal{L}(\phi,x).
+$$
+
+We consider a symmetry transformation of the scalar field
+$$
+\phi(x) \mapsto \phi^\alpha(x)
+$$
+parametrized by $\alpha$ (constant over $M_{\stdim}$) that leaves the action invariant: $S[\phi]=S[\phi^\alpha]$.
+For example, the usual $\U(1)$ rotation corresponds to the transformation
+$$
+\phi^\alpha(x) = e^{\imunit \alpha}\phi.
+$$
+Or, when $V(\phi)=0$, the action also admit the shift symmetry
+$$
+\phi^\alpha(x) = \phi + \alpha.
+$$
+
+In this section, we would like to construct the topological operator corresponding to this kind of symmetry.
+The construction applies to other types of scalar field theory, e.g. real and/or multiple scalar fields, or a non-linear sigma model as long as the kinetic term is standard enough (more on this in @sec-somewhere).
+
+
+
+
+
+## Winding Symmetry in 1+1d Compact Boson
 ## T-duality 
