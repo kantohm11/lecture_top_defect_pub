@@ -1,4 +1,9 @@
 /.quarto/
+/_book
 
 /.luarc.json
 .DS_Store
+
+#generated tex files
+*.tex
+*.toc
