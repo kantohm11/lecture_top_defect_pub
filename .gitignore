@@ -6,10 +6,13 @@
 .DS_Store
 
 #generated tex files
-*.tex
 *.toc
 *.synctex(busy)
-*.synctex
+*.synctex.gz
+*.fls
+*.pdf
 *.log
 *.bcf
+*.aux
 *.fdb_latexmk
+.DS_Store

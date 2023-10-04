@@ -1,0 +1,89 @@
+\documentclass[tikz,dvipsnames]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[]{xcolor}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%my sty
+\usepackage{top_op_fig}
+
+\begin{document}
+\begin{tikzpicture}[thick]
+    \begin{scope}[xshift=0,scale=.8]
+        % Draw the two cross-outs using the cross out shape
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (leftCross) at (-1,0) {};
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (rightCross) at (1,0) {};
+        
+        % Draw the orange curved line as a stretched "S"
+        \draw[color=Cut1,thick] (0,-0.75) to[bend left=20] (0,-0.25) to[bend right=20] (0,0.25) to[bend left=20] (0,0.75);
+
+        % angle brackets
+        \draw[thick] (-1.4,-.75) -- (-1.6,0) -- (-1.4,.75);
+        \draw[thick] (1.4,-.75) -- (1.6,0) coordinate(1r)-- (1.4,.75);
+
+        % local ops
+        \node[anchor=south] at (leftCross.north) {$\mathcal{O}_1$};
+        \node[anchor=south] at (rightCross.north) {$\mathcal{O}_2$};
+
+        %top op
+        \node[anchor=south,color=Cut1] at (0,.75) {$U_g[W]$};
+    \end{scope}
+
+
+    \begin{scope}[xshift=10em,scale=.8]
+        % Draw the two cross-outs using the cross out shape
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (leftCross) at (-1,0) {};
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (rightCross) at (1,0) {};
+        
+        % Draw the orange curved line as a stretched "S"
+        \draw[color=Cut1,thick] (0,-0.75) to[bend left=10] (-.1,-.5) 
+        .. controls  ++(0,.2) and ++(0,-.2) .. (0.5,0)
+        .. controls  ++(0,.2) and ++(0,-.2) .. (-.1,.5)
+        to[bend left=10] (0,0.75);
+
+        % angle brackets
+        \draw[thick] (-1.4,-.75) -- (-1.6,0) coordinate(2l)-- (-1.4,.75);
+        \draw[thick] (1.4,-.75) -- (1.6,0) coordinate(2r) -- (1.4,.75);
+
+        % local ops
+        \node[anchor=south] at (leftCross.north) {$\mathcal{O}_1$};
+        \node[anchor=south] at (rightCross.north) {$\mathcal{O}_2$};
+
+        %top op
+        \node[anchor=south,color=Cut1] at (0,.75) {$U_g[W']$};
+
+    \end{scope}
+
+
+    \begin{scope}[xshift=20.7em,scale=.8]
+        % Draw the two cross-outs using the cross out shape
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (leftCross) at (-1,0) {};
+        \node[cross out, draw, minimum size=0.15cm, inner sep=0] (rightCross) at (1,0) {};
+
+        % Draw the orange curved line as a stretched "S"
+        \draw[color=Cut1,thick] (0,-0.75) to[bend left=10] (-.1,-.5) 
+        .. controls  ++(0,.3) and ++(-.5,0) .. (1,-.8) 
+        .. controls  ++(.5,0) and ++(0,-.6) .. (1.7,0) 
+        .. controls  ++(0,.6) and ++(.5,0) .. (1,.8) 
+        .. controls  ++(-.5,0) and ++(0,-.3) .. (-.1,.5)
+        to[bend left=10] (0,0.75);
+
+        % angle brackets
+        \draw[thick] (-1.7,-.75) -- (-1.9,0) coordinate(3l) -- (-1.7,.75);
+        \draw[thick] (1.7,-.75) -- (1.9,0) -- (1.7,.75);
+
+        % local ops
+        \node[anchor=south] at (leftCross.north) {$\mathcal{O}_1$};
+        \node[anchor=south] at (rightCross.north) {$g\cdot\mathcal{O}_2$};
+
+        %top op
+        \node[anchor=south,color=Cut1] at (0,.75) {$U_g[W'']$};
+
+    \end{scope}
+
+    %equals
+    \node at ($(1r)!.5!(2l)$) {$=$};
+    \node at ($(2r)!.5!(3l)$) {$=$};
+\end{tikzpicture}
+\end{document}

@@ -8,36 +8,76 @@ In this section we take a scalar field theory as an example to study topological
 To be concrete, let us consider a complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is
 $$
 \begin{aligned}
-\mathcal{L}(\phi,x) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi)\right)\vol\\
-&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi)\vol,
+\mathcal{L}(\phi) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi(x))\right)\vol\\
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol,
 \end{aligned}
 $$
 where $\vol = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential.
-The action is the integral over the spacetime $M_{\stdim}$:
+The action is the integral over the spacetime $M$:
 $$
-S[\phi] = \int_{M_{\stdim}}\mathcal{L}(\phi,x).
+S[\phi] = \int_{M}\mathcal{L}(\phi).
 $$
 
 We consider a symmetry transformation of the scalar field
 $$
-\phi(x) \mapsto \phi^\alpha(x)
+\phi(x) \mapsto \phi^g(x)
+$${#eq-scalar-transf}
+parametrized by a group element $g$ (constant over $M$) that leaves the action invariant: 
 $$
-parametrized by $\alpha$ (constant over $M_{\stdim}$) that leaves the action invariant: $S[\phi]=S[\phi^\alpha]$.
+S[\phi]=S[\phi^g].
+$${#eq-action-inv}
+This means that the Lagrangian is invariant up to a total derivative:
+$$
+\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{dr}(\phi,g) 
+$${#eq-Lagrangian-inv}
+where $r(\phi,g)$ is a $(\stdim-1)$-form on $M$ depending on the constant $g$ and the field $\phi$.
+
 For example, the usual $\U(1)$ rotation corresponds to the transformation
 $$
-\phi^\alpha(x) = e^{\imunit \alpha}\phi.
+\phi^g(x) = \mathop{g} \phi(x),
 $$
-Or, when $V(\phi)=0$, the action also admit the shift symmetry
+where $g=e^{\imunit \alpha}$ is a $\U(1)$ phase.
+The potential $V(\phi)$ might partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$, e.g. $V(\phi)\propto \phi^k+(\phi^*)^k$.
+In such a case the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi i}{k}}$, $i= 0 \cdots k-1$.
+
+In addition, when $V(\phi)=0$, the action $S[\phi]$ also admit the shift symmetry[^nonzero_r]
 $$
-\phi^\alpha(x) = \phi + \alpha.
+\phi^{\alpha}(x) = \phi(x) + \alpha.
 $$
 
-In this section, we would like to construct the topological operator corresponding to this kind of symmetry.
-The construction applies to other types of scalar field theory, e.g. real and/or multiple scalar fields, or a non-linear sigma model as long as the kinetic term is standard enough (more on this in @sec-somewhere).
+[^nonzero_r]: If we use the form of Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this also gives an example where the total derivative in @eq-Lagrangian-inv is nonzero: $r=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
+In this section, we would like to construct the **topological operator** corresponding to this kind of (very conventional) symmetry.
+The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fields, or a non-linear sigma model as long as the kinetic term is standard enough (more on this in @sec-somewhere).
 
+:::{.callout-note}
+#### Note
+In this lecture we directly construct the topological operators corresponding to the *finite* transformation @eq-scalar-transf, rather than the conventional approach that goes through the Noether's theorem.
+This will enable us to explicitly talk about *finite* symmetries (and their anomalies) in terms of topological operators, and also motivate us the later sections.
+:::
 
+### Topological Operator
+As a basic example of @eq-conv-STO-corresp, we would like to construct the topological operator $U_\alpha[W]$ corresponding to the transformation @eq-scalar-transf.
+The topological operator $U_\alpha[W]$ ,defined with respect to a codimension-1 submanifold $W$ of the spacetime $M$, should satisfy the following properties:
 
+1. Topological: $U_\alpha[W] = U_\alpha[W']$ is $W$ can be continuously defomed into $W'$ without crossing other operators.
+2. Symmetry action: when a deformation from $W$ to $W''$ crosses an local operator $\mathcal{O}$, it gets the symmetry action specified by $g$, resulting in another operator $g\cdot\mathcal{O}$.
+
+These properties are summarized in @fig-op-action.
+
+![The topological operator $U_g[W]$ should be invariant under a continuous deformation and also implement the symmetry action. ](figures/Op_action.svg){#fig-op-action width=400}
+
+The idea of the construction is "*cutting-and-gluing-with-twist*".
+That is, we first divide the spacetime $M$ into two parts: $M_\stdim = M_L \cup_W M_R$ with shared boundary $W$ (see @fig-cut-M).
+We also separate the scalar field $\phi$ into two sets of fields:  $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.
+Then, we glue the two regions and fields on those back together, with the twisted identification:
+$$
+\phi_L|_W = \phi_R^g|_W.
+$$
+
+![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
+
+In path-integral, this construction can be implemented as follows.
 
 ## Winding Symmetry in 1+1d Compact Boson
 ## T-duality 

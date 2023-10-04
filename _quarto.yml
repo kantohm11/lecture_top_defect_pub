@@ -27,13 +27,14 @@ book:
 
 number-sections: true
 shift-heading-level-by: 0
+toc-depth: 3
 
 bibliography: references.bib
 
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     csl: american-statistical-association.csl
     anchor-sections: true
   pdf:
