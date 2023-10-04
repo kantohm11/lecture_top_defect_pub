@@ -28,9 +28,9 @@ S[\phi]=S[\phi^g].
 $${#eq-action-inv}
 This means that the Lagrangian is invariant up to a total derivative:
 $$
-\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{dr}(\phi,g) 
+\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g) 
 $${#eq-Lagrangian-inv}
-where $r(\phi,g)$ is a $(\stdim-1)$-form on $M$ depending on the constant $g$ and the field $\phi$.
+where $s(\phi,g)$ is a $(\stdim-1)$-form on $M$ depending on the constant $g$ and the field $\phi$.
 
 For example, the usual $\U(1)$ rotation corresponds to the transformation
 $$
@@ -48,7 +48,11 @@ $$
 [^nonzero_r]: If we use the form of Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this also gives an example where the total derivative in @eq-Lagrangian-inv is nonzero: $r=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
 In this section, we would like to construct the **topological operator** corresponding to this kind of (very conventional) symmetry.
-The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fields, or a non-linear sigma model as long as the kinetic term is standard enough (more on this in @sec-somewhere).
+
+:::{.callout-note}
+#### Note
+The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fields, or a non-linear sigma model as long as the kinetic term is standard enough (more on this in @sec-somewhere). Also, the spacetime manifold $M$ and the metric on it do not have to be flat. The signature of the metric is also insignificant in this lecture, although we use the Euclidean notation.
+:::
 
 :::{.callout-note}
 #### Note
@@ -60,16 +64,20 @@ This will enable us to explicitly talk about *finite* symmetries (and their anom
 As a basic example of @eq-conv-STO-corresp, we would like to construct the topological operator $U_\alpha[W]$ corresponding to the transformation @eq-scalar-transf.
 The topological operator $U_\alpha[W]$ ,defined with respect to a codimension-1 submanifold $W$ of the spacetime $M$, should satisfy the following properties:
 
+:::{.callout-important}
+## Properties of Symmetry Topological Operator
 1. Topological: $U_\alpha[W] = U_\alpha[W']$ is $W$ can be continuously defomed into $W'$ without crossing other operators.
 2. Symmetry action: when a deformation from $W$ to $W''$ crosses an local operator $\mathcal{O}$, it gets the symmetry action specified by $g$, resulting in another operator $g\cdot\mathcal{O}$.
 
 These properties are summarized in @fig-op-action.
+:::
+
 
 ![The topological operator $U_g[W]$ should be invariant under a continuous deformation and also implement the symmetry action. ](figures/Op_action.svg){#fig-op-action width=400}
 
 The idea of the construction is "*cutting-and-gluing-with-twist*".
 That is, we first divide the spacetime $M$ into two parts: $M_\stdim = M_L \cup_W M_R$ with shared boundary $W$ (see @fig-cut-M).
-We also separate the scalar field $\phi$ into two sets of fields:  $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.
+We also separate the scalar field $\phi$ into two sets of fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.
 Then, we glue the two regions and fields on those back together, with the twisted identification:
 $$
 \phi_L|_W = \phi_R^g|_W.
@@ -77,7 +85,29 @@ $$
 
 ![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
 
-In path-integral, this construction can be implemented as follows.
+In path-integral, this construction can be implemented as follows:
+$$
+\begin{multlined}
+    \langle U_g[W] \cdots \rangle = \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda}\\ \times \exp\left(-S_L-S_R+\imunit \int_W \lambda(\phi_L - \phi_R^g)\vol_W+\int_W s(\phi_L,g)\right)\cdots
+\end{multlined}
+$${#eq-Ug-pathintegral}
+Here, $\mathcal{D}^{X}$ denotes the measure for path-integral for a field defined on a submanifold $X$ of the spacetime $M$,
+and $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$ are actions on the submanifold $M_{L,R}$, and "$\cdots$" represents additional insertions of operators.
+The heart of the above expression is that integrating the Lagrange multiplier $\lambda$ out gives the "delta functional":
+$$
+    \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^g_R)\vol_W\right)
+     = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^g(x)),
+$$
+which should implement @fig-cut-M.
+
+Let us check the property depicted in @fig-op-action.
+To be concrete, we set the insertion $\cdots$ to be $\mathcal{O}_1(x_1)\mathcal{O}_2(x_2)$ with $x_1\in M_L$ and $x_2 \in M_R$.
+To see @fig-op-action, we do change of variables $\widetilde{\phi}_R = \phi_R^g$ as
+$$
+    
+$$
+
+
 
 ## Winding Symmetry in 1+1d Compact Boson
 ## T-duality 
