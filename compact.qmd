@@ -1,5 +1,5 @@
 
-# Compact Boson {#set-compact-boson}
+# Compact Boson {#sec-compact-boson}
 Here we consider *compact* boson, where the field $\phi$ is real and subject to the identification
 $$
 \phi(x) \cong \phi(x) + 2\pi.
