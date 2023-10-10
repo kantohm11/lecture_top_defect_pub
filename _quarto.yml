@@ -1,6 +1,8 @@
 project:
   type: book
 
+
+
 book:
   title: "A Lecture on Topological Operators"
   author:
@@ -18,8 +20,8 @@ book:
     - index.qmd
     - intro.qmd
     - scalar.qmd
+    - compact.qmd
     - vector.qmd
-    - summary.qmd
     - references.qmd
   downloads: pdf
   body-header: header.qmd

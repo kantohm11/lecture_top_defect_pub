@@ -22,8 +22,8 @@ Given this relation, there are two ways of applying symmetry in QFT:
 [^SymRG]: If the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of $\mathcal{T}_\text{IR}$, the map $f_\text{RG}$ is an isomorphism.
 However, typically one integrates out massive dofs in the description of $\mathcal{T}_\text{RG}$, in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 
-::: {.callout-note}
-### Terminology
+::: {.callout-note collapse="false"}
+### Terminology (global symmetry)
 In this lecture, "symmetry" means a *global* symmetry.
 Here *global* means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.
 :::
@@ -69,13 +69,13 @@ In this correspondence, the topological operator shoould be regarded as the gene
 To be precise, we regard this correspondence as the right-hand side *defining* the left-hand side.
 We will explicitly check this correspondence/definition reproduces the known symmetries in the case of scalar field theory in @sec-scalar and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
 
-::: {.callout-note}
-### Terminology
-Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality preserving.
+::: {.callout-note collapse="false"}
+### Terminology (locality-preserving)
+Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality-preserving.
 :::
 
-::: {.callout-note}
-### Terminology
+::: {.callout-note collapse="false"}
+### Terminology (topological defect)
 Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* a priori guaranteed to be topological in the sense of @fig-TopOpsDeform . On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
 :::
 
@@ -97,9 +97,9 @@ $${#eq-GSTO-corresp}
 :::
 More specifically, a generalized symmetry corresponding to an operator of codimension $p+1$ is called **$p$-form symmetry**, and a generalized symmetry corresponding to an operator without its inverse is called **non-invertible symmetry** (among other names like category symmetry and topological symmetry).
 
-In an "unusual" QFT, we can even relax the topological-ness of the operator in the right-hand side of @eq-GSTO-corresp, resulting in what is called **subsystem** symmetry. We will briefly make a comment on it in @sec-somewhere.
+In an "unusual" QFT, we can even relax the topological-ness of the operator in the right-hand side of @eq-GSTO-corresp, resulting in what is called **subsystem** symmetry. We will briefly make a comment on it in @sec-trivial-scalar.
 
-The sub-classes of generalized symmetry is summarized in the table below:
+The subclasses of generalized symmetry is summarized in the table below:
 
 |              | $p$-form | non-invertible | subsystem  |
 |--------------|----------|----------------|------------|
@@ -107,6 +107,11 @@ The sub-classes of generalized symmetry is summarized in the table below:
 | Invertible?  |          | No             |            |
 | Topological? |          |                | Partically |
 
+:Subclasses of generalized symmetry and defining properties of their corresponding topological operators. {#tbl-sym-classes}
+
 The subclasses are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.
 
 [^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially known from [@KalbRamond].
+
+## Contents of the Lecture
+**FIXME**

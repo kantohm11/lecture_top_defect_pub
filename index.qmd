@@ -11,6 +11,10 @@ Due to lack of time and (more significantly) my understanding, the lecture will 
 
 [^1]: In Japan, an "intensive lecture" is a format of a lecture course where a lecturer (usually from another university) gives lectures in consecutive days filling 7-9 slots in usually 3 days.
 
+::: {.callout-warning}
+This note is **under construction**, and there are many missed equations, figures, explanations, sections, and *references*. 
+:::
+
 ## Prerequisite
 * Basic knowledge about scalar field theory and (abelian) gauge theory in path-integral formalism, and
 * Knowledge about renormalization group (RG) flows to understand motivations.
