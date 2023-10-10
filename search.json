@@ -151,7 +151,7 @@
     "href": "vector.html",
     "title": "4  Vector",
     "section": "",
-    "text": "\\[\n\\DeclareMathOperator{\\vol}{vol}\n\\DeclareMathOperator{\\U}{U}\n\\DeclareMathOperator{\\SU}{SU}\n\\DeclareMathOperator{\\imunit}{i}\n\\DeclareMathOperator{\\id}{id}\n\\newcommand{\\stdim}{D}\n\\]\ntest"
+    "text": "\\[\n\\DeclareMathOperator{\\vol}{vol}\n\\DeclareMathOperator{\\U}{U}\n\\DeclareMathOperator{\\SU}{SU}\n\\DeclareMathOperator{\\imunit}{i}\n\\DeclareMathOperator{\\id}{id}\n\\newcommand{\\stdim}{D}\n\\]"
   },
   {
     "objectID": "references.html",
