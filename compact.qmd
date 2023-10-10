@@ -236,7 +236,7 @@ $$
 $$
 Thus by substituting back we get **FIXME:check the sign!**
 $$
-\mathcal{I}_1^\text{T}\mathcal{O}_n^\text{winding} = \mathcal{O}_{\pm? n}^\text{shift}.
+\mathcal{I}_1^\text{T}\cdots\mathcal{O}_n^\text{winding} = \mathcal{O}_{\pm? n}^\text{shift}.
 $$
 
 
@@ -256,7 +256,7 @@ Therefore, the T-duality interface squares to the identity.
 In particular, at $R=1$, the self-interface defines an invertible $\mathbb{Z}_2$ symmetry.
 
 ### Non-invertible symmetry from T-duality
-@Choi:2021kmx generalized the Kapustin-Tikhonov T-duality interface @Kapustin:2009av
+@Choi:2021kmx generalized the Kapustin-Tikhonov T-duality interface by @Kapustin:2009av
 as 
 $$
 \begin{multlined}
@@ -268,14 +268,111 @@ $$
 -\frac{N^2}{4\pi R^2}\int_{M_R}\mathop{d\phi_R}*\mathop{d\phi_R}\right).
 \end{multlined}
 $${#eq-TN-interface}
+This interface is a *self-interface* at $R=\sqrt{N}$.
 The same procedure as we did for $\mathcal{I}_1$ leads to
 $$
 \begin{multlined}
 \langle\mathcal{O}_L \mathcal{I}^\text{T}_N[W] \rangle= 
-\int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}
+\int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}\mathop{\mathcal{D}^{W}V'}
 \mathcal{O}_L[\phi_L]\\
 \exp\left(-\frac{R^2}{4\pi}\int_{M_L}\mathop{d\phi_L}*\mathop{d\phi_L}
 -\frac{\imunit }{2\pi}\int_W (N \phi_L - \widetilde{\phi}_R)\mathop{dV}
 -\frac{R^2}{4\pi N^2}\int_{M_R}\mathop{d\widetilde\phi_R}*\mathop{d\widetilde\phi_R}\right).
 \end{multlined}
+$${#eq-TN-interface2}
+We further rescale the fields as
+
+$$
+\begin{aligned}
+V' &= NV \\
+N \widetilde\phi_R' &= \widetilde\phi_R \mod 2\pi
+\end{aligned}
+$$
+so that we have
+$$
+\begin{multlined}
+\langle\mathcal{O}_L \mathcal{I}^\text{T}_N[W] \rangle = \mathcal{N} 
+\int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}\mathop{\mathcal{D}^{W}V'}
+\mathcal{O}_L[\phi_L]\\
+\exp\left(-\frac{R^2}{4\pi}\int_{M_L}\mathop{d\phi_L}*\mathop{d\phi_L}
+-\frac{\imunit }{2\pi}\int_W ( \phi_L - \widetilde{\phi}_R')\mathop{dV'}
+-\frac{R^2}{4\pi}\int_{M_R}\mathop{d\widetilde\phi_R'}*\mathop{d\widetilde\phi_R'}\right).
+\end{multlined}
+$${#eq-TN-interface3}
+To go from @eq-TN-interface3 to @eq-TN-interface2, we define a $\mathbb{Z}_N$ valued variable $n_{\widetilde{\phi'}_R} = [N\widetilde{\phi'}_R/2\pi] \mod N$ so that $\widetilde{\phi'} = \frac{2\pi}{N}(\{\widetilde{\phi}/2\pi\} + 2\pi n_{\widetilde{\phi'}_R})$. Then, after substituting it, the sum over $n_{\widetilde{\phi'}}$ enforces $V'$ be divisible by $N$ (that is, the winding of $V$ along $W$ is constrained to be a multiple of $N$).
+Thus, we have
+$$\langle\mathcal{O}_L \mathcal{I}_N^\text{T}[W]\rangle = \mathcal{N} \langle \mathcal{O}_L \rangle.
+$$
+We are not caring enough about the absolute size of path-integral measure to determine the normalization constant $\mathcal{N}$, but will determined in by another mean later.
+
+#### Fusion rule
+The product, or *fusion* of the generalized operator is
+$$
+\begin{aligned}
+(\mathcal{I}_N^\text{T})^2 &= \int \mathcal{D}^W V \exp(\frac{\imunit}{2\pi} N \int_W \mathop{dV}(\phi_L-\phi_R))\\
+&= \sum_{n=0}^{N-1} \int \mathcal{D}^W V' \exp(\frac{\imunit}{2\pi}  \int_W \mathop{dV}(\phi_L-\phi_R+ 2\pi n/N))\\
+&= \sum_{n=0}^{N-1} U_{2\pi n/N}^{\text{shift}},
+\end{aligned}
+$${#eq-fusion-I}
+where in the second line we did the chage of variable $NV = V'$, and enforced the divisibility of $V'$ by $N$ by the sum over $n$.
+One can also see $\mathcal{I}_N^\text{T}[-W] = \mathcal{I}_N^\text{T}[W]$ (note that when we consider an operator on $W$ the notion of "left" and "right" also flips), so
+$$
+\mathcal{I}_N^\text{T}[W]\mathcal{I}_N^\text{T}[-W] = \sum_{n=0}^{N-1} U_{2\pi n/N}^{\text{shift}}.
+$$
+This contrasts to the case of conventional symmetry operator, where $U_g[W] = U_{g^{-1}}[W]$ and thus
+$$
+U_g [W] U_g[-W] = \id[W].
+$$
+In the case of $\mathcal{I}_N^\text{T}$, $N\ge 2$, the fusion with its orientation reversal is not the trivial operator, but a sum. This is a one of hallmarks of **non-invertible** symmetry. $\mathcal{I}_N^\text{T}[-W]$, called the **dual** of the original operator, is the closest possible thing to be the "inverse", but it fails to be so.
+Therefore, the compact boson theory in 1+1d at $R=\sqrt{N}$ has the non-invertible T-duality symmetry.
+
+Here, we can determine that the coefficient in the above equations are correct. 
+This is because that we can insert the one-dimensional operator $(\mathcal{I}_N^\text{T})^2$
+along the time direction, which should determine the *defect Hilbert* space.
+On the right hand side, we should have a direct sum of defect Hilbert spaces for the involved invertible symmetry operators. There is no way to take "average" over Hilbert spaces, or divide it by a number, so we can assume the minimal possible coefficient is realized, which is the one in @eq-fusion-I.
+
+Given @eq-fusion-I, the coefficient $\mathcal{N}$ in @eq-TN-interface3 is determined by
+$$
+\langle (\mathcal{I}_N^\text{T})^2[W] \rangle = \sum_{n=0}^{N-1}\langle U_{2\pi n/N}^\text{shift}[W] \rangle = \mathcal{N}^2,
+$$
+thus $\mathcal{N} = \sqrt{N}$. This quantity is called the **quantum dimension** of $\mathcal{I}_N^\text{T}$.
+
+#### Action on the local operators
+What is the action of $\mathcal{I}_N^\text{T}$ on the local operator $\mathcal{O}^\text{winding}_n$?
+Naively repeating the procedure in the previous section, one might think
+$$
+\mathcal{I}_N^\text{T} \cdot \mathcal{O}^\text{winding}_n(x) \stackrel{?}{=} \mathcal{O}^\text{shift}_{n/N}(x)
+$$
+however the left hand side, $e^{\imunit n/N \phi}$, does not make sense when $N$ does not divide $n$ as it is incompatible with the periodicity of $\phi$.
+Thus the right hand side vanishes unless $N | n$, and we have
+$$
+\mathcal{I}_N^\text{T} \cdot \mathcal{O}^\text{winding}_n(x) = 
+\begin{cases}
+e^{\imunit \frac{n}{N}\phi} & N|n \\
+0 & \text{otherwise}.
+\end{cases}
+$$
+Note that here we considered the *encircling* action (FIXME:Figure!!).
+We can instead consider the *passing* action, in which case we have
+$$
+\mathcal{I}_N^\text{T}[W_L]  \mathcal{O}^\text{winding}_n(x) = 
+e^{\imunit \frac{n}{N}\int_{\gamma^x} \mathop{d\phi}} \mathcal{I}_N^\text{T}[W_R],
+$$
+$W_{L,R}$ goes through the left/right side of the point $x$, and the path $\gamma^x$ starts from a point on $W_R$ and ends at $x$.
+
+
+### Non-invertible T-duality for a rational $R$
+We can further generalize @eq-TN-interface so that it is a self duality at $R^2 = p/q$ ($p$ and $q$ are taken to be coprime) [@Niro:2022ctq;@Cordova:2023ent].
+The construction is 
+$$
+\mathcal{I}_{p,q}^\text{T}[W]=\int \mathop{\mathcal{D}^W a} \mathop{\mathcal{D}^W b} \exp\left(-\frac{\imunit}{2\pi}  \int_W (q \mathop{a} \mathop{db} +p \mathop{a} \mathop{d\phi_L} - b \mathop{d\phi_R} )\right),
+$$
+where $a$ and $b$ are periodic scalar fields on $W$.
+The fusion is
+$$
+(\mathcal{I}_{p,q}^\text{T}[W])^2 = \sum_{n_1=0}^{p-1}\sum_{n_2=0}^{q-1}U^\text{shift}_{2\pi n_1/N}U^\text{winding}_{2\pi n_2/N},
+$$
+and the quantum dimension is
+$$
+\langle \mathcal{I}_{p,q}^\text{T}[W]\rangle = \sqrt{pq}.
 $$
