@@ -60,3 +60,6 @@ format:
 callout-icon: true
 
 
+
+execute: 
+  freeze: auto
