@@ -376,3 +376,5 @@ and the quantum dimension is
 $$
 \langle \mathcal{I}_{p,q}^\text{T}[W]\rangle = \sqrt{pq}.
 $$
+
+![caption](figures/one-form_act.drawio.svg)

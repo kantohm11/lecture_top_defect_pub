@@ -23,7 +23,7 @@ book:
     - compact.qmd
     - vector.qmd
     - references.qmd
-  #downloads: pdf
+  downloads: pdf
   body-header: header.qmd
     
 
@@ -39,23 +39,23 @@ format:
     theme: flatly
     csl: american-statistical-association.csl
     anchor-sections: true
-  #pdf:
-    #documentclass: scrreport
-    #cite-method: biblatex
-    #biblatexoptions: 
-      #- "style=phys"
-      #- "eprint=true"
-      #- "url=true"
-      #- "backref=true"
-      #- "biblabel=brackets"
-      #- "citestyle = numeric-comp"
-      #- "sorting = none"
-    #filters:
-      #- line-break.lua
-      #- callout-title-modify.lua
-    #keep-tex: true
-    #fig-pos: 't'
-    #include-in-header: header.tex
+  pdf:
+   documentclass: scrreport
+   cite-method: biblatex
+   biblatexoptions: 
+     - "style=phys"
+     - "eprint=true"
+     - "url=true"
+     - "backref=true"
+     - "biblabel=brackets"
+     - "citestyle = numeric-comp"
+     - "sorting = none"
+   filters:
+     - line-break.lua
+     - callout-title-modify.lua
+   keep-tex: true
+   fig-pos: 't'
+   include-in-header: header.tex
 
 callout-icon: true
 
