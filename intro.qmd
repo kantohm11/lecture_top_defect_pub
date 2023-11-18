@@ -44,10 +44,10 @@ If the symmetry involves a spacetime transformation, the point $x$ in the right-
 This preservation of locality of a symmetry is the reason for the symmetry relation in @eq-RG-group-match.
 This will be made clear in the lecture.
 
-However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform. 
-There are types of symmetry called "topological symmetry", which arises from topologically-nontrivial field configuration.
+However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform, which is called *classical symmetry*. 
+There are types of symmetry called *topological symmetry* or *quantum symmetry*, which arises from topologically-nontrivial field configuration.
 Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
-In many occurrences a topological symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
+In many occurrences a topological/quantum symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
 
 From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to **topological operators**. 
 A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on a $n$-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).

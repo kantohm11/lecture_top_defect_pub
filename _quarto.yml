@@ -36,10 +36,14 @@ bibliography: references.bib
 
 format:
   html:
-    theme: [flatly]
+    default-image-extension: svg
+    theme: 
+      light: [flatly]
+      dark: [darkly,custom.scss]
     csl: american-statistical-association.csl
     anchor-sections: true
   pdf:
+   default-image-extension: pdf
    documentclass: scrreport
    cite-method: biblatex
    biblatexoptions: 

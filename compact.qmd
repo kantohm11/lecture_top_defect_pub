@@ -377,27 +377,12 @@ $$
 \langle \mathcal{I}_{p,q}^\text{T}[W]\rangle = \sqrt{pq}.
 $$
 
-:::{.content-visible when-format="html"}
 :::{#fig-elephants layout-ncol=2}
 
-![](figures/one-form_act.drawio.svg)
+![](figures/one-form_act)
 
 
-![](figures/one_form_passing2.drawio.svg)
+![](figures/one_form_passing)
 
 Action of $p$-form symmetry operator $U_\alpha[W^{D-p-1}]$ on a $p$-dimensional operator $\mathcal{O}_q[\Sigma^p]$ of $p$-form charge $q$.
 :::
-:::
-
-:::{.content-visible when-format="pdf"}
-:::{#fig-elephants layout-ncol=2}
-
-![](figures/one-form_act.pdf){.content-visible when-format="pdf"}
-
-![](figures/one_form_passing.pdf){.content-visible when-format="pdf"}
-
-Action of $p$-form symmetry operator $U_\alpha[W^{D-p-1}]$ on a $p$-dimensional operator $\mathcal{O}_q[\Sigma^p]$ of $p$-form charge $q$.
-:::
-:::
-
-test
