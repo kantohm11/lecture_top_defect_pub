@@ -67,7 +67,7 @@ $${#eq-conv-STO-corresp}
 :::
 In this correspondence, the topological operator shoould be regarded as the generalization of the **Noether charge** into possibly discrete symmetry.
 To be precise, we regard this correspondence as the right-hand side *defining* the left-hand side.
-We will explicitly check this correspondence/definition reproduces the known symmetries in the case of scalar field theory in @sec-scalar and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
+We will explicitly check this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in @sec-scalar, and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
 
 ::: {.callout-note collapse="false"}
 ### Terminology (locality-preserving)
