@@ -121,6 +121,8 @@ for any $\alpha$. And thus the both sides vanish unless $\sum n_i = 0$.
 
 ## Mixed Anomaly between Shift and Winding Symmetry
 
+### Intersection
+
 Having explicit descriptions of topological operators enables us to directly compute **quantum anomaly** (often called 't Hooft anomaly) of the symmetries. 
 This is because, from a modern perspective, the anomaly is a subtlety arises when symmetry operators collide.
 Here we observe one example of anomaly -- the mixed anomaly between the shift and winding symmetry in the compact boson theory -- explicitly from the topological operator perspective.
@@ -142,20 +144,44 @@ If we regard $\alpha$ to be in $\mathbb{R}$ and not $\mathbb{R}/2\pi\mathbb{Z}$,
 $$
 \begin{aligned}
 U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &\stackrel{\text{def1}}{=} U^\text{shift}_\alpha \exp\left(\imunit\beta \left(\int_{\gamma^1_L}\frac{\mathop{d\phi_L}}{2\pi} + \int_{\gamma^1_R}\frac{\mathop{d\phi_R}}{2\pi} + \{\alpha/2\pi\}\right)\right)\\
-& \sim U^\text{shift}_\alpha \exp\left(\imunit\beta/2\pi [\alpha/2\pi] \right),
+& \sim U^\text{shift}_\alpha \exp\left(\imunit\beta [\alpha/2\pi] \right),
 \end{aligned}
 $$
 where $[r]$ is the integer part of a real number $r$, and $\{r\}= r-[r]$. With this definition, or regularization, of the intersection, $\alpha$ is no longer periodic, but $\beta$ is kept periodic.
 One can do other regularizations where $\alpha$ is periodic but $\beta$ is not, or just abandon both of periodicity, but cannot save both.
 
 This incompatibility of periodicity, or the group multiplication law, when topological operators intersects is the hallmark of anomaly. 
-This incompatibility is better characterized as a group cohomology (or its generalization to a higher-group), see e.g.\ @TachikawaTasi.
+
+### Group Cohomology
+The incompatibility above is better characterized as a group cohomology (or its generalization to a higher-group). 
+Here we see how to characterize the mixed anomaly of the compact boson in 1+1d as a group cohomology element.
+(Here we do not delve into the general theory of group cohomology. See e.g.\ @TachikawaTasi).
+
+In 1+1d, both $U^\text{shift}_\alpha$ and $U^\text{winding}_\beta$ are line operators.
+Both operators are $2\pi$ periodic in its parameters, when intersection between them are absent.
+A more precise statement that applies even with intersections is that
+$U^\text{shift}_\alpha$ and $U^\text{shift}_{\alpha+2\pi}$ can be connected with an invertible topological junction [^isomUalpha]:
+$$
+ \exp\left(\frac{\imunit}{2\pi} \int^\square \mathop{dV}(\phi_L-\phi_R -\alpha)  + \imunit V(\square)  + \frac{\imunit}{2\pi} \int_\square \mathop{dV}(\phi_L-\phi_R -\alpha+2\pi)  \right)
+$$
+where $\square$ denotes the point connecting two line operators.
+See also @fig-shift-isom
+
+[](figures/){#fig-shift-isom}
+
+[^isomUalpha]: In the language of category theory, they are isomorphic. In (higher) category theory it is important to distinguish that two objects are the *same* and that the two objects are *isomorphic*.
+
+
+We let the composition of the two lines be denoted by $U_{\alpha,\beta} = U^\text{shift}_\alpha U^\text{winding}_\beta$.
+Note that here we already has made a choice -- that we put the shift operator to the left of the winding operator in $U_{\alpha,\beta}$.
+
+
 
 ## T-duality 
 
 The compact boson in $\stdim=2$-dimensions famously has *T-duality*.
 
-The T-duality is equivalence between the compact boson with radius $R$ and radius $\frac{1}{R}$ **FIXME:what is $R'$?**,
+The T-duality is equivalence between the compact boson with radius $R$ and radius $\frac{1}{R}$,
 and maps the shift (or momentum) symmetry of one side to the winding symmetry of the other side, and vise versa.
 Note that this makes sense because in $\stdim=2$ the winding symmetry is a 0-form symmetry.
 

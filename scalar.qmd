@@ -1,10 +1,10 @@
-# Topological Operators in Scalar Field Theory {#sec-scalar}
+# Topological Operators for Classical Symmetry {#sec-scalar}
 
-In this section we take a scalar field theory as an example to study topological operators.
+In this section we take the classical symmetry in scalar field theory as an example to study topological operators.
 
 
 ## Set Up
-To be concrete, let us consider a complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is
+To be concrete, let us consider the complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is given by
 $$
 \begin{aligned}
 \mathcal{L}(\phi) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi(x))\right)\vol\\
@@ -48,20 +48,20 @@ $$
 
 [^nonzero_r]: If we use the form of Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this also gives an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
-In this section, we would like to construct the **topological operator** corresponding to this kind of (very conventional) symmetry.
+In this section, we would like to construct the **topological operator** corresponding to these *classical* symmetry.
 
 :::{.callout-note}
 #### Note
 The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fieldsas long as the kinetic term is standard enough (more on this in @sec-trivial-scalar). 
-For non-linear sigma model with topologically non-trivial target, the Lagrange multiplier $\lambda$ below should take values in the correct sets. 
-We will treat $S^1$ target case (compact boson) in @sec-compact-boson.
+For non-linear sigma model with topologically non-trivial target, the Lagrange multiplier $\lambda$ below should take values in the correct set.
+We will consider the case with $S^1$ target (compact boson) in @sec-compact-boson.
 Also, the spacetime manifold $M$ and the metric on it do not have to be flat. The signature of the metric is also insignificant in this lecture, although we use the Euclidean notation.
 :::
 
 :::{.callout-note}
 #### Note
-In this lecture we directly construct the topological operators corresponding to the *finite* transformation @eq-scalar-transf, rather than the conventional approach that goes through the Noether's theorem.
-This will enable us to explicitly talk about *finite* symmetries (and their anomalies) in terms of topological operators, and also motivate us the later sections.
+In this lecture we directly construct the topological operators corresponding to the *finite* transformation @eq-scalar-transf, rather than the conventional approach considerting infinitesimal transformation.
+This will enable us to explicitly talk about *finite* symmetries (and their anomalies) in terms of topological operators, and also motivate us to consider generalized symmetries.
 :::
 
 ## Construction of Topological Operator
@@ -131,12 +131,15 @@ $${#eq-delta-functional}
 which should implement @fig-cut-M.
 Before studying the operator $U_g[W]$, we should study the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
 
-## Trivial Operator {#sec-trivial-scalar}
-When $g=\id$, the operator $U_{g=\id}[W]$ should be the **trivial** operator $\id[W]$, that satisfy
+## Identity Wall {#sec-trivial-scalar}
+When $g=\id$, the operator $U_{g=\id}[W]$ should be *trivial*.
+That is, we have
 $$
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
-$$
-That is, we should have
+$${#eq-identity-wall}
+We call the codimension-1 operator $\id[W]$ with this property **identity wall**.
+It can also be called **transparent wall** or like that.
+Expanding @eq-identity-wall, the following equation should hold:
 $$
 \begin{multlined}
     \int \mathop{\mathcal{D}^M\phi} \exp(-S) \cdots=
@@ -154,12 +157,12 @@ The reason for this is that the standard kinetic term would diverge in the limit
 
 This assumption, however, does not apply to QFTs with higher-derivative kinetic terms.
 Examples of such exotic QFTs (without relativistic symmetry) includes tensor gauge theories (see e.g. [@Pretko:2020cko;@Seiberg:2020bhn]). 
-In these theories a field *can* be discontinuous, but some of higher derivatives are constrained to be finite. 
-In such cases the construction of the trivial operator should differ.
+In these theories a field *can* be discontinuous, but some of higher derivatives are constrained to scale correctly with respect to the ratio of the lattice size and the system size. 
+In such cases the construction of the trivial operator should differ. *KO does not know how to describe it because of the UV/IR mixing and totally confused*.
 
 These QFTs describes what is called the **fracton phases** of matter, which does not have emergent continuous rotational symmetry in the IR.
 And the models typically posses **subsytemsymmetries**, whose corresponding operator is not totally topological. 
-Existence of the new kind of symmetry lacked in standard relativistic systems related to the face that the *trivial* operator looks different.
+Existence of the new kind of symmetry lacked in standard relativistic systems would be related to the fact that the identy wall looks different from the first place.
 :::
 
 It is instructive to study the equation of motions (EOMs) on the right hand side of @eq-trivial-scalar.
@@ -261,8 +264,7 @@ Of course we could get the same result by considering global change of variable 
 The symmetry we discuss here does not suffer from anomaly and the Ward-Takahashi idendity (@eq-Ward-Takahashi) follows.
 If we instead consider the topological operator corresponding to a symmetry with mixed-gravitational anomaly, the invariance of the measure (@eq-measure-inv) does not necessarily hold when $M_M$ does not have the topology of a ball, and likewise @eq-bubble can fail when $W_0$ is not a ball.
 Thus, on a spacetime with non-trivial topology (other than $\mathbb{R}^4$ or $S^4$), (@eq-Ward-Takahashi) might fail at the last equality, while (by choosing $W_0$ to be a ball) other steps goes through.
-The failure is by a phase depending on topology of the spacetime, and
-an interesting consequences of this is discussed in [@Cordova:2019jqi].
+The failure is by a phase depending on topology of the spacetime, and has an interesting consequences of this discussed in [@Cordova:2019jqi].
 :::
 
 ## Relation to Noether Charge
