@@ -160,16 +160,28 @@ Here we see how to characterize the mixed anomaly of the compact boson in 1+1d a
 In 1+1d, both $U^\text{shift}_\alpha$ and $U^\text{winding}_\beta$ are line operators.
 Both operators are $2\pi$ periodic in its parameters, when intersection between them are absent.
 A more precise statement that applies even with intersections is that
-$U^\text{shift}_\alpha$ and $U^\text{shift}_{\alpha+2\pi}$ can be connected with an invertible topological junction [^isomUalpha]:
+$U^\text{shift}_\alpha$ and $U^\text{shift}_{\alpha+2\pi}$ can be connected with an invertible topological line-changing operator or a *line-isomrphism* operator for short[^isom]:
 $$
  \exp\left(\frac{\imunit}{2\pi} \int^\square \mathop{dV}(\phi_L-\phi_R -\alpha)  + \imunit V(\square)  + \frac{\imunit}{2\pi} \int_\square \mathop{dV}(\phi_L-\phi_R -\alpha+2\pi)  \right)
 $$
-where $\square$ denotes the point connecting two line operators.
-See also @fig-shift-isom
+where $\square$ denotes the point connecting two line operators. Note that the winding operator $e^{\imunit V(\square)}$ is precisely cancelled when the integral in the last term is evaluated, and thus the junction operator is topological. The existence of its inverse is also manifest.
 
-[](figures/){#fig-shift-isom}
 
-[^isomUalpha]: In the language of category theory, they are isomorphic. In (higher) category theory it is important to distinguish that two objects are the *same* and that the two objects are *isomorphic*.
+[^isom]: In the language of category theory, such an invertible topological line-changing operator defines an *isomorphism* between the lines. In (higher)-category theory it is important to to distinguish being isomorphic from being "the same", and in this context physically it means that we remember the total derivative terms on the line.
+
+See also @fig-line-isom
+
+
+:::{#fig-line-isom layout-ncol=2}
+
+![](figures/shift_2pi_isom)
+
+![](figures/winding_2pi_isom)
+
+
+Line-isomorphism operators
+:::
+
 
 
 We let the composition of the two lines be denoted by $U_{\alpha,\beta} = U^\text{shift}_\alpha U^\text{winding}_\beta$.
@@ -403,7 +415,7 @@ $$
 \langle \mathcal{I}_{p,q}^\text{T}[W]\rangle = \sqrt{pq}.
 $$
 
-:::{#fig-elephants layout-ncol=2}
+:::{#fig-one-form layout-ncol=2}
 
 ![](figures/one-form_act)
 
