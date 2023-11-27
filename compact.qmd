@@ -180,7 +180,7 @@ Line-isomorphism operators.
 
 Likewise, the line isomorphism operator for the winding symmetry operator is 
 $$
- \exp\left(\imunit \alpha \int^\triangle \frac{d\phi}{2\pi} + \imunit\phi(\triangle)  + \imunit (\alpha+2\pi)  \int_\triangle \frac{d\phi}{2\pi}  \right).
+ \exp\left(\imunit \alpha \int^{\triangle} \frac{d\phi}{2\pi} + \imunit\phi(\triangle)  + \imunit (\alpha+2\pi)  \int_{\triangle} \frac{d\phi}{2\pi}  \right).
 $$
 
 We let the composition of the two lines be denoted by $U_{\alpha,\beta} = U^\text{shift}_\alpha U^\text{winding}_\beta$.
