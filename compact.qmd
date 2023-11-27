@@ -78,7 +78,17 @@ According to @tbl-sym-classes, this topological operator should define a $\U(1)$
 
 What are the operators *charged* under the symmetry?
 When $p \ge 1$ ($\stdim\ge 3$), the operator @eq-winding-op cannot act on a local (point) operator, because the one-dimensional submanifold $\gamma^1$ can always be deformed one configuration to another without colliding with a point. 
-On the other hand, it can potentially act on a $p$-dimensional extended operator. **FIXME:figure!!**.
+On the other hand, it can potentially act on a $p$-dimensional extended operator: @fig-one-form.
+
+:::{#fig-one-form layout-ncol=2}
+
+![](figures/one-form_act)
+
+
+![](figures/one_form_passing)
+
+Action of $p$-form symmetry operator $U_\alpha[W^{D-p-1}]$ on a $p$-dimensional operator $\mathcal{O}_q[\Sigma^p]$ of $p$-form charge $q$. We can consider the two types of actions, one is *encircling* action (left), and the other is the *passing* action (right). From the latter we can close the loop on the right of the $\mathcal{O}_q$, and contract the loop on the right hand side, to get the former type of action.
+:::
 
 However, the construction of a charged operator is a bit tricky. 
 A way of doing it is to first insert the identity operator @eq-identity-compact-boson, then utilize the field $V$ on the identity operator to defing an operator charged under @eq-winding-op.
@@ -465,12 +475,3 @@ $$
 \langle \mathcal{I}_{p,q}^\text{T}[W]\rangle = \sqrt{pq}.
 $$
 
-:::{#fig-one-form layout-ncol=2}
-
-![](figures/one-form_act)
-
-
-![](figures/one_form_passing)
-
-Action of $p$-form symmetry operator $U_\alpha[W^{D-p-1}]$ on a $p$-dimensional operator $\mathcal{O}_q[\Sigma^p]$ of $p$-form charge $q$.
-:::
