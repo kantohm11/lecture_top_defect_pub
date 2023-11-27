@@ -210,7 +210,10 @@ The definition of junction fusing two $U_{\alpha,\beta}$'s into one.
 
 
 Now, we consider the two concequative junctions, which fuses three lines $U_{\langle\alpha_i\rangle,\langle\beta_i\rangle}$ ($i=1,2,3$) into $U_{\langle\sum_i \alpha_i\rangle,\langle\sum_j \beta_j \rangle}$; see @fig-F-move.
-There two ways of such fusin as depicted in the figure, and the two are related by a nontrivial phase which is
+
+![The anomalous phase from the F-move](figures/f_move)
+
+There two ways of such fusion as depicted in the figure, and the two are related by a nontrivial phase which is
 $$
 f(g_1,g_2,g_3) = ,
 $$
