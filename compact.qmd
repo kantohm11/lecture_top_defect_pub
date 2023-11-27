@@ -171,10 +171,9 @@ where $\square$ denotes the point connecting two line operators. Note that the w
 
 :::{#fig-line-isom layout-ncol=2}
 
-![](figures/shift_2pi_isom)
+![](figures/shift_2pi_isom){fig-align="center"}
 
-![](figures/winding_2pi_isom)
-
+![](figures/winding_2pi_isom){fig-align="center"}
 
 Line-isomorphism operators.
 :::
