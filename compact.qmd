@@ -189,7 +189,7 @@ However, the fused operator in general has parameters in the fundamental domain 
 Therefore, we normalize the junction by using the $\square$ and $\triangle$ isomorphisms so that the output is $U_{\langle \alpha_1+\alpha_2\rangle, \langle \beta_1+\beta_2\rangle}$, where $\langle \alpha \rangle = 2\pi\{\alpha/2\pi\}$; see @fig-junction-def.
 The point is that this isomorphism results in a phase when crosing a intersection of the lines.
 
-:::{#fig-junction-def layout-ncol=2}
+:::{#fig-junction-def layout=[[20,80]]}
 
 ![](figures/prod_isom){fig-align="center"}
 
