@@ -5,6 +5,7 @@ $$
 \DeclareMathOperator{\SU}{SU}
 \DeclareMathOperator{\imunit}{i}
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Map}{Map}
 \newcommand{\stdim}{D}
 $$
 :::

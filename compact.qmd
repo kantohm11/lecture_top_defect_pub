@@ -177,7 +177,7 @@ $$
 where $\square$ denotes the point connecting two line operators. Note that the winding operator $e^{\imunit V(\square)}$ is precisely cancelled when the integral in the last term is evaluated, and thus the junction operator is topological. The existence of its inverse is also manifest.
 
 
-[^isom]: In the language of category theory, such an invertible topological line-changing operator defines an *isomorphism* between the lines. In (higher)-category theory it is important to to distinguish being isomorphic from being "the same", and in this context physically it means that we remember the total derivative terms on the line.
+[^isom]: In the language of category theory, such an invertible topological line-changing operator defines an *isomorphism* between the lines. In (higher)-category theory it is important to distinguish being isomorphic from being "the same", and in this context physically it means that we remember the total derivative terms on the line.
 
 :::{#fig-line-isom layout-ncol=2}
 
@@ -197,7 +197,7 @@ We let the composition of the two lines be denoted by $U_{\alpha,\beta} = U^\tex
 With it, we can define "naive" junction where two line operators $U_{\alpha_1,\beta_1}$ and $U_{\alpha_2,\beta_2}$ fusing into $U_{\alpha_1+\alpha_2,\beta_1+\beta_2}$.
 However, the fused operator in general has parameters in the fundamental domain other than those of the fused ones.
 Therefore, we normalize the junction by using the $\square$ and $\triangle$ isomorphisms so that the output is $U_{\langle \alpha_1+\alpha_2\rangle, \langle \beta_1+\beta_2\rangle}$, where $\langle \alpha \rangle = 2\pi\{\alpha/2\pi\}$; see @fig-junction-def.
-The point is that this isomorphism results in a phase when crosing a intersection of the lines.
+The point is that this isomorphism results in a phase when crossing an intersection of the lines.
 
 :::{.content-visible when-format="html"}
 :::{#fig-junction-def layout-nrow=2}
@@ -221,37 +221,45 @@ The definition of junction fusing two $U_{\alpha,\beta}$'s into one.
 :::
 :::
 
-Now, we consider the two concequative junctions, which fuses three lines $U_{\langle\alpha_i\rangle,\langle\beta_i\rangle}$ ($i=1,2,3$) into $U_{\langle\sum_i \alpha_i\rangle,\langle\sum_j \beta_j \rangle}$; see @fig-F-move.
+Now, we consider the two consecutive junctions, which fuses three lines $U_{\langle\alpha_i\rangle,\langle\beta_i\rangle}$ ($i=1,2,3$) into $U_{\langle\sum_i \alpha_i\rangle,\langle\sum_j \beta_j \rangle}$; see @fig-F-move.
 
-![The anomalous phase from the F-move](figures/f_move){#fig-F-move}
+![The anomalous phase from the F-move. We let $\alpha_{12} = \alpha_1+\alpha_2$, etc.](figures/f_move){#fig-F-move}
 
-There two ways of such fusion as depicted in the figure, and the two are related by a nontrivial phase which is
+There are two ways of such fusion as depicted in the figure, and the two are related by a nontrivial phase which is
 $$
-f(g_1,g_2,g_3) = ,
-$$
+f(g_1,g_2,g_3) = \alpha_1\left[\frac{\langle\beta_2\rangle}{2\pi}+\frac{\langle\beta_3\rangle}{2\pi}\right]+\beta_3\left[\frac{\langle\alpha_1\rangle}{2\pi}+\frac{\langle\alpha_2\rangle}{2\pi}\right],
+$${#eq-cocycle-boson}
 where $g_i = (\alpha_i,\beta_i)\in U(1)^2$.
 The two configurations are gauge-equivalent, yet there is a non-trivial phase relating them. This is the *anomalous phase* of this anomalous $U(1)^2$ symmetry of 1+1d compact boson.
 
 
 :::{.callout-note}
-# Group Cocycle
+# Group cohomology
 
 Mathematically speaking, the function $f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}$ is a 3-cocycle on the group $G=U(1)$; it satisfies the *pentagon identity*, depicted in @fig-pentagon.
 
 Futher, it is subject to an ambiguity; we can modify the junction by a phase $h(g_1,g_2)$. This modifies the anomalous phase $f$ as
 $$ f(g_1,g_2,g_3) \mapsto f(g_1,g_2,g_3) + (\delta h)(g_1,g_2,g_3)
 $$
-where $\delta h : (U(1))^3\to \mathbb{R}/2\pi\mathbb{Z}$ is the following *exact* cocycle:
+where $\delta h : (U(1))^3\to \mathbb{R}/2\pi\mathbb{Z}$ is the following function called a *coboundary* (FIXME:sign?):
 $$
-(\delta h)(g_1,g_2,g_3) = 
+(\delta h)(g_1,g_2,g_3) = h(g_1,g_2) + h(g_1g_2,g_3) - h(g_1,g_2g_3) - h(g_2,g_3).
 $$
-The **group cohomology 
+The third **group cohomology** is an element of the quatient group
+$$
+H^3 = \{f\in\Map(G^3,\mathbb{R}/2\pi\mathbb{Z})\mid\text{pentagon eq.}\} / \delta(\Map(G^3,\mathbb{R}/2\pi\mathbb{Z})),
+$$
+where $\Map(X,Y)$ is the abelian group of $Y$ valued functions on $X$ [^Map].
+This group cohomology classifies the anomalous phases of 1+1-dimensional bosonic theories with $G$-symmetry.
 :::
+
+[^Map]: When $G$ is continuous, the definition of $\Map(G^n,\mathbb{R}/2\pi\mathbb{Z})$ is subtle. The particular cocycle $f$ in @eq-cocycle-boson is not continuous, so we do not want $\Map(X,Y)$ to mean continuous maps. On the other hand arbitrary discontinuous maps would contain too wild cocycles to be realized in a QFT. In this particular case it seems considering *piecewise continuous* functions is necessary and sufficient. For general cases in general dimensions KO is not sure.
 
 :::{.callout-tip}
 # Exercise: $\mathbb{Z}_2$ anomaly
 
-The diagonal $\mathbb{Z}_2$ subgroup of $U(1)^2$ generate by $U_{\pi,\pi}$ is anomalous. Confirm this fact by calculating $f(g_1,g_2,g_3)$ for $g_i$'s in this subgroup, and also proving that no $h$ can satisfy $f = -\delta(h)$.
+The diagonal $\mathbb{Z}_3$ subgroup of $U(1)^2$ generate by $U_{2\pi/3,2\pi/3}$ is anomalous. Confirm this fact by calculating $f(g_1,g_2,g_3)$ for $g_i$'s in this subgroup, and also proving that no $h$ can satisfy $f = -\delta(h)$.
+Optionally one might consider some other finite subgroups of $U(1)^2$.
 :::
 
 :::{.callout-note}
