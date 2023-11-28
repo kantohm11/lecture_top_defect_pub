@@ -56,10 +56,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,6 +113,10 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">A Lecture on Topological Operators</a> 
+        <div class="sidebar-tools-main">
+    <a href="./A-Lecture-on-Topological-Operators.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -135,7 +141,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./scalar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators for Classical Symmetry</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -168,7 +174,11 @@ div.csl-indent {
   <ul>
   <li><a href="#trivial-operator-and-shift-symmetry-operator" id="toc-trivial-operator-and-shift-symmetry-operator" class="nav-link active" data-scroll-target="#trivial-operator-and-shift-symmetry-operator"><span class="header-section-number">3.1</span> Trivial Operator and Shift Symmetry Operator</a></li>
   <li><a href="#winding-symmetry" id="toc-winding-symmetry" class="nav-link" data-scroll-target="#winding-symmetry"><span class="header-section-number">3.2</span> Winding Symmetry</a></li>
-  <li><a href="#mixed-anomaly-between-shift-and-winding-symmetry" id="toc-mixed-anomaly-between-shift-and-winding-symmetry" class="nav-link" data-scroll-target="#mixed-anomaly-between-shift-and-winding-symmetry"><span class="header-section-number">3.3</span> Mixed Anomaly between Shift and Winding Symmetry</a></li>
+  <li><a href="#mixed-anomaly-between-shift-and-winding-symmetry" id="toc-mixed-anomaly-between-shift-and-winding-symmetry" class="nav-link" data-scroll-target="#mixed-anomaly-between-shift-and-winding-symmetry"><span class="header-section-number">3.3</span> Mixed Anomaly between Shift and Winding Symmetry</a>
+  <ul class="collapse">
+  <li><a href="#intersection" id="toc-intersection" class="nav-link" data-scroll-target="#intersection"><span class="header-section-number">3.3.1</span> Intersection</a></li>
+  <li><a href="#group-cohomology" id="toc-group-cohomology" class="nav-link" data-scroll-target="#group-cohomology"><span class="header-section-number">3.3.2</span> Group Cohomology</a></li>
+  </ul></li>
   <li><a href="#t-duality" id="toc-t-duality" class="nav-link" data-scroll-target="#t-duality"><span class="header-section-number">3.4</span> T-duality</a>
   <ul class="collapse">
   <li><a href="#t-duality-topological-interface" id="toc-t-duality-topological-interface" class="nav-link" data-scroll-target="#t-duality-topological-interface"><span class="header-section-number">3.4.1</span> T-duality topological interface</a></li>
@@ -204,6 +214,7 @@ div.csl-indent {
 \DeclareMathOperator{\SU}{SU}
 \DeclareMathOperator{\imunit}{i}
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Map}{Map}
 \newcommand{\stdim}{D}
 \]</span></p>
 </div>
@@ -257,7 +268,20 @@ div.csl-indent {
 <p>The compact boson theory has another topological operator of dimension 1 (codimension <span class="math inline">\(\stdim-1\)</span>), which is simply <span id="eq-winding-op"><span class="math display">\[
 U^\text{winding}_\alpha[\gamma^1] = \exp\left(\imunit\alpha \int_{\gamma^1}\frac{\mathop{d\phi}}{2\pi}\right).
 \tag{3.3}\]</span></span> Given the periodicity, the integral <span class="math inline">\(\int_{\gamma^1}\mathop{d\phi}\)</span> for a closed <span class="math inline">\(\gamma^1\)</span> takes a value in <span class="math inline">\(2\pi \mathbb{Z}\)</span>, and therefore the operator is invariant against deformation of <span class="math inline">\(\gamma^1\)</span>. This also indicates that the parameter <span class="math inline">\(\alpha\)</span> is <span class="math inline">\(2\pi\)</span> periodic. According to <a href="intro.html#tbl-sym-classes">Table&nbsp;<span>1.1</span></a>, this topological operator should define a <span class="math inline">\(\U(1)\)</span> <span class="math inline">\(p\)</span>-form symmetry with <span class="math inline">\(p=(\stdim-2)\)</span>, called the <strong>winding symmetry</strong>.</p>
-<p>What are the operators <em>charged</em> under the symmetry? When <span class="math inline">\(p \ge 1\)</span> (<span class="math inline">\(\stdim\ge 3\)</span>), the operator <a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a> cannot act on a local (point) operator, because the one-dimensional submanifold <span class="math inline">\(\gamma^1\)</span> can always be deformed one configuration to another without colliding with a point. On the other hand, it can potentially act on a <span class="math inline">\(p\)</span>-dimensional extended operator. <strong>FIXME:figure!!</strong>.</p>
+<p>What are the operators <em>charged</em> under the symmetry? When <span class="math inline">\(p \ge 1\)</span> (<span class="math inline">\(\stdim\ge 3\)</span>), the operator <a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a> cannot act on a local (point) operator, because the one-dimensional submanifold <span class="math inline">\(\gamma^1\)</span> can always be deformed one configuration to another without colliding with a point. On the other hand, it can potentially act on a <span class="math inline">\(p\)</span>-dimensional extended operator: <a href="#fig-one-form">Figure&nbsp;<span>3.1</span></a>.</p>
+<div id="fig-one-form" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="figures/one-form_act.svg" class="img-fluid figure-img"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="figures/one_form_passing.svg" class="img-fluid figure-img"></p>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Action of <span class="math inline">\(p\)</span>-form symmetry operator <span class="math inline">\(U_\alpha[W^{D-p-1}]\)</span> on a <span class="math inline">\(p\)</span>-dimensional operator <span class="math inline">\(\mathcal{O}_q[\Sigma^p]\)</span> of <span class="math inline">\(p\)</span>-form charge <span class="math inline">\(q\)</span>. We can consider the two types of actions, one is <em>encircling</em> action (left), and the other is the <em>passing</em> action (right). From the latter we can close the loop on the right of the <span class="math inline">\(\mathcal{O}_q\)</span>, and contract the loop on the right hand side, to get the former type of action.</figcaption><p></p>
+</figure>
+</div>
 <p>However, the construction of a charged operator is a bit tricky. A way of doing it is to first insert the identity operator <a href="#eq-identity-compact-boson">Equation&nbsp;<span>3.1</span></a>, then utilize the field <span class="math inline">\(V\)</span> on the identity operator to defing an operator charged under <a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a>. Concretely, the (non-topological) operator with winding charge <span class="math inline">\(n\)</span> can be constructed as <span id="eq-dual-op"><span class="math display">\[
 \langle \mathcal{O}^\text{winding}_n[\Sigma^{D-2}] \rangle
 = \int \mathcal{D}^{W^{\stdim-1}}V \exp\left(\frac{\imunit}{2\pi}\int_{W^{\stdim-1}} \mathop{dV}\left(\phi_L-\phi_R\right)+\imunit n \int_{\Sigma^{\stdim-2}}V\right).
@@ -299,7 +323,7 @@ Note
 </div>
 </div>
 <p><strong>FIXME:derivation of the charge, from EOM of V</strong></p>
-<p>Now the Ward-Takahashi identity <a href="scalar.html#eq-Ward-Takahashi">Equation&nbsp;<span>2.12</span></a> formally follows from the topological-ness of <a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a>. Explicitly, we have <span class="math display">\[
+<p>Now the Ward-Takahashi identity <a href="scalar.html#eq-Ward-Takahashi">Equation&nbsp;<span>2.13</span></a> formally follows from the topological-ness of <a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a>. Explicitly, we have <span class="math display">\[
 \langle \prod_i \mathcal{O}^\text{winding}_{n_i}(x_i)\rangle
 =
 \langle \prod_i e^{\imunit \alpha n_i} \mathcal{O}^\text{winding}_{n_i}(x_i)\rangle
@@ -307,6 +331,8 @@ Note
 </section>
 <section id="mixed-anomaly-between-shift-and-winding-symmetry" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="mixed-anomaly-between-shift-and-winding-symmetry"><span class="header-section-number">3.3</span> Mixed Anomaly between Shift and Winding Symmetry</h2>
+<section id="intersection" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="intersection"><span class="header-section-number">3.3.1</span> Intersection</h3>
 <p>Having explicit descriptions of topological operators enables us to directly compute <strong>quantum anomaly</strong> (often called ’t Hooft anomaly) of the symmetries. This is because, from a modern perspective, the anomaly is a subtlety arises when symmetry operators collide. Here we observe one example of anomaly – the mixed anomaly between the shift and winding symmetry in the compact boson theory – explicitly from the topological operator perspective. For a general theory about anomaly and topological operator, readers can consult other resources, e.g. <span class="citation" data-cites="TachikawaTasi">Tachikawa (<a href="references.html#ref-TachikawaTasi" role="doc-biblioref">2019</a>)</span>.</p>
 <p>Let us study the intersection of <span class="math inline">\(U_\alpha^\text{shift}[W^{\stdim-1}]\)</span> (<a href="#eq-shift-compact-boson">Equation&nbsp;<span>3.2</span></a>) and <span class="math inline">\(U_\beta^\text{winding}[\gamma^1]\)</span> (<a href="#eq-winding-op">Equation&nbsp;<span>3.3</span></a>). <strong>FIXME:figure</strong> The shift symmetry operator divides <span class="math inline">\(\gamma^1\)</span> into <span class="math inline">\(\gamma^1_L\)</span> and <span class="math inline">\(\gamma^1_R\)</span>, and the winding operator thus now, naively, look like <span class="math display">\[
 \begin{aligned}
@@ -317,15 +343,127 @@ U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &amp;\stackrel{\text{naiv
 <p>A way to define the intersection is to abandon the periodicity of either of <span class="math inline">\(\alpha\)</span> or <span class="math inline">\(\beta\)</span>. If we regard <span class="math inline">\(\alpha\)</span> to be in <span class="math inline">\(\mathbb{R}\)</span> and not <span class="math inline">\(\mathbb{R}/2\pi\mathbb{Z}\)</span>, we can modify the above naive definition to be <span class="math display">\[
 \begin{aligned}
 U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &amp;\stackrel{\text{def1}}{=} U^\text{shift}_\alpha \exp\left(\imunit\beta \left(\int_{\gamma^1_L}\frac{\mathop{d\phi_L}}{2\pi} + \int_{\gamma^1_R}\frac{\mathop{d\phi_R}}{2\pi} + \{\alpha/2\pi\}\right)\right)\\
-&amp; \sim U^\text{shift}_\alpha \exp\left(\imunit\beta/2\pi [\alpha/2\pi] \right),
+&amp; \sim U^\text{shift}_\alpha \exp\left(\imunit\beta [\alpha/2\pi] \right),
 \end{aligned}
 \]</span> where <span class="math inline">\([r]\)</span> is the integer part of a real number <span class="math inline">\(r\)</span>, and <span class="math inline">\(\{r\}= r-[r]\)</span>. With this definition, or regularization, of the intersection, <span class="math inline">\(\alpha\)</span> is no longer periodic, but <span class="math inline">\(\beta\)</span> is kept periodic. One can do other regularizations where <span class="math inline">\(\alpha\)</span> is periodic but <span class="math inline">\(\beta\)</span> is not, or just abandon both of periodicity, but cannot save both.</p>
-<p>This incompatibility of periodicity, or the group multiplication law, when topological operators intersects is the hallmark of anomaly. This incompatibility is better characterized as a group cohomology (or its generalization to a higher-group), see e.g.&nbsp;<span class="citation" data-cites="TachikawaTasi">Tachikawa (<a href="references.html#ref-TachikawaTasi" role="doc-biblioref">2019</a>)</span>.</p>
+<p>This incompatibility of periodicity, or the group multiplication law, when topological operators intersects is the hallmark of anomaly.</p>
+</section>
+<section id="group-cohomology" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="group-cohomology"><span class="header-section-number">3.3.2</span> Group Cohomology</h3>
+<p>The incompatibility above is better characterized as a group cohomology (or its generalization to a higher-group). Here we see how to characterize the mixed anomaly of the compact boson in 1+1d as a group cohomology element. (Here we do not delve into the general theory of group cohomology. See e.g.&nbsp;<span class="citation" data-cites="TachikawaTasi">Tachikawa (<a href="references.html#ref-TachikawaTasi" role="doc-biblioref">2019</a>)</span>).</p>
+<p>In 1+1d, both <span class="math inline">\(U^\text{shift}_\alpha\)</span> and <span class="math inline">\(U^\text{winding}_\beta\)</span> are line operators. Both operators are <span class="math inline">\(2\pi\)</span> periodic in its parameters, when intersection between them are absent. A more precise statement that applies even with intersections is that <span class="math inline">\(U^\text{shift}_\alpha\)</span> and <span class="math inline">\(U^\text{shift}_{\alpha+2\pi}\)</span> can be connected with an invertible topological line-changing operator or a <em>line-isomrphism</em> operator for short<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (See also <a href="#fig-line-isom">Figure&nbsp;<span>3.2</span></a>): <span class="math display">\[
+\exp\left(\frac{\imunit}{2\pi} \int^\square \mathop{dV}(\phi_L-\phi_R -\alpha)  + \imunit V(\square)  + \frac{\imunit}{2\pi} \int_\square \mathop{dV}(\phi_L-\phi_R -\alpha+2\pi)  \right)
+\]</span> where <span class="math inline">\(\square\)</span> denotes the point connecting two line operators. Note that the winding operator <span class="math inline">\(e^{\imunit V(\square)}\)</span> is precisely cancelled when the integral in the last term is evaluated, and thus the junction operator is topological. The existence of its inverse is also manifest.</p>
+<div id="fig-line-isom" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/shift_2pi_isom.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/winding_2pi_isom.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: Line-isomorphism operators.</figcaption><p></p>
+</figure>
+</div>
+<p>Likewise, the line isomorphism operator for the winding symmetry operator is <span class="math display">\[
+\exp\left(\imunit \alpha \int^{\triangle} \frac{d\phi}{2\pi} + \imunit\phi(\triangle)  + \imunit (\alpha+2\pi)  \int_{\triangle} \frac{d\phi}{2\pi}  \right).
+\]</span></p>
+<p>We let the composition of the two lines be denoted by <span class="math inline">\(U_{\alpha,\beta} = U^\text{shift}_\alpha U^\text{winding}_\beta\)</span>. With it, we can define “naive” junction where two line operators <span class="math inline">\(U_{\alpha_1,\beta_1}\)</span> and <span class="math inline">\(U_{\alpha_2,\beta_2}\)</span> fusing into <span class="math inline">\(U_{\alpha_1+\alpha_2,\beta_1+\beta_2}\)</span>. However, the fused operator in general has parameters in the fundamental domain other than those of the fused ones. Therefore, we normalize the junction by using the <span class="math inline">\(\square\)</span> and <span class="math inline">\(\triangle\)</span> isomorphisms so that the output is <span class="math inline">\(U_{\langle \alpha_1+\alpha_2\rangle, \langle \beta_1+\beta_2\rangle}\)</span>, where <span class="math inline">\(\langle \alpha \rangle = 2\pi\{\alpha/2\pi\}\)</span>; see <a href="#fig-junction-def">Figure&nbsp;<span>3.3</span></a>. The point is that this isomorphism results in a phase when crossing an intersection of the lines.</p>
+<div id="fig-junction-def" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/prod_isom.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/junction_def.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.3: The definition of junction fusing two <span class="math inline">\(U_{\alpha,\beta}\)</span>’s into one.</figcaption><p></p>
+</figure>
+</div>
+<p>Now, we consider the two consecutive junctions, which fuses three lines <span class="math inline">\(U_{\langle\alpha_i\rangle,\langle\beta_i\rangle}\)</span> (<span class="math inline">\(i=1,2,3\)</span>) into <span class="math inline">\(U_{\langle\sum_i \alpha_i\rangle,\langle\sum_j \beta_j \rangle}\)</span>; see <a href="#fig-F-move">Figure&nbsp;<span>3.4</span></a>.</p>
+<div id="fig-F-move" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/f_move.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.4: The anomalous phase from the F-move. We let <span class="math inline">\(\alpha_{12} = \alpha_1+\alpha_2\)</span>, etc.</figcaption>
+</figure>
+</div>
+<p>There are two ways of such fusion as depicted in the figure, and the two are related by a nontrivial phase which is <span id="eq-cocycle-boson"><span class="math display">\[
+f(g_1,g_2,g_3) = \alpha_1\left[\frac{\langle\beta_2\rangle}{2\pi}+\frac{\langle\beta_3\rangle}{2\pi}\right]+\beta_3\left[\frac{\langle\alpha_1\rangle}{2\pi}+\frac{\langle\alpha_2\rangle}{2\pi}\right],
+\tag{3.5}\]</span></span> where <span class="math inline">\(g_i = (\alpha_i,\beta_i)\in U(1)^2\)</span>. The two configurations are gauge-equivalent, yet there is a non-trivial phase relating them. This is the <em>anomalous phase</em> of this anomalous <span class="math inline">\(U(1)^2\)</span> symmetry of 1+1d compact boson.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Group cohomology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mathematically speaking, the function <span class="math inline">\(f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}\)</span> is a 3-cocycle on the group <span class="math inline">\(G=U(1)\)</span>; it satisfies the <em>pentagon identity</em>, depicted in <span class="quarto-unresolved-ref">?fig-pentagon</span>.</p>
+<p>Futher, it is subject to an ambiguity; we can modify the junction by a phase <span class="math inline">\(h(g_1,g_2)\)</span>. This modifies the anomalous phase <span class="math inline">\(f\)</span> as <span class="math display">\[ f(g_1,g_2,g_3) \mapsto f(g_1,g_2,g_3) + (\delta h)(g_1,g_2,g_3)
+\]</span> where <span class="math inline">\(\delta h : (U(1))^3\to \mathbb{R}/2\pi\mathbb{Z}\)</span> is the following function called a <em>coboundary</em> (FIXME:sign?): <span class="math display">\[
+(\delta h)(g_1,g_2,g_3) = h(g_1,g_2) + h(g_1g_2,g_3) - h(g_1,g_2g_3) - h(g_2,g_3).
+\]</span> The third <strong>group cohomology</strong> is an element of the quatient group <span class="math display">\[
+H^3 = \{f\in\Map(G^3,\mathbb{R}/2\pi\mathbb{Z})\mid\text{pentagon eq.}\} / \delta(\Map(G^3,\mathbb{R}/2\pi\mathbb{Z})),
+\]</span> where <span class="math inline">\(\Map(X,Y)\)</span> is the abelian group of <span class="math inline">\(Y\)</span> valued functions on <span class="math inline">\(X\)</span> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. This group cohomology classifies the anomalous phases of 1+1-dimensional bosonic theories with <span class="math inline">\(G\)</span>-symmetry.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise: <span class="math inline">\(\mathbb{Z}_2\)</span> anomaly
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The diagonal <span class="math inline">\(\mathbb{Z}_3\)</span> subgroup of <span class="math inline">\(U(1)^2\)</span> generate by <span class="math inline">\(U_{2\pi/3,2\pi/3}\)</span> is anomalous. Confirm this fact by calculating <span class="math inline">\(f(g_1,g_2,g_3)\)</span> for <span class="math inline">\(g_i\)</span>’s in this subgroup, and also proving that no <span class="math inline">\(h\)</span> can satisfy <span class="math inline">\(f = -\delta(h)\)</span>. Optionally one might consider some other finite subgroups of <span class="math inline">\(U(1)^2\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Comparison to more conventional calculation.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The mixed anomaly between the shift and winding symmetry in 1+1d compact boson is usually computed from the two-point function of the corresponding current operators. Such computation corresopnds to <em>non-flat</em> and infinitesimal background for the symmetries. On the other hand, inserting topological operator corresponds to <em>flat</em> and finite background. The two computations results in the same result is quite non-trivial, and is explained by the Chern-Weil theory.</p>
+<p>While the computation based on non-flat background is easier, it is only for continuous symmetries and not obvious how it restricts to a finite subgroup, for example.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="t-duality" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="t-duality"><span class="header-section-number">3.4</span> T-duality</h2>
 <p>The compact boson in <span class="math inline">\(\stdim=2\)</span>-dimensions famously has <em>T-duality</em>.</p>
-<p>The T-duality is equivalence between the compact boson with radius <span class="math inline">\(R\)</span> and radius <span class="math inline">\(\frac{1}{R}\)</span> <strong>FIXME:what is <span class="math inline">\(R'\)</span>?</strong>, and maps the shift (or momentum) symmetry of one side to the winding symmetry of the other side, and vise versa. Note that this makes sense because in <span class="math inline">\(\stdim=2\)</span> the winding symmetry is a 0-form symmetry.</p>
+<p>The T-duality is equivalence between the compact boson with radius <span class="math inline">\(R\)</span> and radius <span class="math inline">\(\frac{1}{R}\)</span>, and maps the shift (or momentum) symmetry of one side to the winding symmetry of the other side, and vise versa. Note that this makes sense because in <span class="math inline">\(\stdim=2\)</span> the winding symmetry is a 0-form symmetry.</p>
 <p>When the radius is the self-dual radius <span class="math inline">\(R=1\)</span>, the duality becomes a (conventional) <span class="math inline">\(\mathbb{Z}_2\)</span> symmetry, which is a part of the larger emergent <span class="math inline">\(\SU(2)\)</span> symmetry.</p>
 <p>In this section we study</p>
 <ol type="1">
@@ -345,19 +483,19 @@ U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &amp;\stackrel{\text{def1
 -\frac{\imunit}{2\pi}\int_W \phi_L\mathop{d\phi_R}
 -\frac{1}{4\pi R^2}\int_{M_R}\mathop{d\phi_R}*\mathop{d\phi_R}\right).
 \end{multlined}
-\tag{3.5}\]</span></span> For simplicity let us take <span class="math inline">\(\mathcal{O}_R =1\)</span>, and <span class="math inline">\(M_R\)</span> be a compact region in the spacetime. In this case, we expect the supposed topological-ness implies <span class="math display">\[
+\tag{3.6}\]</span></span> For simplicity let us take <span class="math inline">\(\mathcal{O}_R =1\)</span>, and <span class="math inline">\(M_R\)</span> be a compact region in the spacetime. In this case, we expect the supposed topological-ness implies <span class="math display">\[
 \langle \mathcal{O}_L \mathcal{I}_1^\text{T}[W]\rangle = \langle \mathcal{O}_L \rangle.
 \]</span> To show this, we replace the variable <span class="math inline">\(\phi_R\)</span> with <span class="math inline">\(F_R = d\phi_R\)</span> by <span class="math display">\[
 \int \mathcal{D}\phi_R = \int \mathop{\mathcal{D}F_R} \mathop{\mathcal{D}\widetilde{\phi}_R}
 \exp\left(\frac{\imunit}{2\pi} \int_{M_R}\widetilde{\phi}_R \mathop{dF_R}\right),
-\]</span> where the periodic scalar <span class="math inline">\(\widetilde{\phi}_R\)</span> is the Lagrange multiplier enforcing the closedness and the quantization of <span class="math inline">\(F_R = d\phi_R\)</span>. Substituting this into <a href="#eq-T-interface">Equation&nbsp;<span>3.5</span></a>, the EOMs with respect to <span class="math inline">\(F_R\)</span> are <span id="eq-EOM-FR-boson"><span class="math display">\[
+\]</span> where the periodic scalar <span class="math inline">\(\widetilde{\phi}_R\)</span> is the Lagrange multiplier enforcing the closedness and the quantization of <span class="math inline">\(F_R = d\phi_R\)</span>. Substituting this into <a href="#eq-T-interface">Equation&nbsp;<span>3.6</span></a>, the EOMs with respect to <span class="math inline">\(F_R\)</span> are <span id="eq-EOM-FR-boson"><span class="math display">\[
 \begin{aligned}
     \frac{1}{R} *d\phi_R(x) &amp;= \imunit d\widetilde\phi_R(x) \quad \mathop{\text{for}} x \in M_R \\
     \phi_L(x) &amp;= \widetilde{\phi}_R(x) \quad \mathop{\text{for}} x \in W.
 \end{aligned}
-\tag{3.6}\]</span></span> Substituting the former equation to the Lagrangea of <span class="math inline">\(\phi_R\)</span>, we get <span class="math display">\[
+\tag{3.7}\]</span></span> Substituting the former equation to the Lagrangea of <span class="math inline">\(\phi_R\)</span>, we get <span class="math display">\[
     \frac{R^2}{4\pi} \int_{M_R}\mathop{d\widetilde{\phi}_R}*\mathop{d\widetilde{\phi}_R}
-\]</span> with is the same as for <span class="math inline">\(\phi_L\)</span>, while the latter of <a href="#eq-EOM-FR-boson">Equation&nbsp;<span>3.6</span></a> connects <span class="math inline">\(\phi_L\)</span> and <span class="math inline">\(\widetilde{\phi}_R\)</span> along <span class="math inline">\(W\)</span>. As a whole, we recover the path-integral over <span class="math inline">\(M\)</span> resulting in <span class="math inline">\(\langle \mathcal{O}_L \rangle\)</span>. For a more general topological-ness about local deformation of <span class="math inline">\(W\)</span> can be derived in the same way but with more letters.</p>
+\]</span> with is the same as for <span class="math inline">\(\phi_L\)</span>, while the latter of <a href="#eq-EOM-FR-boson">Equation&nbsp;<span>3.7</span></a> connects <span class="math inline">\(\phi_L\)</span> and <span class="math inline">\(\widetilde{\phi}_R\)</span> along <span class="math inline">\(W\)</span>. As a whole, we recover the path-integral over <span class="math inline">\(M\)</span> resulting in <span class="math inline">\(\langle \mathcal{O}_L \rangle\)</span>. For a more general topological-ness about local deformation of <span class="math inline">\(W\)</span> can be derived in the same way but with more letters.</p>
 <p>Now, let us set <span class="math inline">\(\mathcal{O}_R = \mathcal{O}^\text{winding}_n(x)\)</span> and see how the topological interface acts on the operator. As the operator <span class="math inline">\(\mathcal{O}^\text{winding}_n\)</span> in <a href="#eq-dual-op">Equation&nbsp;<span>3.4</span></a> is defined on the trivial surface operator, we have to divide the manifold into three parts: <span class="math inline">\(M_L,M_M,m_R\)</span>, separated by <span class="math inline">\(W_1\)</span> and <span class="math inline">\(W_2\)</span>. As the <span class="math inline">\(M_L\)</span> and field on it is not going to be relevant, we suppress them in the following equations. The calculation goes as:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -398,7 +536,7 @@ U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &amp;\stackrel{\text{def1
 -\frac{\imunit N}{2\pi}\int_W \phi_L\mathop{d\phi_R}
 -\frac{N^2}{4\pi R^2}\int_{M_R}\mathop{d\phi_R}*\mathop{d\phi_R}\right).
 \end{multlined}
-\tag{3.7}\]</span></span> This interface is a <em>self-interface</em> at <span class="math inline">\(R=\sqrt{N}\)</span>. The same procedure as we did for <span class="math inline">\(\mathcal{I}_1\)</span> leads to <span id="eq-TN-interface2"><span class="math display">\[
+\tag{3.8}\]</span></span> This interface is a <em>self-interface</em> at <span class="math inline">\(R=\sqrt{N}\)</span>. The same procedure as we did for <span class="math inline">\(\mathcal{I}_1\)</span> leads to <span id="eq-TN-interface2"><span class="math display">\[
 \begin{multlined}
 \langle\mathcal{O}_L \mathcal{I}^\text{T}_N[W] \rangle=
 \int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}\mathop{\mathcal{D}^{W}V'}
@@ -407,7 +545,7 @@ U^\text{shift}_\alpha U^\text{winding}_\beta[\gamma^1] &amp;\stackrel{\text{def1
 -\frac{\imunit }{2\pi}\int_W (N \phi_L - \widetilde{\phi}_R)\mathop{dV}
 -\frac{R^2}{4\pi N^2}\int_{M_R}\mathop{d\widetilde\phi_R}*\mathop{d\widetilde\phi_R}\right).
 \end{multlined}
-\tag{3.8}\]</span></span> We further rescale the fields as</p>
+\tag{3.9}\]</span></span> We further rescale the fields as</p>
 <p><span class="math display">\[
 \begin{aligned}
 V' &amp;= NV \\
@@ -422,7 +560,7 @@ N \widetilde\phi_R' &amp;= \widetilde\phi_R \mod 2\pi
 -\frac{\imunit }{2\pi}\int_W ( \phi_L - \widetilde{\phi}_R')\mathop{dV'}
 -\frac{R^2}{4\pi}\int_{M_R}\mathop{d\widetilde\phi_R'}*\mathop{d\widetilde\phi_R'}\right).
 \end{multlined}
-\tag{3.9}\]</span></span> To go from <a href="#eq-TN-interface3">Equation&nbsp;<span>3.9</span></a> to <a href="#eq-TN-interface2">Equation&nbsp;<span>3.8</span></a>, we define a <span class="math inline">\(\mathbb{Z}_N\)</span> valued variable <span class="math inline">\(n_{\widetilde{\phi'}_R} = [N\widetilde{\phi'}_R/2\pi] \mod N\)</span> so that <span class="math inline">\(\widetilde{\phi'} = \frac{2\pi}{N}(\{\widetilde{\phi}/2\pi\} + 2\pi n_{\widetilde{\phi'}_R})\)</span>. Then, after substituting it, the sum over <span class="math inline">\(n_{\widetilde{\phi'}}\)</span> enforces <span class="math inline">\(V'\)</span> be divisible by <span class="math inline">\(N\)</span> (that is, the winding of <span class="math inline">\(V\)</span> along <span class="math inline">\(W\)</span> is constrained to be a multiple of <span class="math inline">\(N\)</span>). Thus, we have <span class="math display">\[\langle\mathcal{O}_L \mathcal{I}_N^\text{T}[W]\rangle = \mathcal{N} \langle \mathcal{O}_L \rangle.
+\tag{3.10}\]</span></span> To go from <a href="#eq-TN-interface3">Equation&nbsp;<span>3.10</span></a> to <a href="#eq-TN-interface2">Equation&nbsp;<span>3.9</span></a>, we define a <span class="math inline">\(\mathbb{Z}_N\)</span> valued variable <span class="math inline">\(n_{\widetilde{\phi'}_R} = [N\widetilde{\phi'}_R/2\pi] \mod N\)</span> so that <span class="math inline">\(\widetilde{\phi'} = \frac{2\pi}{N}(\{\widetilde{\phi}/2\pi\} + 2\pi n_{\widetilde{\phi'}_R})\)</span>. Then, after substituting it, the sum over <span class="math inline">\(n_{\widetilde{\phi'}}\)</span> enforces <span class="math inline">\(V'\)</span> be divisible by <span class="math inline">\(N\)</span> (that is, the winding of <span class="math inline">\(V\)</span> along <span class="math inline">\(W\)</span> is constrained to be a multiple of <span class="math inline">\(N\)</span>). Thus, we have <span class="math display">\[\langle\mathcal{O}_L \mathcal{I}_N^\text{T}[W]\rangle = \mathcal{N} \langle \mathcal{O}_L \rangle.
 \]</span> We are not caring enough about the absolute size of path-integral measure to determine the normalization constant <span class="math inline">\(\mathcal{N}\)</span>, but will determined in by another mean later.</p>
 <section id="fusion-rule" class="level4" data-number="3.4.2.1">
 <h4 data-number="3.4.2.1" class="anchored" data-anchor-id="fusion-rule"><span class="header-section-number">3.4.2.1</span> Fusion rule</h4>
@@ -432,13 +570,13 @@ N \widetilde\phi_R' &amp;= \widetilde\phi_R \mod 2\pi
 &amp;= \sum_{n=0}^{N-1} \int \mathcal{D}^W V' \exp(\frac{\imunit}{2\pi}  \int_W \mathop{dV}(\phi_L-\phi_R+ 2\pi n/N))\\
 &amp;= \sum_{n=0}^{N-1} U_{2\pi n/N}^{\text{shift}},
 \end{aligned}
-\tag{3.10}\]</span></span> where in the second line we did the chage of variable <span class="math inline">\(NV = V'\)</span>, and enforced the divisibility of <span class="math inline">\(V'\)</span> by <span class="math inline">\(N\)</span> by the sum over <span class="math inline">\(n\)</span>. One can also see <span class="math inline">\(\mathcal{I}_N^\text{T}[-W] = \mathcal{I}_N^\text{T}[W]\)</span> (note that when we consider an operator on <span class="math inline">\(W\)</span> the notion of “left” and “right” also flips), so <span class="math display">\[
+\tag{3.11}\]</span></span> where in the second line we did the chage of variable <span class="math inline">\(NV = V'\)</span>, and enforced the divisibility of <span class="math inline">\(V'\)</span> by <span class="math inline">\(N\)</span> by the sum over <span class="math inline">\(n\)</span>. One can also see <span class="math inline">\(\mathcal{I}_N^\text{T}[-W] = \mathcal{I}_N^\text{T}[W]\)</span> (note that when we consider an operator on <span class="math inline">\(W\)</span> the notion of “left” and “right” also flips), so <span class="math display">\[
 \mathcal{I}_N^\text{T}[W]\mathcal{I}_N^\text{T}[-W] = \sum_{n=0}^{N-1} U_{2\pi n/N}^{\text{shift}}.
 \]</span> This contrasts to the case of conventional symmetry operator, where <span class="math inline">\(U_g[W] = U_{g^{-1}}[W]\)</span> and thus <span class="math display">\[
 U_g [W] U_g[-W] = \id[W].
 \]</span> In the case of <span class="math inline">\(\mathcal{I}_N^\text{T}\)</span>, <span class="math inline">\(N\ge 2\)</span>, the fusion with its orientation reversal is not the trivial operator, but a sum. This is a one of hallmarks of <strong>non-invertible</strong> symmetry. <span class="math inline">\(\mathcal{I}_N^\text{T}[-W]\)</span>, called the <strong>dual</strong> of the original operator, is the closest possible thing to be the “inverse”, but it fails to be so. Therefore, the compact boson theory in 1+1d at <span class="math inline">\(R=\sqrt{N}\)</span> has the non-invertible T-duality symmetry.</p>
-<p>Here, we can determine that the coefficient in the above equations are correct. This is because that we can insert the one-dimensional operator <span class="math inline">\((\mathcal{I}_N^\text{T})^2\)</span> along the time direction, which should determine the <em>defect Hilbert</em> space. On the right hand side, we should have a direct sum of defect Hilbert spaces for the involved invertible symmetry operators. There is no way to take “average” over Hilbert spaces, or divide it by a number, so we can assume the minimal possible coefficient is realized, which is the one in <a href="#eq-fusion-I">Equation&nbsp;<span>3.10</span></a>.</p>
-<p>Given <a href="#eq-fusion-I">Equation&nbsp;<span>3.10</span></a>, the coefficient <span class="math inline">\(\mathcal{N}\)</span> in <a href="#eq-TN-interface3">Equation&nbsp;<span>3.9</span></a> is determined by <span class="math display">\[
+<p>Here, we can determine that the coefficient in the above equations are correct. This is because that we can insert the one-dimensional operator <span class="math inline">\((\mathcal{I}_N^\text{T})^2\)</span> along the time direction, which should determine the <em>defect Hilbert</em> space. On the right hand side, we should have a direct sum of defect Hilbert spaces for the involved invertible symmetry operators. There is no way to take “average” over Hilbert spaces, or divide it by a number, so we can assume the minimal possible coefficient is realized, which is the one in <a href="#eq-fusion-I">Equation&nbsp;<span>3.11</span></a>.</p>
+<p>Given <a href="#eq-fusion-I">Equation&nbsp;<span>3.11</span></a>, the coefficient <span class="math inline">\(\mathcal{N}\)</span> in <a href="#eq-TN-interface3">Equation&nbsp;<span>3.10</span></a> is determined by <span class="math display">\[
 \langle (\mathcal{I}_N^\text{T})^2[W] \rangle = \sum_{n=0}^{N-1}\langle U_{2\pi n/N}^\text{shift}[W] \rangle = \mathcal{N}^2,
 \]</span> thus <span class="math inline">\(\mathcal{N} = \sqrt{N}\)</span>. This quantity is called the <strong>quantum dimension</strong> of <span class="math inline">\(\mathcal{I}_N^\text{T}\)</span>.</p>
 </section>
@@ -460,7 +598,7 @@ e^{\imunit \frac{n}{N}\int_{\gamma^x} \mathop{d\phi}} \mathcal{I}_N^\text{T}[W_R
 </section>
 <section id="non-invertible-t-duality-for-a-rational-r" class="level3" data-number="3.4.3">
 <h3 data-number="3.4.3" class="anchored" data-anchor-id="non-invertible-t-duality-for-a-rational-r"><span class="header-section-number">3.4.3</span> Non-invertible T-duality for a rational <span class="math inline">\(R\)</span></h3>
-<p>We can further generalize <a href="#eq-TN-interface">Equation&nbsp;<span>3.7</span></a> so that it is a self duality at <span class="math inline">\(R^2 = p/q\)</span> (<span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are taken to be coprime) <span class="citation" data-cites="Niro:2022ctq Cordova:2023ent">(<a href="references.html#ref-Cordova:2023ent" role="doc-biblioref">Cordova and Ohmori 2023</a>; <a href="references.html#ref-Niro:2022ctq" role="doc-biblioref">Niro et al. 2023</a>)</span>. The construction is <span class="math display">\[
+<p>We can further generalize <a href="#eq-TN-interface">Equation&nbsp;<span>3.8</span></a> so that it is a self duality at <span class="math inline">\(R^2 = p/q\)</span> (<span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are taken to be coprime) <span class="citation" data-cites="Niro:2022ctq Cordova:2023ent">(<a href="references.html#ref-Cordova:2023ent" role="doc-biblioref">Cordova and Ohmori 2023</a>; <a href="references.html#ref-Niro:2022ctq" role="doc-biblioref">Niro et al. 2023</a>)</span>. The construction is <span class="math display">\[
 \mathcal{I}_{p,q}^\text{T}[W]=\int \mathop{\mathcal{D}^W a} \mathop{\mathcal{D}^W b} \exp\left(-\frac{\imunit}{2\pi}  \int_W (q \mathop{a} \mathop{db} +p \mathop{a} \mathop{d\phi_L} - b \mathop{d\phi_R} )\right),
 \]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are periodic scalar fields on <span class="math inline">\(W\)</span>. The fusion is <span class="math display">\[
 (\mathcal{I}_{p,q}^\text{T}[W])^2 = \sum_{n_1=0}^{p-1}\sum_{n_2=0}^{q-1}U^\text{shift}_{2\pi n_1/N}U^\text{winding}_{2\pi n_2/N},
@@ -501,6 +639,8 @@ Tachikawa, Y. (2019), <span>“<a href="https://member.ipmu.jp/yuji.tachikawa/le
 <hr>
 <ol>
 <li id="fn1"><p>We assume that the integration should be done over <em>gauge equivalent classes</em> of <span class="math inline">\(V\)</span>. In other words the gauge fixing procedure is implicit in this lecture.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In the language of category theory, such an invertible topological line-changing operator defines an <em>isomorphism</em> between the lines. In (higher)-category theory it is important to distinguish being isomorphic from being “the same”, and in this context physically it means that we remember the total derivative terms on the line.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>When <span class="math inline">\(G\)</span> is continuous, the definition of <span class="math inline">\(\Map(G^n,\mathbb{R}/2\pi\mathbb{Z})\)</span> is subtle. The particular cocycle <span class="math inline">\(f\)</span> in <a href="#eq-cocycle-boson">Equation&nbsp;<span>3.5</span></a> is not continuous, so we do not want <span class="math inline">\(\Map(X,Y)\)</span> to mean continuous maps. On the other hand arbitrary discontinuous maps would contain too wild cocycles to be realized in a QFT. In this particular case it seems considering <em>piecewise continuous</em> functions is necessary and sufficient. For general cases in general dimensions KO is not sure.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -525,6 +665,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -741,7 +996,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./scalar.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators for Classical Symmetry</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

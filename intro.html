@@ -56,10 +56,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,6 +113,10 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">A Lecture on Topological Operators</a> 
+        <div class="sidebar-tools-main">
+    <a href="./A-Lecture-on-Topological-Operators.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -135,7 +141,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./scalar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators for Classical Symmetry</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -199,6 +205,7 @@ div.csl-indent {
 \DeclareMathOperator{\SU}{SU}
 \DeclareMathOperator{\imunit}{i}
 \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Map}{Map}
 \newcommand{\stdim}{D}
 \]</span></p>
 </div>
@@ -249,7 +256,7 @@ Terminology (global symmetry)
 <p><span id="eq-field-transform"><span class="math display">\[
 \phi(x) \mapsto F(\phi(x)),
 \tag{1.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right-hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>1.1</span></a>. This will be made clear in the lecture.</p>
-<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>. There are types of symmetry called “topological symmetry”, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurrences a topological symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
+<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>, which is called <em>classical symmetry</em>. There are types of symmetry called <em>topological symmetry</em> or <em>quantum symmetry</em>, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurrences a topological/quantum symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
 <p>From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to <strong>topological operators</strong>. A topological operator <span class="math inline">\(\mathcal{D}[W_n]\)</span> in a QFT is an extended operator defined on a <span class="math inline">\(n\)</span>-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold <span class="math inline">\(W_n\)</span> (See <a href="#fig-TopOpsDeform">Figure&nbsp;<span>1.1</span></a>).</p>
 <div id="fig-TopOpsDeform" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -276,7 +283,7 @@ Symmetry/Topological Operator Correspondence
 \tag{1.3}\]</span></span></p>
 </div>
 </div>
-<p>In this correspondence, the topological operator shoould be regarded as the generalization of the <strong>Noether charge</strong> into possibly discrete symmetry. To be precise, we regard this correspondence as the right-hand side <em>defining</em> the left-hand side. We will explicitly check this correspondence/definition reproduces the known symmetries in the case of scalar field theory in <a href="scalar.html"><span>Chapter&nbsp;2</span></a> and in the case of abelian gauge theory in <a href="vector.html"><span>Chapter&nbsp;4</span></a>. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.</p>
+<p>In this correspondence, the topological operator shoould be regarded as the generalization of the <strong>Noether charge</strong> into possibly discrete symmetry. To be precise, we regard this correspondence as the right-hand side <em>defining</em> the left-hand side. We will explicitly check this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in <a href="scalar.html"><span>Chapter&nbsp;2</span></a>, and in the case of abelian gauge theory in <a href="vector.html"><span>Chapter&nbsp;4</span></a>. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -418,6 +425,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -639,7 +761,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./scalar.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators in Scalar Field Theory</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators for Classical Symmetry</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
