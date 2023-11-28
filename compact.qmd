@@ -236,7 +236,7 @@ The two configurations are gauge-equivalent, yet there is a non-trivial phase re
 :::{.callout-note}
 # Group cohomology
 
-Mathematically speaking, the function $f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}$ is a 3-cocycle on the group $G=U(1)$; it satisfies the *pentagon identity*, depicted in @fig-pentagon.
+Mathematically speaking, the function $f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}$ is a 3-cocycle on the group $G=U(1)^2$; it satisfies the *pentagon identity*, depicted in @fig-pentagon.
 
 Futher, it is subject to an ambiguity; we can modify the junction by a phase $h(g_1,g_2)$. This modifies the anomalous phase $f$ as
 $$ f(g_1,g_2,g_3) \mapsto f(g_1,g_2,g_3) + (\delta h)(g_1,g_2,g_3)
