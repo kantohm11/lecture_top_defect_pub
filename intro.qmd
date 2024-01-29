@@ -6,6 +6,22 @@ In this lecture we consider them in *quantum field theories* (QFTs).
 The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow.
 More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ flows into an infrared theory $\mathcal{T}_\text{IR}$, there is a canonical homomorphism $f_\text{RG}$ from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
 
+
+**Symmetry** is a cornerstone concept in theoretical physics.
+Particularly within the context of *quantum field theories* (QFTs).
+A key principle in QFTs is the preservation of symmetry throughout the renormalization group flow.
+To elaborate, when an ultraviolet (UV) theory, denoted as $\mathcal{T}_\text{UV}$, transitions into an infrared theory, represented as $\mathcal{T}_\text{IR}$, a canonical homomorphism $f_\text{RG}$ is established.
+This homomorphism maps the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
+
+::: {.callout-important icon="true"}
+### RG flow homomorphism from UV symmetry to IR symmetry
+$$
+f_\text{RG} : G_\text{UV} \to G_\text{IR}.
+$${#eq-RG-group-match}
+:::
+
+Given this relation, there are two ways of applying symmetry in QFT:]
+
 ::: {.callout-important icon="true"}
 ### RG flow homomorphism from UV symmetry to IR symmetry
 $$
