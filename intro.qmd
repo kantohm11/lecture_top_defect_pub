@@ -28,39 +28,52 @@ in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surje
 Also, if one also drops some higher-order interaction terms, or runs the flow to zero energy, 
 there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 
-::: {.callout-note collapse="false"}
-### Terminology (global symmetry)
-In this lecture, "symmetry" means a *global* symmetry.
-Here *global* means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.
-:::
-
 ## Locality
-The second important keyword in this lecture is **locality**.
-By the word quantum field theory, in most cases we implicitly mean *local* quantum field theory.
-This can roughly be explained by that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.
 
-Locality of QFT has a consequence with respect to symmetry: that is, in most situations we only consider symmetries that *preserves locality*. 
-In terms of fields, this means that the symmetry transformation is local:
+One of the defining characteristics of symmetry in quantum field theories (QFTs) is its *preservation of locality*. 
+In the context of classical symmetry in fields, this means that the symmetry transformation is local:
 
 $$
-\phi(x) \mapsto F(\phi(x)),
+\phi(x) \mapsto F(\phi(x')),
 $${#eq-field-transform}
-where $F(\phi(x))$ is a function depends on the *local* value a field (or a collection of fields and its derivatives) at the point $x$.
-If the symmetry involves a spacetime transformation, the point $x$ in the right-hand side should be replaced by the image of $x$ under the symmetry.
-This preservation of locality of a symmetry is the reason for the symmetry relation in @eq-RG-group-match.
-This will be made clear in the lecture.
 
-However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform, which is called *classical symmetry*. 
-There are types of symmetry called *topological symmetry* or *quantum symmetry*, which arises from topologically-nontrivial field configuration.
-Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
-In many occurrences a topological/quantum symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
+In this equation, $F(\phi(x'))$ is a function that relies solely on the *local* value of a field (or a set of fields and its derivatives) at a point $x'$.
+When $x'\neq x$, the symmetry involves a *spacetime* symmetry, while when $x'=x$, it is an *internal* symmetry.
+The preservation of locality in a symmetry underpins the symmetry relation in @eq-RG-group-match, which will be elaborated further in the lecture.
 
-From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to **topological operators**. 
-A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on a $n$-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
+:::{.callout-note}
+Please note that a QFT, when quantized on a fixed space manifold $M$, does possess unitary operators that commute with its Hamiltonian, other than those originating from locality-preserving symmetry. 
+In most cases, such unitary operators are irrelevant; an example is the one that multiplies a phase to a specific eigenstate.
+Therefore, in this lecture, when we refer to a symmetry, we assume that it preserves locality.
+In fact, we assert that this property is the *last* one to be discarded in the context of generalized symmetry, if ever, due to the invariance under the renormalization group flow. [^ColemanMandula]
+:::
+
+[^ColemanMandula]: Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.
+
+::: {.callout-note collapse="false"}
+### Terminology (locality-preserving)
+To be clear, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global, spacetime or internal, symmetries one encounters in a QFT textbook are all locality-preserving.
+:::
+
+
+::: {.callout-note collapse="false"}
+### Terminology (Locality-Preserving)
+To avoid confusion, it's important to note that locality-preserving symmetry does *not* mean gauge redundancy, which is sometimes labeled as local symmetry. The global -- spacetime, or internal -- symmetries typically encountered in a QFT textbook all preserve locality.
+:::
+
+
+However, not all symmetries in QFT that preserve locality take the form of @eq-field-transform, i.e., a *classical* symmetry. 
+Other types of symmetries exist, such as *topological symmetry* or *quantum symmetry*, which emerge from topologically nontrivial field configurations.
+Examples include the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
+In many cases, a topological/quantum symmetry is mapped to a symmetry of the type @eq-field-transform under a duality, and thus it should also be considered as preserving locality.
+
+## HERE
+From a contemporary standpoint, the universal characterization of locality-preserving symmetries is their correspondence to **topological operators**. 
+A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on an $n$-dimensional submanifold of the spacetime. The correlators that include it should remain invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
 
 ![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
 
-The first aim of the lecture is to understand the correspondence, that is
+The first goal of this lecture is to understand the following correspondence:
 
 ::: {.callout-important}
 ### Symmetry/Topological Operator Correspondence
@@ -71,18 +84,14 @@ $$\begin{split}
 \end{split}
 $${#eq-conv-STO-corresp}
 :::
-In this correspondence, the topological operator shoould be regarded as the generalization of the **Noether charge** into possibly discrete symmetry.
-To be precise, we regard this correspondence as the right-hand side *defining* the left-hand side.
-We will explicitly check this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in @sec-scalar, and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
+In this correspondence, the topological operator should be viewed as a generalization of the **Noether charge** for potentially discrete symmetry.
+More precisely, we consider this correspondence as the right-hand side *defining* the left-hand side.
+We will explicitly verify that this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in @sec-scalar, and in the case of abelian gauge theory in @sec-vector. The case of fermions is both intriguing and crucial, but it will be left as an exercise, or a work, for the audience/readers.
+
 
 ::: {.callout-note collapse="false"}
-### Terminology (locality-preserving)
-Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality-preserving.
-:::
-
-::: {.callout-note collapse="false"}
-### Terminology (topological defect)
-Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* a priori guaranteed to be topological in the sense of @fig-TopOpsDeform . On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
+### Terminology (Topological Defect)
+There exists an unfortunate discrepancy in terminology. Outside the realm of generalized symmetry literature, a "topological defect" typically refers to a dynamical object, or its trajectory, viewed as an operator in the IR theory. As an operator in the IR theory, it is *not* necessarily topological in the sense of @fig-TopOpsDeform. Conversely, within the generalized symmetry literature, "topological defect (operator)" often signifies an extended operator that is inherently topological. To mitigate potential confusion in this lecture, we will adopt the term "topological operator", even when the supporting submanifold of the operator is not within a time-slice.
 :::
 
 ## Generalized Symmetry
