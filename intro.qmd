@@ -50,11 +50,6 @@ In fact, we assert that this property is the *last* one to be discarded in the c
 
 [^ColemanMandula]: Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.
 
-::: {.callout-note collapse="false"}
-### Terminology (locality-preserving)
-To be clear, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global, spacetime or internal, symmetries one encounters in a QFT textbook are all locality-preserving.
-:::
-
 
 ::: {.callout-note collapse="false"}
 ### Terminology (Locality-Preserving)
