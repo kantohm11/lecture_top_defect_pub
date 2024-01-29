@@ -67,7 +67,6 @@ Other types of symmetries exist, such as *topological symmetry* or *quantum symm
 Examples include the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
 In many cases, a topological/quantum symmetry is mapped to a symmetry of the type @eq-field-transform under a duality, and thus it should also be considered as preserving locality.
 
-## HERE
 From a contemporary standpoint, the universal characterization of locality-preserving symmetries is their correspondence to **topological operators**. 
 A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on an $n$-dimensional submanifold of the spacetime. The correlators that include it should remain invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
 
