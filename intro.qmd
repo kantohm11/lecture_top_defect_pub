@@ -25,7 +25,7 @@ $${#eq-RG-group-match}
 Given this relation, there are two ways of applying symmetry in QFT:]
 
 ::: {.callout-important icon="true"}
-### RG flow homomorphism from UV symmetry to IR symmetry
+## RG flow homomorphism from UV symmetry to IR symmetry
 $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
@@ -58,6 +58,7 @@ When $x'\neq x$, the symmetry involves a *spacetime* symmetry, while when $x'=x$
 The preservation of locality in a symmetry underpins the symmetry relation in @eq-RG-group-match, which will be elaborated further in the lecture.
 
 :::{.callout-note}
+#### Note
 Please note that a QFT, when quantized on a fixed space manifold $M$, does possess unitary operators that commute with its Hamiltonian, other than those originating from locality-preserving symmetry. 
 In most cases, such unitary operators are irrelevant; an example is the one that multiplies a phase to a specific eigenstate.
 Therefore, in this lecture, when we refer to a symmetry, we assume that it preserves locality.
@@ -65,6 +66,7 @@ In fact, we assert that this property is the *last* one to be discarded in the c
 :::
 
 [^ColemanMandula]: Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.
+
 
 
 ::: {.callout-note collapse="false"}

@@ -112,8 +112,6 @@
 \definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
 \makeatother
 \makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
@@ -152,18 +150,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -171,7 +161,8 @@
 \usepackage[style=phys,eprint=true,url=true,backref=true,biblabel=brackets,citestyle
 = numeric-comp,sorting = none]{biblatex}
 \addbibresource{references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -190,7 +181,6 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -200,8 +190,7 @@
 }
 \bookmarksetup{startatroot}
 
-\hypertarget{what-is-this}{%
-\chapter*{What is this}\label{what-is-this}}
+\chapter*{What is this}\label{what-is-this}
 \addcontentsline{toc}{chapter}{What is this}
 
 \markboth{What is this}{What is this}
@@ -227,15 +216,14 @@ defects corresponding to generalized symmetries. Due to lack of time and
 systems, and the generalization to fermionic systems is left for the
 readers/audiences.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-warning-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-warning-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 This note is \textbf{under construction}, and there are many missed
 equations, figures, explanations, sections, and \emph{references}.
 
 \end{tcolorbox}
 
-\hypertarget{prerequisite}{%
-\section*{Prerequisite}\label{prerequisite}}
+\section*{Prerequisite}\label{prerequisite}
 \addcontentsline{toc}{section}{Prerequisite}
 
 \markright{Prerequisite}
@@ -252,15 +240,13 @@ equations, figures, explanations, sections, and \emph{references}.
   Knowledge about differential form and Stokes's theorem in terms of it.
 \end{itemize}
 
-\hypertarget{what-is-contained-and-what-is-not}{%
 \section*{What is contained and what is
-not}\label{what-is-contained-and-what-is-not}}
+not}\label{what-is-contained-and-what-is-not}
 \addcontentsline{toc}{section}{What is contained and what is not}
 
 \markright{What is contained and what is not}
 
-\hypertarget{other-lecturesreviews}{%
-\section*{Other Lectures/Reviews}\label{other-lecturesreviews}}
+\section*{Other Lectures/Reviews}\label{other-lecturesreviews}
 \addcontentsline{toc}{section}{Other Lectures/Reviews}
 
 \markright{Other Lectures/Reviews}
@@ -279,11 +265,9 @@ old lectures. The one I would particularly recommend is
 
 \bookmarksetup{startatroot}
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\chapter{Introduction}\label{introduction}
 
-\hypertarget{symmetry}{%
-\section{Symmetry}\label{symmetry}}
+\section{Symmetry}\label{symmetry}
 
 \textbf{Symmetry} plays a crucial role in theoretical physics. In this
 lecture, we will discuss its application in \emph{quantum field
@@ -306,11 +290,11 @@ IR symmetry group \(G_\text{IR}\):\footnote{If the UV theory is a fixed
   \emph{emergent} symmetry, in which case \(f_\text{RG}\) can be
   non-injective.}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{RG flow homomorphism from UV symmetry to IR symmetry}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{RG flow homomorphism from UV symmetry to IR symmetry}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-\begin{equation}\protect\hypertarget{eq-RG-group-match}{}{
+\begin{equation}\phantomsection\label{eq-RG-group-match}{
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
-}\label{eq-RG-group-match}\end{equation}
+}\end{equation}
 
 \end{tcolorbox}
 
@@ -328,17 +312,16 @@ Given this relationship, symmetry in QFT can be applied in two ways:
   the QCD Lagrangian from the hadron spectrum).
 \end{itemize}
 
-\hypertarget{locality}{%
-\section{Locality}\label{locality}}
+\section{Locality}\label{locality}
 
 One of the defining characteristics of symmetry in quantum field
 theories (QFTs) is its \emph{preservation of locality}. In the context
 of classical symmetry in fields, this means that the symmetry
 transformation is local:
 
-\begin{equation}\protect\hypertarget{eq-field-transform}{}{
+\begin{equation}\phantomsection\label{eq-field-transform}{
 \phi(x) \mapsto F(\phi(x')),
-}\label{eq-field-transform}\end{equation}
+}\end{equation}
 
 In this equation, \(F(\phi(x'))\) is a function that relies solely on
 the \emph{local} value of a field (or a set of fields and its
@@ -348,7 +331,7 @@ a \emph{spacetime} symmetry, while when \(x'=x\), it is an
 underpins the symmetry relation in Equation~\ref{eq-RG-group-match},
 which will be elaborated further in the lecture.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 Please note that a QFT, when quantized on a fixed space manifold \(M\),
 does possess unitary operators that commute with its Hamiltonian, other
@@ -366,7 +349,7 @@ invariance under the renormalization group flow. \footnotemark{}
 strong locality-preserving condition; that the symmetry generators act
 on multi-particle asymptotic states as tensor products.}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (Locality-Preserving)}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Terminology (Locality-Preserving)}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 To avoid confusion, it's important to note that locality-preserving
 symmetry does \emph{not} mean gauge redundancy, which is sometimes
@@ -396,25 +379,27 @@ supporting manifold \(W_n\) (See Figure~\ref{fig-TopOpsDeform}).
 
 \begin{figure}[t]
 
-{\centering \includegraphics[width=4.16667in,height=\textheight]{figures/TopOpsDeform.png}
+\centering{
+
+\includegraphics[width=4.16667in,height=\textheight]{figures/TopOpsDeform.png}
 
 }
 
 \caption{\label{fig-TopOpsDeform}Topological operator.}
 
-\end{figure}
+\end{figure}%
 
 The first goal of this lecture is to understand the following
 correspondence:
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry/Topological Operator Correspondence}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Symmetry/Topological Operator Correspondence}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-\begin{equation}\protect\hypertarget{eq-conv-STO-corresp}{}{\begin{split}
+\begin{equation}\phantomsection\label{eq-conv-STO-corresp}{\begin{split}
 &\text{(Conventional) locality-preserving symmetry} \\ 
 &\Longleftrightarrow\;
 \text{invertible topological operator of codimension 1.}
 \end{split}
-}\label{eq-conv-STO-corresp}\end{equation}
+}\end{equation}
 
 \end{tcolorbox}
 
@@ -429,7 +414,7 @@ Chapter~\ref{sec-vector}. The case of fermions is both intriguing and
 crucial, but it will be left as an exercise, or a work, for the
 audience/readers.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (Topological Defect)}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Terminology (Topological Defect)}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 There exists an unfortunate discrepancy in terminology. Outside the
 realm of generalized symmetry literature, a ``topological defect''
@@ -445,8 +430,7 @@ operator is not within a time-slice.
 
 \end{tcolorbox}
 
-\hypertarget{generalized-symmetry}{%
-\section{Generalized Symmetry}\label{generalized-symmetry}}
+\section{Generalized Symmetry}\label{generalized-symmetry}
 
 The concept of \textbf{generalized (global) symmetry} is fundamentally
 based on the correspondence in Equation~\ref{eq-conv-STO-corresp}, as
@@ -460,14 +444,14 @@ right-hand side of Equation~\ref{eq-conv-STO-corresp}. Hence, we
 \emph{define} generalized symmetry through the following correspondence,
 which extends Equation~\ref{eq-conv-STO-corresp}:
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Generalized Symmetry/Topological Operator Correspondence}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Generalized Symmetry/Topological Operator Correspondence}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-\begin{equation}\protect\hypertarget{eq-GSTO-corresp}{}{\begin{split}
+\begin{equation}\phantomsection\label{eq-GSTO-corresp}{\begin{split}
 &\text{Generalized symmetry (in a ``usual" QFT)} \\ 
 &\stackrel{\text{def}}{\Longleftrightarrow}\;
 \text{General topological operator.}
 \end{split}
-}\label{eq-GSTO-corresp}\end{equation}
+}\end{equation}
 
 \end{tcolorbox}
 
@@ -487,11 +471,10 @@ this lecture.
 
 The table below summarizes the subclasses of generalized symmetry:
 
-\hypertarget{tbl-sym-classes}{}
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tbl-sym-classes}Subclasses of generalized symmetry and
-defining properties of their corresponding topological
-operators.}\tabularnewline
+\caption{Subclasses of generalized symmetry and defining properties of
+their corresponding topological
+operators.}\label{tbl-sym-classes}\tabularnewline
 \toprule\noalign{}
 & \(p\)-form & non-invertible & subsystem \\
 \midrule\noalign{}
@@ -510,320 +493,328 @@ Topological? & & & Partially \\
 These subclasses are not mutually exclusive. Therefore, in theory, a
 2-form non-invertible subsystem symmetry could exist, for example.
 
-\hypertarget{contents-of-the-lecture}{%
-\section{Contents of the Lecture}\label{contents-of-the-lecture}}
+\section{Contents of the Lecture}\label{contents-of-the-lecture}
 
 \textbf{FIXME}
 
 \bookmarksetup{startatroot}
 
-\hypertarget{sec-scalar}{%
-\chapter{Topological Operators for Classical
-Symmetry}\label{sec-scalar}}
+\chapter{Topological Operators for Classical Symmetry}\label{sec-scalar}
 
-In this section we take the classical symmetry in scalar field theory as
-an example to study topological operators.
+This section explores topological operators in the context of classical
+symmetry in scalar field theory.
 
-\hypertarget{set-up}{%
-\section{Set Up}\label{set-up}}
+\section{Set Up}\label{set-up}
 
-To be concrete, let us consider the complex scalar field theory whose
-Lagrangian (density) on a spacetime of dimension \(\stdim\) is given by
+For specificity, consider a complex scalar field theory with the
+following Lagrangian (density) on a spacetime \(M\) of dimension
+\(\stdim\):
+
 \[
 \begin{aligned}
 \mathcal{L}(\phi) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi(x))\right)\vol\\
-&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol,
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol.
 \end{aligned}
-\] where \(\mathop{*}\) is the Hodge star,
+\]
+
+In this equation, \(\mathop{*}\) represents the Hodge star,
 \(\vol = \mathop{*} 1 = \prod_{i=1}^{\stdim} \mathop{dx_i}\) is the
-volume form for the flat space, and \(V(\phi)\) is the potential. The
-action is the integral over the spacetime \(M\) (without boundary): \[
+volume form for the flat space, and \(V(\phi)\) is the potential. Then,
+the action is given by:
+
+\[
 S[\phi] = \int_{M}\mathcal{L}(\phi).
 \]
 
-We consider a symmetry transformation of the scalar field
-\begin{equation}\protect\hypertarget{eq-scalar-transf}{}{
-\phi(x) \mapsto \phi^g(x)
-}\label{eq-scalar-transf}\end{equation} parametrized by a group element
-\(g\) (constant over \(M\)) that leaves the action invariant:
-\begin{equation}\protect\hypertarget{eq-action-inv}{}{
+Consider a symmetry transformation of the scalar field as follows:
+
+\begin{equation}\phantomsection\label{eq-scalar-transf}{
+\phi(x) \mapsto \phi^g(x).
+}\end{equation}
+
+We assume that this transformation is parametrized by an element \(g\)
+in a group \(G\), which is constant over \(M\) and leaves the action
+invariant:
+
+\begin{equation}\phantomsection\label{eq-action-inv}{
 S[\phi]=S[\phi^g].
-}\label{eq-action-inv}\end{equation} This means that the Lagrangian is
-invariant up to a total derivative:
-\begin{equation}\protect\hypertarget{eq-Lagrangian-inv}{}{
-\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g) 
-}\label{eq-Lagrangian-inv}\end{equation} where \(s(\phi,g)\) is a
-\((\stdim-1)\)-form on \(M\) depending on the constant \(g\) and the
-field \(\phi\). We set \(s(\phi,g=\id) = 0\), where \(\id\) is the unit
-of the symmetry group. Then, by \(\phi = (\phi^g)^{g^{-1}}\), we can set
-that \(s(\phi,g) = - s(\phi,g^{-1})\).
+}\end{equation}
 
-For example, the usual \(\U(1)\) rotation corresponds to the
-transformation \[
+This implies that the Lagrangian is invariant up to a total derivative:
+
+\begin{equation}\phantomsection\label{eq-Lagrangian-inv}{
+\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g).
+}\end{equation}
+
+In this equation, \(s(\phi,g)\) is a \((\stdim-1)\)-form on \(M\) that
+depends on the constant \(g\) and the field \(\phi\). We define
+\(s(\phi,g=\id) = 0\), where \(\id\) is the unit of the symmetry group.
+
+For instance, the standard \(\U(1)\) rotation corresponds to the
+transformation:
+
+\[
 \phi^g(x) = \mathop{g} \phi(x),
-\] where \(g=e^{\imunit \alpha}\) is a \(\U(1)\) phase. The potential
-\(V(\phi)\) might partially break the \(\U(1)\) rotation into its
-subgroup \(\mathbb{Z}_k\), e.g.~\(V(\phi)\propto \phi^k+(\phi^*)^k\). In
-such a case the parameter \(g\) takes \emph{discrete} values:
-\(g = e^{\imunit \frac{2\pi i}{k}}\), \(i= 0 \cdots k-1\).
+\]
 
-In addition, when \(V(\phi)=0\), the action \(S[\phi]\) also admit the
-shift symmetry\footnote{If we use the form of Lagrangian
-  \(\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}\), this also
-  gives an example where the total derivative in
+where \(g=e^{\imunit \alpha}\) represents a \(\U(1)\) phase. The
+potential \(V(\phi)\) may partially break the \(\U(1)\) rotation into
+its subgroup \(\mathbb{Z}_k\). For example, when
+\(V(\phi)\propto \phi^k+(\phi^*)^k\), the parameter \(g\) takes
+\emph{discrete} values: \(g = e^{\imunit \frac{2\pi i}{k}}\), where
+\(i\) ranges from 0 to \(k-1\).
+
+Moreover, when \(V(\phi)=0\), the action \(S[\phi]\) also admits the
+shift symmetry\footnote{If we use the form of the Lagrangian
+  \(\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}\), this provides
+  an example where the total derivative in
   Equation~\ref{eq-Lagrangian-inv} is nonzero:
-  \(s=-\frac12 \alpha \mathop{*}\mathop{d\phi}\).} \[
+  \(s=-\frac12 \alpha \mathop{*}\mathop{d\phi}\).}:
+
+\[
 \phi^{\alpha}(x) = \phi(x) + \alpha.
 \]
 
-In this section, we would like to construct the \textbf{topological
-operator} corresponding to these \emph{classical} symmetry.
+In this section, our goal is to construct the \textbf{topological
+operator} corresponding to these \emph{classical} symmetries.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-The construction will apply to other types of scalar field theory,
-e.g.~real and/or multiple scalar fieldsas long as the kinetic term is
-standard enough (more on this in Section~\ref{sec-trivial-scalar}). For
-non-linear sigma model with topologically non-trivial target, the
-Lagrange multiplier \(\lambda\) below should take values in the correct
-set. We will consider the case with \(S^1\) target (compact boson) in
-Chapter~\ref{sec-compact-boson}. Also, the spacetime manifold \(M\) and
-the metric on it do not have to be flat. The signature of the metric is
-also insignificant in this lecture, although we use the Euclidean
-notation.
+This construction can be applied to various types of scalar field
+theory, such as real and/or multiple scalar fields, provided the kinetic
+term is standard enough (more details in
+Section~\ref{sec-trivial-scalar}). Also note that the spacetime manifold
+\(M\) and its metric do not need to be flat. The metric's signature is
+not significant in this lecture, even though we use Euclidean notation.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-In this lecture we directly construct the topological operators
-corresponding to the \emph{finite} transformation
-Equation~\ref{eq-scalar-transf}, rather than the conventional approach
-considerting infinitesimal transformation. This will enable us to
-explicitly talk about \emph{finite} symmetries (and their anomalies) in
-terms of topological operators, and also motivate us to consider
+In this lecture, we focus on constructing topological operators that
+correspond to the \emph{finite} transformation
+Equation~\ref{eq-scalar-transf}, as opposed to the conventional approach
+of considering infinitesimal transformations. This approach allows us to
+explicitly discuss \emph{discrete} symmetries (and their anomalies) in
+terms of topological operators, and it also motivates us to consider
 generalized symmetries.
 
 \end{tcolorbox}
 
-\hypertarget{construction-of-topological-operator}{%
-\section{Construction of Topological
-Operator}\label{construction-of-topological-operator}}
+\section{Construction of the Topological
+Operator}\label{construction-of-the-topological-operator}
 
-As a basic example of Equation~\ref{eq-conv-STO-corresp}, we would like
-to construct the topological operator \(U_\alpha[W]\) corresponding to
-the transformation Equation~\ref{eq-scalar-transf}. The topological
-operator \(U_\alpha[W]\) ,defined with respect to a codimension-1
-submanifold \(W\) of the spacetime \(M\), should satisfy the following
-properties:
+As a fundamental example of the correspondence
+Equation~\ref{eq-conv-STO-corresp}, we aim to construct the topological
+operator \(U_\alpha[W]\) that corresponds to the transformation
+Equation~\ref{eq-scalar-transf}. Specifically, we will construct an
+operator \(U_\alpha[W]\), defined on a codimension-1 submanifold \(W\)
+of the spacetime \(M\), that satisfies the following properties:
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Properties of Symmetry Topological Operator}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Properties of the Symmetry Topological Operator}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Topological: \(U_g[W] = U_g[W']\) is \(W\) can be continuously defomed
-  into \(W'\) without crossing other operators.
+  Topological: \(U_g[W] = U_g[W']\) if \(W\) can be continuously
+  deformed into \(W'\) without intersecting other operators.
 \item
-  Symmetry action: when a deformation from \(W\) to \(W''\) crosses an
-  local operator \(\mathcal{O}\), it gets the symmetry action specified
-  by \(g\), resulting in another operator \(\mathcal{O}^g\).
+  Symmetry action: When a deformation from \(W\) to \(W''\) intersects a
+  local operator \(\mathcal{O}\), it undergoes the symmetry action
+  specified by \(g\), resulting in another operator \(\mathcal{O}^g\).
 \item
-  Noether: when the symmetry group is continuous, we can take the group
-  element to be the infinitsimal deformation of \(\id\):
-  \(g = \id + \alpha + \mathcal{O}(\alpha^2)\). Then, the operator
-  \(U_g[W]\) is approximated by the Noether charge
-  \begin{equation}\protect\hypertarget{eq-Noether-approx}{}{
-  U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
-  }\label{eq-Noether-approx}\end{equation} where
-  \(j = j_\mu\mathop{dx^\mu}\) is the Nother current one-form
-  \textbf{FIXME:sign is uncertain..} \[
-  \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
-  \] Note that when \(W\) is a time-slice \(W=\{t=0\}\), \[
+  Noether: When the symmetry group is continuous, we can consider the
+  group element as the infinitesimal deformation of \(\id\):
+  \(g = \id + \alpha + \mathcal{O}(\alpha^2)\). In this case, the
+  operator \(U_g[W]\) is approximated by the Noether charge
+  \begin{equation}\phantomsection\label{eq-Noether-approx}{
+   U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
+   }\end{equation} where \(j = j_\mu\mathop{dx^\mu}\) is the Noether
+  current one-form. \textbf{FIXME:sign is uncertain..} \[
+   \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
+   \] Note that when \(W\) is a time-slice \(W=\{t=0\}\), \[
   \int_W \mathop{*} j = \int_{\{t=0\}} j^0 \mathop{d^{\stdim-1}x}
-  \] is exactly the Noether charge written in any QFT textbook.
+  \] is precisely the Noether charge as described in any QFT textbook.
 \end{enumerate}
 
-The properties 1.~and 2.~are summarized in Figure~\ref{fig-op-action}.
+Properties 1 and 2 are summarized in Figure~\ref{fig-op-action}.
 
 \end{tcolorbox}
 
 \begin{figure}[t]
 
-{\centering \includegraphics[width=4.16667in,height=\textheight]{index_files/mediabag/figures/Op_action.pdf}
+\centering{
+
+\includegraphics[width=4.16667in,height=\textheight]{index_files/mediabag/figures/Op_action.pdf}
 
 }
 
-\caption{\label{fig-op-action}The topological operator \(U_g[W]\) should
-be invariant under a continuous deformation and also implement the
-symmetry action.}
+\caption{\label{fig-op-action}The topological operator \(U_g[W]\) is
+designed to be invariant under a continuous deformation and to implement
+the symmetry action.}
 
-\end{figure}
+\end{figure}%
 
-The idea of the construction is
-``\emph{cutting-and-gluing-with-twist}''. That is, we first divide the
-spacetime \(M\) into two parts: \(M_\stdim = M_L \cup_W M_R\) with
-shared boundary \(W\) (see Figure~\ref{fig-cut-M}. We take the
-orientation of \(W\) so that \(\partial M_L = -\partial M_R = W\). ). We
-also separate the scalar field \(\phi\) into two sets of fields:
-\(\phi_L(x)\) for \(x \in M_L\) and \(\phi_R(x)\) for \(x \in M_R\).
-Then, we glue the two regions and fields on those back together, with
-the twisted identification: \[
-\phi_L|_W = \phi_R^{g^{-1}}|_W.
-\]
+The construction is based on the concept of
+``cutting-and-gluing-with-twist''. Initially, we partition the spacetime
+\(M\) into two subregions: \(M_\stdim = M_L \cup_W M_R\) with a common
+boundary \(W\) (refer to Figure~\ref{fig-cut-M}. We orient \(W\) such
+that \(\partial M_L = -\partial M_R = W\).). We also divide the scalar
+field \(\phi\) into two fields: \(\phi_L(x)\) for \(x \in M_L\) and
+\(\phi_R(x)\) for \(x \in M_R\). Subsequently, we reconnect the two
+regions and their respective fields, with a twisted identification:
+\[ \phi_L|_W = \phi_R^{g^{-1}}|_W. \]
 
 \begin{figure}[t]
 
-{\centering \includegraphics[width=2.39583in,height=\textheight]{index_files/mediabag/figures/ManifoldSplit.pdf}
+\centering{
+
+\includegraphics[width=2.39583in,height=\textheight]{index_files/mediabag/figures/ManifoldSplit.pdf}
 
 }
 
 \caption{\label{fig-cut-M}The cutting and twisted gluing, implementing
 the topological operator \(U_g[W]\).}
 
-\end{figure}
+\end{figure}%
 
 In path-integral, this construction can be implemented as follows:
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry Topological Operator}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Symmetry Topological Operator for a Classical Symmetry}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-\begin{equation}\protect\hypertarget{eq-Ug-pathintegral}{}{
+\begin{equation}\phantomsection\label{eq-Ug-pathintegral}{
 \begin{multlined}
     \langle U_g[W] \cdots \rangle = \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda} \cdots\\ \times \exp\left(-S_L[\phi_L]-S_R[\phi_R] - G_W[\lambda,\phi_L,\phi_R,g]\right)
 \end{multlined}
-}\label{eq-Ug-pathintegral}\end{equation}
+}\end{equation}
 
 \end{tcolorbox}
 
-Here, \(\mathcal{D}^{X}\) denotes the measure for path-integral for a
-field defined on a submanifold \(X\) of the spacetime \(M\), and
-\(S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})\) are actions on the
-submanifold \(M_{L,R}\), and ``\(\cdots\)'' represents additional
-insertions of operators. In addition, the ``gluing'' action \(G_W\) on
-the submanifold \(W\) is
-\begin{equation}\protect\hypertarget{eq-gluing-action}{}{
-\begin{multlined}
+Here, \(\mathcal{D}^{X}\) denotes the measure for the path-integral for
+a field defined on a submanifold \(X\) of the spacetime \(M\). The
+actions on the submanifold \(M_{L,R}\) are written as
+\(S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})\), and ``\(\cdots\)''
+denotes additional operator insertions. The ``gluing'' action \(G_W\) on
+the submanifold \(W\) is defined as
+\begin{equation}\phantomsection\label{eq-gluing-action}{
+%\begin{multlined}
     G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
-\end{multlined}
-}\label{eq-gluing-action}\end{equation} The heart of the above
-expression is that integrating the Lagrange multiplier \(\lambda\) out
-gives the ``delta functional'':
-\begin{equation}\protect\hypertarget{eq-delta-functional}{}{
-\
+%\end{multlined}
+}\end{equation} The key point of the above expression is that
+integrating the Lagrange multiplier \(\lambda\) results in the ``delta
+functional'':
+\begin{equation}\phantomsection\label{eq-delta-functional}{
     \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^{g^{-1}}_R)\vol_W\right)
      = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^{g^{-1}}(x)),
-}\label{eq-delta-functional}\end{equation} which should implement
-Figure~\ref{fig-cut-M}. Before studying the operator \(U_g[W]\), we
-should study the \emph{trivial} case where the symmetry transformation
-\(g\) is the identity map \(g=\id\).
+}\end{equation} which should implement Figure~\ref{fig-cut-M}. Before
+studying the operator \(U_g[W]\), we should first examine the
+\emph{trivial} case where the symmetry transformation \(g\) is the
+identity map \(g=\id\).
 
-\hypertarget{sec-trivial-scalar}{%
-\section{Identity Wall}\label{sec-trivial-scalar}}
+\section{Identity Wall}\label{sec-trivial-scalar}
 
-When \(g=\id\), the operator \(U_{g=\id}[W]\) should be \emph{trivial}.
-That is, we have
-\begin{equation}\protect\hypertarget{eq-identity-wall}{}{
+When the transformation is trivial, i.e., \(g=\id\), the operator
+\(U_{g=\id}[W]\) should also be \emph{trivial}. This implies that
+\begin{equation}\phantomsection\label{eq-identity-wall}{
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
-}\label{eq-identity-wall}\end{equation} We call the codimension-1
-operator \(\id[W]\) with this property \textbf{identity wall}. It can
-also be called \textbf{transparent wall} or like that. Expanding
-Equation~\ref{eq-identity-wall}, the following equation should hold:
-\begin{equation}\protect\hypertarget{eq-trivial-scalar}{}{
+}\end{equation} We refer to the codimension-1 operator \(\id[W]\) with
+this property as the \textbf{identity wall}. It can also be termed as
+the \textbf{transparent wall} or similar. Upon expanding
+Equation~\ref{eq-identity-wall}, the following equation should be
+satisfied: \begin{equation}\phantomsection\label{eq-trivial-scalar}{
 \begin{multlined}
     \int \mathop{\mathcal{D}^M\phi} \exp(-S) \cdots=
     \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda} \\ \times \exp\left(-S_L-S_R+\imunit \int_W \lambda(\phi_L - \phi_R)\vol_W\right)\cdots.\\ 
 \end{multlined}
-}\label{eq-trivial-scalar}\end{equation}
+}\end{equation}
 
-The point is that the difference between giving a field \(\phi\) and
-giving a pair of fields \((\phi_L,\phi_R)\) is that the latter is not
-constrained to be continuous across \(W\). On the right-hand side it is
-rather enforced by integrating out \(\lambda\) because of
-Equation~\ref{eq-delta-functional}.
+The key distinction between providing a field \(\phi\) on \(M\) and
+providing a pair of fields \((\phi_L,\phi_R)\) on \((M_L,M_R)\) is that
+the latter is not required to be continuous across \(W\). On the
+right-hand side, continuity is enforced by integrating out \(\lambda\)
+due to Equation~\ref{eq-delta-functional}.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Continuity of fields in ``exotic'' QFTs and subsystem symmetry}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Continuity of Fields in ``Exotic'' QFTs and Subsystem Symmetry}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-Here we assumed that the path integral \(\int\mathcal{D}^M\phi\) should
-be over the \emph{continuous} fields. The reason for this is that the
-standard kinetic term would diverge in the limit where the filed
-\(\phi\) becomes discontinuous.
+In this context, we assume that the path integral
+\(\int\mathcal{D}^M\phi\) should be over the \emph{continuous} fields.
+This is because the standard kinetic term would diverge when the field
+\(\phi\) becomes discontinuous, and thus such configuration does not
+contribute to the path-integral.
 
-This assumption, however, does not apply to QFTs with higher-derivative
+However, this assumption does not hold for QFTs with higher-derivative
 kinetic terms. Examples of such exotic QFTs (without relativistic
-symmetry) includes tensor gauge theories (see e.g.
-\autocite{Pretko:2020cko,Seiberg:2020bhn}). In these theories a field
-\emph{can} be discontinuous, but some of higher derivatives are
-constrained to scale correctly with respect to the ratio of the lattice
-size and the system size. In such cases the construction of the trivial
-operator should differ. \emph{KO does not know how to describe it
-because of the UV/IR mixing and totally confused}.
+symmetry) include tensor gauge theories (refer to
+\autocite{Pretko:2020cko,Seiberg:2020bhn} for more details). An example
+of such kinetic term is
+\((\partial_t\phi)^2 + (\partial_x\partial_y \phi)^2\). In these
+theories, a field \emph{can} be discontinuous, but some higher
+derivatives are constrained to scale appropriately with the ratio of the
+lattice size to the system size. In such scenarios, the construction of
+the trivial operator should differ.
 
-These QFTs describes what is called the \textbf{fracton phases} of
-matter, which does not have emergent continuous rotational symmetry in
-the IR. And the models typically posses \textbf{subsytemsymmetries},
-whose corresponding operator is not totally topological. Existence of
-the new kind of symmetry lacked in standard relativistic systems would
-be related to the fact that the identy wall looks different from the
-first place.
+These QFTs describe what is known as the \textbf{fracton phases} of
+matter, which do not have emergent continuous rotational symmetry in the
+IR. Moreover, these models typically possess \textbf{subsystem
+symmetries}, whose corresponding operator is not entirely topological.
+The existence of this new type of symmetry, absent in standard
+relativistic systems, could be related to this subtlety regarding
+identity wall .
 
 \end{tcolorbox}
 
-It is instructive to study the equation of motions (EOMs) on the right
-hand side of Equation~\ref{eq-trivial-scalar}. The EOM with respect to
-\(\lambda\) simply states \(\phi_L(x) = \phi_R(x)\) for \(x\in W\). The
-surface term of Euler-Lagrange equation for \(\phi_L\) and \(\phi_R\)
-gives \[
+Let us study the equations of motion (EOMs) on the right-hand side of
+Equation~\ref{eq-trivial-scalar}. The EOM with respect to \(\lambda\)
+simply enforces \(\phi_L(x) = \phi_R(x)\) for \(x\in W\). On the other
+hand, the surface term of the Euler-Lagrange equation for \(\phi_L\) and
+\(\phi_R\) yields \[
     \left.\frac{\delta \mathcal{L}[\phi_L]}{\delta \mathop{d\phi_L}}\right|_W = \lambda \vol_W = \left. \frac{\delta \mathcal{L}[\phi_R]}{\delta \mathop{d \phi_R}}\right|_W.
-\] If \(W\) is spacelike, or we regard the direction perpendicular to
-\(W\) as the imaginary time in Euclidean signature, this enforces that
-the canonical momentum also be continuous across \(W\).
+\] If \(W\) is spacelike, or if we interpret the direction perpendicular
+to \(W\) as the imaginary time in Euclidean signature, this condition
+ensures the continuity of the canonical momentum across \(W\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Locality}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Locality}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-Equation~\ref{eq-trivial-scalar} expresses the \textbf{locality} of the
-path-integral. We can use the same procedure to decompose the
+Equation~\ref{eq-trivial-scalar} encapsulates the \textbf{locality} of
+the path-integral. We can employ the same procedure to decompose the
 path-integral \(\int \mathcal{D}^M{\phi}\) on \(M\) into path-integrals
-on local patches like \(\int \prod_i\mathcal{D}^{V_i}\phi_i\) (comes
-with many Lagrange multipliers). Here \(\bigcup_i V_i =M\) and
-\(V_i \cap V_j\) has codimension 1 in \(M\) if not empty.
+on local patches, like \(\int \prod_i\mathcal{D}^{V_i}\phi_i\)
+(accompanied by numerous Lagrange multipliers). Here,
+\(\bigcup_i V_i =M\) and \(V_i \cap V_j\) has codimension 1 in \(M\) if
+not empty.
 
-Indeed, in the context of topological quantum field theory (TQFT), a
-similar \textbf{cutting-and-gluing} axiom is hired by the Atiyah-Segal
-formulation of topological quantum field theory and later Lurie's
-cobordism hypothesis \autocite{Lurie} established the relation between
-it and the locality.
-
-Although in this lecture we satisfy ourselves with the formal
-non-rigorous treatment of path-integrals, deeper understanding of
-locality in non-topological QFT is strongly desired, and there are some
-promising results e.g.~in \autocite{GradyPavlov1}.
+In the realm of topological quantum field theory (TQFT), a similar
+\textbf{cutting-and-gluing} axiom is utilized in the Atiyah-Segal
+formulation of topological quantum field theory. Later, Lurie's
+cobordism hypothesis \autocite{Lurie} established the relationship
+between this axiom and locality.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{A comment about fermion}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{A note on fermions}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-Because we do not plan to talk about fermion in this lecture, we comment
-on what will differ in the case of fermions.
+While this lecture does not cover fermions, it's worth noting how they
+would differ in this context.
 
-In the scalar field theory, we impose the continuity of the ``position''
-variables (in analytical-mechanical sense) \(\phi\), then the continuity
-of the momentum variables follows by EOM.
+In scalar field theory, we enforce the continuity of the ``position''
+variables (in the analytical-mechanical sense) \(\phi\), and the
+continuity of the momentum variables follows from the equations of
+motion (EOM).
 
-In a chiral fermion theory, as its kinetic term involves only one
-derivative, momentum and position variables cannot typically be possible
-in a way preserving Lorentz or global chiral symmetry. Thus, the
-``cutting'' have to induce an apparent violation of invariance under the
-Lorentz or the other symmetry, which is a way of seeing the
-gravitational and global symmetry anomaly. The precise understanding of
-this perspective is remained to be open in this lecture (and not in the
-literature as far as the author knows).
+However, in a chiral fermion theory, the kinetic term involves only one
+derivative, making it typically impossible to separate position and
+momentum variables while preserving Lorentz or global chiral symmetry.
+Consequently, the ``cutting'' process would seemingly violate invariance
+under Lorentz or another symmetry, which can be interpreted as a
+manifestation of the gravitational and global symmetry anomaly. A
+precise understanding of this perspective is beyond the scope of this
+lecture.
 
 \end{tcolorbox}
 
-\hypertarget{symmetry-action-and-ward-takahashi-identity}{%
 \section{Symmetry Action and Ward-Takahashi
-identity}\label{symmetry-action-and-ward-takahashi-identity}}
+identity}\label{symmetry-action-and-ward-takahashi-identity}
 
 Let us turn to the non-trivial operator
 Equation~\ref{eq-Ug-pathintegral} and check the property depicted in
@@ -858,26 +849,25 @@ variable \(\widetilde{\phi}_M = \phi_M^{g^{-1}}\) : \[
 \] In the second to last equality we used
 Equation~\ref{eq-Lagrangian-inv} and in the last equality we assumed
 that the path-integral measure is invariant:
-\begin{equation}\protect\hypertarget{eq-measure-inv}{}{\mathcal{D}\phi_M = \mathcal{D}\phi_M^g.
-}\label{eq-measure-inv}\end{equation} Lastly, from
-Equation~\ref{eq-delta-functional} we get \(U_{g^{-1}}[-W] = U_g[W]\),
-so we obtain Figure~\ref{fig-op-action}, that is
-\begin{equation}\protect\hypertarget{eq-sym-op-act}{}{
+\begin{equation}\phantomsection\label{eq-measure-inv}{\mathcal{D}\phi_M = \mathcal{D}\phi_M^g.
+}\end{equation} Lastly, from Equation~\ref{eq-delta-functional} we get
+\(U_{g^{-1}}[-W] = U_g[W]\), so we obtain Figure~\ref{fig-op-action},
+that is \begin{equation}\phantomsection\label{eq-sym-op-act}{
 \langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 \mathcal{O}_2^g U_g[W_2] \rangle.
-}\label{eq-sym-op-act}\end{equation}
+}\end{equation}
 
 We note that we can also get the following equation in the same way as
-above: \begin{equation}\protect\hypertarget{eq-bubble}{}{
+above: \begin{equation}\phantomsection\label{eq-bubble}{
 \langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2^g \cdots \rangle,
-}\label{eq-bubble}\end{equation}
+}\end{equation}
 
 when \(W_0\) encloses a compact region of \(M\) and contains no
 operator. Then, by repeatedly using these equations, we get the
 \textbf{Ward-Takahashi identity} (\textbf{FIXME:figure})
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Ward-Takahashi Identity}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Ward-Takahashi Identity}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
-\begin{equation}\protect\hypertarget{eq-Ward-Takahashi}{}{
+\begin{equation}\phantomsection\label{eq-Ward-Takahashi}{
 \begin{aligned}
 \langle \mathcal{O}_1 \mathcal{O}_2 \cdots \mathcal{O}_N \rangle
 &= 
@@ -889,10 +879,10 @@ operator. Then, by repeatedly using these equations, we get the
 &= 
 \langle \mathcal{O}_1^g  \mathcal{O}_2^g \cdots \mathcal{O}_N^g\rangle,
 \end{aligned}
-}\label{eq-Ward-Takahashi}\end{equation} where \(W_i\) encloses the
-operators \(\mathcal{O}_1 \cdots \mathcal{O}_i\), and at the last step
-we collapsed \(U_g[W_N]\) towards the infinity (or whatever point if
-\(M\) is compact).
+}\end{equation} where \(W_i\) encloses the operators
+\(\mathcal{O}_1 \cdots \mathcal{O}_i\), and at the last step we
+collapsed \(U_g[W_N]\) towards the infinity (or whatever point if \(M\)
+is compact).
 
 \end{tcolorbox}
 
@@ -904,7 +894,7 @@ symmetry does not come from field transformation.
 
 \textbf{FIXME:explain about the selection rule}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Mixed-gravitational anomaly}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Mixed-gravitational anomaly}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 The symmetry we discuss here does not suffer from anomaly and the
 Ward-Takahashi idendity (Equation~\ref{eq-Ward-Takahashi}) follows. If
@@ -922,8 +912,7 @@ spacetime, and has an interesting consequences of this discussed in
 
 \end{tcolorbox}
 
-\hypertarget{relation-to-noether-charge}{%
-\section{Relation to Noether Charge}\label{relation-to-noether-charge}}
+\section{Relation to Noether Charge}\label{relation-to-noether-charge}
 
 Here we show the relation Equation~\ref{eq-Noether-approx} of the
 topological operator \(U_g[W]\) to the conventional Noether charge. This
@@ -937,8 +926,7 @@ parameter \(\delta\) and satisfies \(f(0) = 1\) and
 
 \bookmarksetup{startatroot}
 
-\hypertarget{sec-compact-boson}{%
-\chapter{Compact Boson}\label{sec-compact-boson}}
+\chapter{Compact Boson}\label{sec-compact-boson}
 
 Here we consider \emph{compact} boson, where the field \(\phi\) is real
 and subject to the identification \[
@@ -973,9 +961,8 @@ symmetries:
 The purpose of this section is to understand these generalized
 symmetries, but before that we review the shift symmetry.
 
-\hypertarget{trivial-operator-and-shift-symmetry-operator}{%
 \section{Trivial Operator and Shift Symmetry
-Operator}\label{trivial-operator-and-shift-symmetry-operator}}
+Operator}\label{trivial-operator-and-shift-symmetry-operator}
 
 We start from the identity operator \(\id[W^{\stdim-1}]\) that cuts and
 glues the path-integral. The construction is almost the same as before,
@@ -995,11 +982,11 @@ terms of \((\stdim-2)\)-form \(\U(1)\) gauge field \(V\) with \[
   that the integration should be done over \emph{gauge equivalent
   classes} of \(V\). In other words the gauge fixing procedure is
   implicit in this lecture.}
-\begin{equation}\protect\hypertarget{eq-identity-compact-boson}{}{
+\begin{equation}\phantomsection\label{eq-identity-compact-boson}{
     \id[{W^{\stdim-1}}] = \int \mathcal{D}^{W^{\stdim-1}}V \exp\left(\frac{\imunit}{2\pi}\int_{W^{\stdim-1}} \mathop{dV}\left(\phi_L-\phi_R\right)\right).
-}\label{eq-identity-compact-boson}\end{equation}
+}\end{equation}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{\(p\)-form gauge field}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\(p\)-form gauge field}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 A \(p\)-form gauge field \(V\) is \emph{locally} (i.e.~in a patch)
 \(p\)-form, but \(V\) is not necessarily a \emph{global} \(p\)-form and
@@ -1016,18 +1003,17 @@ motivated reader can consult e.g.~\textcite{Hsieh:2020jpj}.
 \end{tcolorbox}
 
 Now the topological operator for the shift symmetry is simply
-\begin{equation}\protect\hypertarget{eq-shift-compact-boson}{}{
+\begin{equation}\phantomsection\label{eq-shift-compact-boson}{
     U_\alpha^\text{shift}[{W^{\stdim-1}}] = \int \mathcal{D}^{W^{\stdim-1}}V \exp\left(\frac{\imunit}{2\pi}\int_{W^{\stdim-1}} \mathop{dV}\left(\phi_L-\phi_R + \alpha\right)\right).
-}\label{eq-shift-compact-boson}\end{equation}
+}\end{equation}
 
-\hypertarget{winding-symmetry}{%
-\section{Winding Symmetry}\label{winding-symmetry}}
+\section{Winding Symmetry}\label{winding-symmetry}
 
 The compact boson theory has another topological operator of dimension 1
 (codimension \(\stdim-1\)), which is simply
-\begin{equation}\protect\hypertarget{eq-winding-op}{}{
+\begin{equation}\phantomsection\label{eq-winding-op}{
 U^\text{winding}_\alpha[\gamma^1] = \exp\left(\imunit\alpha \int_{\gamma^1}\frac{\mathop{d\phi}}{2\pi}\right).
-}\label{eq-winding-op}\end{equation} Given the periodicity, the integral
+}\end{equation} Given the periodicity, the integral
 \(\int_{\gamma^1}\mathop{d\phi}\) for a closed \(\gamma^1\) takes a
 value in \(2\pi \mathbb{Z}\), and therefore the operator is invariant
 against deformation of \(\gamma^1\). This also indicates that the
@@ -1044,35 +1030,13 @@ another without colliding with a point. On the other hand, it can
 potentially act on a \(p\)-dimensional extended operator:
 Figure~\ref{fig-one-form}.
 
-\begin{figure}
+\begin{figure}[t]
 
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/one-form_act.pdf}
-
-}
-
-}
-
-\end{minipage}%
+\begin{minipage}{0.50\linewidth}
+\includegraphics{figures/one-form_act.pdf}\end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/one_form_passing.pdf}
-
-}
-
-}
-
-\end{minipage}%
+\begin{minipage}{0.50\linewidth}
+\includegraphics{figures/one_form_passing.pdf}\end{minipage}%
 
 \caption{\label{fig-one-form}Action of \(p\)-form symmetry operator
 \(U_\alpha[W^{D-p-1}]\) on a \(p\)-dimensional operator
@@ -1082,7 +1046,7 @@ the other is the \emph{passing} action (right). From the latter we can
 close the loop on the right of the \(\mathcal{O}_q\), and contract the
 loop on the right hand side, to get the former type of action.}
 
-\end{figure}
+\end{figure}%
 
 However, the construction of a charged operator is a bit tricky. A way
 of doing it is to first insert the identity operator
@@ -1090,21 +1054,20 @@ Equation~\ref{eq-identity-compact-boson}, then utilize the field \(V\)
 on the identity operator to defing an operator charged under
 Equation~\ref{eq-winding-op}. Concretely, the (non-topological) operator
 with winding charge \(n\) can be constructed as
-\begin{equation}\protect\hypertarget{eq-dual-op}{}{
+\begin{equation}\phantomsection\label{eq-dual-op}{
 \langle \mathcal{O}^\text{winding}_n[\Sigma^{D-2}] \rangle
 = \int \mathcal{D}^{W^{\stdim-1}}V \exp\left(\frac{\imunit}{2\pi}\int_{W^{\stdim-1}} \mathop{dV}\left(\phi_L-\phi_R\right)+\imunit n \int_{\Sigma^{\stdim-2}}V\right).
-}\label{eq-dual-op}\end{equation} Here, we take arbitrary
-\(W^{\stdim-1}\) that contains \(\Sigma^{\stdim-2}\), and the correlator
-is independent of the choice. The coefficient \(n\) has to be an integer
-for \(\int_{\Sigma^{D-1}}\) to be invariant under global gauge
-transformations.
+}\end{equation} Here, we take arbitrary \(W^{\stdim-1}\) that contains
+\(\Sigma^{\stdim-2}\), and the correlator is independent of the choice.
+The coefficient \(n\) has to be an integer for \(\int_{\Sigma^{D-1}}\)
+to be invariant under global gauge transformations.
 
 The operator Equation~\ref{eq-dual-op} is often defined as a
 ``disorder'' operator that enforces singular behavior. Here we see the
 explicit construction of such by \emph{integrating in} the Lagrange
 multiplier \(V\) on \(W^{\stdim-1}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 Note that the topological operator Equation~\ref{eq-Ug-pathintegral} is
 also of disorder-type; it enforces a jump of the field across \(W\). It
@@ -1142,12 +1105,10 @@ Equation~\ref{eq-winding-op}. Explicitly, we have \[
 \] for any \(\alpha\). And thus the both sides vanish unless
 \(\sum n_i = 0\).
 
-\hypertarget{mixed-anomaly-between-shift-and-winding-symmetry}{%
 \section{Mixed Anomaly between Shift and Winding
-Symmetry}\label{mixed-anomaly-between-shift-and-winding-symmetry}}
+Symmetry}\label{mixed-anomaly-between-shift-and-winding-symmetry}
 
-\hypertarget{intersection}{%
-\subsection{Intersection}\label{intersection}}
+\subsection{Intersection}\label{intersection}
 
 Having explicit descriptions of topological operators enables us to
 directly compute \textbf{quantum anomaly} (often called 't Hooft
@@ -1197,8 +1158,7 @@ save both.
 This incompatibility of periodicity, or the group multiplication law,
 when topological operators intersects is the hallmark of anomaly.
 
-\hypertarget{group-cohomology}{%
-\subsection{Group Cohomology}\label{group-cohomology}}
+\subsection{Group Cohomology}\label{group-cohomology}
 
 The incompatibility above is better characterized as a group cohomology
 (or its generalization to a higher-group). Here we see how to
@@ -1226,39 +1186,23 @@ cancelled when the integral in the last term is evaluated, and thus the
 junction operator is topological. The existence of its inverse is also
 manifest.
 
-\begin{figure}
+\begin{figure}[t]
 
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
+\begin{minipage}{0.50\linewidth}
+\begin{center}
 \includegraphics{figures/shift_2pi_isom.pdf}
-
-}
-
-}
-
+\end{center}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
+\begin{minipage}{0.50\linewidth}
+\begin{center}
 \includegraphics{figures/winding_2pi_isom.pdf}
-
-}
-
-}
-
+\end{center}
 \end{minipage}%
 
 \caption{\label{fig-line-isom}Line-isomorphism operators.}
 
-\end{figure}
+\end{figure}%
 
 Likewise, the line isomorphism operator for the winding symmetry
 operator is \[
@@ -1278,50 +1222,27 @@ where \(\langle \alpha \rangle = 2\pi\{\alpha/2\pi\}\); see
 Figure~\ref{fig-junction-def}. The point is that this isomorphism
 results in a phase when crossing an intersection of the lines.
 
-\begin{figure}
+\begin{figure}[t]
 
-\begin{minipage}[t]{0.35\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
+\begin{minipage}{0.35\linewidth}
+\begin{center}
 \includegraphics{figures/prod_isom.pdf}
-
-}
-
-}
-
+\end{center}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
+\begin{minipage}{0.05\linewidth}
+~\end{minipage}%
 %
-\begin{minipage}[t]{0.60\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
+\begin{minipage}{0.60\linewidth}
+\begin{center}
 \includegraphics{figures/junction_def.pdf}
-
-}
-
-}
-
+\end{center}
 \end{minipage}%
 
 \caption{\label{fig-junction-def}The definition of junction fusing two
 \(U_{\alpha,\beta}\)'s into one.}
 
-\end{figure}
+\end{figure}%
 
 Now, we consider the two consecutive junctions, which fuses three lines
 \(U_{\langle\alpha_i\rangle,\langle\beta_i\rangle}\) (\(i=1,2,3\)) into
@@ -1330,26 +1251,27 @@ Figure~\ref{fig-F-move}.
 
 \begin{figure}[t]
 
-{\centering \includegraphics{figures/f_move.pdf}
+\centering{
+
+\includegraphics{figures/f_move.pdf}
 
 }
 
 \caption{\label{fig-F-move}The anomalous phase from the F-move. We let
 \(\alpha_{12} = \alpha_1+\alpha_2\), etc.}
 
-\end{figure}
+\end{figure}%
 
 There are two ways of such fusion as depicted in the figure, and the two
 are related by a nontrivial phase which is
-\begin{equation}\protect\hypertarget{eq-cocycle-boson}{}{
+\begin{equation}\phantomsection\label{eq-cocycle-boson}{
 f(g_1,g_2,g_3) = \alpha_1\left[\frac{\langle\beta_2\rangle}{2\pi}+\frac{\langle\beta_3\rangle}{2\pi}\right]+\beta_3\left[\frac{\langle\alpha_1\rangle}{2\pi}+\frac{\langle\alpha_2\rangle}{2\pi}\right],
-}\label{eq-cocycle-boson}\end{equation} where
-\(g_i = (\alpha_i,\beta_i)\in U(1)^2\). The two configurations are
-gauge-equivalent, yet there is a non-trivial phase relating them. This
-is the \emph{anomalous phase} of this anomalous \(U(1)^2\) symmetry of
-1+1d compact boson.
+}\end{equation} where \(g_i = (\alpha_i,\beta_i)\in U(1)^2\). The two
+configurations are gauge-equivalent, yet there is a non-trivial phase
+relating them. This is the \emph{anomalous phase} of this anomalous
+\(U(1)^2\) symmetry of 1+1d compact boson.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Group cohomology}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Group cohomology}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 Mathematically speaking, the function
 \(f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}\) is a 3-cocycle on the
@@ -1380,7 +1302,7 @@ realized in a QFT. In this particular case it seems considering
 \emph{piecewise continuous} functions is necessary and sufficient. For
 general cases in general dimensions KO is not sure.}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Exercise: \(\mathbb{Z}_2\) anomaly}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Exercise: \(\mathbb{Z}_2\) anomaly}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 The diagonal \(\mathbb{Z}_3\) subgroup of \(U(1)^2\) generate by
 \(U_{2\pi/3,2\pi/3}\) is anomalous. Confirm this fact by calculating
@@ -1390,7 +1312,7 @@ some other finite subgroups of \(U(1)^2\).
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Comparison to more conventional calculation.}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, coltitle=black, left=2mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, titlerule=0mm, opacitybacktitle=0.6, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Comparison to more conventional calculation.}, toptitle=1mm, arc=.35mm, rightrule=.15mm, opacityback=0]
 
 The mixed anomaly between the shift and winding symmetry in 1+1d compact
 boson is usually computed from the two-point function of the
@@ -1406,8 +1328,7 @@ subgroup, for example.
 
 \end{tcolorbox}
 
-\hypertarget{t-duality}{%
-\section{T-duality}\label{t-duality}}
+\section{T-duality}\label{t-duality}
 
 The compact boson in \(\stdim=2\)-dimensions famously has
 \emph{T-duality}.
@@ -1440,9 +1361,8 @@ In this section we study
 The latter can further be generalized to the case of rational \(R^2\)
 \autocite{Niro:2022ctq,Cordova:2023ent}.
 
-\hypertarget{t-duality-topological-interface}{%
 \subsection{T-duality topological
-interface}\label{t-duality-topological-interface}}
+interface}\label{t-duality-topological-interface}
 
 Here we study the T-duality topological interface connecting two compact
 boson theories in \(\stdim=2\)-dimensions; with radius \(R\) and radius
@@ -1453,7 +1373,7 @@ to be contained in the larger \(\SU(2)\) enhanced symmetry.
 
 According to \autocite{Kapustin:2009av}, the partition functino
 involving the interface is
-\begin{equation}\protect\hypertarget{eq-T-interface}{}{
+\begin{equation}\phantomsection\label{eq-T-interface}{
 \begin{multlined}
 \langle \mathcal{O}_L \mathcal{I}^\text{T}_1[W] \mathcal{O}_R  \rangle= 
 \int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}
@@ -1462,9 +1382,9 @@ involving the interface is
 -\frac{\imunit}{2\pi}\int_W \phi_L\mathop{d\phi_R}
 -\frac{1}{4\pi R^2}\int_{M_R}\mathop{d\phi_R}*\mathop{d\phi_R}\right).
 \end{multlined}
-}\label{eq-T-interface}\end{equation} For simplicity let us take
-\(\mathcal{O}_R =1\), and \(M_R\) be a compact region in the spacetime.
-In this case, we expect the supposed topological-ness implies \[
+}\end{equation} For simplicity let us take \(\mathcal{O}_R =1\), and
+\(M_R\) be a compact region in the spacetime. In this case, we expect
+the supposed topological-ness implies \[
 \langle \mathcal{O}_L \mathcal{I}_1^\text{T}[W]\rangle = \langle \mathcal{O}_L \rangle.
 \] To show this, we replace the variable \(\phi_R\) with
 \(F_R = d\phi_R\) by \[
@@ -1474,13 +1394,13 @@ In this case, we expect the supposed topological-ness implies \[
 multiplier enforcing the closedness and the quantization of
 \(F_R = d\phi_R\). Substituting this into Equation~\ref{eq-T-interface},
 the EOMs with respect to \(F_R\) are
-\begin{equation}\protect\hypertarget{eq-EOM-FR-boson}{}{
+\begin{equation}\phantomsection\label{eq-EOM-FR-boson}{
 \begin{aligned}
     \frac{1}{R} *d\phi_R(x) &= \imunit d\widetilde\phi_R(x) \quad \mathop{\text{for}} x \in M_R \\
     \phi_L(x) &= \widetilde{\phi}_R(x) \quad \mathop{\text{for}} x \in W.
 \end{aligned}
-}\label{eq-EOM-FR-boson}\end{equation} Substituting the former equation
-to the Lagrangea of \(\phi_R\), we get \[
+}\end{equation} Substituting the former equation to the Lagrangea of
+\(\phi_R\), we get \[
     \frac{R^2}{4\pi} \int_{M_R}\mathop{d\widetilde{\phi}_R}*\mathop{d\widetilde{\phi}_R}
 \] with is the same as for \(\phi_L\), while the latter of
 Equation~\ref{eq-EOM-FR-boson} connects \(\phi_L\) and
@@ -1533,13 +1453,12 @@ perpendicular to \(W_1\) and \(W_2\) contributes. Therefore, the
 T-duality interface squares to the identity. In particular, at \(R=1\),
 the self-interface defines an invertible \(\mathbb{Z}_2\) symmetry.
 
-\hypertarget{non-invertible-symmetry-from-t-duality}{%
 \subsection{Non-invertible symmetry from
-T-duality}\label{non-invertible-symmetry-from-t-duality}}
+T-duality}\label{non-invertible-symmetry-from-t-duality}
 
 \textcite{Choi:2021kmx} generalized the Kapustin-Tikhonov T-duality
 interface by \textcite{Kapustin:2009av} as
-\begin{equation}\protect\hypertarget{eq-TN-interface}{}{
+\begin{equation}\phantomsection\label{eq-TN-interface}{
 \begin{multlined}
 \langle \mathcal{O}_L \mathcal{I}^\text{T}_N[W] \mathcal{O}_R  \rangle= 
 \int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}
@@ -1548,10 +1467,9 @@ interface by \textcite{Kapustin:2009av} as
 -\frac{\imunit N}{2\pi}\int_W \phi_L\mathop{d\phi_R}
 -\frac{N^2}{4\pi R^2}\int_{M_R}\mathop{d\phi_R}*\mathop{d\phi_R}\right).
 \end{multlined}
-}\label{eq-TN-interface}\end{equation} This interface is a
-\emph{self-interface} at \(R=\sqrt{N}\). The same procedure as we did
-for \(\mathcal{I}_1\) leads to
-\begin{equation}\protect\hypertarget{eq-TN-interface2}{}{
+}\end{equation} This interface is a \emph{self-interface} at
+\(R=\sqrt{N}\). The same procedure as we did for \(\mathcal{I}_1\) leads
+to \begin{equation}\phantomsection\label{eq-TN-interface2}{
 \begin{multlined}
 \langle\mathcal{O}_L \mathcal{I}^\text{T}_N[W] \rangle= 
 \int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}\mathop{\mathcal{D}^{W}V'}
@@ -1560,7 +1478,7 @@ for \(\mathcal{I}_1\) leads to
 -\frac{\imunit }{2\pi}\int_W (N \phi_L - \widetilde{\phi}_R)\mathop{dV}
 -\frac{R^2}{4\pi N^2}\int_{M_R}\mathop{d\widetilde\phi_R}*\mathop{d\widetilde\phi_R}\right).
 \end{multlined}
-}\label{eq-TN-interface2}\end{equation} We further rescale the fields as
+}\end{equation} We further rescale the fields as
 
 \[
 \begin{aligned}
@@ -1568,7 +1486,7 @@ V' &= NV \\
 N \widetilde\phi_R' &= \widetilde\phi_R \mod 2\pi
 \end{aligned}
 \] so that we have
-\begin{equation}\protect\hypertarget{eq-TN-interface3}{}{
+\begin{equation}\phantomsection\label{eq-TN-interface3}{
 \begin{multlined}
 \langle\mathcal{O}_L \mathcal{I}^\text{T}_N[W] \rangle = \mathcal{N} 
 \int \mathop{\mathcal{D}^{M_L}\phi_L}\mathop{\mathcal{D}^{M_R}\phi_R}\mathop{\mathcal{D}^{W}V'}
@@ -1577,9 +1495,9 @@ N \widetilde\phi_R' &= \widetilde\phi_R \mod 2\pi
 -\frac{\imunit }{2\pi}\int_W ( \phi_L - \widetilde{\phi}_R')\mathop{dV'}
 -\frac{R^2}{4\pi}\int_{M_R}\mathop{d\widetilde\phi_R'}*\mathop{d\widetilde\phi_R'}\right).
 \end{multlined}
-}\label{eq-TN-interface3}\end{equation} To go from
-Equation~\ref{eq-TN-interface3} to Equation~\ref{eq-TN-interface2}, we
-define a \(\mathbb{Z}_N\) valued variable
+}\end{equation} To go from Equation~\ref{eq-TN-interface3} to
+Equation~\ref{eq-TN-interface2}, we define a \(\mathbb{Z}_N\) valued
+variable
 \(n_{\widetilde{\phi'}_R} = [N\widetilde{\phi'}_R/2\pi] \mod N\) so that
 \(\widetilde{\phi'} = \frac{2\pi}{N}(\{\widetilde{\phi}/2\pi\} + 2\pi n_{\widetilde{\phi'}_R})\).
 Then, after substituting it, the sum over \(n_{\widetilde{\phi'}}\)
@@ -1590,19 +1508,18 @@ along \(W\) is constrained to be a multiple of \(N\)). Thus, we have
 measure to determine the normalization constant \(\mathcal{N}\), but
 will determined in by another mean later.
 
-\hypertarget{fusion-rule}{%
-\subsubsection{Fusion rule}\label{fusion-rule}}
+\subsubsection{Fusion rule}\label{fusion-rule}
 
 The product, or \emph{fusion} of the generalized operator is
-\begin{equation}\protect\hypertarget{eq-fusion-I}{}{
+\begin{equation}\phantomsection\label{eq-fusion-I}{
 \begin{aligned}
 (\mathcal{I}_N^\text{T})^2 &= \int \mathcal{D}^W V \exp(\frac{\imunit}{2\pi} N \int_W \mathop{dV}(\phi_L-\phi_R))\\
 &= \sum_{n=0}^{N-1} \int \mathcal{D}^W V' \exp(\frac{\imunit}{2\pi}  \int_W \mathop{dV}(\phi_L-\phi_R+ 2\pi n/N))\\
 &= \sum_{n=0}^{N-1} U_{2\pi n/N}^{\text{shift}},
 \end{aligned}
-}\label{eq-fusion-I}\end{equation} where in the second line we did the
-chage of variable \(NV = V'\), and enforced the divisibility of \(V'\)
-by \(N\) by the sum over \(n\). One can also see
+}\end{equation} where in the second line we did the chage of variable
+\(NV = V'\), and enforced the divisibility of \(V'\) by \(N\) by the sum
+over \(n\). One can also see
 \(\mathcal{I}_N^\text{T}[-W] = \mathcal{I}_N^\text{T}[W]\) (note that
 when we consider an operator on \(W\) the notion of ``left'' and
 ``right'' also flips), so \[
@@ -1634,9 +1551,8 @@ Equation~\ref{eq-TN-interface3} is determined by \[
 \] thus \(\mathcal{N} = \sqrt{N}\). This quantity is called the
 \textbf{quantum dimension} of \(\mathcal{I}_N^\text{T}\).
 
-\hypertarget{action-on-the-local-operators}{%
 \subsubsection{Action on the local
-operators}\label{action-on-the-local-operators}}
+operators}\label{action-on-the-local-operators}
 
 What is the action of \(\mathcal{I}_N^\text{T}\) on the local operator
 \(\mathcal{O}^\text{winding}_n\)? Naively repeating the procedure in the
@@ -1659,9 +1575,8 @@ e^{\imunit \frac{n}{N}\int_{\gamma^x} \mathop{d\phi}} \mathcal{I}_N^\text{T}[W_R
 \] \(W_{L,R}\) goes through the left/right side of the point \(x\), and
 the path \(\gamma^x\) starts from a point on \(W_R\) and ends at \(x\).
 
-\hypertarget{non-invertible-t-duality-for-a-rational-r}{%
 \subsection{\texorpdfstring{Non-invertible T-duality for a rational
-\(R\)}{Non-invertible T-duality for a rational R}}\label{non-invertible-t-duality-for-a-rational-r}}
+\(R\)}{Non-invertible T-duality for a rational R}}\label{non-invertible-t-duality-for-a-rational-r}
 
 We can further generalize Equation~\ref{eq-TN-interface} so that it is a
 self duality at \(R^2 = p/q\) (\(p\) and \(q\) are taken to be coprime)
@@ -1676,13 +1591,11 @@ is \[
 
 \bookmarksetup{startatroot}
 
-\hypertarget{sec-vector}{%
-\chapter{Vector}\label{sec-vector}}
+\chapter{Vector}\label{sec-vector}
 
 \bookmarksetup{startatroot}
 
-\hypertarget{references}{%
-\chapter*{References}\label{references}}
+\chapter*{References}\label{references}
 \addcontentsline{toc}{chapter}{References}
 
 \markboth{References}{References}
