@@ -8,8 +8,15 @@ A fundamental aspect of symmetry in QFTs is its preservation along the renormali
 More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ transitions into an infrared theory $\mathcal{T}_\text{IR}$, 
 a canonical homomorphism $f_\text{RG}$ exists from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
 
+::: {.callout-tip title="Tip with Title"}
+This is a callout with a title.
+:::
+
+
+<!---
 ::: {.callout-important icon="true"}
-### RG flow homomorphism from UV symmetry to IR symmetry
+## RG flow homomorphism from UV symmetry to IR symmetry
+teset
 $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
@@ -50,6 +57,7 @@ In fact, we assert that this property is the *last* one to be discarded in the c
 :::
 
 [^ColemanMandula]: Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.
+
 
 
 ::: {.callout-note collapse="false"}
@@ -127,3 +135,4 @@ These subclasses are not mutually exclusive. Therefore, in theory, a 2-form non-
 
 ## Contents of the Lecture
 **FIXME**
+--->

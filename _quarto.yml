@@ -19,10 +19,10 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - scalar.qmd
-    - compact.qmd
-    - vector.qmd
-    - references.qmd
+    #- scalar.qmd
+    #- compact.qmd
+    #- vector.qmd
+    #- references.qmd
   downloads: pdf
   body-header: header.qmd
     
