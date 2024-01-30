@@ -1,98 +1,131 @@
 # Topological Operators for Classical Symmetry {#sec-scalar}
 
-In this section we take the classical symmetry in scalar field theory as an example to study topological operators.
-
+This section explores topological operators in the context of classical symmetry in scalar field theory.
 
 ## Set Up
-To be concrete, let us consider the complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is given by
+For specificity, consider a complex scalar field theory with the following Lagrangian (density) on a spacetime $M$ of dimension $\stdim$:
+
 $$
 \begin{aligned}
 \mathcal{L}(\phi) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi(x))\right)\vol\\
-&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol,
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol.
 \end{aligned}
 $$
-where $\mathop{*}$ is the Hodge star, $\vol = \mathop{*} 1 = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential.
-The action is the integral over the spacetime $M$ (without boundary):
+
+In this equation, $\mathop{*}$ represents the Hodge star, $\vol = \mathop{*} 1 = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential. Then, the action is given by:
+
 $$
 S[\phi] = \int_{M}\mathcal{L}(\phi).
 $$
 
-We consider a symmetry transformation of the scalar field
+Consider a symmetry transformation of the scalar field as follows:
+
 $$
-\phi(x) \mapsto \phi^g(x)
+\phi(x) \mapsto \phi^g(x).
 $${#eq-scalar-transf}
-parametrized by a group element $g$ (constant over $M$) that leaves the action invariant: 
+
+We assume that this transformation is parametrized by an element $g$ in a group $G$, which is constant over $M$ and leaves the action invariant:
+
 $$
 S[\phi]=S[\phi^g].
 $${#eq-action-inv}
-This means that the Lagrangian is invariant up to a total derivative:
-$$
-\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g) 
-$${#eq-Lagrangian-inv}
-where $s(\phi,g)$ is a $(\stdim-1)$-form on $M$ depending on the constant $g$ and the field $\phi$.
-We set $s(\phi,g=\id) = 0$, where $\id$ is the unit of the symmetry group.
-Then, by $\phi = (\phi^g)^{g^{-1}}$, we can set that $s(\phi,g) = - s(\phi,g^{-1})$.
 
-For example, the usual $\U(1)$ rotation corresponds to the transformation
+This implies that the Lagrangian is invariant up to a total derivative:
+
+$$
+\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g).
+$${#eq-Lagrangian-inv}
+
+In this equation, $s(\phi,g)$ is a $(\stdim-1)$-form on $M$ that depends on the constant $g$ and the field $\phi$. We define $s(\phi,g=\id) = 0$, where $\id$ is the unit of the symmetry group.
+
+For instance, the standard $\U(1)$ rotation corresponds to the transformation:
+
 $$
 \phi^g(x) = \mathop{g} \phi(x),
 $$
-where $g=e^{\imunit \alpha}$ is a $\U(1)$ phase.
-The potential $V(\phi)$ might partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$, e.g. $V(\phi)\propto \phi^k+(\phi^*)^k$.
-In such a case the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi i}{k}}$, $i= 0 \cdots k-1$.
 
-In addition, when $V(\phi)=0$, the action $S[\phi]$ also admit the shift symmetry[^nonzero_r]
+where $g=e^{\imunit \alpha}$ represents a $\U(1)$ phase. The potential $V(\phi)$ may partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$. For example, when $V(\phi)\propto \phi^k+(\phi^*)^k$, the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi i}{k}}$, where $i$ ranges from 0 to $k-1$.
+
+Moreover, when $V(\phi)=0$, the action $S[\phi]$ also admits the shift symmetry[^nonzero_r]:
+
 $$
 \phi^{\alpha}(x) = \phi(x) + \alpha.
 $$
 
-[^nonzero_r]: If we use the form of Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this also gives an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
+[^nonzero_r]: If we use the form of the Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this provides an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
-In this section, we would like to construct the **topological operator** corresponding to these *classical* symmetry.
+In this section, our goal is to construct the **topological operator** corresponding to these *classical* symmetries.
 
 :::{.callout-note}
 #### Note
-The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fieldsas long as the kinetic term is standard enough (more on this in @sec-trivial-scalar). 
-For non-linear sigma model with topologically non-trivial target, the Lagrange multiplier $\lambda$ below should take values in the correct set.
-We will consider the case with $S^1$ target (compact boson) in @sec-compact-boson.
-Also, the spacetime manifold $M$ and the metric on it do not have to be flat. The signature of the metric is also insignificant in this lecture, although we use the Euclidean notation.
+This construction can be applied to various types of scalar field theory, such as real and/or multiple scalar fields, provided the kinetic term is standard enough (more details in @sec-trivial-scalar). Also note that the spacetime manifold $M$ and its metric do not need to be flat. The metric's signature is not significant in this lecture, even though we use Euclidean notation.
 :::
 
 :::{.callout-note}
 #### Note
-In this lecture we directly construct the topological operators corresponding to the *finite* transformation @eq-scalar-transf, rather than the conventional approach considerting infinitesimal transformation.
-This will enable us to explicitly talk about *finite* symmetries (and their anomalies) in terms of topological operators, and also motivate us to consider generalized symmetries.
+In this lecture, we focus on constructing topological operators that correspond to the *finite* transformation @eq-scalar-transf, as opposed to the conventional approach of considering infinitesimal transformations. This approach allows us to explicitly discuss *discrete* symmetries (and their anomalies) in terms of topological operators, and it also motivates us to consider generalized symmetries.
 :::
 
-## Construction of Topological Operator
-As a basic example of @eq-conv-STO-corresp, we would like to construct the topological operator $U_\alpha[W]$ corresponding to the transformation @eq-scalar-transf.
-The topological operator $U_\alpha[W]$ ,defined with respect to a codimension-1 submanifold $W$ of the spacetime $M$, should satisfy the following properties:
+## Construction of the Topological Operator
+As a fundamental example of the correspondence @eq-conv-STO-corresp, we aim to construct the topological operator $U_\alpha[W]$ that corresponds to the transformation @eq-scalar-transf. Specifically, we will construct an operator $U_\alpha[W]$, defined on a codimension-1 submanifold $W$ of the spacetime $M$, that satisfies the following properties:
 
 :::{.callout-important}
-#### Properties of Symmetry Topological Operator
-1. Topological: $U_g[W] = U_g[W']$ is $W$ can be continuously defomed into $W'$ without crossing other operators.
-2. Symmetry action: when a deformation from $W$ to $W''$ crosses an local operator $\mathcal{O}$, it gets the symmetry action specified by $g$, resulting in another operator $\mathcal{O}^g$.
-3. Noether: when the symmetry group is continuous, we can take the group element to be the infinitsimal deformation of $\id$: $g = \id + \alpha + \mathcal{O}(\alpha^2)$. Then, the operator $U_g[W]$ is approximated by the Noether charge
-   $$
-   U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
-   $${#eq-Noether-approx}
-   where $j = j_\mu\mathop{dx^\mu}$ is the Nother current one-form **FIXME:sign is uncertain..**
-   $$
-   \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
-   $$
+#### Properties of the Symmetry Topological Operator
+1. Topological: $U_g[W] = U_g[W']$ if $W$ can be continuously deformed into $W'$ without intersecting other operators.
+2. Symmetry action: When a deformation from $W$ to $W''$ intersects a local operator $\mathcal{O}$, it undergoes the symmetry action specified by $g$, resulting in another operator $\mathcal{O}^g$.
+3. Noether: When the symmetry group is continuous, we can consider the group element as the infinitesimal deformation of $\id$: $g = \id + \alpha + \mathcal{O}(\alpha^2)$. In this case, the operator $U_g[W]$ is approximated by the Noether charge
+    $$
+    U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
+    $${#eq-Noether-approx}
+    where $j = j_\mu\mathop{dx^\mu}$ is the Noether current one-form. **FIXME:sign is uncertain..**
+    $$
+    \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
+    $$
 Note that when $W$ is a time-slice $W=\{t=0\}$,
 $$
 \int_W \mathop{*} j = \int_{\{t=0\}} j^0 \mathop{d^{\stdim-1}x}
 $$
-is exactly the Noether charge written in any QFT textbook.
+is precisely the Noether charge as described in any QFT textbook.
 
-
-The properties 1.\ and 2.\ are summarized in @fig-op-action.
+Properties 1 and 2 are summarized in @fig-op-action.
 :::
 
+![The topological operator $U_g[W]$ is designed to be invariant under a continuous deformation and to implement the symmetry action.](figures/Op_action.svg){#fig-op-action width=400}
 
-![The topological operator $U_g[W]$ should be invariant under a continuous deformation and also implement the symmetry action. ](figures/Op_action.svg){#fig-op-action width=400}
+The construction is based on the concept of "cutting-and-gluing-with-twist".
+Initially, we partition the spacetime $M$ into two subregions: $M_\stdim = M_L \cup_W M_R$ with a common boundary $W$ (refer to @fig-cut-M. We orient $W$ such that $\partial M_L = -\partial M_R = W$.).
+We also divide the scalar field $\phi$ into two fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$. Subsequently, we reconnect the two regions and their respective fields, with a twisted identification: 
+$$ \phi_L|_W = \phi_R^{g^{-1}}|_W. $$
 
+![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
+
+In path-integral, this construction can be implemented as follows:
+
+::: {.callout-important}
+#### Symmetry Topological Operator for a Classical Symmetry
+$$
+\begin{multlined}
+    \langle U_g[W] \cdots \rangle = \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda} \cdots\\ \times \exp\left(-S_L[\phi_L]-S_R[\phi_R] - G_W[\lambda,\phi_L,\phi_R,g]\right)
+\end{multlined}
+$${#eq-Ug-pathintegral}
+:::
+
+In this context, $\mathcal{D}^{X}$ signifies the measure for the path-integral for a field defined on a submanifold $X$ of the spacetime $M$. The actions on the submanifold $M_{L,R}$ are represented by $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$, and "$\cdots$" denotes additional operator insertions. The "gluing" action $G_W$ on the submanifold $W$ is defined as
+$$
+\begin{multlined}
+    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
+\end{multlined}
+$${#eq-gluing-action}
+The key point of the above expression is that integrating the Lagrange multiplier $\lambda$ results in the "delta functional":
+$$
+\
+    \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^{g^{-1}}_R)\vol_W\right)
+     = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^{g^{-1}}(x)),
+$${#eq-delta-functional}
+which should implement @fig-cut-M.
+Before delving into the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
+
+#### old
 The idea of the construction is "*cutting-and-gluing-with-twist*".
 That is, we first divide the spacetime $M$ into two parts: $M_\stdim = M_L \cup_W M_R$ with shared boundary $W$ (see @fig-cut-M. We take the orientation of $W$ so that $\partial M_L = -\partial M_R = W$. ).
 We also separate the scalar field $\phi$ into two sets of fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.

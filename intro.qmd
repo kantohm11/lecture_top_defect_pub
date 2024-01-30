@@ -42,6 +42,7 @@ When $x'\neq x$, the symmetry involves a *spacetime* symmetry, while when $x'=x$
 The preservation of locality in a symmetry underpins the symmetry relation in @eq-RG-group-match, which will be elaborated further in the lecture.
 
 :::{.callout-note}
+#### Note
 Please note that a QFT, when quantized on a fixed space manifold $M$, does possess unitary operators that commute with its Hamiltonian, other than those originating from locality-preserving symmetry. 
 In most cases, such unitary operators are irrelevant; an example is the one that multiplies a phase to a specific eigenstate.
 Therefore, in this lecture, when we refer to a symmetry, we assume that it preserves locality.
