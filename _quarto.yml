@@ -57,7 +57,7 @@ format:
      - "sorting = none"
    filters:
      - line-break.lua
-     - callout-title-modify.lua
+     #- callout-title-modify.lua
    keep-tex: true
    fig-pos: 't'
    include-in-header: header.tex
