@@ -90,10 +90,9 @@ There exists an unfortunate discrepancy in terminology. Outside the realm of gen
 
 ## Generalized Symmetry
 
-The correspondence in @eq-conv-STO-corresp is the core in the notion of **generalized (global) symmetry**, 
-coined by [@Gaiotto:2014kfa] [^GKSW].
-That is, the notion of symmetry can be generalized by relaxing the adjective in the right-hand side of @eq-conv-STO-corresp. 
-Therefore, we *define* generalized symmetry by the following correspondence generalizing @eq-conv-STO-corresp:
+The concept of **generalized (global) symmetry** is fundamentally based on the correspondence in @eq-conv-STO-corresp, as introduced by [@Gaiotto:2014kfa] [^GKSW].
+This concept expands the traditional notion of symmetry by loosening the constraints on the right-hand side of @eq-conv-STO-corresp. 
+Hence, we *define* generalized symmetry through the following correspondence, which extends @eq-conv-STO-corresp:
 
 ::: {.callout-important}
 ### Generalized Symmetry/Topological Operator Correspondence
@@ -104,23 +103,26 @@ $$\begin{split}
 \end{split}
 $${#eq-GSTO-corresp}
 :::
-More specifically, a generalized symmetry corresponding to an operator of codimension $p+1$ is called **$p$-form symmetry**, and a generalized symmetry corresponding to an operator without its inverse is called **non-invertible symmetry** (among other names like category symmetry and topological symmetry).
 
-In an "unusual" QFT, we can even relax the topological-ness of the operator in the right-hand side of @eq-GSTO-corresp, resulting in what is called **subsystem** symmetry. We will briefly make a comment on it in @sec-trivial-scalar.
+In more specific terms, a generalized symmetry that corresponds to an operator of codimension $p+1$ is referred to as a **$p$-form symmetry**. 
+Meanwhile, a generalized symmetry that corresponds to an operator without an inverse is known as a **non-invertible symmetry** (also referred to as category symmetry or topological symmetry).
 
-The subclasses of generalized symmetry is summarized in the table below:
+In the context of an "unusual" QFT, the topological constraint on the operator in the right-hand side of @eq-GSTO-corresp can be further relaxed. 
+This leads to the concept of **subsystem** symmetry, which will be briefly mentioned in @sec-trivial-scalar, but will not be discussed in detail in this lecture.
+
+The table below summarizes the subclasses of generalized symmetry:
 
 |              | $p$-form | non-invertible | subsystem  |
 |--------------|----------|----------------|------------|
 | codimension  | $p+1$    |                |            |
 | Invertible?  |          | No             |            |
-| Topological? |          |                | Partically |
+| Topological? |          |                | Partially  |
 
 :Subclasses of generalized symmetry and defining properties of their corresponding topological operators. {#tbl-sym-classes}
 
-The subclasses are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.
+These subclasses are not mutually exclusive. Therefore, in theory, a 2-form non-invertible subsystem symmetry could exist, for example.
 
-[^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially known from [@KalbRamond].
+[^GKSW]: The concept of global higher-form symmetry has been previously explored and investigated in the literature, for example, in [@Kapustin:2013uxa;@Barkeshli:2014cna]. Its gauged version was essentially known from [@KalbRamond].
 
 ## Contents of the Lecture
 **FIXME**
