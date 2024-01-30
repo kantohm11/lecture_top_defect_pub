@@ -42,6 +42,7 @@ format:
       dark: [darkly,custom.scss]
     csl: american-statistical-association.csl
     anchor-sections: true
+    html-math-method: mathjax
   pdf:
    default-image-extension: pdf
    documentclass: scrreport

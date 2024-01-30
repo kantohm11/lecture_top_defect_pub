@@ -110,69 +110,27 @@ $$
 $${#eq-Ug-pathintegral}
 :::
 
-In this context, $\mathcal{D}^{X}$ signifies the measure for the path-integral for a field defined on a submanifold $X$ of the spacetime $M$. The actions on the submanifold $M_{L,R}$ are represented by $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$, and "$\cdots$" denotes additional operator insertions. The "gluing" action $G_W$ on the submanifold $W$ is defined as
+Here, $\mathcal{D}^{X}$ denotes the measure for the path-integral for a field defined on a submanifold $X$ of the spacetime $M$. The actions on the submanifold $M_{L,R}$ are written as $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$, and "$\cdots$" denotes additional operator insertions. The "gluing" action $G_W$ on the submanifold $W$ is defined as
 $$
-\begin{multlined}
+%\begin{multlined}
     G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
-\end{multlined}
+%\end{multlined}
 $${#eq-gluing-action}
 The key point of the above expression is that integrating the Lagrange multiplier $\lambda$ results in the "delta functional":
 $$
-\
     \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^{g^{-1}}_R)\vol_W\right)
      = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^{g^{-1}}(x)),
 $${#eq-delta-functional}
 which should implement @fig-cut-M.
-Before delving into the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
-
-#### old
-The idea of the construction is "*cutting-and-gluing-with-twist*".
-That is, we first divide the spacetime $M$ into two parts: $M_\stdim = M_L \cup_W M_R$ with shared boundary $W$ (see @fig-cut-M. We take the orientation of $W$ so that $\partial M_L = -\partial M_R = W$. ).
-We also separate the scalar field $\phi$ into two sets of fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.
-Then, we glue the two regions and fields on those back together, with the twisted identification:
-$$
-\phi_L|_W = \phi_R^{g^{-1}}|_W.
-$$
-
-![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
-
-In path-integral, this construction can be implemented as follows:
-
-::: {.callout-important}
-#### Symmetry Topological Operator
-$$
-\begin{multlined}
-    \langle U_g[W] \cdots \rangle = \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda} \cdots\\ \times \exp\left(-S_L[\phi_L]-S_R[\phi_R] - G_W[\lambda,\phi_L,\phi_R,g]\right)
-\end{multlined}
-$${#eq-Ug-pathintegral}
-:::
-
-Here, $\mathcal{D}^{X}$ denotes the measure for path-integral for a field defined on a submanifold $X$ of the spacetime $M$,
-and $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$ are actions on the submanifold $M_{L,R}$, and "$\cdots$" represents additional insertions of operators.
-In addition, the "gluing" action $G_W$ on the submanifold $W$ is
-$$
-\begin{multlined}
-    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
-\end{multlined}
-$${#eq-gluing-action}
-The heart of the above expression is that integrating the Lagrange multiplier $\lambda$ out gives the "delta functional":
-$$
-\
-    \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^{g^{-1}}_R)\vol_W\right)
-     = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^{g^{-1}}(x)),
-$${#eq-delta-functional}
-which should implement @fig-cut-M.
-Before studying the operator $U_g[W]$, we should study the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
+Before studying the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
 
 ## Identity Wall {#sec-trivial-scalar}
-When $g=\id$, the operator $U_{g=\id}[W]$ should be *trivial*.
-That is, we have
+When the transformation is trivial, i.e., $g=\id$, the operator $U_{g=\id}[W]$ should also be *trivial*. This implies that
 $$
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
 $${#eq-identity-wall}
-We call the codimension-1 operator $\id[W]$ with this property **identity wall**.
-It can also be called **transparent wall** or like that.
-Expanding @eq-identity-wall, the following equation should hold:
+We refer to the codimension-1 operator $\id[W]$ with this property as the **identity wall**. It can also be termed as the **transparent wall** or similar.
+Upon expanding @eq-identity-wall, the following equation should be satisfied:
 $$
 \begin{multlined}
     \int \mathop{\mathcal{D}^M\phi} \exp(-S) \cdots=
@@ -180,52 +138,41 @@ $$
 \end{multlined}
 $${#eq-trivial-scalar}
 
-The point is that the difference between giving a field $\phi$ and giving a pair of fields $(\phi_L,\phi_R)$ is that the latter is not constrained to be continuous across $W$. On the right-hand side it is rather enforced by integrating out $\lambda$ because of @eq-delta-functional.
+The key distinction between providing a field $\phi$ on $M$ and providing a pair of fields $(\phi_L,\phi_R)$ on $(M_L,M_R)$ is that the latter is not required to be continuous across $W$. On the right-hand side, continuity is enforced by integrating out $\lambda$ due to @eq-delta-functional.
 
 :::{.callout-tip collapse="true"}
-# Continuity of fields in "exotic" QFTs and subsystem symmetry
-Here we assumed that the path integral 
-$\int\mathcal{D}^M\phi$ should be over the *continuous* fields.
-The reason for this is that the standard kinetic term would diverge in the limit where the filed $\phi$ becomes discontinuous. 
+# Continuity of Fields in "Exotic" QFTs and Subsystem Symmetry
+In this context, we assume that the path integral $\int\mathcal{D}^M\phi$ should be over the *continuous* fields. This is because the standard kinetic term would diverge when the field $\phi$ becomes discontinuous, and thus such configuration does not contribute to the path-integral. 
 
-This assumption, however, does not apply to QFTs with higher-derivative kinetic terms.
-Examples of such exotic QFTs (without relativistic symmetry) includes tensor gauge theories (see e.g. [@Pretko:2020cko;@Seiberg:2020bhn]). 
-In these theories a field *can* be discontinuous, but some of higher derivatives are constrained to scale correctly with respect to the ratio of the lattice size and the system size. 
-In such cases the construction of the trivial operator should differ. *KO does not know how to describe it because of the UV/IR mixing and totally confused*.
+However, this assumption does not hold for QFTs with higher-derivative kinetic terms. Examples of such exotic QFTs (without relativistic symmetry) include tensor gauge theories (refer to [@Pretko:2020cko;@Seiberg:2020bhn] for more details). An example of such kinetic term is $(\partial_t\phi)^2 + (\partial_x\partial_y \phi)^2$. In these theories, a field *can* be discontinuous, but some higher derivatives are constrained to scale appropriately with the ratio of the lattice size to the system size. In such scenarios, the construction of the trivial operator should differ.
 
-These QFTs describes what is called the **fracton phases** of matter, which does not have emergent continuous rotational symmetry in the IR.
-And the models typically posses **subsytemsymmetries**, whose corresponding operator is not totally topological. 
-Existence of the new kind of symmetry lacked in standard relativistic systems would be related to the fact that the identy wall looks different from the first place.
+These QFTs describe what is known as the **fracton phases** of matter, which do not have emergent continuous rotational symmetry in the IR. Moreover, these models typically possess **subsystem symmetries**, whose corresponding operator is not entirely topological. The existence of this new type of symmetry, absent in standard relativistic systems, could be related to this subtlety regarding identity wall .
 :::
 
-It is instructive to study the equation of motions (EOMs) on the right hand side of @eq-trivial-scalar.
-The EOM with respect to $\lambda$ simply states $\phi_L(x) = \phi_R(x)$ for $x\in W$.
-The surface term of Euler-Lagrange equation for $\phi_L$ and $\phi_R$ gives
+Let us study the equations of motion (EOMs) on the right-hand side of @eq-trivial-scalar. The EOM with respect to $\lambda$ simply enforces $\phi_L(x) = \phi_R(x)$ for $x\in W$. On the other hand, the surface term of the Euler-Lagrange equation for $\phi_L$ and $\phi_R$ yields
 $$
     \left.\frac{\delta \mathcal{L}[\phi_L]}{\delta \mathop{d\phi_L}}\right|_W = \lambda \vol_W = \left. \frac{\delta \mathcal{L}[\phi_R]}{\delta \mathop{d \phi_R}}\right|_W.
 $$
-If $W$ is spacelike, or we regard the direction perpendicular to $W$ as the imaginary time in Euclidean signature, this enforces that the canonical momentum also be continuous across $W$.
+If $W$ is spacelike, or if we interpret the direction perpendicular to $W$ as the imaginary time in Euclidean signature, this condition ensures the continuity of the canonical momentum across $W$.
 
 :::{.callout-note}
 #### Locality
-@eq-trivial-scalar expresses the **locality** of the path-integral. 
-We can use the same procedure to decompose the path-integral $\int \mathcal{D}^M{\phi}$ on $M$ into path-integrals on local patches like $\int \prod_i\mathcal{D}^{V_i}\phi_i$ (comes with many Lagrange multipliers). Here $\bigcup_i V_i =M$ and $V_i \cap V_j$ has codimension 1 in $M$ if not empty.
+@eq-trivial-scalar encapsulates the **locality** of the path-integral. We can employ the same procedure to decompose the path-integral $\int \mathcal{D}^M{\phi}$ on $M$ into path-integrals on local patches, like $\int \prod_i\mathcal{D}^{V_i}\phi_i$ (accompanied by numerous Lagrange multipliers). Here, $\bigcup_i V_i =M$ and $V_i \cap V_j$ has codimension 1 in $M$ if not empty.
 
-Indeed, in the context of topological quantum field theory (TQFT), a similar **cutting-and-gluing** axiom is hired by the Atiyah-Segal formulation of topological quantum field theory and later Lurie's cobordism hypothesis [@Lurie] established the relation between it and the locality. 
-
-Although in this lecture we satisfy ourselves with the formal non-rigorous treatment of path-integrals, deeper understanding of locality in non-topological QFT is strongly desired, and there are some promising results e.g. in [@GradyPavlov1].
+In the realm of topological quantum field theory (TQFT), a similar **cutting-and-gluing** axiom is utilized in the Atiyah-Segal formulation of topological quantum field theory. Later, Lurie's cobordism hypothesis [@Lurie] established the relationship between this axiom and locality. 
 :::
 
 :::{.callout-tip collapse="true"}
-#### A comment about fermion
-Because we do not plan to talk about fermion in this lecture, we comment on what will differ in the case of fermions.
+#### A note on fermions
+While this lecture does not cover fermions, it's worth noting how they would differ in this context.
 
-In the scalar field theory, we impose the continuity of the "position" variables (in analytical-mechanical sense) $\phi$, then the continuity of the momentum variables follows by EOM.
+In scalar field theory, we enforce the continuity of the "position" variables (in the analytical-mechanical sense) $\phi$, and the continuity of the momentum variables follows from the equations of motion (EOM).
 
-In a chiral fermion theory, as its kinetic term involves only one derivative, momentum and position variables cannot typically be possible in a way preserving Lorentz or global chiral symmetry. 
-Thus, the "cutting" have to induce an apparent violation of invariance under the Lorentz or the other symmetry, which is a way of seeing the gravitational and global symmetry anomaly.
-The precise understanding of this perspective is remained to be open in this lecture (and not in the literature as far as the author knows).
+However, in a chiral fermion theory, the kinetic term involves only one derivative, making it typically impossible to separate position and momentum variables while preserving Lorentz or global chiral symmetry.
+Consequently, the "cutting" process would seemingly violate invariance under Lorentz or another symmetry, which can be interpreted as a manifestation of the gravitational and global symmetry anomaly.
+A precise understanding of this perspective is beyond the scope of this lecture.
 :::
+
 
 ## Symmetry Action and Ward-Takahashi identity
 
