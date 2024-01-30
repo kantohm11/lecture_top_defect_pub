@@ -186,11 +186,11 @@
 
 \title{A Lecture on Topological Operators}
 \author{Kantaro Ohmori}
-\date{2023-11-28}
+\date{2024-01-30}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -227,7 +227,7 @@ defects corresponding to generalized symmetries. Due to lack of time and
 systems, and the generalization to fermionic systems is left for the
 readers/audiences.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, colback=white, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 This note is \textbf{under construction}, and there are many missed
 equations, figures, explanations, sections, and \emph{references}.
@@ -285,27 +285,28 @@ old lectures. The one I would particularly recommend is
 \hypertarget{symmetry}{%
 \section{Symmetry}\label{symmetry}}
 
-\textbf{Symmetry} plays a fundamental role in theoretical physics. In
-this lecture we consider them in \emph{quantum field theories} (QFTs).
-The fundamental fact about symmetry in QFTs is that is it preserved
-along the renormalization group flow. More precisely, when an
-ultraviolet (UV) theory \(\mathcal{T}_\text{UV}\) flows into an infrared
-theory \(\mathcal{T}_\text{IR}\), there is a canonical homomorphism
-\(f_\text{RG}\) from the UV symmetry group \(G_\text{UV}\) to the IR
-symmetry group \(G_\text{IR}\):\footnote{If the UV theory is a fixed
+\textbf{Symmetry} plays a crucial role in theoretical physics. In this
+lecture, we will discuss its application in \emph{quantum field
+theories} (QFTs). A fundamental aspect of symmetry in QFTs is its
+preservation along the renormalization group flow. More precisely, when
+an ultraviolet (UV) theory \(\mathcal{T}_\text{UV}\) transitions into an
+infrared theory \(\mathcal{T}_\text{IR}\), a canonical homomorphism
+\(f_\text{RG}\) exists from the UV symmetry group \(G_\text{UV}\) to the
+IR symmetry group \(G_\text{IR}\):\footnote{If the UV theory is a fixed
   point, \(G_\text{UV}\) should be understood as the one preserved by
-  the perturbation triggering the RG flow. If the RG flow is to a lower
+  the deformation triggering the RG flow. If the RG flow is to a lower
   nonzero energy, and if one retains all the (even very massive) degrees
-  of freedom in the description of \(\mathcal{T}_\text{IR}\), the map
-  \(f_\text{RG}\) is an isomorphism. However, typically one integrates
-  out massive dofs in the description of \(\mathcal{T}_\text{RG}\), in
-  which case some symmetry can decouple and thus \(f_\text{RG}\) can be
+  of freedom, and also all the irrevant interactions in the description
+  of \(\mathcal{T}_\text{IR}\), the map \(f_\text{RG}\) is an
+  isomorphism. However, typically one integrates out massive degrees of
+  freedom in the description of \(\mathcal{T}_\text{RG}\), in which case
+  some symmetry can decouple and thus \(f_\text{RG}\) can be
   non-surjective. Also, if one also drops some higher-order interaction
-  terms, or runs the flow to the zero energy, there can be an
+  terms, or runs the flow to zero energy, there can be an
   \emph{emergent} symmetry, in which case \(f_\text{RG}\) can be
   non-injective.}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{RG flow homomorphism from UV symmetry to IR symmetry}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{RG flow homomorphism from UV symmetry to IR symmetry}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{equation}\protect\hypertarget{eq-RG-group-match}{}{
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
@@ -313,71 +314,84 @@ f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 
 \end{tcolorbox}
 
-Given this relation, there are two ways of applying symmetry in QFT:
+Given this relationship, symmetry in QFT can be applied in two ways:
 
 \begin{itemize}
 \tightlist
 \item
-  UV to IR: Given a microscopic model (e.g.~a model of elementary
-  particles or electrons in a matter), constrain/guess what happens in
-  the macroscopic scale.
+  UV to IR: Starting with a microscopic model (e.g., a model of
+  elementary particles or electrons in matter), we can use symmetry to
+  constrain or predict what happens on a macroscopic scale.
 \item
-  IR to UV: Given some macroscopic phenomena, constrain/guess what could
-  be the microscopic origin of it (e.g.~guessing QCD Lagrangian from
-  hadron spectrum).
+  IR to UV: Given certain macroscopic phenomena, we can use symmetry to
+  constrain or infer the possible microscopic origins (e.g., inferring
+  the QCD Lagrangian from the hadron spectrum).
 \end{itemize}
-
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (global symmetry)}}]
-
-In this lecture, ``symmetry'' means a \emph{global} symmetry. Here
-\emph{global} means that the symmetry operation acts on the entire
-space. In addition, in most contents we exclude symmetries acting on the
-spacetime out of consideration for simplicity.
-
-\end{tcolorbox}
 
 \hypertarget{locality}{%
 \section{Locality}\label{locality}}
 
-The second important keyword in this lecture is \textbf{locality}. By
-the word quantum field theory, in most cases we implicitly mean
-\emph{local} quantum field theory. This can roughly be explained by that
-the action is written as the integration of Lagrangian density, which is
-a local functional of fields over the spacetime.
-
-Locality of QFT has a consequence with respect to symmetry: that is, in
-most situations we only consider symmetries that \emph{preserves
-locality}. In terms of fields, this means that the symmetry
+One of the defining characteristics of symmetry in quantum field
+theories (QFTs) is its \emph{preservation of locality}. In the context
+of classical symmetry in fields, this means that the symmetry
 transformation is local:
 
 \begin{equation}\protect\hypertarget{eq-field-transform}{}{
-\phi(x) \mapsto F(\phi(x)),
-}\label{eq-field-transform}\end{equation} where \(F(\phi(x))\) is a
-function depends on the \emph{local} value a field (or a collection of
-fields and its derivatives) at the point \(x\). If the symmetry involves
-a spacetime transformation, the point \(x\) in the right-hand side
-should be replaced by the image of \(x\) under the symmetry. This
-preservation of locality of a symmetry is the reason for the symmetry
-relation in Equation~\ref{eq-RG-group-match}. This will be made clear in
-the lecture.
+\phi(x) \mapsto F(\phi(x')),
+}\label{eq-field-transform}\end{equation}
 
-However, not all the (locality-preserving) symmetry in QFT takes the
-form of Equation~\ref{eq-field-transform}, which is called
-\emph{classical symmetry}. There are types of symmetry called
-\emph{topological symmetry} or \emph{quantum symmetry}, which arises
-from topologically-nontrivial field configuration. Examples are the
-winding symmetry in 1+1d compact boson, and the monopole symmetries in
-2+1d abelian gauge theories. In many occurrences a topological/quantum
-symmetry is mapped to a symmetry of type of
-Equation~\ref{eq-field-transform} under a duality, and thus it should
-also be considered as being locality-preserving.
+In this equation, \(F(\phi(x'))\) is a function that relies solely on
+the \emph{local} value of a field (or a set of fields and its
+derivatives) at a point \(x'\). When \(x'\neq x\), the symmetry involves
+a \emph{spacetime} symmetry, while when \(x'=x\), it is an
+\emph{internal} symmetry. The preservation of locality in a symmetry
+underpins the symmetry relation in Equation~\ref{eq-RG-group-match},
+which will be elaborated further in the lecture.
 
-From the modern perspective, the universal characterization of
-locality-preserving symmetries is its correspondence to
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+
+Please note that a QFT, when quantized on a fixed space manifold \(M\),
+does possess unitary operators that commute with its Hamiltonian, other
+than those originating from locality-preserving symmetry. In most cases,
+such unitary operators are irrelevant; an example is the one that
+multiplies a phase to a specific eigenstate. Therefore, in this lecture,
+when we refer to a symmetry, we assume that it preserves locality. In
+fact, we assert that this property is the \emph{last} one to be
+discarded in the context of generalized symmetry, if ever, due to the
+invariance under the renormalization group flow. \footnotemark{}
+
+\end{tcolorbox}
+
+\footnotetext{Also, note that the Colman-Mandula theorem assumes a
+strong locality-preserving condition; that the symmetry generators act
+on multi-particle asymptotic states as tensor products.}
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (Locality-Preserving)}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
+
+To avoid confusion, it's important to note that locality-preserving
+symmetry does \emph{not} mean gauge redundancy, which is sometimes
+labeled as local symmetry. The global -- spacetime, or internal --
+symmetries typically encountered in a QFT textbook all preserve
+locality.
+
+\end{tcolorbox}
+
+However, not all symmetries in QFT that preserve locality take the form
+of Equation~\ref{eq-field-transform}, i.e., a \emph{classical} symmetry.
+Other types of symmetries exist, such as \emph{topological symmetry} or
+\emph{quantum symmetry}, which emerge from topologically nontrivial
+field configurations. Examples include the winding symmetry in 1+1d
+compact boson, and the monopole symmetries in 2+1d abelian gauge
+theories. In many cases, a topological/quantum symmetry is mapped to a
+symmetry of the type Equation~\ref{eq-field-transform} under a duality,
+and thus it should also be considered as preserving locality.
+
+From a contemporary standpoint, the universal characterization of
+locality-preserving symmetries is their correspondence to
 \textbf{topological operators}. A topological operator
-\(\mathcal{D}[W_n]\) in a QFT is an extended operator defined on a
-\(n\)-dimensional submanifold of the spacetime and the correlators
-containing it should be invariant under the smooth deformation of the
+\(\mathcal{D}[W_n]\) in a QFT is an extended operator defined on an
+\(n\)-dimensional submanifold of the spacetime. The correlators that
+include it should remain invariant under the smooth deformation of the
 supporting manifold \(W_n\) (See Figure~\ref{fig-TopOpsDeform}).
 
 \begin{figure}[t]
@@ -390,10 +404,10 @@ supporting manifold \(W_n\) (See Figure~\ref{fig-TopOpsDeform}).
 
 \end{figure}
 
-The first aim of the lecture is to understand the correspondence, that
-is
+The first goal of this lecture is to understand the following
+correspondence:
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry/Topological Operator Correspondence}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry/Topological Operator Correspondence}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{equation}\protect\hypertarget{eq-conv-STO-corresp}{}{\begin{split}
 &\text{(Conventional) locality-preserving symmetry} \\ 
@@ -404,54 +418,49 @@ is
 
 \end{tcolorbox}
 
-In this correspondence, the topological operator shoould be regarded as
-the generalization of the \textbf{Noether charge} into possibly discrete
-symmetry. To be precise, we regard this correspondence as the right-hand
-side \emph{defining} the left-hand side. We will explicitly check this
-correspondence/definition reproduces the known symmetries in the case of
-a classical symmetry in a scalar field theory in
-Chapter~\ref{sec-scalar}, and in the case of abelian gauge theory in
-Chapter~\ref{sec-vector}. The case of fermion is very interesting and
-crucial, but it will be remained to be worked out by audiences/readers.
+In this correspondence, the topological operator should be viewed as a
+generalization of the \textbf{Noether charge} for potentially discrete
+symmetry. More precisely, we consider this correspondence as the
+right-hand side \emph{defining} the left-hand side. We will explicitly
+verify that this correspondence/definition reproduces the known
+symmetries in the case of a classical symmetry in a scalar field theory
+in Chapter~\ref{sec-scalar}, and in the case of abelian gauge theory in
+Chapter~\ref{sec-vector}. The case of fermions is both intriguing and
+crucial, but it will be left as an exercise, or a work, for the
+audience/readers.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (locality-preserving)}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (Topological Defect)}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
-Again, we are \emph{not} talking about gauge redundancy, which is
-sometimes called local symmetry. Global symmetries one encounters in a
-QFT textbook are all locality-preserving.
-
-\end{tcolorbox}
-
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Terminology (topological defect)}}]
-
-Here is another unfortunate conflict of terminology. In the literature
-(outside generalized symmetry literature), a ``topological defect''
-refers to a dynamical object, or its trajectory viewed as an operator in
-the IR theory, charg\textbf{ed} under a topological (higher) symmetry.
-As an operator in the IR theory, it is \emph{not} a priori guaranteed to
-be topological in the sense of Figure~\ref{fig-TopOpsDeform} . On the
-other hand, in the generalized symmetry literature, ``topological defect
-(operator)'' often means an extended operator that is itself
-topological. In this lecture, in order to ease the confusion, we use the
-term ``topological operator''.
+There exists an unfortunate discrepancy in terminology. Outside the
+realm of generalized symmetry literature, a ``topological defect''
+typically refers to a dynamical object, or its trajectory, viewed as an
+operator in the IR theory. As an operator in the IR theory, it is
+\emph{not} necessarily topological in the sense of
+Figure~\ref{fig-TopOpsDeform}. Conversely, within the generalized
+symmetry literature, ``topological defect (operator)'' often signifies
+an extended operator that is inherently topological. To mitigate
+potential confusion in this lecture, we will adopt the term
+``topological operator'', even when the supporting submanifold of the
+operator is not within a time-slice.
 
 \end{tcolorbox}
 
 \hypertarget{generalized-symmetry}{%
 \section{Generalized Symmetry}\label{generalized-symmetry}}
 
-The correspondence in Equation~\ref{eq-conv-STO-corresp} is the core in
-the notion of \textbf{generalized (global) symmetry}, coined by
-\autocite{Gaiotto:2014kfa} \footnote{The global higher-form symmetry
-  itself had appeared and investigated in the literature,
-  e.g.~\autocite{Kapustin:2013uxa,Barkeshli:2014cna}, and its gauged
-  version was essentially known from \autocite{KalbRamond}.}. That is,
-the notion of symmetry can be generalized by relaxing the adjective in
-the right-hand side of Equation~\ref{eq-conv-STO-corresp}. Therefore, we
-\emph{define} generalized symmetry by the following correspondence
-generalizing Equation~\ref{eq-conv-STO-corresp}:
+The concept of \textbf{generalized (global) symmetry} is fundamentally
+based on the correspondence in Equation~\ref{eq-conv-STO-corresp}, as
+introduced by \autocite{Gaiotto:2014kfa} \footnote{The concept of global
+  higher-form symmetry has been previously explored and investigated in
+  the literature, for example, in
+  \autocite{Kapustin:2013uxa,Barkeshli:2014cna}. Its gauged version was
+  essentially known from \autocite{KalbRamond}.}. This concept expands
+the traditional notion of symmetry by loosening the constraints on the
+right-hand side of Equation~\ref{eq-conv-STO-corresp}. Hence, we
+\emph{define} generalized symmetry through the following correspondence,
+which extends Equation~\ref{eq-conv-STO-corresp}:
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Generalized Symmetry/Topological Operator Correspondence}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Generalized Symmetry/Topological Operator Correspondence}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{equation}\protect\hypertarget{eq-GSTO-corresp}{}{\begin{split}
 &\text{Generalized symmetry (in a ``usual" QFT)} \\ 
@@ -462,18 +471,21 @@ generalizing Equation~\ref{eq-conv-STO-corresp}:
 
 \end{tcolorbox}
 
-More specifically, a generalized symmetry corresponding to an operator
-of codimension \(p+1\) is called \textbf{\(p\)-form symmetry}, and a
-generalized symmetry corresponding to an operator without its inverse is
-called \textbf{non-invertible symmetry} (among other names like category
-symmetry and topological symmetry).
+In more specific terms, a generalized symmetry that corresponds to an
+operator of codimension \(p+1\) is referred to as a \textbf{\(p\)-form
+symmetry}. Meanwhile, a generalized symmetry that corresponds to an
+operator without an inverse is known as a \textbf{non-invertible
+symmetry} (also referred to as category symmetry or topological
+symmetry).
 
-In an ``unusual'' QFT, we can even relax the topological-ness of the
-operator in the right-hand side of Equation~\ref{eq-GSTO-corresp},
-resulting in what is called \textbf{subsystem} symmetry. We will briefly
-make a comment on it in Section~\ref{sec-trivial-scalar}.
+In the context of an ``unusual'' QFT, the topological constraint on the
+operator in the right-hand side of Equation~\ref{eq-GSTO-corresp} can be
+further relaxed. This leads to the concept of \textbf{subsystem}
+symmetry, which will be briefly mentioned in
+Section~\ref{sec-trivial-scalar}, but will not be discussed in detail in
+this lecture.
 
-The subclasses of generalized symmetry is summarized in the table below:
+The table below summarizes the subclasses of generalized symmetry:
 
 \hypertarget{tbl-sym-classes}{}
 \begin{longtable}[]{@{}llll@{}}
@@ -492,11 +504,11 @@ operators.}\tabularnewline
 \endlastfoot
 codimension & \(p+1\) & & \\
 Invertible? & & No & \\
-Topological? & & & Partically \\
+Topological? & & & Partially \\
 \end{longtable}
 
-The subclasses are not mutually exclusive, so, in principle, there can
-be a 2-form non-invertible subsystem symmetry.
+These subclasses are not mutually exclusive. Therefore, in theory, a
+2-form non-invertible subsystem symmetry could exist, for example.
 
 \hypertarget{contents-of-the-lecture}{%
 \section{Contents of the Lecture}\label{contents-of-the-lecture}}
@@ -567,7 +579,7 @@ shift symmetry\footnote{If we use the form of Lagrangian
 In this section, we would like to construct the \textbf{topological
 operator} corresponding to these \emph{classical} symmetry.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 The construction will apply to other types of scalar field theory,
 e.g.~real and/or multiple scalar fieldsas long as the kinetic term is
@@ -582,7 +594,7 @@ notation.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Note}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 In this lecture we directly construct the topological operators
 corresponding to the \emph{finite} transformation
@@ -605,7 +617,7 @@ operator \(U_\alpha[W]\) ,defined with respect to a codimension-1
 submanifold \(W\) of the spacetime \(M\), should satisfy the following
 properties:
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Properties of Symmetry Topological Operator}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Properties of Symmetry Topological Operator}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -674,7 +686,7 @@ the topological operator \(U_g[W]\).}
 
 In path-integral, this construction can be implemented as follows:
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry Topological Operator}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Symmetry Topological Operator}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{equation}\protect\hypertarget{eq-Ug-pathintegral}{}{
 \begin{multlined}
@@ -730,7 +742,7 @@ constrained to be continuous across \(W\). On the right-hand side it is
 rather enforced by integrating out \(\lambda\) because of
 Equation~\ref{eq-delta-functional}.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, colback=white, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Continuity of fields in ``exotic'' QFTs and subsystem symmetry}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Continuity of fields in ``exotic'' QFTs and subsystem symmetry}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 Here we assumed that the path integral \(\int\mathcal{D}^M\phi\) should
 be over the \emph{continuous} fields. The reason for this is that the
@@ -767,7 +779,7 @@ gives \[
 \(W\) as the imaginary time in Euclidean signature, this enforces that
 the canonical momentum also be continuous across \(W\).
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Locality}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Locality}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 Equation~\ref{eq-trivial-scalar} expresses the \textbf{locality} of the
 path-integral. We can use the same procedure to decompose the
@@ -789,7 +801,7 @@ promising results e.g.~in \autocite{GradyPavlov1}.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, colback=white, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{A comment about fermion}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{A comment about fermion}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 Because we do not plan to talk about fermion in this lecture, we comment
 on what will differ in the case of fermions.
@@ -863,7 +875,7 @@ when \(W_0\) encloses a compact region of \(M\) and contains no
 operator. Then, by repeatedly using these equations, we get the
 \textbf{Ward-Takahashi identity} (\textbf{FIXME:figure})
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Ward-Takahashi Identity}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{\textsf{Ward-Takahashi Identity}}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 \begin{equation}\protect\hypertarget{eq-Ward-Takahashi}{}{
 \begin{aligned}
@@ -892,7 +904,7 @@ symmetry does not come from field transformation.
 
 \textbf{FIXME:explain about the selection rule}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, colback=white, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Mixed-gravitational anomaly}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Mixed-gravitational anomaly}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 The symmetry we discuss here does not suffer from anomaly and the
 Ward-Takahashi idendity (Equation~\ref{eq-Ward-Takahashi}) follows. If
@@ -987,7 +999,7 @@ terms of \((\stdim-2)\)-form \(\U(1)\) gauge field \(V\) with \[
     \id[{W^{\stdim-1}}] = \int \mathcal{D}^{W^{\stdim-1}}V \exp\left(\frac{\imunit}{2\pi}\int_{W^{\stdim-1}} \mathop{dV}\left(\phi_L-\phi_R\right)\right).
 }\label{eq-identity-compact-boson}\end{equation}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{\(p\)-form gauge field}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{\(p\)-form gauge field}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 A \(p\)-form gauge field \(V\) is \emph{locally} (i.e.~in a patch)
 \(p\)-form, but \(V\) is not necessarily a \emph{global} \(p\)-form and
@@ -1092,7 +1104,7 @@ The operator Equation~\ref{eq-dual-op} is often defined as a
 explicit construction of such by \emph{integrating in} the Lagrange
 multiplier \(V\) on \(W^{\stdim-1}\).
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 Note that the topological operator Equation~\ref{eq-Ug-pathintegral} is
 also of disorder-type; it enforces a jump of the field across \(W\). It
@@ -1337,12 +1349,12 @@ gauge-equivalent, yet there is a non-trivial phase relating them. This
 is the \emph{anomalous phase} of this anomalous \(U(1)^2\) symmetry of
 1+1d compact boson.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Group cohomology}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Group cohomology}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 Mathematically speaking, the function
 \(f : (U(1)^2)^3 \to \mathbb{R}/2\pi\mathbb{Z}\) is a 3-cocycle on the
-group \(G=U(1)\); it satisfies the \emph{pentagon identity}, depicted in
-\textbf{?@fig-pentagon}.
+group \(G=U(1)^2\); it satisfies the \emph{pentagon identity}, depicted
+in \textbf{?@fig-pentagon}.
 
 Futher, it is subject to an ambiguity; we can modify the junction by a
 phase \(h(g_1,g_2)\). This modifies the anomalous phase \(f\) as
@@ -1368,7 +1380,7 @@ realized in a QFT. In this particular case it seems considering
 \emph{piecewise continuous} functions is necessary and sufficient. For
 general cases in general dimensions KO is not sure.}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, colback=white, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Exercise: \(\mathbb{Z}_2\) anomaly}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\textsf{Exercise: \(\mathbb{Z}_2\) anomaly}}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 The diagonal \(\mathbb{Z}_3\) subgroup of \(U(1)^2\) generate by
 \(U_{2\pi/3,2\pi/3}\) is anomalous. Confirm this fact by calculating
@@ -1378,7 +1390,7 @@ some other finite subgroups of \(U(1)^2\).
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacitybacktitle=0.6, coltitle=black, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, bottomtitle=1mm, toprule=.15mm, arc=.35mm, rightrule=.15mm, titlerule=0mm, opacityback=0, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Comparison to more conventional calculation.}}]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, titlerule=0mm, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\textsf{Comparison to more conventional calculation.}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, opacityback=0, bottomtitle=1mm, colback=white, toptitle=1mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6]
 
 The mixed anomaly between the shift and winding symmetry in 1+1d compact
 boson is usually computed from the two-point function of the
@@ -1666,8 +1678,6 @@ is \[
 
 \hypertarget{sec-vector}{%
 \chapter{Vector}\label{sec-vector}}
-
-test
 
 \bookmarksetup{startatroot}
 
