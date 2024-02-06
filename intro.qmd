@@ -67,7 +67,17 @@ In many cases, a topological/quantum symmetry is mapped to a symmetry of the typ
 From a contemporary standpoint, the universal characterization of locality-preserving symmetries is their correspondence to **topological operators**. 
 A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on an $n$-dimensional submanifold of the spacetime. The correlators that include it should remain invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
 
-![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
+:::{.content-visible when-format="html"}
+
+![Topological operator.](figures/tikz/TopOpsDeform.svg){#fig-TopOpsDeform width=400}
+
+:::
+
+:::{.content-visible when-format="pdf"}
+
+![Topological operator.](figures/tikz/TopOpsDeform.pdf){#fig-TopOpsDeform width=400}
+
+:::
 
 The first goal of this lecture is to understand the following correspondence:
 
