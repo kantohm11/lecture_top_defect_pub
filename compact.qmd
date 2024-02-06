@@ -272,7 +272,7 @@ While the computation based on non-flat background is easier, it is only for con
 :::
 
 
-## T-duality 
+## T-duality  {#sec-Tdual}
 
 The compact boson in $\stdim=2$-dimensions famously has *T-duality*.
 
