@@ -238,22 +238,24 @@ $$
 \langle \mathcal{O}_1^g  \mathcal{O}_2^g \cdots \mathcal{O}_N^g\rangle,
 \end{aligned}
 $${#eq-Ward-Takahashi}
-where $W_i$ encloses the operators $\mathcal{O}_1 \cdots \mathcal{O}_i$, and at the last step we collapsed $U_g[W_N]$ towards the infinity (or whatever point if $M$ is compact). See also @fig-WardTakahashi.
+where $W_i$ encloses the operators $\mathcal{O}_1 \cdots \mathcal{O}_i$, and at the last step we collapsed $U_g[W_N]$ towards the infinity (or whatever point if $M$ is compact). See also @fig-Ward-Takahashi.
 :::
 
 :::{.content-visible when-format="html"}
 
-![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.svg){#fig-WardTakahashi width=400}
+![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.svg){#fig-Ward-Takahashi width=400}
 
 :::
 
 :::{.content-visible when-format="pdf"}
 
-![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.pdf){#fig-WardTakahashi width=400}
+![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.pdf){#fig-Ward-Takahashi width=400}
 
 :::
 
-Of course we could get the same result by considering global change of variable $\widetilde{\phi} = \phi^{g^{-1}}$, the point is that, once the existence of topological operator is established, the derivation of the Ward-Takahashi identity can be done in the same way, even if the symmetry does not come from field transformation.
+We could get the same result by considering global change of variable $\widetilde{\phi} = \phi^{g^{-1}}$ in the path-integral and could avoid topological operator to derive this identity. 
+However, the deriviation in @fig-Ward-Takahashi applies as long as we have a topological operator, and it acts on local operators as in @fig-op-action.
+Thus this derivation is applicable to quantum and duality symmetry we will encounter in @sec-compact-boson, and also will be convenient starting point to generalizing the identity to non-invertible case; see @Cordova:2022ieu and @Copetti:2023mcq for example.
 
 Let us quickly recall that Ward-Takahashi identity means selection rules in correlation functions. 
 For simplicity, let us consider the $\U(1)$ action:
@@ -269,10 +271,6 @@ for any phase $g \in \U(1)$.
 That is, either $\sum_i q_i =0$ --- the total $\U(1)$ charge is saturated --- or that the correlation function vanishes.
 This is the familiar selection rule.
 If the $\U(1)$ symmetry is broken down to its $\mathbb{Z}_k$ subgroup, @eq-WT-U1 holds only for $g\in \mathbb{Z}_k$. This means the total charge $\sum_i q_i$ should vanish only modulo $k$ for the correlator to be nonzero.
-
-Although this statement for $\mathbb{Z}_k$ symmetry should also be familiar by, e.g., investigating perturbative expansion, it cannot be formally derived based on current operators, as a discrete symmetry does not have a current.
-On the other hand, this method of topological operator applies to discrete symmetry that is not a reminisent of a continuous symmetry, an example of which we will see in @sec-Tdual.
-That this method of topological operator formally leads to the Ward-Takahashi identity for both discrete and continuous symemtry signals its importance.
 
 :::{.callout-tip collapse="true"}
 #### Mixed-gravitational anomaly
