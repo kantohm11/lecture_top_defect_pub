@@ -1,4 +1,7 @@
-\documentclass[tikz]{standalone}
+\documentclass[tikz,dvipsnames]{standalone}
+
+\usepackage[]{xcolor}
+\PassOptionsToPackage{dvipsnames}{xcolor}
 
 \usetikzlibrary{calc}
 \usetikzlibrary{decorations.pathmorphing,patterns,decorations.markings,arrows.meta,intersections}
@@ -65,11 +68,11 @@ arrow at/.style 2 args={postaction={decorate,decoration={
 
 \pgfmathsetseed{1}
 \path[set random waves=0.1cm and 0.1cm with name mypath] (1,-.5) circle (0.5cm);
-\draw[smooth, orange,thick,-{Stealth[red]},save path=\pathA] plot[smooth cycle] coordinates {(mypath-1) (mypath-2) (mypath-3) (mypath-4) (mypath-5) (mypath-6) (mypath-7) (mypath-8) (mypath-9)};
+\draw[smooth, RedOrange,thick,-{Stealth[red]},save path=\pathA] plot[smooth cycle] coordinates {(mypath-1) (mypath-2) (mypath-3) (mypath-4) (mypath-5) (mypath-6) (mypath-7) (mypath-8) (mypath-9)};
 %\draw[blue, ->][use path=\pathA];
 
 %\path[arrow at={1.0}{red}] (mypath-1) to[out=45,in=135] (mypath-2);
-\path[arrow at={.99}{orange,length=.25cm}] (mypath-1) to[out=45,in=20] (mypath-3);
+\path[arrow at={.99}{RedOrange,length=.25cm}] (mypath-1) to[out=45,in=20] (mypath-3);
 
 
 \end{scope}
@@ -87,9 +90,9 @@ arrow at/.style 2 args={postaction={decorate,decoration={
 
 \pgfmathsetseed{2}
 \path[set random waves=0.1cm and 0.1cm with name mypath] (1.5,-.5) ellipse [x radius=1cm,y radius=.4cm];
-\draw[smooth, orange,thick,-{Stealth[red]},save path=\pathA] plot[smooth cycle] coordinates {(mypath-1) (mypath-2) (mypath-3) (mypath-4) (mypath-5) (mypath-6) (mypath-7) (mypath-8) (mypath-9)};
+\draw[smooth, RedOrange,thick,-{Stealth[red]},save path=\pathA] plot[smooth cycle] coordinates {(mypath-1) (mypath-2) (mypath-3) (mypath-4) (mypath-5) (mypath-6) (mypath-7) (mypath-8) (mypath-9)};
 %\draw[blue, ->][use path=\pathA];
-\path[arrow at={.99}{orange,length=.25cm}] (mypath-1) to[out=90,in=5] (mypath-3);
+\path[arrow at={.99}{RedOrange,length=.25cm}] (mypath-1) to[out=90,in=5] (mypath-3);
 
 \end{scope}
     

@@ -211,7 +211,7 @@ $${#eq-sym-op-act}
 
 We note that we can also get the following equation in the same way as above:
 $$
-\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2^g \cdots \rangle,
+\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle,
 $${#eq-bubble}
 
 when $W_0$ encloses a compact region of $M$ and contains no operator.

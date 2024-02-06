@@ -6,7 +6,7 @@
 In this lecture, we will discuss its application in *quantum field theories* (QFTs). 
 A fundamental aspect of symmetry in QFTs is its preservation along the renormalization group flow.
 More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ transitions into an infrared theory $\mathcal{T}_\text{IR}$, 
-a canonical homomorphism $f_\text{RG}$ exists from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
+a canonical homomorphism $f_\text{RG}$ exists from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:
 
 ::: {.callout-important icon="true"}
 ## RG flow homomorphism from UV symmetry to IR symmetry
@@ -14,19 +14,25 @@ $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
 :::
+Here, if the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the deformation triggering the RG flow. 
+
+
+::: {.callout-note collapse="true"}
+### Property of $f_\text{RG}$
+The property of $f_\text{RG}$ depends on what exactly is meant by the IR theory $\mathcal{T}_\text{IR}$.
+If the RG flow is to a lower nonzero energy, and the IR theory $\mathcal{T}_\text{IR}$ retains all the (even very massive) degrees of freedom and all the irrelevant interactions, 
+the map $f_\text{RG}$ is an isomorphism.
+However, typically one integrates out massive degrees of freedom in the description of $\mathcal{T}_\text{RG}$, 
+in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. 
+Also, if one also drops some higher-order interaction terms, or runs the flow to zero energy, 
+there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
+:::
 
 Given this relationship, symmetry in QFT can be applied in two ways:
 
 * UV to IR: Starting with a microscopic model (e.g., a model of elementary particles or electrons in matter), we can use symmetry to constrain or predict what happens on a macroscopic scale.
 * IR to UV: Given certain macroscopic phenomena, we can use symmetry to constrain or infer the possible microscopic origins (e.g., inferring the QCD Lagrangian from the hadron spectrum).
 
-[^SymRG]: If the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the deformation triggering the RG flow. 
-If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom, and also all the irrevant interactions in the description of $\mathcal{T}_\text{IR}$, 
-the map $f_\text{RG}$ is an isomorphism.
-However, typically one integrates out massive degrees of freedom in the description of $\mathcal{T}_\text{RG}$, 
-in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. 
-Also, if one also drops some higher-order interaction terms, or runs the flow to zero energy, 
-there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 
 ## Locality
 
