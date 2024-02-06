@@ -235,6 +235,18 @@ $${#eq-Ward-Takahashi}
 where $W_i$ encloses the operators $\mathcal{O}_1 \cdots \mathcal{O}_i$, and at the last step we collapsed $U_g[W_N]$ towards the infinity (or whatever point if $M$ is compact).
 :::
 
+:::{.content-visible when-format="html"}
+
+![FIXME](figures/tikz/WardTakahashi.svg){#fig-WardTakahashi width=400}
+
+:::
+
+:::{.content-visible when-format="pdf"}
+
+![FIXME](figures/tikz/WardTakahashi.pdf){#fig-WardTakahashi width=400}
+
+:::
+
 Of course we could get the same result by considering global change of variable $\widetilde{\phi} = \phi^{g^{-1}}$, the point is that, once the existence of topological operator is established, the derivation of the Ward-Takahashi identity can be done in the same way, even if the symmetry does not come from field transformation.
 
 **FIXME:explain about the selection rule**
