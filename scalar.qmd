@@ -131,7 +131,7 @@ which should implement @fig-cut-M.
 Before studying the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
 
 ## Identity Wall {#sec-trivial-scalar}
-When the transformation is trivial, i.e., $g=\id$, the operator $U_{g=\id}[W]$ should also be *trivial*. This implies that
+When the transformation is trivial, i.e., $g=\id$, the operator $U_{g=\id}[W]$ should also be *trivial*, i.e. should do nothing. This implies that
 $$
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
 $${#eq-identity-wall}
