@@ -179,6 +179,18 @@ Consequently, the "cutting" process would seemingly violate invariance under Lor
 A precise understanding of this perspective is beyond the scope of this lecture.
 :::
 
+## Group Multiplication Law  and Inverse
+For the conventional symmetry,
+we assume that transformations $g$ forms a group.
+Correspondingly, the topological operators should satisfy the same multiplication law: 
+$$
+U_{g_1}[W_1] U_{g_2}[W_2] = U_{g_1g_2}[W_1]
+$$
+where the codimension-1 submanifold $W_2$ is parralel to $W_1$ but slightly right to it.
+
+To show the multiplication law for a classical symmetry, 
+
+
 
 ## Symmetry Action and Ward-Takahashi identity
 
