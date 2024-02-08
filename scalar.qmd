@@ -50,7 +50,7 @@ $$
 \phi^g(x) = \mathop{g} \phi(x),
 $$
 
-where $g=e^{\imunit \alpha}$ represents a $\U(1)$ phase. The potential $V(\phi)$ may partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$. For example, when $V(\phi)\propto \phi^k+(\phi^*)^k$, the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi i}{k}}$, where $i$ ranges from 0 to $k-1$.
+where $g=e^{\imunit \alpha}$ represents a $\U(1)$ phase. The potential $V(\phi)$ may partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$. For example, when $V(\phi)\propto \phi^k+(\phi^*)^k$, the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi p}{k}}$, for an integer $p$.
 
 Moreover, when $V(\phi)=0$, the action $S[\phi]$ also admits the shift symmetry[^nonzero_r]:
 
@@ -119,7 +119,7 @@ $${#eq-Ug-pathintegral}
 Here, $\mathcal{D}^{X}$ denotes the measure for the path-integral for a field defined on a submanifold $X$ of the spacetime $M$. The actions on the submanifold $M_{L,R}$ are written as $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$, and "$\cdots$" denotes additional operator insertions. The "gluing" action $G_W$ on the submanifold $W$ is defined as
 $$
 %\begin{multlined}
-    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
+    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_R^{g^{-1}},g).
 %\end{multlined}
 $${#eq-gluing-action}
 The key point of the above expression is that integrating the Lagrange multiplier $\lambda$ results in the "delta functional":
@@ -176,16 +176,80 @@ Consequently, the "cutting" process would seemingly violate invariance under Lor
 A precise understanding of this perspective is beyond the scope of this lecture.
 :::
 
-## Group Multiplication Law  and Inverse
-For the conventional symmetry,
-we assume that transformations $g$ forms a group.
+## Topological-ness
+Let us show the topological-ness of $U_g$, i.e. the first equation in @fig-op-action, or
+$$
+U_{g}[W_1]\id[W_2] = \id[W_1]U_{g}[W_2].
+$${#eq-U-top}
+To show @eq-U-top, we divide the spacetime into three parts: $M_L,M_M$ and $M_L$, where $W$ separates $M_L$ and $M_M$, while $W'$ separates $M_M$ and $M_R$.
+The relevant part of paht-integral regarding the left hand side of @eq-U-group reads
+$$
+\int\mathcal{D}^{M_M}\phi_M\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\phi_M]-G_{W_1}[\phi_L,\phi_M,g]-G_{W_2}[\phi_M,\phi_R,\id]}.
+$$
+Here $S_M = \int_{M_M}\mathcal{L}[\phi_M]$ and we omit the path-integral measures for $\phi_{L,R}$ and also the actions on $M_L$ and $M_R$ for the sake of readability.
+By changing the variable by $\tilde{\phi}_M^{g} = \phi_M$, we get the expression
+$$
+\int\mathcal{D}^{M_M}\tilde{\phi}_M^g\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\tilde\phi_M^g]-G_{W_1}[\lambda_1,\phi_L,\phi_M,\id] - \int_{W_1} s(\tilde\phi_M,g) -G_{W_2}[\lambda_2,\tilde\phi_M^g,\phi_R,\id]}.
+$$
+As $M_M$ is open, the action $S_M[\tilde\phi_M^g]$ catches up the surface term:
+$$
+S_M[\tilde\phi_M^g] = S_M[\tilde\phi_M] - \int_{W_1} s(\tilde{\phi}_M,g) + \int_{W_2} s(\tilde{\phi}_M,g).
+$$
+Using this equation combined with @eq-surface-term-inverse, we get
+$$
+\int\mathcal{D}^{M_M}\tilde{\phi}_M^g\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\tilde\phi_M^g]-G_{W_1}[\lambda_1,\phi_L,\tilde\phi_M,\id] -G_{-W_2}[\lambda_2,\phi_R,\tilde\phi_M,g^{-1}]},
+$$
+where $-W_2$ is the orientation reversal of $W_2$.
+Then we use the invariance of the path-integral measure of the sclar fields (up to the overall nomarlization):
+$$\mathcal{D}^{M_M}\phi_M = \mathcal{D}^{M_M}\phi_M^g
+$${#eq-measure-inv}
+to get
+$$
+U_{g}[W_1]= U_{g^{-1}}[-W_2].
+$$
+
+Lastly, we need to show
+$$ U_{g^{-1}}[-W] = U_g[W].
+$${#eq-Udual-inverse}
+To show this, we assume that there exists a transformation $\lambda^g$ of $\lambda$ that satisfies
+$$ \lambda(\phi_L-\phi_R) = \lambda^{g}(\phi_L^{g}-\phi_R^{g})
+$$
+and
+$$ \mathcal{D}^W\lambda^g = \mathcal{D}^W\lambda. 
+$$
+For example, when the action is a $\U(1)$ rotation $\lambda^g$ is the rotation by the inverse,
+and when the action is a shift of $\phi$, we can set $\lambda^g = \lambda$.
+Then,
+$$
+\begin{split}
+U_{g^{-1}}[-W] &= \int\mathcal{D}^W \lambda \, e^{-G_{-W}[\lambda^{g^{-1}},\phi_R,\phi_L,g^{-1}]}\\
+&= \int\mathcal{D}^W \lambda \, e^{\imunit\int_{-W}\lambda(\phi_R-\phi_L^{g})\vol_W - \int_{-W}s(\phi_L^{g},g^{-1})}\\
+&= \int\mathcal{D}^W \lambda \, e^{\imunit\int_{W}\lambda^{g^{-1}}(\phi_L-\phi_R^{g^{-1}})\vol_W - \int_{W}s(\phi_L,g)}\\
+&= \int\mathcal{D}^W \lambda^{g^{-1}} \, e^{-G_W[\lambda^{g^{-1}},\phi_L,\phi_R,g]}\\
+&= U_g[W].
+\end{split}
+$$
+
+
+
+## Group Multiplication Law and Junction
+For the conventional symmetry, we assume that transformations $g$ forms a group.
 Correspondingly, the topological operators should satisfy the same multiplication law: 
 $$
 U_{g_1}[W_1] U_{g_2}[W_2] = U_{g_1g_2}[W_1]
 $${#eq-U-group}
 where the codimension-1 submanifold $W_2$ is parralel to $W_1$ but slightly right to it.
+One can show this in the same manner we have done for @eq-U-top.
+In particular, from @eq-Udual-inverse we have
+$$ U_g[W_1] U_g[-W_2] = U_g[W_1] U_{g^{-1}}[W_2] = U_\id[W_1] = \id[W_1].
+$${#eq-Udual-inverse-2}
+That is, the orientation reversal of $U_g$ is its inverse.
+The properties @eq-U-group and @eq-Udual-inverse-2 are the properties of a conventional symmetry and will be relatex in a generalized --- specifically non-invertible --- symmetry.
 
-To show @eq-U-group, we divide the spacetime into three parts: $M_L,M_M$ and $M_L$, where $W_1$ separates $M_L$ and $M_M$, while $W_2$ separates $M_M$ and $M_R$.
+For later convenience, here we also introduce the **topological junctions** of topological operators $U_{g_1},U_{g_2},U_{g_3}$.
+A junction is the object connecting multiple extended operators.
+For the classical symmetry, such an junction is simply defined by putting three (or more) operators on submanifolds $W_1,W_2$ and $W_3$ sharing their boundary $J$.
+
 
 
 
@@ -218,8 +282,6 @@ $$
 \end{align}
 $$
 In the second to last equality we used @eq-Lagrangian-inv and in the last equality we assumed that the path-integral measure is invariant: 
-$$\mathcal{D}\phi_M = \mathcal{D}\phi_M^g.
-$${#eq-measure-inv}
 Lastly, from @eq-delta-functional we get $U_{g^{-1}}[-W] = U_g[W]$, so we obtain @fig-op-action, that is
 $$
 \langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 \mathcal{O}_2^g U_g[W_2] \rangle.
