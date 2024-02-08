@@ -129,9 +129,6 @@ $$
 $${#eq-delta-functional}
 which should implement @fig-cut-M.
 Before studying the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
-
-## Identity Wall {#sec-trivial-scalar}
-When the transformation is trivial, i.e., $g=\id$, the operator $U_{g=\id}[W]$ should also be *trivial*, i.e. should do nothing. This implies that
 $$
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
 $${#eq-identity-wall}
@@ -185,10 +182,11 @@ we assume that transformations $g$ forms a group.
 Correspondingly, the topological operators should satisfy the same multiplication law: 
 $$
 U_{g_1}[W_1] U_{g_2}[W_2] = U_{g_1g_2}[W_1]
-$$
+$${#eq-U-group}
 where the codimension-1 submanifold $W_2$ is parralel to $W_1$ but slightly right to it.
 
-To show the multiplication law for a classical symmetry, 
+To show @eq-U-group, we divide the spacetime into three parts: $M_L,M_M$ and $M_L$, where $W_1$ separates $M_L$ and $M_M$, while $W_2$ separates $M_M$ and $M_R$.
+
 
 
 
