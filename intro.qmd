@@ -1,10 +1,12 @@
 # Introduction
 
 ## Symmetry
-**Symmetry** plays a fundamental role in theoretical physics. 
-In this lecture we consider them in *quantum field theories* (QFTs). 
-The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow.
-More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ flows into an infrared theory $\mathcal{T}_\text{IR}$, there is a canonical homomorphism $f_\text{RG}$ from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:[^SymRG]
+
+**Symmetry** plays a crucial role in theoretical physics. 
+In this lecture, we will discuss its application in *quantum field theories* (QFTs). 
+A fundamental aspect of symmetry in QFTs is its preservation along the renormalization group flow.
+More precisely, when an ultraviolet (UV) theory $\mathcal{T}_\text{UV}$ transitions into an infrared theory $\mathcal{T}_\text{IR}$, 
+a canonical homomorphism $f_\text{RG}$ exists from the UV symmetry group $G_\text{UV}$ to the IR symmetry group $G_\text{IR}$:
 
 
 **Symmetry** is a cornerstone concept in theoretical physics.
@@ -23,54 +25,83 @@ $${#eq-RG-group-match}
 Given this relation, there are two ways of applying symmetry in QFT:]
 
 ::: {.callout-important icon="true"}
-### RG flow homomorphism from UV symmetry to IR symmetry
+## RG flow homomorphism from UV symmetry to IR symmetry
 $$
 f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 $${#eq-RG-group-match}
 :::
+Here, if the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the deformation triggering the RG flow. 
 
 
-Given this relation, there are two ways of applying symmetry in QFT:
-
-* UV to IR: Given a microscopic model (e.g. a model of elementary particles or electrons in a matter), constrain/guess what happens in the macroscopic scale.
-* IR to UV: Given some macroscopic phenomena, constrain/guess what could be the microscopic origin of it (e.g. guessing QCD Lagrangian from hadron spectrum).
-
-[^SymRG]: If the UV theory is a fixed point, $G_\text{UV}$ should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of $\mathcal{T}_\text{IR}$, the map $f_\text{RG}$ is an isomorphism.
-However, typically one integrates out massive dofs in the description of $\mathcal{T}_\text{RG}$, in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
-
-::: {.callout-note collapse="false"}
-### Terminology (global symmetry)
-In this lecture, "symmetry" means a *global* symmetry.
-Here *global* means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.
+::: {.callout-note collapse="true"}
+### Property of $f_\text{RG}$
+The property of $f_\text{RG}$ depends on what exactly is meant by the IR theory $\mathcal{T}_\text{IR}$.
+If the RG flow is to a lower nonzero energy, and the IR theory $\mathcal{T}_\text{IR}$ retains all the (even very massive) degrees of freedom and all the irrelevant interactions, 
+the map $f_\text{RG}$ is an isomorphism.
+However, typically one integrates out massive degrees of freedom in the description of $\mathcal{T}_\text{RG}$, 
+in which case some symmetry can decouple and thus $f_\text{RG}$ can be non-surjective. 
+Also, if one also drops some higher-order interaction terms, or runs the flow to zero energy, 
+there can be an *emergent* symmetry, in which case $f_\text{RG}$ can be non-injective.
 :::
 
-## Locality
-The second important keyword in this lecture is **locality**.
-By the word quantum field theory, in most cases we implicitly mean *local* quantum field theory.
-This can roughly be explained by that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.
+Given this relationship, symmetry in QFT can be applied in two ways:
 
-Locality of QFT has a consequence with respect to symmetry: that is, in most situations we only consider symmetries that *preserves locality*. 
-In terms of fields, this means that the symmetry transformation is local:
+* UV to IR: Starting with a microscopic model (e.g., a model of elementary particles or electrons in matter), we can use symmetry to constrain or predict what happens on a macroscopic scale.
+* IR to UV: Given certain macroscopic phenomena, we can use symmetry to constrain or infer the possible microscopic origins (e.g., inferring the QCD Lagrangian from the hadron spectrum).
+
+
+## Locality
+
+One of the defining characteristics of symmetry in quantum field theories (QFTs) is its *preservation of locality*. 
+In the context of classical symmetry in fields, this means that the symmetry transformation is local:
 
 $$
-\phi(x) \mapsto F(\phi(x)),
+\phi(x) \mapsto F(\phi(x')),
 $${#eq-field-transform}
-where $F(\phi(x))$ is a function depends on the *local* value a field (or a collection of fields and its derivatives) at the point $x$.
-If the symmetry involves a spacetime transformation, the point $x$ in the right-hand side should be replaced by the image of $x$ under the symmetry.
-This preservation of locality of a symmetry is the reason for the symmetry relation in @eq-RG-group-match.
-This will be made clear in the lecture.
 
-However, not all the (locality-preserving) symmetry in QFT takes the form of @eq-field-transform, which is called *classical symmetry*. 
-There are types of symmetry called *topological symmetry* or *quantum symmetry*, which arises from topologically-nontrivial field configuration.
-Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
-In many occurrences a topological/quantum symmetry is mapped to a symmetry of type of @eq-field-transform under a duality, and thus it should also be considered as being locality-preserving.
+In this equation, $F(\phi(x'))$ is a function that relies solely on the *local* value of a field (or a set of fields and its derivatives) at a point $x'$.
+When $x'\neq x$, the symmetry involves a *spacetime* symmetry, while when $x'=x$, it is an *internal* symmetry.
+The preservation of locality in a symmetry underpins the symmetry relation in @eq-RG-group-match, which will be elaborated further in the lecture.
 
-From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to **topological operators**. 
-A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on a $n$-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
+:::{.callout-note}
+#### Note
+Please note that a QFT, when quantized on a fixed space manifold $M$, does possess unitary operators that commute with its Hamiltonian, other than those originating from locality-preserving symmetry. 
+In most cases, such unitary operators are irrelevant; an example is the one that multiplies a phase to a specific eigenstate.
+Therefore, in this lecture, when we refer to a symmetry, we assume that it preserves locality.
+In fact, we assert that this property is the *last* one to be discarded in the context of generalized symmetry, if ever, due to the invariance under the renormalization group flow. [^ColemanMandula]
+:::
 
-![Topological operator.](figures/TopOpsDeform.png){#fig-TopOpsDeform width=400}
+[^ColemanMandula]: Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.
 
-The first aim of the lecture is to understand the correspondence, that is
+
+
+::: {.callout-note collapse="false"}
+### Terminology (Locality-Preserving)
+To avoid confusion, it's important to note that locality-preserving symmetry does *not* mean gauge redundancy, which is sometimes labeled as local symmetry. The global -- spacetime, or internal -- symmetries typically encountered in a QFT textbook all preserve locality.
+:::
+
+
+However, not all symmetries in QFT that preserve locality take the form of @eq-field-transform, i.e., a *classical* symmetry. 
+Other types of symmetries exist, such as *topological symmetry* or *quantum symmetry*, which emerge from topologically nontrivial field configurations.
+Examples include the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories.
+In many cases, a topological/quantum symmetry is mapped to a symmetry of the type @eq-field-transform under a duality, and thus it should also be considered as preserving locality.
+
+From a contemporary standpoint, the universal characterization of locality-preserving symmetries is their correspondence to **topological operators**. 
+A topological operator $\mathcal{D}[W_n]$ in a QFT is an extended operator defined on an $n$-dimensional submanifold of the spacetime. The correlators that include it should remain invariant under the smooth deformation of the supporting manifold $W_n$ (See @fig-TopOpsDeform).
+
+:::{.content-visible when-format="html"}
+
+![Topological operator.](figures/tikz/TopOpsDeform.svg){#fig-TopOpsDeform width=400}
+
+:::
+
+:::{.content-visible when-format="pdf"}
+
+![Topological operator.](figures/tikz/TopOpsDeform.pdf){#fig-TopOpsDeform width=400}
+
+:::
+
+The first goal of this lecture is to understand the following correspondence:
 
 ::: {.callout-important}
 ### Symmetry/Topological Operator Correspondence
@@ -81,26 +112,21 @@ $$\begin{split}
 \end{split}
 $${#eq-conv-STO-corresp}
 :::
-In this correspondence, the topological operator shoould be regarded as the generalization of the **Noether charge** into possibly discrete symmetry.
-To be precise, we regard this correspondence as the right-hand side *defining* the left-hand side.
-We will explicitly check this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in @sec-scalar, and in the case of abelian gauge theory in @sec-vector. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.
+In this correspondence, the topological operator should be viewed as a generalization of the **Noether charge** for potentially discrete symmetry.
+More precisely, we consider this correspondence as the right-hand side *defining* the left-hand side.
+We will explicitly verify that this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in @sec-scalar, and in the case of abelian gauge theory in @sec-vector. The case of fermions is both intriguing and crucial, but it will be left as an exercise, or a work, for the audience/readers.
+
 
 ::: {.callout-note collapse="false"}
-### Terminology (locality-preserving)
-Again, we are *not* talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality-preserving.
-:::
-
-::: {.callout-note collapse="false"}
-### Terminology (topological defect)
-Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a "topological defect" refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg**ed** under a topological (higher) symmetry. As an operator in the IR theory, it is *not* a priori guaranteed to be topological in the sense of @fig-TopOpsDeform . On the other hand, in the generalized symmetry literature, "topological defect (operator)" often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term "topological operator".
+### Terminology (Topological Defect)
+There exists an unfortunate discrepancy in terminology. Outside the realm of generalized symmetry literature, a "topological defect" typically refers to a dynamical object, or its trajectory, viewed as an operator in the IR theory. As an operator in the IR theory, it is *not* necessarily topological in the sense of @fig-TopOpsDeform. Conversely, within the generalized symmetry literature, "topological defect (operator)" often signifies an extended operator that is inherently topological. To mitigate potential confusion in this lecture, we will adopt the term "topological operator", even when the supporting submanifold of the operator is not within a time-slice.
 :::
 
 ## Generalized Symmetry
 
-The correspondence in @eq-conv-STO-corresp is the core in the notion of **generalized (global) symmetry**, 
-coined by [@Gaiotto:2014kfa] [^GKSW].
-That is, the notion of symmetry can be generalized by relaxing the adjective in the right-hand side of @eq-conv-STO-corresp. 
-Therefore, we *define* generalized symmetry by the following correspondence generalizing @eq-conv-STO-corresp:
+The concept of **generalized (global) symmetry** is fundamentally based on the correspondence in @eq-conv-STO-corresp, as introduced by [@Gaiotto:2014kfa] [^GKSW].
+This concept expands the traditional notion of symmetry by loosening the constraints on the right-hand side of @eq-conv-STO-corresp. 
+Hence, we *define* generalized symmetry through the following correspondence, which extends @eq-conv-STO-corresp:
 
 ::: {.callout-important}
 ### Generalized Symmetry/Topological Operator Correspondence
@@ -111,23 +137,26 @@ $$\begin{split}
 \end{split}
 $${#eq-GSTO-corresp}
 :::
-More specifically, a generalized symmetry corresponding to an operator of codimension $p+1$ is called **$p$-form symmetry**, and a generalized symmetry corresponding to an operator without its inverse is called **non-invertible symmetry** (among other names like category symmetry and topological symmetry).
 
-In an "unusual" QFT, we can even relax the topological-ness of the operator in the right-hand side of @eq-GSTO-corresp, resulting in what is called **subsystem** symmetry. We will briefly make a comment on it in @sec-trivial-scalar.
+In more specific terms, a generalized symmetry that corresponds to an operator of codimension $p+1$ is referred to as a **$p$-form symmetry**. 
+Meanwhile, a generalized symmetry that corresponds to an operator without an inverse is known as a **non-invertible symmetry** (also referred to as category symmetry or topological symmetry).
 
-The subclasses of generalized symmetry is summarized in the table below:
+In the context of an "unusual" QFT, the topological constraint on the operator in the right-hand side of @eq-GSTO-corresp can be further relaxed. 
+This leads to the concept of **subsystem** symmetry, which will be briefly mentioned in @sec-trivial-scalar, but will not be discussed in detail in this lecture.
+
+The table below summarizes the subclasses of generalized symmetry:
 
 |              | $p$-form | non-invertible | subsystem  |
 |--------------|----------|----------------|------------|
 | codimension  | $p+1$    |                |            |
 | Invertible?  |          | No             |            |
-| Topological? |          |                | Partically |
+| Topological? |          |                | Partially  |
 
 :Subclasses of generalized symmetry and defining properties of their corresponding topological operators. {#tbl-sym-classes}
 
-The subclasses are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.
+These subclasses are not mutually exclusive. Therefore, in theory, a 2-form non-invertible subsystem symmetry could exist, for example.
 
-[^GKSW]: The global higher-form symmetry itself had appeared and investigated in the literature, e.g.\ [@Kapustin:2013uxa;@Barkeshli:2014cna], and its gauged version was essentially known from [@KalbRamond].
+[^GKSW]: The concept of global higher-form symmetry has been previously explored and investigated in the literature, for example, in [@Kapustin:2013uxa;@Barkeshli:2014cna]. Its gauged version was essentially known from [@KalbRamond].
 
 ## Contents of the Lecture
 **FIXME**

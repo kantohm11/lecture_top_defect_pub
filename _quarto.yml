@@ -42,6 +42,7 @@ format:
       dark: [darkly,custom.scss]
     csl: american-statistical-association.csl
     anchor-sections: true
+    html-math-method: mathjax
   pdf:
    default-image-extension: pdf
    documentclass: scrreport
@@ -56,12 +57,15 @@ format:
      - "sorting = none"
    filters:
      - line-break.lua
-     - callout-title-modify.lua
+     #- callout-title-modify.lua
    keep-tex: true
    fig-pos: 't'
    include-in-header: header.tex
 
 callout-icon: true
+
+execute:
+  freeze: auto
 
 
 

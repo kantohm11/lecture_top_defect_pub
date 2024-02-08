@@ -1,112 +1,121 @@
 # Topological Operators for Classical Symmetry {#sec-scalar}
 
-In this section we take the classical symmetry in scalar field theory as an example to study topological operators.
-
+This section explores topological operators in the context of classical symmetry in scalar field theory.
 
 ## Set Up
-To be concrete, let us consider the complex scalar field theory whose Lagrangian (density) on a spacetime of dimension $\stdim$ is given by
+For specificity, consider a complex scalar field theory with the following Lagrangian (density) on a spacetime $M$ of dimension $\stdim$:
+
 $$
 \begin{aligned}
 \mathcal{L}(\phi) &=  - \left(\frac12 \partial_\mu \phi(x)^* \partial^\nu \phi(x) + V(\phi(x))\right)\vol\\
-&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol,
+&= \frac{1}{2} \mathop{d\phi} \wedge *\mathop{d\phi} - V(\phi(x))\vol.
 \end{aligned}
 $$
-where $\mathop{*}$ is the Hodge star, $\vol = \mathop{*} 1 = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential.
-The action is the integral over the spacetime $M$ (without boundary):
+
+In this equation, $\mathop{*}$ represents the Hodge star, $\vol = \mathop{*} 1 = \prod_{i=1}^{\stdim} \mathop{dx_i}$ is the volume form for the flat space, and $V(\phi)$ is the potential. Then, the action is given by:
+
 $$
 S[\phi] = \int_{M}\mathcal{L}(\phi).
 $$
 
-We consider a symmetry transformation of the scalar field
+Consider a symmetry transformation of the scalar field as follows:
+
 $$
-\phi(x) \mapsto \phi^g(x)
+\phi(x) \mapsto \phi^g(x).
 $${#eq-scalar-transf}
-parametrized by a group element $g$ (constant over $M$) that leaves the action invariant: 
+
+We assume that this transformation is parametrized by an element $g$ in a group $G$, which is constant over $M$ and leaves the action invariant:
+
 $$
 S[\phi]=S[\phi^g].
 $${#eq-action-inv}
-This means that the Lagrangian is invariant up to a total derivative:
-$$
-\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g) 
-$${#eq-Lagrangian-inv}
-where $s(\phi,g)$ is a $(\stdim-1)$-form on $M$ depending on the constant $g$ and the field $\phi$.
-We set $s(\phi,g=\id) = 0$, where $\id$ is the unit of the symmetry group.
-Then, by $\phi = (\phi^g)^{g^{-1}}$, we can set that $s(\phi,g) = - s(\phi,g^{-1})$.
 
-For example, the usual $\U(1)$ rotation corresponds to the transformation
+This implies that the Lagrangian is invariant up to a total derivative:
+
+$$
+\mathcal{L}(\phi^g) = \mathcal{L}(\phi) + \mathop{ds}(\phi,g).
+$${#eq-Lagrangian-inv}
+
+
+In this equation, $s(\phi,g)$ is a $(\stdim-1)$-form on $M$ that depends on the constant $g$ and the field $\phi$. 
+This $(D-1)$-form $s(\phi,g)$ is subject to the ambiguity coming from shifting by an exact term. Hereafter we use this ambiguity to set $s(\phi,\id)=0$.
+
+From the consecutive transformation with $g_1$ and $g_2$, we have
+$$ 
+s(\phi^{g_1},g_2) + s(\phi,g_1) = s(\phi,g_2g_1) + ds^{(1)}(\phi,g_1,g_2),
+$${#eq-surface-term-assosiative}
+for some $(D-2)$-form $s^{(1)}(\phi,g_1,g_2)$.
+In particular, setting $g_2=g_1^{-1}$, we have 
+$$s(\phi^g,g^{-1}) + s(\phi,g)  = ds^{(1)}(\phi, g, g^{-1}).
+$${#eq-surface-term-inverse}
+
+
+
+For instance, the standard $\U(1)$ rotation corresponds to the transformation:
+
 $$
 \phi^g(x) = \mathop{g} \phi(x),
 $$
-where $g=e^{\imunit \alpha}$ is a $\U(1)$ phase.
-The potential $V(\phi)$ might partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$, e.g. $V(\phi)\propto \phi^k+(\phi^*)^k$.
-In such a case the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi i}{k}}$, $i= 0 \cdots k-1$.
 
-In addition, when $V(\phi)=0$, the action $S[\phi]$ also admit the shift symmetry[^nonzero_r]
+where $g=e^{\imunit \alpha}$ represents a $\U(1)$ phase. The potential $V(\phi)$ may partially break the $\U(1)$ rotation into its subgroup $\mathbb{Z}_k$. For example, when $V(\phi)\propto \phi^k+(\phi^*)^k$, the parameter $g$ takes *discrete* values: $g = e^{\imunit \frac{2\pi p}{k}}$, for an integer $p$.
+
+Moreover, when $V(\phi)=0$, the action $S[\phi]$ also admits the shift symmetry[^nonzero_r]:
+
 $$
 \phi^{\alpha}(x) = \phi(x) + \alpha.
 $$
 
-[^nonzero_r]: If we use the form of Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this also gives an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
+[^nonzero_r]: If we use the form of the Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this provides an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
-In this section, we would like to construct the **topological operator** corresponding to these *classical* symmetry.
+In this section, our goal is to construct the **topological operator** corresponding to these *classical* symmetries.
 
 :::{.callout-note}
 #### Note
-The construction will apply to other types of scalar field theory, e.g. real and/or multiple scalar fieldsas long as the kinetic term is standard enough (more on this in @sec-trivial-scalar). 
-For non-linear sigma model with topologically non-trivial target, the Lagrange multiplier $\lambda$ below should take values in the correct set.
-We will consider the case with $S^1$ target (compact boson) in @sec-compact-boson.
-Also, the spacetime manifold $M$ and the metric on it do not have to be flat. The signature of the metric is also insignificant in this lecture, although we use the Euclidean notation.
+This construction can be applied to various types of scalar field theory, such as real and/or multiple scalar fields, provided the kinetic term is standard enough (more details in @tip-fracton). Also note that the spacetime manifold $M$ and its metric do not need to be flat. The metric's signature is not significant in this lecture, even though we use Euclidean notation.
 :::
 
 :::{.callout-note}
 #### Note
-In this lecture we directly construct the topological operators corresponding to the *finite* transformation @eq-scalar-transf, rather than the conventional approach considerting infinitesimal transformation.
-This will enable us to explicitly talk about *finite* symmetries (and their anomalies) in terms of topological operators, and also motivate us to consider generalized symmetries.
+In this lecture, we focus on constructing topological operators that correspond to the *finite* transformation @eq-scalar-transf, as opposed to the conventional approach of considering infinitesimal transformations. This approach allows us to explicitly discuss *discrete* symmetries (and their anomalies) in terms of topological operators, and it also motivates us to consider generalized symmetries.
 :::
 
-## Construction of Topological Operator
-As a basic example of @eq-conv-STO-corresp, we would like to construct the topological operator $U_\alpha[W]$ corresponding to the transformation @eq-scalar-transf.
-The topological operator $U_\alpha[W]$ ,defined with respect to a codimension-1 submanifold $W$ of the spacetime $M$, should satisfy the following properties:
+## Construction of the Topological Operator
+As a fundamental example of the correspondence @eq-conv-STO-corresp, we aim to construct the topological operator $U_\alpha[W]$ that corresponds to the transformation @eq-scalar-transf. Specifically, we will construct an operator $U_\alpha[W]$, defined on a codimension-1 submanifold $W$ of the spacetime $M$, that satisfies the following properties:
 
 :::{.callout-important}
-#### Properties of Symmetry Topological Operator
-1. Topological: $U_g[W] = U_g[W']$ is $W$ can be continuously defomed into $W'$ without crossing other operators.
-2. Symmetry action: when a deformation from $W$ to $W''$ crosses an local operator $\mathcal{O}$, it gets the symmetry action specified by $g$, resulting in another operator $\mathcal{O}^g$.
-3. Noether: when the symmetry group is continuous, we can take the group element to be the infinitsimal deformation of $\id$: $g = \id + \alpha + \mathcal{O}(\alpha^2)$. Then, the operator $U_g[W]$ is approximated by the Noether charge
-   $$
-   U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
-   $${#eq-Noether-approx}
-   where $j = j_\mu\mathop{dx^\mu}$ is the Nother current one-form **FIXME:sign is uncertain..**
-   $$
-   \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
-   $$
+#### Properties of the Symmetry Topological Operator
+1. Topological: $U_g[W] = U_g[W']$ if $W$ can be continuously deformed into $W'$ without intersecting other operators.
+2. Symmetry action: When a deformation from $W$ to $W''$ intersects a local operator $\mathcal{O}$, it undergoes the symmetry action specified by $g$, resulting in another operator $\mathcal{O}^g$.
+3. Noether: When the symmetry group is continuous, we can consider the group element as the infinitesimal deformation of $\id$: $g = \id + \alpha + \mathcal{O}(\alpha^2)$. In this case, the operator $U_g[W]$ is approximated by the Noether charge
+    $$
+    U_{1+\alpha+\mathcal{O}(\alpha^2)} = 1 + \alpha \int_W \mathop{*}j +\mathcal{O}(\alpha^2),
+    $${#eq-Noether-approx}
+    where $j = j_\mu\mathop{dx^\mu}$ is the Noether current one-form. **FIXME:sign is uncertain..**
+    $$
+    \mathop{*}j = \left.\frac{\delta\mathcal{L}(\phi^{1+\alpha(x)})}{\delta d\alpha}\right|_{\alpha=0} + \left.\frac{\partial s(\phi, 1+ \alpha)}{\partial \alpha}\right|_{\alpha=0}.
+    $$
 Note that when $W$ is a time-slice $W=\{t=0\}$,
 $$
 \int_W \mathop{*} j = \int_{\{t=0\}} j^0 \mathop{d^{\stdim-1}x}
 $$
-is exactly the Noether charge written in any QFT textbook.
+is precisely the Noether charge as described in any QFT textbook.
 
-
-The properties 1.\ and 2.\ are summarized in @fig-op-action.
+Properties 1 and 2 are summarized in @fig-op-action.
 :::
 
+![The topological operator $U_g[W]$ is designed to be invariant under a continuous deformation and to implement the symmetry action.](figures/Op_action.svg){#fig-op-action width=400}
 
-![The topological operator $U_g[W]$ should be invariant under a continuous deformation and also implement the symmetry action. ](figures/Op_action.svg){#fig-op-action width=400}
-
-The idea of the construction is "*cutting-and-gluing-with-twist*".
-That is, we first divide the spacetime $M$ into two parts: $M_\stdim = M_L \cup_W M_R$ with shared boundary $W$ (see @fig-cut-M. We take the orientation of $W$ so that $\partial M_L = -\partial M_R = W$. ).
-We also separate the scalar field $\phi$ into two sets of fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$.
-Then, we glue the two regions and fields on those back together, with the twisted identification:
-$$
-\phi_L|_W = \phi_R^{g^{-1}}|_W.
-$$
+The construction is based on the concept of "cutting-and-gluing-with-twist".
+Initially, we partition the spacetime $M$ into two subregions: $M_\stdim = M_L \cup_W M_R$ with a common boundary $W$ (refer to @fig-cut-M. We orient $W$ such that $\partial M_L = -\partial M_R = W$.).
+We also divide the scalar field $\phi$ into two fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$. Subsequently, we reconnect the two regions and their respective fields, with a twisted identification: 
+$$ \phi_L|_W = \phi_R^{g^{-1}}|_W. $$
 
 ![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
 
 In path-integral, this construction can be implemented as follows:
 
 ::: {.callout-important}
-#### Symmetry Topological Operator
+#### Symmetry Topological Operator for a Classical Symmetry
 $$
 \begin{multlined}
     \langle U_g[W] \cdots \rangle = \int \mathop{\mathcal{D}^{M_L}\phi_L} \mathop{\mathcal{D}^{M_R}\phi_R} \mathop{\mathcal{D}^W\lambda} \cdots\\ \times \exp\left(-S_L[\phi_L]-S_R[\phi_R] - G_W[\lambda,\phi_L,\phi_R,g]\right)
@@ -114,32 +123,24 @@ $$
 $${#eq-Ug-pathintegral}
 :::
 
-Here, $\mathcal{D}^{X}$ denotes the measure for path-integral for a field defined on a submanifold $X$ of the spacetime $M$,
-and $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$ are actions on the submanifold $M_{L,R}$, and "$\cdots$" represents additional insertions of operators.
-In addition, the "gluing" action $G_W$ on the submanifold $W$ is
+Here, $\mathcal{D}^{X}$ denotes the measure for the path-integral for a field defined on a submanifold $X$ of the spacetime $M$. The actions on the submanifold $M_{L,R}$ are written as $S_{L,R} = \int_{M_{L,R}}\mathcal{L}(\phi_{L,R})$, and "$\cdots$" denotes additional operator insertions. The "gluing" action $G_W$ on the submanifold $W$ is defined as
 $$
-\begin{multlined}
-    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_M,g).
-\end{multlined}
+%\begin{multlined}
+    G_W[\lambda,\phi_L,\phi_R,g] = - \imunit \int_W \lambda(\phi_L - \phi_R^{g^{-1}})\vol_W+\int_W s(\phi_R^{g^{-1}},g).
+%\end{multlined}
 $${#eq-gluing-action}
-The heart of the above expression is that integrating the Lagrange multiplier $\lambda$ out gives the "delta functional":
+The key point of the above expression is that integrating the Lagrange multiplier $\lambda$ results in the "delta functional":
 $$
-\
     \int \mathop{\mathcal{D}^W\lambda} \exp\left(\imunit \int_W \lambda (\phi_L-\phi^{g^{-1}}_R)\vol_W\right)
      = \prod_{x\in W}\delta(\phi_L(x) - \phi_R^{g^{-1}}(x)),
 $${#eq-delta-functional}
 which should implement @fig-cut-M.
-Before studying the operator $U_g[W]$, we should study the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
-
-## Identity Wall {#sec-trivial-scalar}
-When $g=\id$, the operator $U_{g=\id}[W]$ should be *trivial*.
-That is, we have
+Before studying the operator $U_g[W]$, we should first examine the *trivial* case where the symmetry transformation $g$ is the identity map $g=\id$.
 $$
 \langle \id[W] \cdots \rangle = \langle \cdots \rangle.
 $${#eq-identity-wall}
-We call the codimension-1 operator $\id[W]$ with this property **identity wall**.
-It can also be called **transparent wall** or like that.
-Expanding @eq-identity-wall, the following equation should hold:
+We refer to the codimension-1 operator $\id[W]$ with this property as the **identity wall**. It can also be termed as the **transparent wall** or similar.
+Upon expanding @eq-identity-wall, the following equation should be satisfied:
 $$
 \begin{multlined}
     \int \mathop{\mathcal{D}^M\phi} \exp(-S) \cdots=
@@ -147,52 +148,127 @@ $$
 \end{multlined}
 $${#eq-trivial-scalar}
 
-The point is that the difference between giving a field $\phi$ and giving a pair of fields $(\phi_L,\phi_R)$ is that the latter is not constrained to be continuous across $W$. On the right-hand side it is rather enforced by integrating out $\lambda$ because of @eq-delta-functional.
+The key distinction between providing a field $\phi$ on $M$ and providing a pair of fields $(\phi_L,\phi_R)$ on $(M_L,M_R)$ is that the latter is not required to be continuous across $W$. On the right-hand side, continuity is enforced by integrating out $\lambda$ due to @eq-delta-functional.
 
-:::{.callout-tip collapse="true"}
-# Continuity of fields in "exotic" QFTs and subsystem symmetry
-Here we assumed that the path integral 
-$\int\mathcal{D}^M\phi$ should be over the *continuous* fields.
-The reason for this is that the standard kinetic term would diverge in the limit where the filed $\phi$ becomes discontinuous. 
+:::{#tip-fracton .callout-tip collapse="true"}
+# Continuity of Fields in "Exotic" QFTs and Subsystem Symmetry
+In this context, we assume that the path integral $\int\mathcal{D}^M\phi$ should be over the *continuous* fields. This is because the standard kinetic term would diverge when the field $\phi$ becomes discontinuous, and thus such configuration does not contribute to the path-integral. 
 
-This assumption, however, does not apply to QFTs with higher-derivative kinetic terms.
-Examples of such exotic QFTs (without relativistic symmetry) includes tensor gauge theories (see e.g. [@Pretko:2020cko;@Seiberg:2020bhn]). 
-In these theories a field *can* be discontinuous, but some of higher derivatives are constrained to scale correctly with respect to the ratio of the lattice size and the system size. 
-In such cases the construction of the trivial operator should differ. *KO does not know how to describe it because of the UV/IR mixing and totally confused*.
+However, this assumption does not hold for QFTs with higher-derivative kinetic terms. Examples of such exotic QFTs (without relativistic symmetry) include tensor gauge theories (refer to [@Pretko:2020cko;@Seiberg:2020bhn] for more details). An example of such kinetic term is $(\partial_t\phi)^2 + (\partial_x\partial_y \phi)^2$. In these theories, a field *can* be discontinuous, but some higher derivatives are constrained to scale appropriately with the ratio of the lattice size to the system size. In such scenarios, the construction of the trivial operator should differ.
 
-These QFTs describes what is called the **fracton phases** of matter, which does not have emergent continuous rotational symmetry in the IR.
-And the models typically posses **subsytemsymmetries**, whose corresponding operator is not totally topological. 
-Existence of the new kind of symmetry lacked in standard relativistic systems would be related to the fact that the identy wall looks different from the first place.
+These QFTs describe what is known as the **fracton phases** of matter, which do not have emergent continuous rotational symmetry in the IR. Moreover, these models typically possess **subsystem symmetries**, whose corresponding operator is not entirely topological. The existence of this new type of symmetry, absent in standard relativistic systems, could be related to this subtlety regarding identity wall .
 :::
 
-It is instructive to study the equation of motions (EOMs) on the right hand side of @eq-trivial-scalar.
-The EOM with respect to $\lambda$ simply states $\phi_L(x) = \phi_R(x)$ for $x\in W$.
-The surface term of Euler-Lagrange equation for $\phi_L$ and $\phi_R$ gives
+Let us study the equations of motion (EOMs) on the right-hand side of @eq-trivial-scalar. The EOM with respect to $\lambda$ simply enforces $\phi_L(x) = \phi_R(x)$ for $x\in W$. On the other hand, the surface term of the Euler-Lagrange equation for $\phi_L$ and $\phi_R$ yields
 $$
     \left.\frac{\delta \mathcal{L}[\phi_L]}{\delta \mathop{d\phi_L}}\right|_W = \lambda \vol_W = \left. \frac{\delta \mathcal{L}[\phi_R]}{\delta \mathop{d \phi_R}}\right|_W.
 $$
-If $W$ is spacelike, or we regard the direction perpendicular to $W$ as the imaginary time in Euclidean signature, this enforces that the canonical momentum also be continuous across $W$.
+If $W$ is spacelike, or if we interpret the direction perpendicular to $W$ as the imaginary time in Euclidean signature, this condition ensures the continuity of the canonical momentum across $W$.
 
 :::{.callout-note}
 #### Locality
-@eq-trivial-scalar expresses the **locality** of the path-integral. 
-We can use the same procedure to decompose the path-integral $\int \mathcal{D}^M{\phi}$ on $M$ into path-integrals on local patches like $\int \prod_i\mathcal{D}^{V_i}\phi_i$ (comes with many Lagrange multipliers). Here $\bigcup_i V_i =M$ and $V_i \cap V_j$ has codimension 1 in $M$ if not empty.
+@eq-trivial-scalar encapsulates the **locality** of the path-integral. We can employ the same procedure to decompose the path-integral $\int \mathcal{D}^M{\phi}$ on $M$ into path-integrals on local patches, like $\int \prod_i\mathcal{D}^{V_i}\phi_i$ (accompanied by numerous Lagrange multipliers). Here, $\bigcup_i V_i =M$ and $V_i \cap V_j$ has codimension 1 in $M$ if not empty.
 
-Indeed, in the context of topological quantum field theory (TQFT), a similar **cutting-and-gluing** axiom is hired by the Atiyah-Segal formulation of topological quantum field theory and later Lurie's cobordism hypothesis [@Lurie] established the relation between it and the locality. 
-
-Although in this lecture we satisfy ourselves with the formal non-rigorous treatment of path-integrals, deeper understanding of locality in non-topological QFT is strongly desired, and there are some promising results e.g. in [@GradyPavlov1].
+In the realm of topological quantum field theory (TQFT), a similar **cutting-and-gluing** axiom is utilized in the Atiyah-Segal formulation of topological quantum field theory. Later, Lurie's cobordism hypothesis [@Lurie] established the relationship between this axiom and locality. 
 :::
 
 :::{.callout-tip collapse="true"}
-#### A comment about fermion
-Because we do not plan to talk about fermion in this lecture, we comment on what will differ in the case of fermions.
+#### A note on fermions
+While this lecture does not cover fermions, it's worth noting how they would differ in this context.
 
-In the scalar field theory, we impose the continuity of the "position" variables (in analytical-mechanical sense) $\phi$, then the continuity of the momentum variables follows by EOM.
+In scalar field theory, we enforce the continuity of the "position" variables (in the analytical-mechanical sense) $\phi$, and the continuity of the momentum variables follows from the equations of motion (EOM).
 
-In a chiral fermion theory, as its kinetic term involves only one derivative, momentum and position variables cannot typically be possible in a way preserving Lorentz or global chiral symmetry. 
-Thus, the "cutting" have to induce an apparent violation of invariance under the Lorentz or the other symmetry, which is a way of seeing the gravitational and global symmetry anomaly.
-The precise understanding of this perspective is remained to be open in this lecture (and not in the literature as far as the author knows).
+However, in a chiral fermion theory, the kinetic term involves only one derivative, making it typically impossible to separate position and momentum variables while preserving Lorentz or global chiral symmetry.
+Consequently, the "cutting" process would seemingly violate invariance under Lorentz or another symmetry, which can be interpreted as a manifestation of the gravitational and global symmetry anomaly.
+A precise understanding of this perspective is beyond the scope of this lecture.
 :::
+
+## Topological-ness
+Let us show the topological-ness of $U_g$, i.e. the first equation in @fig-op-action, or
+$$
+U_{g}[W_1]\id[W_2] = \id[W_1]U_{g}[W_2].
+$${#eq-U-top}
+To show @eq-U-top, we divide the spacetime into three parts: $M_L,M_M$ and $M_L$, where $W$ separates $M_L$ and $M_M$, while $W'$ separates $M_M$ and $M_R$.
+The relevant part of paht-integral regarding the left hand side of @eq-U-group reads
+$$
+\int\mathcal{D}^{M_M}\phi_M\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\phi_M]-G_{W_1}[\phi_L,\phi_M,g]-G_{W_2}[\phi_M,\phi_R,\id]}.
+$$
+Here $S_M = \int_{M_M}\mathcal{L}[\phi_M]$ and we omit the path-integral measures for $\phi_{L,R}$ and also the actions on $M_L$ and $M_R$ for the sake of readability.
+By changing the variable by $\tilde{\phi}_M^{g} = \phi_M$, we get the expression
+$$
+\int\mathcal{D}^{M_M}\tilde{\phi}_M^g\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\tilde\phi_M^g]-G_{W_1}[\lambda_1,\phi_L,\phi_M,\id] - \int_{W_1} s(\tilde\phi_M,g) -G_{W_2}[\lambda_2,\tilde\phi_M^g,\phi_R,\id]}.
+$$
+As $M_M$ is open, the action $S_M[\tilde\phi_M^g]$ catches up the surface term:
+$$
+S_M[\tilde\phi_M^g] = S_M[\tilde\phi_M] - \int_{W_1} s(\tilde{\phi}_M,g) + \int_{W_2} s(\tilde{\phi}_M,g).
+$$
+Using this equation combined with @eq-surface-term-inverse, we get
+$$
+\int\mathcal{D}^{M_M}\tilde{\phi}_M^g\mathcal{D}^{W_1}\lambda_1\mathcal{D}^{W_2}\lambda_2 \, e^{-S_M[\tilde\phi_M^g]-G_{W_1}[\lambda_1,\phi_L,\tilde\phi_M,\id] -G_{-W_2}[\lambda_2,\phi_R,\tilde\phi_M,g^{-1}]},
+$$
+where $-W_2$ is the orientation reversal of $W_2$.
+Then we use the invariance of the path-integral measure of the sclar fields (up to the overall nomarlization):
+$$\mathcal{D}^{M_M}\phi_M = \mathcal{D}^{M_M}\phi_M^g
+$${#eq-measure-inv}
+to get
+$$
+U_{g}[W_1]= U_{g^{-1}}[-W_2].
+$$
+
+Lastly, we need to show
+$$ U_{g^{-1}}[-W] = U_g[W].
+$${#eq-Udual-inverse}
+To show this, we assume that there exists a transformation $\lambda^g$ of $\lambda$ that satisfies
+$$ \lambda(\phi_L-\phi_R) = \lambda^{g}(\phi_L^{g}-\phi_R^{g})
+$$
+and
+$$ \mathcal{D}^W\lambda^g = \mathcal{D}^W\lambda. 
+$$
+For example, when the action is a $\U(1)$ rotation $\lambda^g$ is the rotation by the inverse,
+and when the action is a shift of $\phi$, we can set $\lambda^g = \lambda$.
+Then,
+$$
+\begin{split}
+U_{g^{-1}}[-W] &= \int\mathcal{D}^W \lambda \, e^{-G_{-W}[\lambda^{g^{-1}},\phi_R,\phi_L,g^{-1}]}\\
+&= \int\mathcal{D}^W \lambda \, e^{\imunit\int_{-W}\lambda(\phi_R-\phi_L^{g})\vol_W - \int_{-W}s(\phi_L^{g},g^{-1})}\\
+&= \int\mathcal{D}^W \lambda \, e^{\imunit\int_{W}\lambda^{g^{-1}}(\phi_L-\phi_R^{g^{-1}})\vol_W - \int_{W}s(\phi_L,g)}\\
+&= \int\mathcal{D}^W \lambda^{g^{-1}} \, e^{-G_W[\lambda^{g^{-1}},\phi_L,\phi_R,g]}\\
+&= U_g[W].
+\end{split}
+$$
+
+
+
+## Group Multiplication Law and Junction
+For the conventional symmetry, we assume that transformations $g$ forms a group.
+Correspondingly, the topological operators should satisfy the same multiplication law: 
+$$
+U_{g_1}[W_1] U_{g_2}[W_2] = U_{g_1g_2}[W_1]
+$${#eq-U-group}
+where the codimension-1 submanifold $W_2$ is parralel to $W_1$ but slightly right to it.
+One can show this in the same manner we have done for @eq-U-top.
+In particular, from @eq-Udual-inverse we have
+$$ U_g[W_1] U_g[-W_2] = U_g[W_1] U_{g^{-1}}[W_2] = U_{\id}[W_1] = \id[W_1].
+$${#eq-Udual-inverse-2}
+That is, the orientation reversal of $U_g$ is its inverse.
+The properties @eq-U-group and @eq-Udual-inverse-2 are the properties of a conventional symmetry and will be relatex in a generalized --- specifically non-invertible --- symmetry.
+
+For later convenience, here we also introduce the **topological junctions** of topological operators $U_{g_1},U_{g_2},U_{g_3}$.
+A junction is the object connecting multiple extended operators.
+For the classical symmetry, such an junction is defined by putting three (or more) operators on submanifolds $W_1,W_2$ and $W_3$ sharing their boundary $X$:
+$$
+U_{g_1}[W_1]U_{g_2}[W_2]U_{g_3}[W_3]J_{g_1,g_2,g_3}[X] 
+=
+\int\prod_{i=1}^3\mathcal{D}^{W_i}\lambda_i
+\, e^{-\sum_i G_{W_i}[\lambda_i,\phi_i,\phi_{i+1},g_i]-\int_X s^{(1)}(\phi_1,g_1,g_2)},
+$$
+which can be proven to be topological when $g_3=g_1g_2$. 
+**FIGURE**
+**Example of nonzero $s^{(1)}$ or higher?**
+
+
+
+
 
 ## Symmetry Action and Ward-Takahashi identity
 
@@ -222,8 +298,6 @@ $$
 \end{aligned}
 $$
 In the second to last equality we used @eq-Lagrangian-inv and in the last equality we assumed that the path-integral measure is invariant: 
-$$\mathcal{D}\phi_M = \mathcal{D}\phi_M^g.
-$${#eq-measure-inv}
 Lastly, from @eq-delta-functional we get $U_{g^{-1}}[-W] = U_g[W]$, so we obtain @fig-op-action, that is
 $$
 \langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 \mathcal{O}_2^g U_g[W_2] \rangle.
@@ -231,11 +305,11 @@ $${#eq-sym-op-act}
 
 We note that we can also get the following equation in the same way as above:
 $$
-\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2^g \cdots \rangle,
+\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle,
 $${#eq-bubble}
 
 when $W_0$ encloses a compact region of $M$ and contains no operator.
-Then, by repeatedly using these equations, we get the **Ward-Takahashi identity** (**FIXME:figure**)
+Then, by repeatedly using these equations, we get the **Ward-Takahashi identity** :
 
 ::: {.callout-important}
 #### Ward-Takahashi Identity
@@ -252,12 +326,39 @@ $$
 \langle \mathcal{O}_1^g  \mathcal{O}_2^g \cdots \mathcal{O}_N^g\rangle,
 \end{aligned}
 $${#eq-Ward-Takahashi}
-where $W_i$ encloses the operators $\mathcal{O}_1 \cdots \mathcal{O}_i$, and at the last step we collapsed $U_g[W_N]$ towards the infinity (or whatever point if $M$ is compact).
+where $W_i$ encloses the operators $\mathcal{O}_1 \cdots \mathcal{O}_i$, and at the last step we collapsed $U_g[W_N]$ towards the infinity (or whatever point if $M$ is compact). See also @fig-Ward-Takahashi.
 :::
 
-Of course we could get the same result by considering global change of variable $\widetilde{\phi} = \phi^{g^{-1}}$, the point is that, once the existence of topological operator is established, the derivation of the Ward-Takahashi identity can be done in the same way, even if the symmetry does not come from field transformation.
+:::{.content-visible when-format="html"}
 
-**FIXME:explain about the selection rule**
+![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.svg){#fig-Ward-Takahashi width=400}
+
+:::
+
+:::{.content-visible when-format="pdf"}
+
+![Derivation of Ward-Takahashi identity @eq-Ward-Takahashi.](figures/tikz/WardTakahashi.pdf){#fig-Ward-Takahashi width=400}
+
+:::
+
+We could get the same result by considering global change of variable $\widetilde{\phi} = \phi^{g^{-1}}$ in the path-integral and could avoid topological operator to derive this identity. 
+However, the deriviation in @fig-Ward-Takahashi applies as long as we have a topological operator, and it acts on local operators as in @fig-op-action.
+Thus this derivation is applicable to quantum and duality symmetry we will encounter in @sec-compact-boson, and also will be convenient starting point to generalizing the identity to non-invertible case; see @Cordova:2022ieu and @Copetti:2023mcq for example.
+
+Let us quickly recall that Ward-Takahashi identity means selection rules in correlation functions. 
+For simplicity, let us consider the $\U(1)$ action:
+$$
+\mathcal{O}_i^g = g^{q_i}\mathcal{O}_i
+$${#eq-WT-U1}
+for a phase $g \in \U(1)$. The integer $q_i$ is the $\U(1)$ globalcharge of $\mathcal{O}_i$.
+In this case, @eq-Ward-Takahashi reads 
+$$ 
+\left(1-g^{\sum_i q_i}\right)\left\langle \prod_i \mathcal{O}_i\right\rangle = 0,
+$$
+for any phase $g \in \U(1)$.
+That is, either $\sum_i q_i =0$ --- the total $\U(1)$ charge is saturated --- or that the correlation function vanishes.
+This is the familiar selection rule.
+If the $\U(1)$ symmetry is broken down to its $\mathbb{Z}_k$ subgroup, @eq-WT-U1 holds only for $g\in \mathbb{Z}_k$. This means the total charge $\sum_i q_i$ should vanish only modulo $k$ for the correlator to be nonzero.
 
 :::{.callout-tip collapse="true"}
 #### Mixed-gravitational anomaly
