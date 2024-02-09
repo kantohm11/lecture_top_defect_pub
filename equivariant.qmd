@@ -1,18 +1,15 @@
 ## Classical Symmetry in Sigma Model and equivariant cohomology {#sec-equivariant}
 
-:::{.callout-warning}
-The first part of this appendix is sloppy on purpose. We will correct it later.
-:::
 
-In @sec-scalar we saw that the symmetry transformation by $g \in G$ of the Lagrangian (density) can acompany a surface turm $ds(\phi,g)$ with some $(D-1)$-form $s(\phi,g)$.
-Further, the assosiativity of the transformations imply that we have @eq-surface-term-assosiative (repeating here)
+In @sec-scalar we saw that the symmetry transformation by $g \in G$ of the Lagrangian (density) can accompany a surface term $ds(\phi,g)$ with some $(D-1)$-form $s(\phi,g)$.
+Further, the associativity of the transformations imply that we have @eq-surface-term-assosiative (repeating here)
 $$ 
 s(\phi^{g_2},g_1) + s(\phi,g_2) = s(\phi,g_1g_2) + ds^{(1)}(\phi,g_1,g_2),
 $${#eq-surface-term-assosiative-app}
 with some $(D-2)$ forms $s^{(1)}(\phi,g_1,g_2)$.
 
 This structure continues when $D\ge 3$.
-At the next level, by repeatingly using @eq-surface-term-assosiative-app, we get
+At the next level, by repeatedly using @eq-surface-term-assosiative-app, we get
 $$
 \begin{split}
 s(\phi,g_1g_2g_3) &= s(\phi^{g_3},g_1g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_1g_2,g_3)\\
@@ -29,17 +26,36 @@ $$
 and thus
 $$
 s^{(1)}(\phi^{g_3},g_1,g_2) + s^{(1)}(\phi,g_1g_2,g_3) - s^{(1)}(\phi,g_2,g_3) - s^{(1)}(\phi,g_1,g_2g_3) = ds^{(2)}(\phi,g_1,g_2,g_3),
-$$
+$${#eq-surface-higher-app}
 with some $(D-3)$-forms $s^{(2)}(\phi,g_1,g_2,g_3)$.
 The structure continues until $s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)$ which are 0-forms.
+Recalling that $s$ enters into the action @eq-gluing-action on the symmetry operator and $s^{(1)}$ does into the junction action @eq-junction-action, we understand that $s^{(k)}$ are used to construct iterated junctions (e.g. junction of junctions of junctions of the symmetry operators).
+
 
 Let $s^{(-1)}$ be the metric independent part of $\mathcal{L}$, and $s^{(0)}=s$.
-The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X,\mathbb{R})$. 
-The model[^model] of the equivariant cohomology represented by $(s^{(-1)},s^{(0)},\cdots)$ is called **simplicial de Rham cohomology**, see e.g. [@dupont1978curvature;@kubel2018equivariant].
-
+The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X,\mathbb{R})$ on the target manifold $X$. 
+The model[^model] of the equivariant cohomology represented by $(s^{(-1)},s^{(0)},\cdots)$ is called **simplicial de Rham cohomology**, see e.g. [@dupont1978curvature;@kubel2018equivariant]. 
 
 [^model]: The word "model" in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. In this particular context the "model" refers to a particular complex that realize the equivariant cohomology. This usage might go in the opposite direction to the physicists' one: an abstraction of the (quasi-)real world.
 
-Now we point out the sloppiness; there are two points:
-- A
-- B
+One can actually do more generally. 
+$s^{(k)}$ appears as exponentiated integral $e^{\int_{W^k}s^{(k)}}$ in the path-integral, where $W^k$ is a worldvolume of a $k$-th iterated junction.
+This means that the higher-associativity among $\tilde s^{(k)} := \imunit s^{(k)}$ is allowed to fail by an $\mathbb{Z}$-valued closed form. 
+While such a closed form cannot necessarily be written as $ds^{(k+1)}$ with a globally defined $(D-k-1)$-form, it can be doen with a $(D-k-1)$-form *gauge field*, or in mathematical term *differential cohomology*.
+
+At the lowest level, $s^{(-1)}$ represents a metric-independent term in the Lagrangian. Taking it from *differential* cohomology leads us to consider both WZW terms and $\theta$-terms in the sigma model [@Freed:2006mx].[^Freed] 
+
+[^Freed]: Note that the reference uses differential generalized cohomology to handle cases where the sigma model is coupled to the spin structure. However, in this appendix, we focus on theories that are not dependent on the spin structure. The reference considers also the $G$-equivariant cases.
+
+We then consider a $G$-action $X$ and a $G$-invariant term that does not depend on the metric. This comes with the data set $(\tilde{s}^{(-1)},\cdots \tilde{s}^{(D-1)})$, where each $\tilde{s}^{(k)}$ is a degree-$(D-k-1)$ differential cohomology. This data set should satisfy the equations @eq-surface-term-assosiative-app and @eq-surface-higher-app, among others.
+Such data gives rise to a $G$-equivariant differential cohomology class $\tilde{\mathbf{s}}\in \hat{H}_G^{D+1}(X,\mathbb{Z})$ [@kubel2018equivariant]. 
+
+Based on these considerations, we propose the following conjecture:
+
+:::{#cnj-equivariant}
+
+ The metric-independent terms invariant under the $G$-action in a $D$-dimensional $X$-target sigma model can be classified by the $G$-equivariant differential cohomology group $\hat{H}_G^{D+1}(X,\mathbb{Z})$. 
+
+:::
+
+**FIXME:Anomaly**
