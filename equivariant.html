@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -233,9 +253,51 @@ window.Quarto = {
 \DeclareMathOperator{\Map}{Map}
 \newcommand{\stdim}{D}
 \]</span></p>
-</div><p>TEST</p>
+</div><div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The first part of this appendix is sloppy on purpose. We will correct it later.</p>
+</div>
+</div>
+<p>In <a href="scalar.html" class="quarto-xref"><span>Chapter 2</span></a> we saw that the symmetry transformation by <span class="math inline">\(g \in G\)</span> of the Lagrangian (density) can acompany a surface turm <span class="math inline">\(ds(\phi,g)\)</span> with some <span class="math inline">\((D-1)\)</span>-form <span class="math inline">\(s(\phi,g)\)</span>. Further, the assosiativity of the transformations imply that we have <a href="scalar.html#eq-surface-term-assosiative" class="quarto-xref">Equation&nbsp;<span>2.4</span></a> (repeating here) <span id="eq-surface-term-assosiative-app"><span class="math display">\[
+s(\phi^{g_2},g_1) + s(\phi,g_2) = s(\phi,g_1g_2) + ds^{(1)}(\phi,g_1,g_2),
+\tag{A.1}\]</span></span> with some <span class="math inline">\((D-2)\)</span> forms <span class="math inline">\(s^{(1)}(\phi,g_1,g_2)\)</span>.</p>
+<p>This structure continues when <span class="math inline">\(D\ge 3\)</span>. At the next level, by repeatingly using <a href="#eq-surface-term-assosiative-app" class="quarto-xref">Equation&nbsp;<span>A.1</span></a>, we get <span class="math display">\[
+\begin{split}
+s(\phi,g_1g_2g_3) &amp;= s(\phi^{g_3},g_1g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_1g_2,g_3)\\
+&amp;= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi^{g_3},g_1,g_2) - ds^{(1)}(\phi,g_1g_2,g_3),
+\end{split}
+\]</span> and also <span class="math display">\[
+\begin{split}
+s(\phi,g_1g_2g_3) &amp;= s(\phi^{g_2g_3},g_1) + s(\phi,g_2g_3) - ds^{(1)}(\phi,g_1,g_2g_3)\\
+&amp;= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_2,g_3) - ds^{(1)}(\phi,g_1,g_2g_3),
+\end{split}
+\]</span> and thus <span class="math display">\[
+s^{(1)}(\phi^{g_3},g_1,g_2) + s^{(1)}(\phi,g_1g_2,g_3) - s^{(1)}(\phi,g_2,g_3) - s^{(1)}(\phi,g_1,g_2g_3) = ds^{(2)}(\phi,g_1,g_2,g_3),
+\]</span> with some <span class="math inline">\((D-3)\)</span>-forms <span class="math inline">\(s^{(2)}(\phi,g_1,g_2,g_3)\)</span>. The structure continues until <span class="math inline">\(s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)\)</span> which are 0-forms.</p>
+<p>Let <span class="math inline">\(s^{(-1)}\)</span> be the metric independent part of <span class="math inline">\(\mathcal{L}\)</span>, and <span class="math inline">\(s^{(0)}=s\)</span>. The tuple <span class="math inline">\((s^{(-1)},s^{(0)},\cdots,s^{(D-1)})\)</span> defineds an degree-<span class="math inline">\(D\)</span> <strong>equivariant cohomology class</strong> <span class="math inline">\(\mathbf{s} \in H_G^D(X,\mathbb{R})\)</span>. The model[^model] of the equivariant cohomology realized by <span class="math inline">\((s^{(-1)},s^{(0)},\cdots)\)</span> is called simplicial de Rham cohomology, see e.g. <span class="citation" data-cites="dupont1978curvature kubel2018equivariant">(<a href="references.html#ref-dupont1978curvature" role="doc-biblioref">Dupont 1978</a>; <a href="references.html#ref-kubel2018equivariant" role="doc-biblioref">Kübel and Thom 2018</a>)</span>. Note that this model works for discrete groups, as opposed to the Weyl model based on Lie derivatives that applies to continuous groups.</p>
+<p>Now we point out the sloppiness; there are two points:</p>
+<ul>
+<li>A</li>
+<li>B</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-dupont1978curvature" class="csl-entry" role="listitem">
+Dupont, J. L. (1978), <em><a href="https://books.google.co.jp/books?id=UcUZAQAAIAAJ">Curvature and characteristic classes</a></em>, Lecture notes in mathematics, Springer.
+</div>
+<div id="ref-kubel2018equivariant" class="csl-entry" role="listitem">
+Kübel, A., and Thom, A. (2018), <span>“Equivariant differential cohomology,”</span> <em>Transactions of the American Mathematical Society</em>, 370, 8237–8283.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
