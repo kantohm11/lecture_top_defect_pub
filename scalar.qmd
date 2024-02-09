@@ -42,12 +42,14 @@ This $(D-1)$-form $s(\phi,g)$ is subject to the ambiguity coming from shifting b
 
 From the consecutive transformation with $g_1$ and $g_2$, we have
 $$ 
-s(\phi^{g_1},g_2) + s(\phi,g_1) = s(\phi,g_2g_1) + ds^{(1)}(\phi,g_1,g_2),
+s(\phi^{g_2},g_1) + s(\phi,g_2) = s(\phi,g_1g_2) + ds^{(1)}(\phi,g_1,g_2),
 $${#eq-surface-term-assosiative}
 for some $(D-2)$-form $s^{(1)}(\phi,g_1,g_2)$.
 In particular, setting $g_2=g_1^{-1}$, we have 
-$$s(\phi^g,g^{-1}) + s(\phi,g)  = ds^{(1)}(\phi, g, g^{-1}).
+$$s(\phi^{g^{-1}},g) + s(\phi,g^{-1})  = ds^{(1)}(\phi, g, g^{-1}).
 $${#eq-surface-term-inverse}
+The surface terms $s$ and $s^{(1)}$ are related to **equivariant cohomology** on the target.
+See @sec-equivariant for a further detail.
 
 
 
@@ -80,19 +82,6 @@ This construction can be applied to various types of scalar field theory, such a
 In this lecture, we focus on constructing topological operators that correspond to the *finite* transformation @eq-scalar-transf, as opposed to the conventional approach of considering infinitesimal transformations. This approach allows us to explicitly discuss *discrete* symmetries (and their anomalies) in terms of topological operators, and it also motivates us to consider generalized symmetries.
 :::
 
-:::{#tip-equivariant .callout-tip}
-#### equivariant cohomology
-As the reader might have expected, the structure regarding $s$ and $s^{(1)}$ continues:
-there are $(D-3)$-forms $s^{(2)}(\phi,g_1,g_2,g_3)$ governing the "*higher associativity*" among $s^{(1)}$, and so on, until $s^{(D-1)}(\phi,g_1,g_2,\cdots,g_{D})$ that are 0-forms.
-Although we consider the free scalar fields these higher surface terms can be taken to be zero and irrelevant,
-it might not be the case when we consider a sigma model with target $X$ with a non-trivial topology.
-
-Let $s^{(-1)}$ be the metric independent part of $\mathcal{L}$, and $s^{(0)}=s$.
-The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X)$. In other words $G$-symmetric topologicall terms in $X$-target sigma model is classified by the $G$-equivariant cohomology, when $G$ is a classical symmetry acting on $X$.
-The model[^model] of the equivariant cohomology realized by $(s^{(-1)},s^{(0)},\cdots)$ is called simplicial de Rham cohomology, see e.g. @.
-Note that this model works for discrete groups, as opposed to the Weyl model based on Lie derivatives that applies to continuous groups.
-
-:::
 
 [^model]: The word "model" in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. This usage might go in the opposite direction to the physicists' one: an abstraction of the (quasi-)real world.
 
@@ -265,7 +254,11 @@ U_{g^{-1}}[-W] &= \int\mathcal{D}^W \lambda \, e^{-G_{-W}[\lambda^{g^{-1}},\phi_
 \end{split}
 $$
 
-
+We note that we can also get the following equation in the same way as above:
+$$
+\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle,
+$${#eq-bubble}
+when $W_0$ encloses a compact region of $M$ and contains no operator.
 
 ## Group Multiplication Law and Junction
 For the conventional symmetry, we assume that transformations $g$ forms a group.
@@ -300,43 +293,17 @@ which can be proven to be topological when $g_3=g_1g_2$.
 
 ## Symmetry Action and Ward-Takahashi identity
 
-Let us turn to the non-trivial operator @eq-Ug-pathintegral and check the property depicted in @fig-op-action.
-In order to do it, start from the correlator where $U_g$ is inserted along $W=W_1$ and the trivial operator $\id$ along $W''=W_2$ in @fig-op-action. (Here we only talk about the equality connecting the leftmost and rightmost figures of @fig-op-action. For the middle one the argument is the same. We also renamed the manifolds for the later convenience.)
-Therefore we split the manifold $M$ into three regions $M_L,M_M,M_R$,
-and also the field $\phi$ into $\phi_L,\phi_M,\phi_R$.
-Then to show the equality in @fig-op-action, we perform the change of the variable $\widetilde{\phi}_M = \phi_M^{g^{-1}}$ :
+When we have local operator in addition to topological symmetry operators,
+we also need the second equation in @fig-op-action, or the equation
 $$
-\begin{aligned}
-    &\langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \id[W_2] \rangle \\
-     &= \int \prod_{i=L,M,R}\mathop{\mathcal{D}^{M_i}\phi_i} \mathop{\prod_{a=1,2}\mathcal{D}^{W_a} \lambda_a} e^{-S_L[\phi_L]-S_M[\phi_M]-S_R[\phi_R]}\mathcal{O}_1[\phi_L] \mathcal{O}_2[\phi_M]
-     \\ 
-     &\times \exp\left(-G_{W_1}[\lambda_1,\phi_L,\phi_M,g]-G_{W_2}[\lambda_2,\phi_M,\phi_R,\id]\right)\\
-     &= \int \prod_{i=L,M,R}\mathop{\mathcal{D}^{M_i}\phi_i} \mathop{\prod_{a=1,2}\mathcal{D}^{W_a}\lambda_a} e^{-S_L[\phi_L]-S_M[\widetilde\phi_M^g]-S_R[\phi_R]}\mathcal{O}_1[\phi_L] \mathcal{O}_2[\widetilde\phi_M^g]
-     \\ 
-     &\times \exp\left(-G_{W_1}[\lambda_1,\phi_L,\widetilde\phi_M,\id]-G_{W_2}[\lambda_2,\widetilde{\phi}_M^g,\phi_R,\id]\right)\\ 
-     &\times \exp\left( + \int_W s(\phi_L,g) \right)\\ 
-     &= \int \prod_{i=L,M,R}\mathop{\mathcal{D}^{M_i}\phi_i} \mathop{\prod_{a=1,2}\mathcal{D}^{W_a}\lambda_a} e^{-S_L[\phi_L]-S_M[\widetilde\phi_M^g]-S_R[\phi_R]}\mathcal{O}_1[\phi_L] \mathcal{O}_2^g[\widetilde\phi_M]
-     \\ 
-     &\times \exp\left(-G_{W_1}[\lambda_1,\phi_L,\widetilde\phi_M,\id]-G_{-W_2}[\lambda_2,\phi_R,\widetilde{\phi}_M,g^{-1}]\right)\\ 
-     &\times \exp\left( + \int_{W_1} s(\phi_M,g) + \int_{W_2} s(\phi_M,g^{-1})  \right)\\
-     &= \int \prod_{i=L,M,R}\mathop{\mathcal{D}^{M_i}\phi_i} \mathop{\prod_{a=1,2}\mathcal{D}^{W_a}\lambda_a} e^{-S_L[\phi_L]-S_M[\widetilde\phi_M]-S_R[\phi_R]}\mathcal{O}_1[\phi_L] \mathcal{O}_2^g[\widetilde\phi_M]
-     \\ 
-     &\times \exp\left(-G_{W_1}[\lambda_1,\phi_L,\widetilde\phi_M,\id]-G_{-W_2}[\lambda_2,\phi_R,\widetilde{\phi}_M,g^{-1}]\right)\\
-     &= \langle \mathcal{O}_1 \id[W_1] \mathcal{O}_2 U_{g^{-1}}[-W_2]. \rangle
-\end{aligned}
+U_g[W_1] \mathcal{O} = \mathcal{O}^g U_g[W_2],
 $$
-In the second to last equality we used @eq-Lagrangian-inv and in the last equality we assumed that the path-integral measure is invariant: 
-Lastly, from @eq-delta-functional we get $U_{g^{-1}}[-W] = U_g[W]$, so we obtain @fig-op-action, that is
+where 
+$$\mathcal{O}^g[\phi] := \mathcal{O}[\phi^g]
 $$
-\langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 \mathcal{O}_2^g U_g[W_2] \rangle.
-$${#eq-sym-op-act}
+is the local operator acted by $g \in G$.
+This equation follows from the same manipulation as that proved @eq-U-top, but with an operator insertion in the region $M_M$.
 
-We note that we can also get the following equation in the same way as above:
-$$
-\langle \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle = \langle U_g[W_0] \mathcal{O}_1 \mathcal{O}_2 \cdots \rangle,
-$${#eq-bubble}
-
-when $W_0$ encloses a compact region of $M$ and contains no operator.
 Then, by repeatedly using these equations, we get the **Ward-Takahashi identity** :
 
 ::: {.callout-important}

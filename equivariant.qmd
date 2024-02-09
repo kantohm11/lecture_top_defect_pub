@@ -1,2 +1,44 @@
 ## Classical Symmetry in Sigma Model and equivariant cohomology {#sec-equivariant}
-TEST
+
+:::{.callout-warning}
+The first part of this appendix is sloppy on purpose. We will correct it later.
+:::
+
+In @sec-scalar we saw that the symmetry transformation by $g \in G$ of the Lagrangian (density) can acompany a surface turm $ds(\phi,g)$ with some $(D-1)$-form $s(\phi,g)$.
+Further, the assosiativity of the transformations imply that we have @eq-surface-term-assosiative (repeating here)
+$$ 
+s(\phi^{g_2},g_1) + s(\phi,g_2) = s(\phi,g_1g_2) + ds^{(1)}(\phi,g_1,g_2),
+$${#eq-surface-term-assosiative-app}
+with some $(D-2)$ forms $s^{(1)}(\phi,g_1,g_2)$.
+
+This structure continues when $D\ge 3$.
+At the next level, by repeatingly using @eq-surface-term-assosiative-app, we get
+$$
+\begin{split}
+s(\phi,g_1g_2g_3) &= s(\phi^{g_3},g_1g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_1g_2,g_3)\\
+&= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi^{g_3},g_1,g_2) - ds^{(1)}(\phi,g_1g_2,g_3),
+\end{split}
+$$
+and also
+$$
+\begin{split}
+s(\phi,g_1g_2g_3) &= s(\phi^{g_2g_3},g_1) + s(\phi,g_2g_3) - ds^{(1)}(\phi,g_1,g_2g_3)\\
+&= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_2,g_3) - ds^{(1)}(\phi,g_1,g_2g_3),
+\end{split}
+$$
+and thus
+$$
+s^{(1)}(\phi^{g_3},g_1,g_2) + s^{(1)}(\phi,g_1g_2,g_3) - s^{(1)}(\phi,g_2,g_3) - s^{(1)}(\phi,g_1,g_2g_3) = ds^{(2)}(\phi,g_1,g_2,g_3),
+$$
+with some $(D-3)$-forms $s^{(2)}(\phi,g_1,g_2,g_3)$.
+The structure continues until $s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)$ which are 0-forms.
+
+Let $s^{(-1)}$ be the metric independent part of $\mathcal{L}$, and $s^{(0)}=s$.
+The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X,\mathbb{R})$. 
+The model[^model] of the equivariant cohomology realized by $(s^{(-1)},s^{(0)},\cdots)$ is called simplicial de Rham cohomology, see e.g. [@dupont1978curvature;@kubel2018equivariant].
+Note that this model works for discrete groups, as opposed to the Weyl model based on Lie derivatives that applies to continuous groups.
+
+Now we point out the sloppiness; there are two points:
+
+- A
+- B
