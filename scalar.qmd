@@ -265,7 +265,7 @@ $${#eq-U-group}
 where the codimension-1 submanifold $W_2$ is parralel to $W_1$ but slightly right to it.
 One can show this in the same manner we have done for @eq-U-top.
 In particular, from @eq-Udual-inverse we have
-$$ U_g[W_1] U_g[-W_2] = U_g[W_1] U_{g^{-1}}[W_2] = U_\id[W_1] = \id[W_1].
+$$ U_g[W_1] U_g[-W_2] = U_g[W_1] U_{g^{-1}}[W_2] = U_{\id}[W_1] = \id[W_1].
 $${#eq-Udual-inverse-2}
 That is, the orientation reversal of $U_g$ is its inverse.
 The properties @eq-U-group and @eq-Udual-inverse-2 are the properties of a conventional symmetry and will be relatex in a generalized --- specifically non-invertible --- symmetry.
@@ -295,7 +295,7 @@ Therefore we split the manifold $M$ into three regions $M_L,M_M,M_R$,
 and also the field $\phi$ into $\phi_L,\phi_M,\phi_R$.
 Then to show the equality in @fig-op-action, we perform the change of the variable $\widetilde{\phi}_M = \phi_M^{g^{-1}}$ :
 $$
-\begin{align}
+\begin{aligned}
     &\langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \rangle = \langle \mathcal{O}_1 U_g[W_1] \mathcal{O}_2 \id[W_2] \rangle \\
      &= \int \prod_{i=L,M,R}\mathop{\mathcal{D}^{M_i}\phi_i} \mathop{\prod_{a=1,2}\mathcal{D}^{W_a} \lambda_a} e^{-S_L[\phi_L]-S_M[\phi_M]-S_R[\phi_R]}\mathcal{O}_1[\phi_L] \mathcal{O}_2[\phi_M]
      \\ 
@@ -312,7 +312,7 @@ $$
      \\ 
      &\times \exp\left(-G_{W_1}[\lambda_1,\phi_L,\widetilde\phi_M,\id]-G_{-W_2}[\lambda_2,\phi_R,\widetilde{\phi}_M,g^{-1}]\right)\\
      &= \langle \mathcal{O}_1 \id[W_1] \mathcal{O}_2 U_{g^{-1}}[-W_2]. \rangle
-\end{align}
+\end{aligned}
 $$
 In the second to last equality we used @eq-Lagrangian-inv and in the last equality we assumed that the path-integral measure is invariant: 
 Lastly, from @eq-delta-functional we get $U_{g^{-1}}[-W] = U_g[W]$, so we obtain @fig-op-action, that is
