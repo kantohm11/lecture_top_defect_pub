@@ -23,6 +23,8 @@ book:
     - compact.qmd
     - vector.qmd
     - references.qmd
+  appendices: 
+    - equivariant.qmd
   downloads: pdf
   body-header: header.qmd
     

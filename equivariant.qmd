@@ -1,0 +1,2 @@
+## Classical Symmetry in Sigma Model and equivariant cohomology {#sec-equivariant}
+TEST

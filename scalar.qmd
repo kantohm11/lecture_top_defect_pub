@@ -51,7 +51,8 @@ $${#eq-surface-term-inverse}
 
 
 
-For instance, the standard $\U(1)$ rotation corresponds to the transformation:
+Here we list two basic examples of classical symmetries.
+The first one is the standard $\U(1)$ rotation corresponds to the transformation:
 
 $$
 \phi^g(x) = \mathop{g} \phi(x),
@@ -67,7 +68,7 @@ $$
 
 [^nonzero_r]: If we use the form of the Lagrangian $\mathcal{L}^\prime= -\frac12 \phi \mathop{d*d\phi}$, this provides an example where the total derivative in @eq-Lagrangian-inv is nonzero: $s=-\frac12 \alpha \mathop{*}\mathop{d\phi}$.
 
-In this section, our goal is to construct the **topological operator** corresponding to these *classical* symmetries.
+In the rest of this section, our goal is to construct the **topological operator** corresponding to these *classical* symmetries.
 
 :::{.callout-note}
 #### Note
@@ -78,6 +79,22 @@ This construction can be applied to various types of scalar field theory, such a
 #### Note
 In this lecture, we focus on constructing topological operators that correspond to the *finite* transformation @eq-scalar-transf, as opposed to the conventional approach of considering infinitesimal transformations. This approach allows us to explicitly discuss *discrete* symmetries (and their anomalies) in terms of topological operators, and it also motivates us to consider generalized symmetries.
 :::
+
+:::{#tip-equivariant .callout-tip}
+#### equivariant cohomology
+As the reader might have expected, the structure regarding $s$ and $s^{(1)}$ continues:
+there are $(D-3)$-forms $s^{(2)}(\phi,g_1,g_2,g_3)$ governing the "*higher associativity*" among $s^{(1)}$, and so on, until $s^{(D-1)}(\phi,g_1,g_2,\cdots,g_{D})$ that are 0-forms.
+Although we consider the free scalar fields these higher surface terms can be taken to be zero and irrelevant,
+it might not be the case when we consider a sigma model with target $X$ with a non-trivial topology.
+
+Let $s^{(-1)}$ be the metric independent part of $\mathcal{L}$, and $s^{(0)}=s$.
+The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X)$. In other words $G$-symmetric topologicall terms in $X$-target sigma model is classified by the $G$-equivariant cohomology, when $G$ is a classical symmetry acting on $X$.
+The model[^model] of the equivariant cohomology realized by $(s^{(-1)},s^{(0)},\cdots)$ is called simplicial de Rham cohomology, see e.g. @.
+Note that this model works for discrete groups, as opposed to the Weyl model based on Lie derivatives that applies to continuous groups.
+
+:::
+
+[^model]: The word "model" in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. This usage might go in the opposite direction to the physicists' one: an abstraction of the (quasi-)real world.
 
 ## Construction of the Topological Operator
 As a fundamental example of the correspondence @eq-conv-STO-corresp, we aim to construct the topological operator $U_\alpha[W]$ that corresponds to the transformation @eq-scalar-transf. Specifically, we will construct an operator $U_\alpha[W]$, defined on a codimension-1 submanifold $W$ of the spacetime $M$, that satisfies the following properties:
