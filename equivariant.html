@@ -253,23 +253,10 @@ window.Quarto = {
 \DeclareMathOperator{\Map}{Map}
 \newcommand{\stdim}{D}
 \]</span></p>
-</div><div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The first part of this appendix is sloppy on purpose. We will correct it later.</p>
-</div>
-</div>
-<p>In <a href="scalar.html" class="quarto-xref"><span>Chapter 2</span></a> we saw that the symmetry transformation by <span class="math inline">\(g \in G\)</span> of the Lagrangian (density) can acompany a surface turm <span class="math inline">\(ds(\phi,g)\)</span> with some <span class="math inline">\((D-1)\)</span>-form <span class="math inline">\(s(\phi,g)\)</span>. Further, the assosiativity of the transformations imply that we have <a href="scalar.html#eq-surface-term-assosiative" class="quarto-xref">Equation&nbsp;<span>2.4</span></a> (repeating here) <span id="eq-surface-term-assosiative-app"><span class="math display">\[
+</div><p>In <a href="scalar.html" class="quarto-xref"><span>Chapter 2</span></a> we saw that the symmetry transformation by <span class="math inline">\(g \in G\)</span> of the Lagrangian (density) can accompany a surface term <span class="math inline">\(ds(\phi,g)\)</span> with some <span class="math inline">\((D-1)\)</span>-form <span class="math inline">\(s(\phi,g)\)</span>. Further, the associativity of the transformations imply that we have <a href="scalar.html#eq-surface-term-assosiative" class="quarto-xref">Equation&nbsp;<span>2.4</span></a> (repeating here) <span id="eq-surface-term-assosiative-app"><span class="math display">\[
 s(\phi^{g_2},g_1) + s(\phi,g_2) = s(\phi,g_1g_2) + ds^{(1)}(\phi,g_1,g_2),
 \tag{A.1}\]</span></span> with some <span class="math inline">\((D-2)\)</span> forms <span class="math inline">\(s^{(1)}(\phi,g_1,g_2)\)</span>.</p>
-<p>This structure continues when <span class="math inline">\(D\ge 3\)</span>. At the next level, by repeatingly using <a href="#eq-surface-term-assosiative-app" class="quarto-xref">Equation&nbsp;<span>A.1</span></a>, we get <span class="math display">\[
+<p>This structure continues when <span class="math inline">\(D\ge 3\)</span>. At the next level, by repeatedly using <a href="#eq-surface-term-assosiative-app" class="quarto-xref">Equation&nbsp;<span>A.1</span></a>, we get <span class="math display">\[
 \begin{split}
 s(\phi,g_1g_2g_3) &amp;= s(\phi^{g_3},g_1g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_1g_2,g_3)\\
 &amp;= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi^{g_3},g_1,g_2) - ds^{(1)}(\phi,g_1g_2,g_3),
@@ -279,16 +266,26 @@ s(\phi,g_1g_2g_3) &amp;= s(\phi^{g_3},g_1g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_1g
 s(\phi,g_1g_2g_3) &amp;= s(\phi^{g_2g_3},g_1) + s(\phi,g_2g_3) - ds^{(1)}(\phi,g_1,g_2g_3)\\
 &amp;= s(\phi^{g_2g_3},g_1) + s(\phi^{g_3},g_2) + s(\phi,g_3) - ds^{(1)}(\phi,g_2,g_3) - ds^{(1)}(\phi,g_1,g_2g_3),
 \end{split}
-\]</span> and thus <span class="math display">\[
+\]</span> and thus <span id="eq-surface-higher-app"><span class="math display">\[
 s^{(1)}(\phi^{g_3},g_1,g_2) + s^{(1)}(\phi,g_1g_2,g_3) - s^{(1)}(\phi,g_2,g_3) - s^{(1)}(\phi,g_1,g_2g_3) = ds^{(2)}(\phi,g_1,g_2,g_3),
-\]</span> with some <span class="math inline">\((D-3)\)</span>-forms <span class="math inline">\(s^{(2)}(\phi,g_1,g_2,g_3)\)</span>. The structure continues until <span class="math inline">\(s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)\)</span> which are 0-forms.</p>
-<p>Let <span class="math inline">\(s^{(-1)}\)</span> be the metric independent part of <span class="math inline">\(\mathcal{L}\)</span>, and <span class="math inline">\(s^{(0)}=s\)</span>. The tuple <span class="math inline">\((s^{(-1)},s^{(0)},\cdots,s^{(D-1)})\)</span> defineds an degree-<span class="math inline">\(D\)</span> <strong>equivariant cohomology class</strong> <span class="math inline">\(\mathbf{s} \in H_G^D(X,\mathbb{R})\)</span>. The model<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of the equivariant cohomology represented by <span class="math inline">\((s^{(-1)},s^{(0)},\cdots)\)</span> is called <strong>simplicial de Rham cohomology</strong>, see e.g. <span class="citation" data-cites="dupont1978curvature kubel2018equivariant">(<a href="references.html#ref-dupont1978curvature" role="doc-biblioref">Dupont 1978</a>; <a href="references.html#ref-kubel2018equivariant" role="doc-biblioref">Kübel and Thom 2018</a>)</span>.</p>
-<p>Now we point out the sloppiness; there are two points: - A - B</p>
+\tag{A.2}\]</span></span> with some <span class="math inline">\((D-3)\)</span>-forms <span class="math inline">\(s^{(2)}(\phi,g_1,g_2,g_3)\)</span>. The structure continues until <span class="math inline">\(s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)\)</span> which are 0-forms. Recalling that <span class="math inline">\(s\)</span> enters into the action <a href="scalar.html#eq-gluing-action" class="quarto-xref">Equation&nbsp;<span>2.8</span></a> on the symmetry operator and <span class="math inline">\(s^{(1)}\)</span> does into the junction action <a href="scalar.html#eq-junction-action" class="quarto-xref">Equation&nbsp;<span>2.18</span></a>, we understand that <span class="math inline">\(s^{(k)}\)</span> are used to construct iterated junctions (e.g.&nbsp;junction of junctions of junctions of the symmetry operators).</p>
+<p>Let <span class="math inline">\(s^{(-1)}\)</span> be the metric independent part of <span class="math inline">\(\mathcal{L}\)</span>, and <span class="math inline">\(s^{(0)}=s\)</span>. The tuple <span class="math inline">\((s^{(-1)},s^{(0)},\cdots,s^{(D-1)})\)</span> defineds an degree-<span class="math inline">\(D\)</span> <strong>equivariant cohomology class</strong> <span class="math inline">\(\mathbf{s} \in H_G^D(X,\mathbb{R})\)</span> on the target manifold <span class="math inline">\(X\)</span>. The model<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of the equivariant cohomology represented by <span class="math inline">\((s^{(-1)},s^{(0)},\cdots)\)</span> is called <strong>simplicial de Rham cohomology</strong>, see e.g. <span class="citation" data-cites="dupont1978curvature kubel2018equivariant">(<a href="references.html#ref-dupont1978curvature" role="doc-biblioref">Dupont 1978</a>; <a href="references.html#ref-kubel2018equivariant" role="doc-biblioref">Kübel and Thom 2018</a>)</span>.</p>
+<p>One can actually do more generally. <span class="math inline">\(s^{(k)}\)</span> appears as exponentiated integral <span class="math inline">\(e^{\int_{W^k}s^{(k)}}\)</span> in the path-integral, where <span class="math inline">\(W^k\)</span> is a worldvolume of a <span class="math inline">\(k\)</span>-th iterated junction. This means that the higher-associativity among <span class="math inline">\(\tilde s^{(k)} := \imunit s^{(k)}\)</span> is allowed to fail by an <span class="math inline">\(\mathbb{Z}\)</span>-valued closed form. While such a closed form cannot necessarily be written as <span class="math inline">\(ds^{(k+1)}\)</span> with a globally defined <span class="math inline">\((D-k-1)\)</span>-form, it can be doen with a <span class="math inline">\((D-k-1)\)</span>-form <em>gauge field</em>, or in mathematical term <em>differential cohomology</em>.</p>
+<p>At the lowest level, <span class="math inline">\(s^{(-1)}\)</span> represents a metric-independent term in the Lagrangian. Taking it from <em>differential</em> cohomology leads us to consider both WZW terms and <span class="math inline">\(\theta\)</span>-terms in the sigma model <span class="citation" data-cites="Freed:2006mx">(<a href="references.html#ref-Freed:2006mx" role="doc-biblioref">Freed 2008</a>)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>We then consider a <span class="math inline">\(G\)</span>-action <span class="math inline">\(X\)</span> and a <span class="math inline">\(G\)</span>-invariant term that does not depend on the metric. This comes with the data set <span class="math inline">\((\tilde{s}^{(-1)},\cdots \tilde{s}^{(D-1)})\)</span>, where each <span class="math inline">\(\tilde{s}^{(k)}\)</span> is a degree-<span class="math inline">\((D-k-1)\)</span> differential cohomology. This data set should satisfy the equations <a href="#eq-surface-term-assosiative-app" class="quarto-xref">Equation&nbsp;<span>A.1</span></a> and <a href="#eq-surface-higher-app" class="quarto-xref">Equation&nbsp;<span>A.2</span></a>, among others. Such data gives rise to a <span class="math inline">\(G\)</span>-equivariant differential cohomology class <span class="math inline">\(\tilde{\mathbf{s}}\in \hat{H}_G^{D+1}(X,\mathbb{Z})\)</span> <span class="citation" data-cites="kubel2018equivariant">(<a href="references.html#ref-kubel2018equivariant" role="doc-biblioref">Kübel and Thom 2018</a>)</span>.</p>
+<p>Based on these considerations, we propose the following conjecture:</p>
+<div id="cnj-equivariant" class="theorem conjecture">
+<p><span class="theorem-title"><strong>Conjecture A.1</strong></span> The metric-independent terms invariant under the <span class="math inline">\(G\)</span>-action in a <span class="math inline">\(D\)</span>-dimensional <span class="math inline">\(X\)</span>-target sigma model can be classified by the <span class="math inline">\(G\)</span>-equivariant differential cohomology group <span class="math inline">\(\hat{H}_G^{D+1}(X,\mathbb{Z})\)</span>.</p>
+</div>
+<p><strong>FIXME:Anomaly</strong></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-dupont1978curvature" class="csl-entry" role="listitem">
 Dupont, J. L. (1978), <em><a href="https://books.google.co.jp/books?id=UcUZAQAAIAAJ">Curvature and characteristic classes</a></em>, Lecture notes in mathematics, Springer.
+</div>
+<div id="ref-Freed:2006mx" class="csl-entry" role="listitem">
+Freed, D. S. (2008), <span>“<a href="https://arxiv.org/abs/hep-th/0607134"><span class="nocase">Pions and Generalized Cohomology</span></a>,”</span> <em>J. Diff. Geom.</em>, 80, 45–77.
 </div>
 <div id="ref-kubel2018equivariant" class="csl-entry" role="listitem">
 Kübel, A., and Thom, A. (2018), <span>“Equivariant differential cohomology,”</span> <em>Transactions of the American Mathematical Society</em>, 370, 8237–8283.
@@ -298,6 +295,7 @@ Kübel, A., and Thom, A. (2018), <span>“Equivariant differential cohomology,�
 <hr>
 <ol>
 <li id="fn1"><p>The word “model” in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. In this particular context the “model” refers to a particular complex that realize the equivariant cohomology. This usage might go in the opposite direction to the physicists’ one: an abstraction of the (quasi-)real world.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Note that the reference uses differential generalized cohomology to handle cases where the sigma model is coupled to the spin structure. However, in this appendix, we focus on theories that are not dependent on the spin structure. The reference considers also the <span class="math inline">\(G\)</span>-equivariant cases.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
