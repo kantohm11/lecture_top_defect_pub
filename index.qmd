@@ -1,6 +1,5 @@
 # What is this {.unnumbered}
 
-$\vol$
 This is a lecture note prepared for two sets of "intensive lectures":[^1]
 
 * at Tohoku University, Oct. 11-13, 2023, and
