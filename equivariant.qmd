@@ -35,10 +35,10 @@ The structure continues until $s^{(D-1)}(\phi,g_1,g_2,\cdots,g_D)$ which are 0-f
 
 Let $s^{(-1)}$ be the metric independent part of $\mathcal{L}$, and $s^{(0)}=s$.
 The tuple $(s^{(-1)},s^{(0)},\cdots,s^{(D-1)})$ defineds an degree-$D$ **equivariant cohomology class** $\mathbf{s} \in H_G^D(X,\mathbb{R})$. 
-The model[^model] of the equivariant cohomology realized by $(s^{(-1)},s^{(0)},\cdots)$ is called simplicial de Rham cohomology, see e.g. [@dupont1978curvature;@kubel2018equivariant].
-Note that this model works for discrete groups, as opposed to the Weyl model based on Lie derivatives that applies to continuous groups.
+The model[^model] of the equivariant cohomology realized by $(s^{(-1)},s^{(0)},\cdots)$ is called **simplicial de Rham cohomology**, see e.g. [@dupont1978curvature;@kubel2018equivariant], which is different from the more known Cartan model.
+
+[^model]: The word "model" in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. In this particular context the "models" refer to particular complexes that realize the same cohomology. This usage might go in the opposite direction to the physicists' one: an abstraction of the (quasi-)real world.
 
 Now we point out the sloppiness; there are two points:
-
 - A
 - B

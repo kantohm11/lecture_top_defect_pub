@@ -83,7 +83,6 @@ In this lecture, we focus on constructing topological operators that correspond 
 :::
 
 
-[^model]: The word "model" in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. This usage might go in the opposite direction to the physicists' one: an abstraction of the (quasi-)real world.
 
 ## Construction of the Topological Operator
 As a fundamental example of the correspondence @eq-conv-STO-corresp, we aim to construct the topological operator $U_\alpha[W]$ that corresponds to the transformation @eq-scalar-transf. Specifically, we will construct an operator $U_\alpha[W]$, defined on a codimension-1 submanifold $W$ of the spacetime $M$, that satisfies the following properties:
