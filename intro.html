@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -68,7 +69,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -77,6 +84,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -86,6 +94,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar floating">
@@ -94,12 +129,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -109,12 +144,12 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">A Lecture on Topological Operators</a> 
         <div class="sidebar-tools-main">
-    <a href="./A-Lecture-on-Topological-Operators.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./A-Lecture-on-Topological-Operators.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -162,10 +197,27 @@ div.csl-indent {
  <span class="menu-text">References</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equivariant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Classical Symmetry in Sigma Model and equivariant cohomology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -197,7 +249,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 <div class="hidden">
 <p><span class="math display">\[
 \DeclareMathOperator{\vol}{vol}
@@ -211,7 +265,8 @@ div.csl-indent {
 </div>
 <section id="symmetry" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="symmetry"><span class="header-section-number">1.1</span> Symmetry</h2>
-<p><strong>Symmetry</strong> plays a fundamental role in theoretical physics. In this lecture we consider them in <em>quantum field theories</em> (QFTs). The fundamental fact about symmetry in QFTs is that is it preserved along the renormalization group flow. More precisely, when an ultraviolet (UV) theory <span class="math inline">\(\mathcal{T}_\text{UV}\)</span> flows into an infrared theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, there is a canonical homomorphism <span class="math inline">\(f_\text{RG}\)</span> from the UV symmetry group <span class="math inline">\(G_\text{UV}\)</span> to the IR symmetry group <span class="math inline">\(G_\text{IR}\)</span>:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><strong>Symmetry</strong> plays a crucial role in theoretical physics. In this lecture, we will discuss its application in <em>quantum field theories</em> (QFTs). A fundamental aspect of symmetry in QFTs is its preservation along the renormalization group flow. More precisely, when an ultraviolet (UV) theory <span class="math inline">\(\mathcal{T}_\text{UV}\)</span> transitions into an infrared theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, a canonical homomorphism <span class="math inline">\(f_\text{RG}\)</span> exists from the UV symmetry group <span class="math inline">\(G_\text{UV}\)</span> to the IR symmetry group <span class="math inline">\(G_\text{IR}\)</span>:</p>
+<p><strong>Symmetry</strong> is a cornerstone concept in theoretical physics. Particularly within the context of <em>quantum field theories</em> (QFTs). A key principle in QFTs is the preservation of symmetry throughout the renormalization group flow. To elaborate, when an ultraviolet (UV) theory, denoted as <span class="math inline">\(\mathcal{T}_\text{UV}\)</span>, transitions into an infrared theory, represented as <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, a canonical homomorphism <span class="math inline">\(f_\text{RG}\)</span> is established. This homomorphism maps the UV symmetry group <span class="math inline">\(G_\text{UV}\)</span> to the IR symmetry group <span class="math inline">\(G_\text{IR}\)</span>:[^SymRG]</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -227,44 +282,94 @@ f_\text{RG} : G_\text{UV} \to G_\text{IR}.
 \tag{1.1}\]</span></span></p>
 </div>
 </div>
-<p>Given this relation, there are two ways of applying symmetry in QFT:</p>
-<ul>
-<li>UV to IR: Given a microscopic model (e.g.&nbsp;a model of elementary particles or electrons in a matter), constrain/guess what happens in the macroscopic scale.</li>
-<li>IR to UV: Given some macroscopic phenomena, constrain/guess what could be the microscopic origin of it (e.g.&nbsp;guessing QCD Lagrangian from hadron spectrum).</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<p>Given this relation, there are two ways of applying symmetry in QFT:]</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Terminology (global symmetry)
+RG flow homomorphism from UV symmetry to IR symmetry
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span id="eq-RG-group-match"><span class="math display">\[
+f_\text{RG} : G_\text{UV} \to G_\text{IR}.
+\tag{1.2}\]</span></span></p>
+</div>
+</div>
+<p>Here, if the UV theory is a fixed point, <span class="math inline">\(G_\text{UV}\)</span> should be understood as the one preserved by the deformation triggering the RG flow.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Property of <span class="math inline">\(f_\text{RG}\)</span>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In this lecture, “symmetry” means a <em>global</em> symmetry. Here <em>global</em> means that the symmetry operation acts on the entire space. In addition, in most contents we exclude symmetries acting on the spacetime out of consideration for simplicity.</p>
+<p>The property of <span class="math inline">\(f_\text{RG}\)</span> depends on what exactly is meant by the IR theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>. If the RG flow is to a lower nonzero energy, and the IR theory <span class="math inline">\(\mathcal{T}_\text{IR}\)</span> retains all the (even very massive) degrees of freedom and all the irrelevant interactions, the map <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.</p>
 </div>
 </div>
 </div>
+<p>Given this relationship, symmetry in QFT can be applied in two ways:</p>
+<ul>
+<li>UV to IR: Starting with a microscopic model (e.g., a model of elementary particles or electrons in matter), we can use symmetry to constrain or predict what happens on a macroscopic scale.</li>
+<li>IR to UV: Given certain macroscopic phenomena, we can use symmetry to constrain or infer the possible microscopic origins (e.g., inferring the QCD Lagrangian from the hadron spectrum).</li>
+</ul>
 </section>
 <section id="locality" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="locality"><span class="header-section-number">1.2</span> Locality</h2>
-<p>The second important keyword in this lecture is <strong>locality</strong>. By the word quantum field theory, in most cases we implicitly mean <em>local</em> quantum field theory. This can roughly be explained by that the action is written as the integration of Lagrangian density, which is a local functional of fields over the spacetime.</p>
-<p>Locality of QFT has a consequence with respect to symmetry: that is, in most situations we only consider symmetries that <em>preserves locality</em>. In terms of fields, this means that the symmetry transformation is local:</p>
+<p>One of the defining characteristics of symmetry in quantum field theories (QFTs) is its <em>preservation of locality</em>. In the context of classical symmetry in fields, this means that the symmetry transformation is local:</p>
 <p><span id="eq-field-transform"><span class="math display">\[
-\phi(x) \mapsto F(\phi(x)),
-\tag{1.2}\]</span></span> where <span class="math inline">\(F(\phi(x))\)</span> is a function depends on the <em>local</em> value a field (or a collection of fields and its derivatives) at the point <span class="math inline">\(x\)</span>. If the symmetry involves a spacetime transformation, the point <span class="math inline">\(x\)</span> in the right-hand side should be replaced by the image of <span class="math inline">\(x\)</span> under the symmetry. This preservation of locality of a symmetry is the reason for the symmetry relation in <a href="#eq-RG-group-match">Equation&nbsp;<span>1.1</span></a>. This will be made clear in the lecture.</p>
-<p>However, not all the (locality-preserving) symmetry in QFT takes the form of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a>, which is called <em>classical symmetry</em>. There are types of symmetry called <em>topological symmetry</em> or <em>quantum symmetry</em>, which arises from topologically-nontrivial field configuration. Examples are the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many occurrences a topological/quantum symmetry is mapped to a symmetry of type of <a href="#eq-field-transform">Equation&nbsp;<span>1.2</span></a> under a duality, and thus it should also be considered as being locality-preserving.</p>
-<p>From the modern perspective, the universal characterization of locality-preserving symmetries is its correspondence to <strong>topological operators</strong>. A topological operator <span class="math inline">\(\mathcal{D}[W_n]\)</span> in a QFT is an extended operator defined on a <span class="math inline">\(n\)</span>-dimensional submanifold of the spacetime and the correlators containing it should be invariant under the smooth deformation of the supporting manifold <span class="math inline">\(W_n\)</span> (See <a href="#fig-TopOpsDeform">Figure&nbsp;<span>1.1</span></a>).</p>
-<div id="fig-TopOpsDeform" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/TopOpsDeform.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.1: Topological operator.</figcaption>
+\phi(x) \mapsto F(\phi(x')),
+\tag{1.3}\]</span></span></p>
+<p>In this equation, <span class="math inline">\(F(\phi(x'))\)</span> is a function that relies solely on the <em>local</em> value of a field (or a set of fields and its derivatives) at a point <span class="math inline">\(x'\)</span>. When <span class="math inline">\(x'\neq x\)</span>, the symmetry involves a <em>spacetime</em> symmetry, while when <span class="math inline">\(x'=x\)</span>, it is an <em>internal</em> symmetry. The preservation of locality in a symmetry underpins the symmetry relation in <a href="#eq-RG-group-match" class="quarto-xref">Equation&nbsp;<span>1.2</span></a>, which will be elaborated further in the lecture.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please note that a QFT, when quantized on a fixed space manifold <span class="math inline">\(M\)</span>, does possess unitary operators that commute with its Hamiltonian, other than those originating from locality-preserving symmetry. In most cases, such unitary operators are irrelevant; an example is the one that multiplies a phase to a specific eigenstate. Therefore, in this lecture, when we refer to a symmetry, we assume that it preserves locality. In fact, we assert that this property is the <em>last</em> one to be discarded in the context of generalized symmetry, if ever, due to the invariance under the renormalization group flow. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Terminology (Locality-Preserving)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>To avoid confusion, it’s important to note that locality-preserving symmetry does <em>not</em> mean gauge redundancy, which is sometimes labeled as local symmetry. The global – spacetime, or internal – symmetries typically encountered in a QFT textbook all preserve locality.</p>
+</div>
+</div>
+</div>
+<p>However, not all symmetries in QFT that preserve locality take the form of <a href="#eq-field-transform" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>, i.e., a <em>classical</em> symmetry. Other types of symmetries exist, such as <em>topological symmetry</em> or <em>quantum symmetry</em>, which emerge from topologically nontrivial field configurations. Examples include the winding symmetry in 1+1d compact boson, and the monopole symmetries in 2+1d abelian gauge theories. In many cases, a topological/quantum symmetry is mapped to a symmetry of the type <a href="#eq-field-transform" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> under a duality, and thus it should also be considered as preserving locality.</p>
+<p>From a contemporary standpoint, the universal characterization of locality-preserving symmetries is their correspondence to <strong>topological operators</strong>. A topological operator <span class="math inline">\(\mathcal{D}[W_n]\)</span> in a QFT is an extended operator defined on an <span class="math inline">\(n\)</span>-dimensional submanifold of the spacetime. The correlators that include it should remain invariant under the smooth deformation of the supporting manifold <span class="math inline">\(W_n\)</span> (See <a href="#fig-TopOpsDeform" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>).</p>
+<div id="fig-TopOpsDeform" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TopOpsDeform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/tikz/TopOpsDeform.svg" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TopOpsDeform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Topological operator.
+</figcaption>
 </figure>
 </div>
-<p>The first aim of the lecture is to understand the correspondence, that is</p>
+<p>The first goal of this lecture is to understand the following correspondence:</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -280,46 +385,30 @@ Symmetry/Topological Operator Correspondence
 &amp;\Longleftrightarrow\;
 \text{invertible topological operator of codimension 1.}
 \end{split}
-\tag{1.3}\]</span></span></p>
+\tag{1.4}\]</span></span></p>
 </div>
 </div>
-<p>In this correspondence, the topological operator shoould be regarded as the generalization of the <strong>Noether charge</strong> into possibly discrete symmetry. To be precise, we regard this correspondence as the right-hand side <em>defining</em> the left-hand side. We will explicitly check this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in <a href="scalar.html"><span>Chapter&nbsp;2</span></a>, and in the case of abelian gauge theory in <a href="vector.html"><span>Chapter&nbsp;4</span></a>. The case of fermion is very interesting and crucial, but it will be remained to be worked out by audiences/readers.</p>
+<p>In this correspondence, the topological operator should be viewed as a generalization of the <strong>Noether charge</strong> for potentially discrete symmetry. More precisely, we consider this correspondence as the right-hand side <em>defining</em> the left-hand side. We will explicitly verify that this correspondence/definition reproduces the known symmetries in the case of a classical symmetry in a scalar field theory in <a href="scalar.html" class="quarto-xref"><span>Chapter 2</span></a>, and in the case of abelian gauge theory in <a href="vector.html" class="quarto-xref"><span>Chapter 4</span></a>. The case of fermions is both intriguing and crucial, but it will be left as an exercise, or a work, for the audience/readers.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Terminology (locality-preserving)
+Terminology (Topological Defect)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Again, we are <em>not</em> talking about gauge redundancy, which is sometimes called local symmetry. Global symmetries one encounters in a QFT textbook are all locality-preserving.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Terminology (topological defect)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<p>Here is another unfortunate conflict of terminology. In the literature (outside generalized symmetry literature), a “topological defect” refers to a dynamical object, or its trajectory viewed as an operator in the IR theory, charg<strong>ed</strong> under a topological (higher) symmetry. As an operator in the IR theory, it is <em>not</em> a priori guaranteed to be topological in the sense of <a href="#fig-TopOpsDeform">Figure&nbsp;<span>1.1</span></a> . On the other hand, in the generalized symmetry literature, “topological defect (operator)” often means an extended operator that is itself topological. In this lecture, in order to ease the confusion, we use the term “topological operator”.</p>
+<p>There exists an unfortunate discrepancy in terminology. Outside the realm of generalized symmetry literature, a “topological defect” typically refers to a dynamical object, or its trajectory, viewed as an operator in the IR theory. As an operator in the IR theory, it is <em>not</em> necessarily topological in the sense of <a href="#fig-TopOpsDeform" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>. Conversely, within the generalized symmetry literature, “topological defect (operator)” often signifies an extended operator that is inherently topological. To mitigate potential confusion in this lecture, we will adopt the term “topological operator”, even when the supporting submanifold of the operator is not within a time-slice.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="generalized-symmetry" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="generalized-symmetry"><span class="header-section-number">1.3</span> Generalized Symmetry</h2>
-<p>The correspondence in <a href="#eq-conv-STO-corresp">Equation&nbsp;<span>1.3</span></a> is the core in the notion of <strong>generalized (global) symmetry</strong>, coined by <span class="citation" data-cites="Gaiotto:2014kfa">(<a href="references.html#ref-Gaiotto:2014kfa" role="doc-biblioref">Gaiotto et al. 2015</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. That is, the notion of symmetry can be generalized by relaxing the adjective in the right-hand side of <a href="#eq-conv-STO-corresp">Equation&nbsp;<span>1.3</span></a>. Therefore, we <em>define</em> generalized symmetry by the following correspondence generalizing <a href="#eq-conv-STO-corresp">Equation&nbsp;<span>1.3</span></a>:</p>
+<p>The concept of <strong>generalized (global) symmetry</strong> is fundamentally based on the correspondence in <a href="#eq-conv-STO-corresp" class="quarto-xref">Equation&nbsp;<span>1.4</span></a>, as introduced by <span class="citation" data-cites="Gaiotto:2014kfa">(<a href="references.html#ref-Gaiotto:2014kfa" role="doc-biblioref">Gaiotto et al. 2015</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This concept expands the traditional notion of symmetry by loosening the constraints on the right-hand side of <a href="#eq-conv-STO-corresp" class="quarto-xref">Equation&nbsp;<span>1.4</span></a>. Hence, we <em>define</em> generalized symmetry through the following correspondence, which extends <a href="#eq-conv-STO-corresp" class="quarto-xref">Equation&nbsp;<span>1.4</span></a>:</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -335,15 +424,19 @@ Generalized Symmetry/Topological Operator Correspondence
 &amp;\stackrel{\text{def}}{\Longleftrightarrow}\;
 \text{General topological operator.}
 \end{split}
-\tag{1.4}\]</span></span></p>
+\tag{1.5}\]</span></span></p>
 </div>
 </div>
-<p>More specifically, a generalized symmetry corresponding to an operator of codimension <span class="math inline">\(p+1\)</span> is called <strong><span class="math inline">\(p\)</span>-form symmetry</strong>, and a generalized symmetry corresponding to an operator without its inverse is called <strong>non-invertible symmetry</strong> (among other names like category symmetry and topological symmetry).</p>
-<p>In an “unusual” QFT, we can even relax the topological-ness of the operator in the right-hand side of <a href="#eq-GSTO-corresp">Equation&nbsp;<span>1.4</span></a>, resulting in what is called <strong>subsystem</strong> symmetry. We will briefly make a comment on it in <a href="scalar.html#sec-trivial-scalar"><span>Section&nbsp;2.3</span></a>.</p>
-<p>The subclasses of generalized symmetry is summarized in the table below:</p>
-<div id="tbl-sym-classes" class="anchored">
+<p>In more specific terms, a generalized symmetry that corresponds to an operator of codimension <span class="math inline">\(p+1\)</span> is referred to as a <strong><span class="math inline">\(p\)</span>-form symmetry</strong>. Meanwhile, a generalized symmetry that corresponds to an operator without an inverse is known as a <strong>non-invertible symmetry</strong> (also referred to as category symmetry or topological symmetry).</p>
+<p>In the context of an “unusual” QFT, the topological constraint on the operator in the right-hand side of <a href="#eq-GSTO-corresp" class="quarto-xref">Equation&nbsp;<span>1.5</span></a> can be further relaxed. This leads to the concept of <strong>subsystem</strong> symmetry, which will be briefly mentioned in <span class="quarto-unresolved-ref">?sec-trivial-scalar</span>, but will not be discussed in detail in this lecture.</p>
+<p>The table below summarizes the subclasses of generalized symmetry:</p>
+<div id="tbl-sym-classes" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sym-classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: Subclasses of generalized symmetry and defining properties of their corresponding topological operators.
+</figcaption>
+<div aria-describedby="tbl-sym-classes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Table&nbsp;1.1: Subclasses of generalized symmetry and defining properties of their corresponding topological operators.</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -369,19 +462,21 @@ Generalized Symmetry/Topological Operator Correspondence
 <td>Topological?</td>
 <td></td>
 <td></td>
-<td>Partically</td>
+<td>Partially</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The subclasses are not mutually exclusive, so, in principle, there can be a 2-form non-invertible subsystem symmetry.</p>
+</figure>
+</div>
+<p>These subclasses are not mutually exclusive. Therefore, in theory, a 2-form non-invertible subsystem symmetry could exist, for example.</p>
 </section>
 <section id="contents-of-the-lecture" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="contents-of-the-lecture"><span class="header-section-number">1.4</span> Contents of the Lecture</h2>
 <p><strong>FIXME</strong></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Barkeshli:2014cna" class="csl-entry" role="listitem">
 Barkeshli, M., Bonderson, P., Cheng, M., and Wang, Z. (2019), <span>“<span class="nocase">Symmetry Fractionalization, Defects, and Gauging of Topological Phases</span>,”</span> <em>Phys. Rev. B</em>, 100, 115147. <a href="https://doi.org/10.1103/PhysRevB.100.115147">https://doi.org/10.1103/PhysRevB.100.115147</a>.
 </div>
@@ -399,8 +494,8 @@ Kapustin, A., and Thorngren, R. (2013), <span>“<a href="https://arxiv.org/abs/
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>If the UV theory is a fixed point, <span class="math inline">\(G_\text{UV}\)</span> should be understood as the one preserved by the perturbation triggering the RG flow. If the RG flow is to a lower nonzero energy, and if one retains all the (even very massive) degrees of freedom in the description of <span class="math inline">\(\mathcal{T}_\text{IR}\)</span>, the map <span class="math inline">\(f_\text{RG}\)</span> is an isomorphism. However, typically one integrates out massive dofs in the description of <span class="math inline">\(\mathcal{T}_\text{RG}\)</span>, in which case some symmetry can decouple and thus <span class="math inline">\(f_\text{RG}\)</span> can be non-surjective. Also, if one also drops some higher-order interaction terms, or runs the flow to the zero energy, there can be an <em>emergent</em> symmetry, in which case <span class="math inline">\(f_\text{RG}\)</span> can be non-injective.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The global higher-form symmetry itself had appeared and investigated in the literature, e.g.&nbsp;<span class="citation" data-cites="Kapustin:2013uxa Barkeshli:2014cna">(<a href="references.html#ref-Barkeshli:2014cna" role="doc-biblioref">Barkeshli et al. 2019</a>; <a href="references.html#ref-Kapustin:2013uxa" role="doc-biblioref">Kapustin and Thorngren 2013</a>)</span>, and its gauged version was essentially known from <span class="citation" data-cites="KalbRamond">(<a href="references.html#ref-KalbRamond" role="doc-biblioref">Kalb and Ramond 1974</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Also, note that the Colman-Mandula theorem assumes a strong locality-preserving condition; that the symmetry generators act on multi-particle asymptotic states as tensor products.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The concept of global higher-form symmetry has been previously explored and investigated in the literature, for example, in <span class="citation" data-cites="Kapustin:2013uxa Barkeshli:2014cna">(<a href="references.html#ref-Barkeshli:2014cna" role="doc-biblioref">Barkeshli et al. 2019</a>; <a href="references.html#ref-Kapustin:2013uxa" role="doc-biblioref">Kapustin and Thorngren 2013</a>)</span>. Its gauged version was essentially known from <span class="citation" data-cites="KalbRamond">(<a href="references.html#ref-KalbRamond" role="doc-biblioref">Kalb and Ramond 1974</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -446,6 +541,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -514,13 +636,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -599,10 +723,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -612,8 +735,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -626,6 +758,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -669,6 +920,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -694,6 +946,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -755,17 +1033,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+      <a href="./index.html" class="pagination-link  aria-label=" what="" is="" this"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is this</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./scalar.html" class="pagination-link">
+      <a href="./scalar.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Topological Operators for Classical Symmetry</span>">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Topological Operators for Classical Symmetry</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
