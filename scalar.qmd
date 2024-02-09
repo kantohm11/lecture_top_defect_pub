@@ -120,14 +120,25 @@ is precisely the Noether charge as described in any QFT textbook.
 Properties 1 and 2 are summarized in @fig-op-action.
 :::
 
-![The topological operator $U_g[W]$ is designed to be invariant under a continuous deformation and to implement the symmetry action.](figures/Op_action.svg){#fig-op-action width=400}
+:::{.content-visible when-format="html"}
+![The topological operator $U_g[W]$ is designed to be invariant under a continuous deformation and to implement the symmetry action.](figures/tikz/Op_action.svg){#fig-op-action width=400}
+:::
 
+:::{.content-visible when-format="pdf"}
+![The topological operator $U_g[W]$ is designed to be invariant under a continuous deformation and to implement the symmetry action.](figures/tikz/Op_action.pdf){#fig-op-action width=400}
+:::
 The construction is based on the concept of "cutting-and-gluing-with-twist".
 Initially, we partition the spacetime $M$ into two subregions: $M_\stdim = M_L \cup_W M_R$ with a common boundary $W$ (refer to @fig-cut-M. We orient $W$ such that $\partial M_L = -\partial M_R = W$.).
 We also divide the scalar field $\phi$ into two fields: $\phi_L(x)$ for $x \in M_L$ and $\phi_R(x)$ for $x \in M_R$. Subsequently, we reconnect the two regions and their respective fields, with a twisted identification: 
 $$ \phi_L|_W = \phi_R^{g^{-1}}|_W. $$
 
-![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/ManifoldSplit.svg){#fig-cut-M width=230}
+:::{.content-visible when-format="html"}
+![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/tikz/ManifoldSplit.svg){#fig-cut-M width=230}
+:::
+
+:::{.content-visible when-format="pdf"}
+![The cutting and twisted gluing, implementing the topological operator $U_g[W]$.](figures/tikz/ManifoldSplit.pdf){#fig-cut-M width=230}
+:::
 
 In path-integral, this construction can be implemented as follows:
 
