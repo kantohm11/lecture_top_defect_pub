@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "A Lecture on Topological Operators",
     "section": "",
-    "text": "What is this\n\\(\\vol\\) This is a lecture note prepared for two sets of “intensive lectures”:1\nIn this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences.",
+    "text": "What is this\nThis is a lecture note prepared for two sets of “intensive lectures”:1\nIn this lecture I will try to explain the constructions of topological defects corresponding to generalized symmetries. Due to lack of time and (more significantly) my understanding, the lecture will focus on bosonic systems, and the generalization to fermionic systems is left for the readers/audiences.",
     "crumbs": [
       "What is this"
     ]
@@ -274,7 +274,7 @@
     "href": "equivariant.html#footnotes",
     "title": "Appendix A — Classical Symmetry in Sigma Model and equivariant cohomology",
     "section": "",
-    "text": "The word “model” in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. In this particular context the “models” refer to particular complexes that realize the same cohomology. This usage might go in the opposite direction to the physicists’ one: an abstraction of the (quasi-)real world.↩︎",
+    "text": "The word “model” in mathematics, in particular homotopy theory, is used to indecate a concrete construction of an abstract mathematical concept. In this particular context the “model” refers to a particular complex that realize the equivariant cohomology. This usage might go in the opposite direction to the physicists’ one: an abstraction of the (quasi-)real world.↩︎",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Classical Symmetry in Sigma Model and equivariant cohomology</span>"
