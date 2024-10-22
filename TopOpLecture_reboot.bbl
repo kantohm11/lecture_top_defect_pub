@@ -1,0 +1,16 @@
+
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Gaiotto:2014kfa}
+D.~Gaiotto, A.~Kapustin, N.~Seiberg and B.~Willett, \emph{{Generalized Global Symmetries}}, \href{https://doi.org/10.1007/JHEP02(2015)172}{\emph{JHEP} {\bfseries 02} (2015) 172} [\href{https://arxiv.org/abs/1412.5148}{{\ttfamily 1412.5148}}].
+
+\bibitem{Kapustin:2013uxa}
+A.~Kapustin and R.~Thorngren, \emph{{Higher symmetry and gapped phases of gauge theories}},  \href{https://arxiv.org/abs/1309.4721}{{\ttfamily 1309.4721}}.
+
+\bibitem{Barkeshli:2014cna}
+M.~Barkeshli, P.~Bonderson, M.~Cheng and Z.~Wang, \emph{{Symmetry Fractionalization, Defects, and Gauging of Topological Phases}}, \href{https://doi.org/10.1103/PhysRevB.100.115147}{\emph{Phys. Rev. B} {\bfseries 100} (2019) 115147} [\href{https://arxiv.org/abs/1410.4540}{{\ttfamily 1410.4540}}].
+
+\bibitem{KalbRamond}
+M.~Kalb and P.~Ramond, \emph{Classical direct interstring action}, \href{https://doi.org/10.1103/PhysRevD.9.2273}{\emph{Phys. Rev. D} {\bfseries 9} (1974) 2273}.
+
+\end{thebibliography}\endgroup
