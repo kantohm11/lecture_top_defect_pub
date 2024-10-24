@@ -1,0 +1,26 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'A-Lecture-on-Topological-Operators.blg'
+[35] biber-darwin:340> INFO - === 木 10 24, 2024, 16:51:31
+[43] Biber.pm:420> INFO - Reading 'A-Lecture-on-Topological-Operators.bcf'
+[86] Biber.pm:994> INFO - Found 35 citekeys in bib section 0
+[93] Biber.pm:4463> INFO - Processing section 0
+[98] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[99] bibtex.pm:1713> INFO - LaTeX decoding ...
+[114] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[199] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[199] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[208] bbl.pm:676> INFO - Writing 'A-Lecture-on-Topological-Operators.bbl' with encoding 'UTF-8'
+[214] bbl.pm:779> INFO - Output to A-Lecture-on-Topological-Operators.bbl
+[214] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'KalbRamond' is not an integer - this will probably not sort properly.
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'Belov:2006jd' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'Davighi:2020vcm' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'redden2016differential' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'gomi2005equivariant' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'SatiSlides' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'SatiSchreiberTED' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'Benini:2018reh' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'Rosenberg:2024dmx' (section 0)
+[214] Biber.pm:131> WARN - I didn't find a database entry for 'Gaiotto:2017yup' (section 0)
+[214] Biber.pm:133> INFO - WARNINGS: 10

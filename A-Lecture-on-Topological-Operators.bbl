@@ -1,0 +1,1067 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{McGreevy:2022oyu}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=30ef1cfee450df19df9c1f8fef2fe1bf}{%
+           family={McGreevy},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{fullhash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{fullhashraw}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{bibnamehash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{authorbibnamehash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{authornamehash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{authorfullhash}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \strng{authorfullhashraw}{30ef1cfee450df19df9c1f8fef2fe1bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.str-el}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{title}{{Generalized Symmetries in Condensed Matter}}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1146/annurev-conmatphys-040721-021029
+      \endverb
+      \verb{eprint}
+      \verb 2204.03045
+      \endverb
+    \endentry
+    \entry{Schafer-Nameki:2023jdn}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b3f5a812f173295a438f5ad4da5f97c}{%
+           family={Schafer-Nameki},
+           familyi={S\bibinithyphendelim N\bibinitperiod},
+           given={Sakura},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{fullhash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{fullhashraw}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{bibnamehash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{authorbibnamehash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{authornamehash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{authorfullhash}{8b3f5a812f173295a438f5ad4da5f97c}
+      \strng{authorfullhashraw}{8b3f5a812f173295a438f5ad4da5f97c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{title}{{ICTP Lectures on (Non-)Invertible Generalized Symmetries}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2305.18296
+      \endverb
+    \endentry
+    \entry{Gomes:2023ahz}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f644bbf6bd62c3d2086b92ebc14cf57b}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={Pedro\bibnamedelimb R.\bibnamedelimi S.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{fullhash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{fullhashraw}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{bibnamehash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{authorbibnamehash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{authornamehash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{authorfullhash}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \strng{authorfullhashraw}{f644bbf6bd62c3d2086b92ebc14cf57b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{SciPost Phys. Lect. Notes}
+      \field{title}{{An introduction to higher-form symmetries}}
+      \field{volume}{74}
+      \field{year}{2023}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21468/SciPostPhysLectNotes.74
+      \endverb
+      \verb{eprint}
+      \verb 2303.01817
+      \endverb
+    \endentry
+    \entry{Bhardwaj:2023kri}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=9763c90376080f5cc98c322734c51874}{%
+           family={Bhardwaj},
+           familyi={B\bibinitperiod},
+           given={Lakshya},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8d638890e0239286d5c6b3eed03f865b}{%
+           family={Bottini},
+           familyi={B\bibinitperiod},
+           given={Lea\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=63a6f2cb91e70999d51c217671aeefef}{%
+           family={Fraser-Taliente},
+           familyi={F\bibinithyphendelim T\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+        {{hash=04d47e5b8934f66d4ca79340eceaf76c}{%
+           family={Gladden},
+           familyi={G\bibinitperiod},
+           given={Liam},
+           giveni={L\bibinitperiod}}}%
+        {{hash=67bcf2343ed707572ce961d4c8c21383}{%
+           family={Gould},
+           familyi={G\bibinitperiod},
+           given={Dewi\bibnamedelimb S.\bibnamedelimi W.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=274e7129b6747f587b50fbf8a00bef24}{%
+           family={Platschorre},
+           familyi={P\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4a6e8628b324073a8624e7db8620ab51}{%
+           family={Tillim},
+           familyi={T\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8901c1afc9acf0d41be3eaf0e36f629e}
+      \strng{fullhash}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \strng{fullhashraw}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \strng{bibnamehash}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \strng{authorbibnamehash}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \strng{authornamehash}{8901c1afc9acf0d41be3eaf0e36f629e}
+      \strng{authorfullhash}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \strng{authorfullhashraw}{9a78fec98f8b4f54a4f57848eb0a5b74}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{{Lectures on Generalized Symmetries}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2307.07547
+      \endverb
+    \endentry
+    \entry{Luo:2023ive}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=96a9d2414b4bebaaaf3f1a8526a891c2}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ba0b89b2769641032238ee305d6eca17}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qing-Rui},
+           giveni={Q\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=4140c32edac0fa5cb2dad00b4a836765}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yi-Nan},
+           giveni={Y\bibinithyphendelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b19e7a81f7fc34f494a06a2d2148ed2}
+      \strng{fullhash}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \strng{fullhashraw}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \strng{bibnamehash}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \strng{authorbibnamehash}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \strng{authornamehash}{7b19e7a81f7fc34f494a06a2d2148ed2}
+      \strng{authorfullhash}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \strng{authorfullhashraw}{2ce8d5bbc9555cd3d5111fef6225611f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{{Lecture Notes on Generalized Symmetries and Applications}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2307.09215
+      \endverb
+    \endentry
+    \entry{Shao:2023gho}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b719e8b5cc05fa2eb1b26850e9c7f520}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shu-Heng},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{fullhash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{fullhashraw}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{bibnamehash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{authorbibnamehash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{authornamehash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{authorfullhash}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \strng{authorfullhashraw}{b719e8b5cc05fa2eb1b26850e9c7f520}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{8}
+      \field{title}{{What's Done Cannot Be Undone: TASI Lectures on Non-Invertible Symmetry}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2308.00747
+      \endverb
+    \endentry
+    \entry{TachikawaTasi}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=436839fd7ca802e4c292e468f7910017}{%
+           family={Tachikawa},
+           familyi={T\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{436839fd7ca802e4c292e468f7910017}
+      \strng{fullhash}{436839fd7ca802e4c292e468f7910017}
+      \strng{fullhashraw}{436839fd7ca802e4c292e468f7910017}
+      \strng{bibnamehash}{436839fd7ca802e4c292e468f7910017}
+      \strng{authorbibnamehash}{436839fd7ca802e4c292e468f7910017}
+      \strng{authornamehash}{436839fd7ca802e4c292e468f7910017}
+      \strng{authorfullhash}{436839fd7ca802e4c292e468f7910017}
+      \strng{authorfullhashraw}{436839fd7ca802e4c292e468f7910017}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Lecture on anomalies and topological phases}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/
+      \endverb
+      \verb{url}
+      \verb https://member.ipmu.jp/yuji.tachikawa/lectures/2019-top-anom/
+      \endverb
+    \endentry
+    \entry{Gaiotto:2014kfa}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=467a6baf6ae29d9a98d1ef08639cb409}{%
+           family={Gaiotto},
+           familyi={G\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=83cd64767b94ab11ba933548f7fb70ce}{%
+           family={Kapustin},
+           familyi={K\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1fe5d39fd0373c9697cb4ec1c1279f3}{%
+           family={Seiberg},
+           familyi={S\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=eb8c9461b5d8630ecca4841b0cae0481}{%
+           family={Willett},
+           familyi={W\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{fullhash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{fullhashraw}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{bibnamehash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{authorbibnamehash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{authornamehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{authorfullhash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{authorfullhashraw}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Generalized Global Symmetries}}
+      \field{volume}{02}
+      \field{year}{2015}
+      \field{pages}{172}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP02(2015)172
+      \endverb
+      \verb{eprint}
+      \verb 1412.5148
+      \endverb
+    \endentry
+    \entry{Kapustin:2013uxa}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=83cd64767b94ab11ba933548f7fb70ce}{%
+           family={Kapustin},
+           familyi={K\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3c2bee22b040921563ed53dfd1ef397d}{%
+           family={Thorngren},
+           familyi={T\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{fullhash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{fullhashraw}{e4336392761b7abb815cd57b0ed032af}
+      \strng{bibnamehash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{authorbibnamehash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{authornamehash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{authorfullhash}{e4336392761b7abb815cd57b0ed032af}
+      \strng{authorfullhashraw}{e4336392761b7abb815cd57b0ed032af}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{title}{{Higher symmetry and gapped phases of gauge theories}}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1309.4721
+      \endverb
+    \endentry
+    \entry{Barkeshli:2014cna}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4348b37a9a404dee9fecdc50a53026ce}{%
+           family={Barkeshli},
+           familyi={B\bibinitperiod},
+           given={Maissam},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c20da89a5619920628dae50a618cdac7}{%
+           family={Bonderson},
+           familyi={B\bibinitperiod},
+           given={Parsa},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f59e10f128bf859058b65639dd498ba3}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Meng},
+           giveni={M\bibinitperiod}}}%
+        {{hash=25c97308f9f357694bb75718fe65cb11}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhenghan},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee4f9fa40fd7b11637e813ca35efb30b}
+      \strng{fullhash}{c52bbbe41a7a3c908324618d6448462a}
+      \strng{fullhashraw}{c52bbbe41a7a3c908324618d6448462a}
+      \strng{bibnamehash}{c52bbbe41a7a3c908324618d6448462a}
+      \strng{authorbibnamehash}{c52bbbe41a7a3c908324618d6448462a}
+      \strng{authornamehash}{ee4f9fa40fd7b11637e813ca35efb30b}
+      \strng{authorfullhash}{c52bbbe41a7a3c908324618d6448462a}
+      \strng{authorfullhashraw}{c52bbbe41a7a3c908324618d6448462a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.str-el}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{number}{11}
+      \field{title}{{Symmetry Fractionalization, Defects, and Gauging of Topological Phases}}
+      \field{volume}{100}
+      \field{year}{2019}
+      \field{pages}{115147}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.100.115147
+      \endverb
+      \verb{eprint}
+      \verb 1410.4540
+      \endverb
+    \endentry
+    \entry{KalbRamond}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e13c4dd1e913140767572e433c5baaad}{%
+           family={Kalb},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=76845637f6937063f6d146edc3efee01}{%
+           family={Ramond},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{fullhash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{fullhashraw}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{bibnamehash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{authorbibnamehash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{authornamehash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{authorfullhash}{6fc462838f6e2d418cabf3f2b61d772c}
+      \strng{authorfullhashraw}{6fc462838f6e2d418cabf3f2b61d772c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{8}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{4}
+      \field{title}{Classical direct interstring action}
+      \field{volume}{9}
+      \field{year}{1974}
+      \field{pages}{2273\bibrangedash 2284}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.9.2273
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.9.2273
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.9.2273
+      \endverb
+    \endentry
+    \entry{Pretko:2020cko}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=da4aefa0af499f4f69ad387194dcf1b5}{%
+           family={Pretko},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=40324c5235c456ad5ecea8effce19bd0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xie},
+           giveni={X\bibinitperiod}}}%
+        {{hash=982df6db60a078175b32d2811afaf8a2}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Yizhi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f707e1c4df5edb18f19fc38212352382}
+      \strng{fullhash}{c718988f745efd225e953b2a7c80a54e}
+      \strng{fullhashraw}{c718988f745efd225e953b2a7c80a54e}
+      \strng{bibnamehash}{c718988f745efd225e953b2a7c80a54e}
+      \strng{authorbibnamehash}{c718988f745efd225e953b2a7c80a54e}
+      \strng{authornamehash}{f707e1c4df5edb18f19fc38212352382}
+      \strng{authorfullhash}{c718988f745efd225e953b2a7c80a54e}
+      \strng{authorfullhashraw}{c718988f745efd225e953b2a7c80a54e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.str-el}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Int. J. Mod. Phys. A}
+      \field{number}{06}
+      \field{title}{{Fracton Phases of Matter}}
+      \field{volume}{35}
+      \field{year}{2020}
+      \field{pages}{2030003}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1142/S0217751X20300033
+      \endverb
+      \verb{eprint}
+      \verb 2001.01722
+      \endverb
+    \endentry
+    \entry{Seiberg:2020bhn}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c1fe5d39fd0373c9697cb4ec1c1279f3}{%
+           family={Seiberg},
+           familyi={S\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b719e8b5cc05fa2eb1b26850e9c7f520}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shu-Heng},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{fullhash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{fullhashraw}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{bibnamehash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{authorbibnamehash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{authornamehash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{authorfullhash}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \strng{authorfullhashraw}{18db9a3c98be0255d6c1cd3b8ed379d8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.str-el}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{SciPost Phys.}
+      \field{number}{2}
+      \field{title}{{Exotic Symmetries, Duality, and Fractons in 2+1-Dimensional Quantum Field Theory}}
+      \field{volume}{10}
+      \field{year}{2021}
+      \field{pages}{027}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.21468/SciPostPhys.10.2.027
+      \endverb
+      \verb{eprint}
+      \verb 2003.10466
+      \endverb
+    \endentry
+    \entry{Lurie}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
+           family={Lurie},
+           familyi={L\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Press of Boston}%
+      }
+      \strng{namehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{fullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{fullhashraw}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{bibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorfullhashraw}{760ea879284b1a6eeaad87a82be8d1d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current developments in mathematics}
+      \field{number}{1}
+      \field{title}{On the classification of topological field theories}
+      \field{volume}{2008}
+      \field{year}{2008}
+      \field{pages}{129\bibrangedash 280}
+      \range{pages}{152}
+    \endentry
+    \entry{Cordova:2022ieu}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b28bd87b2b310c7ee444703ec678e8b1}{%
+           family={Cordova},
+           familyi={C\bibinitperiod},
+           given={Clay},
+           giveni={C\bibinitperiod}}}%
+        {{hash=000ce77c2f4c2d07c74f00f8c77b88e5}{%
+           family={Ohmori},
+           familyi={O\bibinitperiod},
+           given={Kantaro},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{fullhash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{fullhashraw}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{bibnamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorbibnamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authornamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorfullhash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorfullhashraw}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. X}
+      \field{number}{1}
+      \field{title}{{Noninvertible Chiral Symmetry and Exponential Hierarchies}}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{011034}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevX.13.011034
+      \endverb
+      \verb{eprint}
+      \verb 2205.06243
+      \endverb
+    \endentry
+    \entry{Copetti:2023mcq}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8ca3de797c827f1727afb122e92edf8f}{%
+           family={Copetti},
+           familyi={C\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c4f4193346c3321655e2b40678aa7141}{%
+           family={Del\bibnamedelima Zotto},
+           familyi={D\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=000ce77c2f4c2d07c74f00f8c77b88e5}{%
+           family={Ohmori},
+           familyi={O\bibinitperiod},
+           given={Kantaro},
+           giveni={K\bibinitperiod}}}%
+        {{hash=386704fd3e20412d4cf404892e55a1e1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e2cc9770579a08bf6fb63ca58070331}
+      \strng{fullhash}{3eb877159df130fe8fd9ece29b76b3c5}
+      \strng{fullhashraw}{3eb877159df130fe8fd9ece29b76b3c5}
+      \strng{bibnamehash}{3eb877159df130fe8fd9ece29b76b3c5}
+      \strng{authorbibnamehash}{3eb877159df130fe8fd9ece29b76b3c5}
+      \strng{authornamehash}{1e2cc9770579a08bf6fb63ca58070331}
+      \strng{authorfullhash}{3eb877159df130fe8fd9ece29b76b3c5}
+      \strng{authorfullhashraw}{3eb877159df130fe8fd9ece29b76b3c5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{title}{{Higher Structure of Chiral Symmetry}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2305.18282
+      \endverb
+    \endentry
+    \entry{Cordova:2019jqi}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a5d98fb2e6e4c5cfd426efb3cbdfe477}{%
+           family={Córdova},
+           familyi={C\bibinitperiod},
+           given={Clay},
+           giveni={C\bibinitperiod}}}%
+        {{hash=000ce77c2f4c2d07c74f00f8c77b88e5}{%
+           family={Ohmori},
+           familyi={O\bibinitperiod},
+           given={Kantaro},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{fullhash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{fullhashraw}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{bibnamehash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{authorbibnamehash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{authornamehash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{authorfullhash}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \strng{authorfullhashraw}{b9530cdaab50b9d7db5a8f9fc47d02fd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{2}
+      \field{title}{{Anomaly Constraints on Gapped Phases with Discrete Chiral Symmetry}}
+      \field{volume}{102}
+      \field{year}{2020}
+      \field{pages}{025011}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.102.025011
+      \endverb
+      \verb{eprint}
+      \verb 1912.13069
+      \endverb
+    \endentry
+    \entry{Choi:2021kmx}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=b271162c33cb9b4cd012cb37afb61c57}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Yichul},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b28bd87b2b310c7ee444703ec678e8b1}{%
+           family={Cordova},
+           familyi={C\bibinitperiod},
+           given={Clay},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ec0b3c3b86315954e4f51284e7b3fb9c}{%
+           family={Hsin},
+           familyi={H\bibinitperiod},
+           given={Po-Shen},
+           giveni={P\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=d1558d00d48601134cd60d3f5e7a9410}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Ho\bibnamedelima Tat},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b719e8b5cc05fa2eb1b26850e9c7f520}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shu-Heng},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{98a2268064c0ee109514f0c6f6aa63a5}
+      \strng{fullhash}{efd5b84ab66fe33152783af6d9a1f22d}
+      \strng{fullhashraw}{efd5b84ab66fe33152783af6d9a1f22d}
+      \strng{bibnamehash}{efd5b84ab66fe33152783af6d9a1f22d}
+      \strng{authorbibnamehash}{efd5b84ab66fe33152783af6d9a1f22d}
+      \strng{authornamehash}{98a2268064c0ee109514f0c6f6aa63a5}
+      \strng{authorfullhash}{efd5b84ab66fe33152783af6d9a1f22d}
+      \strng{authorfullhashraw}{efd5b84ab66fe33152783af6d9a1f22d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{12}
+      \field{title}{{Noninvertible duality defects in 3+1 dimensions}}
+      \field{volume}{105}
+      \field{year}{2022}
+      \field{pages}{125016}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.105.125016
+      \endverb
+      \verb{eprint}
+      \verb 2111.01139
+      \endverb
+    \endentry
+    \entry{Niro:2022ctq}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=588faeedf5d155d3e4055730717c3709}{%
+           family={Niro},
+           familyi={N\bibinitperiod},
+           given={Pierluigi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4366d175290da33785f4b1b0488fae89}{%
+           family={Roumpedakis},
+           familyi={R\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4dd820a1fcfc38d3c93d4a982471ab82}{%
+           family={Sela},
+           familyi={S\bibinitperiod},
+           given={Orr},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{46cf4523cbf58491f0e51c77b8b68599}
+      \strng{fullhash}{b1ec1760c65c67943dc43850aeddb7c0}
+      \strng{fullhashraw}{b1ec1760c65c67943dc43850aeddb7c0}
+      \strng{bibnamehash}{b1ec1760c65c67943dc43850aeddb7c0}
+      \strng{authorbibnamehash}{b1ec1760c65c67943dc43850aeddb7c0}
+      \strng{authornamehash}{46cf4523cbf58491f0e51c77b8b68599}
+      \strng{authorfullhash}{b1ec1760c65c67943dc43850aeddb7c0}
+      \strng{authorfullhashraw}{b1ec1760c65c67943dc43850aeddb7c0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Exploring non-invertible symmetries in free theories}}
+      \field{volume}{03}
+      \field{year}{2023}
+      \field{pages}{005}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP03(2023)005
+      \endverb
+      \verb{eprint}
+      \verb 2209.11166
+      \endverb
+    \endentry
+    \entry{Cordova:2023ent}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b28bd87b2b310c7ee444703ec678e8b1}{%
+           family={Cordova},
+           familyi={C\bibinitperiod},
+           given={Clay},
+           giveni={C\bibinitperiod}}}%
+        {{hash=000ce77c2f4c2d07c74f00f8c77b88e5}{%
+           family={Ohmori},
+           familyi={O\bibinitperiod},
+           given={Kantaro},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{fullhash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{fullhashraw}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{bibnamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorbibnamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authornamehash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorfullhash}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \strng{authorfullhashraw}{ef8eed9a6b1e4c2f027745fa30b5d168}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{{Quantum Duality in Electromagnetism and the Fine-Structure Constant}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2307.12927
+      \endverb
+    \endentry
+    \entry{Nagoya:2023zky}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bf304f1d11c87815549e0ec896211740}{%
+           family={Nagoya},
+           familyi={N\bibinitperiod},
+           given={Yuta},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e995114d2c18a1789bedc0b81e2a0812}{%
+           family={Shimamori},
+           familyi={S\bibinitperiod},
+           given={Soichiro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{fullhash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{fullhashraw}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{bibnamehash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{authorbibnamehash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{authornamehash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{authorfullhash}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \strng{authorfullhashraw}{4c215f554294bfaf9bedf8b48be6e4a8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{title}{{Non-invertible duality defect and non-commutative fusion algebra}}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2309.05294
+      \endverb
+    \endentry
+    \entry{Hsieh:2020jpj}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=03887b4b9dcef141c5f937e9a8ed801f}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={Chang-Tse},
+           giveni={C\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=436839fd7ca802e4c292e468f7910017}{%
+           family={Tachikawa},
+           familyi={T\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f8e36fac58e25e4b8bff1dcd6e575dd6}{%
+           family={Yonekura},
+           familyi={Y\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8391fe091e749fbf7c002e205bc9f319}
+      \strng{fullhash}{90cb39f0f26a55467a226fd4b21a86a1}
+      \strng{fullhashraw}{90cb39f0f26a55467a226fd4b21a86a1}
+      \strng{bibnamehash}{90cb39f0f26a55467a226fd4b21a86a1}
+      \strng{authorbibnamehash}{90cb39f0f26a55467a226fd4b21a86a1}
+      \strng{authornamehash}{8391fe091e749fbf7c002e205bc9f319}
+      \strng{authorfullhash}{90cb39f0f26a55467a226fd4b21a86a1}
+      \strng{authorfullhashraw}{90cb39f0f26a55467a226fd4b21a86a1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Commun. Math. Phys.}
+      \field{number}{2}
+      \field{title}{{Anomaly Inflow and p-Form Gauge Theories}}
+      \field{volume}{391}
+      \field{year}{2022}
+      \field{pages}{495\bibrangedash 608}
+      \range{pages}{114}
+      \verb{doi}
+      \verb 10.1007/s00220-022-04333-w
+      \endverb
+      \verb{eprint}
+      \verb 2003.11550
+      \endverb
+    \endentry
+    \entry{Kapustin:2009av}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=83cd64767b94ab11ba933548f7fb70ce}{%
+           family={Kapustin},
+           familyi={K\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=efefaef9260f320ba51c62404985e73d}{%
+           family={Tikhonov},
+           familyi={T\bibinitperiod},
+           given={Mikhail},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{fullhash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{fullhashraw}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{bibnamehash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{authorbibnamehash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{authornamehash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{authorfullhash}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \strng{authorfullhashraw}{5b8855d89a8c4e37cc6273ad5f37fd0e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Abelian duality, walls and boundary conditions in diverse dimensions}}
+      \field{volume}{11}
+      \field{year}{2009}
+      \field{pages}{006}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1126-6708/2009/11/006
+      \endverb
+      \verb{eprint}
+      \verb 0904.0840
+      \endverb
+    \endentry
+    \entry{Freed:2006mx}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fe9ff8deaffced420e1b155c083b3d37}{%
+           family={Freed},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{fullhash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{fullhashraw}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{bibnamehash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{authorbibnamehash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{authornamehash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{authorfullhash}{fe9ff8deaffced420e1b155c083b3d37}
+      \strng{authorfullhashraw}{fe9ff8deaffced420e1b155c083b3d37}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{J. Diff. Geom.}
+      \field{number}{1}
+      \field{title}{{Pions and Generalized Cohomology}}
+      \field{volume}{80}
+      \field{year}{2008}
+      \field{pages}{45\bibrangedash 77}
+      \range{pages}{33}
+      \verb{eprint}
+      \verb hep-th/0607134
+      \endverb
+    \endentry
+    \entry{kubel2018equivariant}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f5cbecba4d48cbee56cbf934183a2273}{%
+           family={Kübel},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=446a90eae27e19e800281ac321e04c4b}{%
+           family={Thom},
+           familyi={T\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{fullhash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{fullhashraw}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{bibnamehash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{authorbibnamehash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{authornamehash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{authorfullhash}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \strng{authorfullhashraw}{de24d9ccddf0b35cc93db6c4e701e5fb}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions of the American Mathematical Society}
+      \field{number}{11}
+      \field{title}{Equivariant differential cohomology}
+      \field{volume}{370}
+      \field{year}{2018}
+      \field{pages}{8237\bibrangedash 8283}
+      \range{pages}{47}
+    \endentry
+    \entry{dupont1978curvature}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a969294e7885ff4e45444bfe7daf8d66}{%
+           family={Dupont},
+           familyi={D\bibinitperiod},
+           given={J.L.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{fullhash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{fullhashraw}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{bibnamehash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{authorbibnamehash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{authornamehash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{authorfullhash}{a969294e7885ff4e45444bfe7daf8d66}
+      \strng{authorfullhashraw}{a969294e7885ff4e45444bfe7daf8d66}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780387086637}
+      \field{series}{Lecture Notes in Mathematics}
+      \field{title}{Curvature and Characteristic Classes}
+      \field{year}{1978}
+      \verb{urlraw}
+      \verb https://books.google.co.jp/books?id=UcUZAQAAIAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.jp/books?id=UcUZAQAAIAAJ
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{Belov:2006jd}
+  \missing{Benini:2018reh}
+  \missing{Davighi:2020vcm}
+  \missing{Gaiotto:2017yup}
+  \missing{Rosenberg:2024dmx}
+  \missing{SatiSchreiberTED}
+  \missing{SatiSlides}
+  \missing{gomi2005equivariant}
+  \missing{redden2016differential}
+\endrefsection
+\endinput
+
