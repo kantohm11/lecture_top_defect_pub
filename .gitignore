@@ -16,7 +16,7 @@
 *.aux
 *.fdb_latexmk
 .DS_Store
-*.tex
+#*.tex
 
 !figures/*.pdf
 !figures/tikz/*.pdf
